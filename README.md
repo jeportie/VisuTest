@@ -93,7 +93,9 @@ VisuTest is a Vim plugin designed to enhance the C development workflow by integ
   - **Empty circle**: Test not run.
   - **Green circle**: Test passed.
   - **Red circle**: Test failed.
+- Press **Space** on a test suite name to display individual test units state using icons.
 - Updates dynamically based on `LastTest.log`.
+<img width="327" alt="Screenshot 2024-09-20 at 22 53 05" src="https://github.com/user-attachments/assets/ae9bb0f2-726c-477b-80ae-86e3f619f7b5">
 
 #### 5. Popup Window for Test Suite Logs
 
@@ -107,6 +109,7 @@ VisuTest is a Vim plugin designed to enhance the C development workflow by integ
   - Start time.
   - Test output.
   - Results from `LastTest.log`.
+<img width="776" alt="Screenshot 2024-09-20 at 22 59 54" src="https://github.com/user-attachments/assets/bdf67cce-dfa6-4d75-af04-063235bd6f8d">
 
 #### 6. Test Suite Approval System
 
