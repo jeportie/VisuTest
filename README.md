@@ -47,23 +47,6 @@ VisuTest is a Vim plugin designed to enhance the C development workflow by integ
     └── .gitignore
 ```
 
-**Explanation**:
-
-- **include/**: Header files, including `project.h` where functions are declared.
-- **lib/**: External libraries or shared code.
-- **assets/**: Static assets such as images, icons, or other resources.
-- **src/**: Source files, each containing one public function.
-  - **sub_folder_name1/**: A subdirectory containing `function_name1.c`.
-  - **function_name2.c**, **function_name3.c**, etc.: Source files in the root of `src/`.
-- **test_src/**: Test source files corresponding to each function in `src/`, maintaining the same directory structure.
-  - **CMakeLists.txt**: Build configuration file, crucial for compiling tests.
-  - **sub_folder_name1/**: Mirrors `src/` subdirectories, containing `test_function_name1.c`.
-- **.gitignore**: Specifies intentionally untracked files to ignore.
-- **vimspector.json**: Configuration file for Vimspector, a Vim plugin for debugging.
-- **main.c**: Entry point of the application.
-- **Makefile**: For building the project.
-- **ycm_extra_conf.py**: Configuration for YouCompleteMe or similar tools.
-
 **Rules**:
 
 - **One Function per File**:
