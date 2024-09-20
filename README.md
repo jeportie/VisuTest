@@ -233,25 +233,6 @@ visutest/
 ├── LICENSE                     # Licensing information
 └── setup.sh                    # Script to install dependencies
 ```
-
-**Explanation of the File Structure**:
-
-- **autoload/**: Contains deferred-loading Vim functions for efficiency.
-- **plugin/**: Main plugin script that initializes VisuTest.
-- **doc/**: Help files accessible via `:help visutest`.
-- **ftplugin/**: Filetype-specific settings to enhance C file editing.
-- **syntax/**: Syntax highlighting definitions if required.
-- **scripts/**: External scripts (Python) handling folder watching, test generation, and CMake updates.
-- **resources/**:
-  - **icons/**: Static icons used in the UI.
-  - **assets/**: Additional assets needed by the plugin.
-- **tests/**: Contains tests to ensure plugin reliability.
-- **config/**:
-  - **default_config.vim**: Default settings for the plugin.
-  - **vimspector.json**: Configuration for the Vimspector plugin.
-- **.gitignore**: Specifies intentionally untracked files to ignore.
-- **setup.sh**: Automates the installation of dependencies.
-
 ---
 
 ## Recap of the Structural Implementation Plan
