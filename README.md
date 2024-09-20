@@ -1,4 +1,4 @@
-# VisuTest Plugin Alpha_version - Comprehensive Project Recap
+# VisuTest Plugin Alpha_version - Project Start Recap
 
 ## Introduction
 
