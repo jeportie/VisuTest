@@ -595,3 +595,205 @@ In this enhanced strategy, we will use **vim-dispatch** and **tmux** for asynchr
 4. Developers can continue working in Vim while the tests are running asynchronously.
 
 ---
+
+
+Yes, we can replace **tmux** and **vim-dispatch** with a custom server-listening system to run tests asynchronously without blocking Vim. This approach involves creating a separate server process that listens for test execution requests from Vim, runs the tests in the background, and sends results back to Vim for display.
+
+Here’s a high-level plan on how to implement such a system:
+
+---
+
+## **Plan for Server-Listening System for Asynchronous Test Execution**
+
+### **Overview**
+
+The idea is to run a separate server (likely a Python or Node.js process) that will handle the execution of commands like `CMake`, `make`, and `CTest`. Vim will send requests to this server for running tests, and the server will asynchronously execute the commands, sending results back to Vim, which can then update the test status in the vertical window.
+
+### **Key Components of the Server-Listening System**
+
+1. **Vim Client**: 
+   - Vim will act as the client, sending test execution requests to the server and receiving responses (e.g., test results or logs).
+   - This will be implemented in Vimscript, using Vim’s `jobstart()` or `system()` to communicate with the server via sockets (or potentially HTTP, depending on the server).
+
+2. **Server Process**:
+   - The server will be a separate process running in the background.
+   - It will listen for requests (e.g., run tests, check test status) and execute the appropriate commands asynchronously.
+   - For example, when the server receives a request to run `CTest`, it will execute the test in the background and send back the results when complete.
+
+3. **Communication Protocol**:
+   - We will establish a protocol for communication between Vim and the server. This could be:
+     - **Sockets**: Using Unix domain sockets or TCP sockets for communication.
+     - **HTTP**: Using HTTP for sending requests and responses.
+   - The server will send JSON responses with test results, logs, etc., which Vim will parse and display in the appropriate windows.
+
+4. **Real-Time Test Status Updates**:
+   - Once the server runs the tests, it will send real-time status updates back to Vim, such as:
+     - Test in progress.
+     - Test passed/failed.
+     - Test log available.
+   - Vim will use this information to update the vertical window and show popups with logs.
+
+---
+
+### **Step-by-Step Implementation Plan**
+
+#### **Phase 1: Server Setup and Communication**
+
+1. **Choose Server Language and Framework**:
+   - Python with `socket` library or `flask` for HTTP-based communication.
+   - Node.js with `express` for HTTP, or native `net` library for socket-based communication.
+   
+   Example: 
+   ```python
+   # Python socket server example
+   import socket
+   import subprocess
+
+   def run_ctest():
+       # Replace this with actual command to run CTest
+       result = subprocess.run(['ctest'], capture_output=True)
+       return result.stdout.decode()
+
+   def start_server():
+       server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+       server_socket.bind(('localhost', 9999))  # Bind to localhost:9999
+       server_socket.listen(1)
+
+       while True:
+           client_socket, addr = server_socket.accept()
+           request = client_socket.recv(1024).decode()
+           
+           if request == "RUN_TEST":
+               test_result = run_ctest()
+               client_socket.send(test_result.encode())
+
+           client_socket.close()
+
+   start_server()
+   ```
+
+2. **Implement Communication from Vim**:
+   - Use Vim’s `jobstart()` function to send requests to the server and handle responses.
+   - This can be wrapped in Vimscript functions, triggered by user commands or events like exiting insert mode.
+   
+   Example:
+   ```vim
+   function! RunTests()
+       " Send a request to the server to run the tests
+       let job = jobstart(['nc', 'localhost', '9999'], {
+           \ 'on_stdout': 'HandleTestResults',
+           \ 'on_stderr': 'HandleTestErrors'
+       \ })
+   endfunction
+
+   function! HandleTestResults(job_id, data, event)
+       " Update the vertical window with test results
+       let result = join(a:data, "\n")
+       call UpdateTestWindow(result)
+   endfunction
+
+   function! UpdateTestWindow(result)
+       " Custom logic to update the test window with results
+       echo "Test results: " . a:result
+   endfunction
+   ```
+
+3. **Test and Debug**:
+   - Ensure that Vim can successfully send requests and receive responses.
+   - Test the communication by running simple commands like `ctest` or `make` from the server.
+
+---
+
+#### **Phase 2: Asynchronous Test Execution**
+
+4. **Handle Asynchronous Commands on the Server**:
+   - When the server receives a test execution request, it should run the command in a non-blocking way (e.g., using Python’s `subprocess.Popen` or Node.js’s `child_process.spawn`).
+   - The server can continue listening for more requests even while tests are running.
+   
+   Example:
+   ```python
+   import subprocess
+
+   def run_ctest_async():
+       process = subprocess.Popen(['ctest'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+       return process
+   ```
+
+5. **Return Real-Time Test Results**:
+   - As the server runs tests, it can periodically send updates (e.g., using a progress indicator or partial logs) back to Vim.
+   - Vim should handle these updates and refresh the vertical window dynamically.
+
+---
+
+#### **Phase 3: Implement Real-Time Updates in Vim**
+
+6. **Update Vertical Window Dynamically**:
+   - Parse the test results and update the vertical window with appropriate icons and status (e.g., running, passed, failed).
+   - You can use `vim.schedule()` to ensure that UI updates happen smoothly in asynchronous contexts.
+
+7. **Popup Logs and Details**:
+   - When a test suite finishes, Vim can display the detailed logs in a popup or buffer, allowing users to inspect what went wrong.
+   - Use the `LastTest.log` or other logs returned by the server for detailed information.
+
+---
+
+#### **Phase 4: Error Handling and Cleanup**
+
+8. **Handle Errors and Timeouts**:
+   - Add error handling to manage cases where the server fails or takes too long to respond.
+   - Display appropriate messages in Vim when errors occur.
+
+9. **Graceful Shutdown**:
+   - Ensure that the server process can be started and stopped gracefully, either through Vim commands or system events.
+
+---
+
+### **Phase 5: Final Enhancements**
+
+10. **User Configuration Options**:
+    - Add Vim configuration settings to customize server behavior (e.g., server port, timeout values, etc.).
+
+11. **Testing and Debugging**:
+    - Thoroughly test the server-client interaction, ensuring no blocking occurs in Vim.
+    - Test various edge cases like large test suites, long-running tests, and network issues.
+
+---
+
+### **File Organization for the Plugin**
+
+```bash
+visutest/
+├── autoload/
+│   └── visutest.vim            # Core Vim functions for plugin behavior
+├── plugin/
+│   └── visutest.vim            # Main plugin logic loaded at startup
+├── server/
+│   ├── server.py               # Python server handling test execution
+│   ├── requirements.txt        # Python dependencies (e.g., Flask, socket, etc.)
+│   └── utils.py                # Utility functions for server-side tasks
+├── scripts/
+│   └── client.vim              # Vimscript client for communicating with the server
+├── tests/
+│   └── test_visutest.vim       # Automated tests for plugin behavior
+├── README.md                   # Plugin documentation
+├── LICENSE                     # Licensing information
+└── config/
+    └── default_config.vim      # Default Vim settings for the plugin
+```
+
+### **Explanation of File Structure**:
+
+- **server/**: Contains the Python or Node.js server code that runs tests asynchronously.
+- **scripts/**: Contains Vimscript logic for sending requests to the server and handling responses.
+- **autoload/plugin/**: Core Vim plugin logic for managing windows, running tests, and handling real-time updates.
+
+---
+
+## **Next Steps**
+
+1. **Set Up the Server**: Write the server code and ensure it can handle basic test execution requests.
+2. **Integrate with Vim**: Implement Vim’s client-side functions to communicate with the server.
+3. **Test Asynchronous Execution**: Validate that tests run asynchronously without blocking Vim.
+4. **Enhance Real-Time Updates**: Implement logic for updating test statuses and displaying logs in Vim.
+
+This approach will give you a fully asynchronous system to run tests without blocking Vim, providing flexibility and scalability as the project grows. Let me know if you'd like to dive into specific parts of the implementation!
