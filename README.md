@@ -360,3 +360,97 @@ visutest/
     - Provide contribution guidelines.
 
 ---
+
+## Notes
+
+### **Window init Strategy Overview**
+
+1. **Test Suite Names Extraction**:
+   - **Source**: `test_src/` directory.
+   - **Approach**: Extract the test suite names from the `.c` files in `test_src/`.
+     - Each `.c` file in `test_src/` represents a test suite.
+     - The file name (e.g., `test_function_name1.c`) corresponds to the test suite name.
+
+2. **Test Unit Function Names Extraction**:
+   - **Source**: Individual test suite files (i.e., `.c` files in `test_src/`).
+   - **Approach**: Parse each test suite `.c` file to extract function names prefixed with `test_`, which typically represent individual test cases.
+     - Scan for functions in the test suite that match the pattern `void test_*()` (or similar).
+
+---
+### **Detailed Steps**
+
+#### **1. Load Test Suite Names**
+
+- **Step 1.1**: Navigate through the `test_src/` directory and gather all `.c` files.
+- **Step 1.2**: Strip the `test_` prefix from the filenames to get the corresponding test suite names.
+  
+**Example**:
+- `test_function_name1.c` -> `function_name1`
+- `test_function_name2.c` -> `function_name2`
+
+#### **2. Parse Test Suite Files for Test Units**
+
+- **Step 2.1**: For each `.c` file in `test_src/`, open the file and scan for functions that represent test units. These typically have the prefix `test_` and follow a naming convention.
+- **Step 2.2**: Collect all function names that match the `test_*` pattern, and list them under their respective test suite in the vertical window.
+
+**Example**:
+- File: `test_function_name1.c`
+  - Test Units:
+    - `void test_case1_function_name1()`
+    - `void test_case2_function_name1()`
+
+#### **3. Display in Vertical Window**
+
+- **Step 3.1**: Use a Vim window (1/4 size vertical window as planned) to display the test suites and their corresponding test units.
+- **Step 3.2**: Format the window such that each test suite is listed, followed by an indented list of its test units.
+
+**Example Display**:
+
+```
+Test Suites:
+  function_name1
+    - test_case1_function_name1
+    - test_case2_function_name1
+  function_name2
+    - test_case1_function_name2
+```
+
+---
+
+### **Implementation Thoughts**
+
+1. **Efficiency**:
+   - You only need to scan the `test_src/` directory and `.c` files once when opening Vim or refreshing the test window. A function can handle this and update the vertical window accordingly.
+
+2. **Regular Expression for Test Functions**:
+   - You can use a regex pattern like `void\s+test_\w+\s*\(` to match the function declarations inside the `.c` test files. This pattern will find all test units and is highly adaptable for different function naming conventions.
+
+3. **Handling Edge Cases**:
+   - **Empty Test Suites**: Handle cases where a `test_*.c` file might not have any test functions.
+   - **Subdirectories**: If the `test_src/` directory contains subdirectories, ensure the parser handles them recursively.
+
+4. **Real-Time Updates**:
+   - Implement a refresh command that users can trigger to update the list if they add new tests while Vim is running.
+
+5. **Visual Enhancements**:
+   - You could further enhance the visual display by using icons (e.g., pass/fail symbols next to the test units once executed).
+
+---
+
+### **Tools to Use**
+
+- **Vimscript**:
+  - Use `globpath()` to list files in the `test_src/` directory.
+  - Use `readfile()` to read the content of the `.c` files and `matchlist()` or `substitute()` with regex to extract function names.
+  
+- **External Scripts (Optional)**:
+  - If performance becomes an issue with large test suites, you might consider using an external script (e.g., Python) to parse the files and return the results to Vim.
+
+---
+
+### **Potential Enhancements**
+
+- **Sorting or Filtering**: Allow the user to filter or sort the test units displayed in the vertical window by status (e.g., passed, failed) or test name.
+- **Interactive Execution**: Make the test suite and test unit names clickable, allowing users to trigger the execution of individual test units directly from the vertical window.
+
+---
