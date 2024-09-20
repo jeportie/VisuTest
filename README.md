@@ -22,9 +22,12 @@ VisuTest is a Vim plugin designed to enhance the C development workflow by integ
     │   ├── project.h
     │   └── defines.h
     ├── lib/
+    │   ├── libfoo.a           # Example static library
+    │   └── libbar.so          # Example shared library
     ├── assets/
+    │   ├── logo.png           # Project logo or image assets
+    │   └── config.json        # Configuration files or templates
     ├── main.c
-    ├── Makefile
     ├── src/
     │   ├── sub_folder_name1/
     │   │   └── function_name1.c
@@ -38,9 +41,10 @@ VisuTest is a Vim plugin designed to enhance the C development workflow by integ
     │   ├── test_function_name2.c
     │   ├── test_function_name3.c
     │   └── test_[...].c
-    ├── .gitignore
-    ├── vimspector.json
-    └── ycm_extra_conf.py
+    ├── ycm_extra_conf.py      # Configuration for YouCompleteMe plugin
+    ├── .vimspector.json       # Configuration file for Vimspector plugin
+    ├── Makefile
+    └── .gitignore
 ```
 
 **Explanation**:
