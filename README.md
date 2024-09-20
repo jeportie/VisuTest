@@ -454,3 +454,144 @@ Test Suites:
 - **Interactive Execution**: Make the test suite and test unit names clickable, allowing users to trigger the execution of individual test units directly from the vertical window.
 
 ---
+### **Exec Strategy Recap and Structure with `vim-dispatch`, `tmux`, and `vim-rooter` Integration**
+
+In this enhanced strategy, we will use **vim-dispatch** and **tmux** for asynchronous test execution and monitoring, while **vim-rooter** simplifies the task of locating the project root. These tools will allow us to improve the overall developer experience by running tests asynchronously and updating the Vim plugin window in real-time as tests complete.
+
+#### **Key Features:**
+1. **Sequential Execution with Asynchronous Control**:
+   - Tests are run one by one asynchronously using `vim-dispatch` and **tmux**, updating the window after each test suite completes.
+
+2. **Real-Time Monitoring**:
+   - Monitor the `LastTest.log` file for real-time updates on test suite results using **tmux** windows to capture outputs.
+   - Update the state of each test suite in the Vim plugin window asynchronously.
+
+3. **Interactive Features**:
+   - **Popup Window**: Display detailed output for a specific test suite in a popup window when pressing **Enter**.
+   - **Test Unit States**: Display and update the state of each test unit when pressing **Space**.
+
+4. **Test Suite States**:
+   - **Waiting**: Before the test suite starts.
+   - **Running**: When the test suite is currently being executed.
+   - **Passed**: When the test suite finishes successfully.
+   - **Failed**: If the test suite fails.
+
+---
+
+### **High-Level Process Flow with Asynchronous Execution**
+
+| **Step**                    | **Action**                                                   | **Details**                                                  |
+|-----------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| **1. Set Project Root with `vim-rooter`** | `vim-rooter` automatically sets the root directory for the project | Ensures that `CMake`, `Make`, and `CTest` are run in the correct project context |
+| **2. Start Test Execution with `vim-dispatch`**  | Run `CMake`, `Make`, and `CTest` sequentially in **tmux** windows via `vim-dispatch` | Asynchronous execution allows tests to run without blocking Vim |
+| **3. Monitor `LastTest.log` in a Separate `tmux` Window** | Use **tmux** to monitor the `LastTest.log` file in real time as each test suite finishes | Captures log updates in real time and updates Vim |
+| **4. Update Test Suite States** | As results appear in `LastTest.log`, update the Vim window with the test suite's current state | Each test suite moves from "Waiting" → "Running" → "Passed"/"Failed" based on log entries. |
+| **5. Show Detailed Output in Popup** | When a user presses **Enter** on a test suite, show its detailed log in a popup | The test suite’s specific output from `LastTest.log` is parsed and displayed. |
+| **6. Parse and Show Test Units** | When pressing **Space** on a test suite, show and update the state of each test unit (individual test cases) | Use `LastTest.log` to determine the status of each test unit and display them interactively. |
+
+---
+
+### **Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**
+
+#### **1. Popup Window with Test Output on Enter**
+- **Trigger**: When a user presses **Enter** on a test suite in the vertical window.
+- **Action**: Open a buffer (popup window) that displays the **detailed output** of the test suite.
+- **Output Example**:
+  
+  ```
+  ----------------------------------------------------------
+  1/1 Testing: ft_split_test
+  1/1 Test: ft_split_test
+  Command: "/home/user/test/test_ft_split"
+  Directory: /home/user/test
+  "ft_split_test" start time: Sep 20 15:05 CEST
+  Output:
+  ----------------------------------------------------------
+  Running suite(s): ft_split
+  100%: Checks: 5, Failures: 0, Errors: 0
+  🟢  All tests passed
+  <end of output>
+  Test time =   0.00 sec
+  ----------------------------------------------------------
+  ```
+  
+- **How It Works**:
+  - Parse the `LastTest.log` file to extract the detailed output for the corresponding test suite.
+  - Display the log inside a new buffer in Vim when triggered by **Enter**.
+
+#### **2. Parsing and Updating Test Unit States**
+- **Trigger**: When a user presses **Space** on a test suite in the vertical window.
+- **Action**: Display all **test units** (individual test cases) under that test suite and their states.
+  
+  - **Test Unit States**:
+    - **Waiting**: Before the test starts.
+    - **Running**: During test execution.
+    - **Passed**: When the unit passes.
+    - **Failed**: When the unit fails.
+
+- **How It Works**:
+  - As `CTest` writes each test unit's result into `LastTest.log`, capture the state changes for each test unit.
+  - Display each test unit name and its state (Waiting, Running, Passed, Failed) in the Vim window.
+  - Pressing **Space** again on a test unit can show more detailed logs or re-run that unit test.
+
+#### **Detailed Steps for Test Unit Parsing**:
+1. **Identify Test Unit Start**:
+   - Test units are logged one by one in `LastTest.log`. The start of each test unit might look like this:
+     ```
+     Test #1: ft_split_test ... Passed
+     ```
+   
+2. **Capture Unit Result**:
+   - Each test unit finishes with a **Passed** or **Failed** status. Parse these lines from the log to update the state of the test units in the Vim window.
+  
+3. **Update Test Unit Display**:
+   - Update the state of each test unit in the vertical window.
+   - Example:
+     ```
+     Test Suites:
+       ft_split_test
+         - test_case1_function_name1 🟢 Passed
+         - test_case2_function_name2 🟢 Passed
+     ```
+
+---
+
+### **Enhanced Real-Time Update Strategy with `vim-dispatch` and `tmux`**
+
+| **Step**                  | **Action**                                                   | **Details**                                                  |
+|---------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| **1. Set Project Root with `vim-rooter`** | Automatically set the project root directory based on the project folder layout | Ensures correct working directory for build and test execution |
+| **2. Start Test Execution with `vim-dispatch`** | Use `vim-dispatch` to run `CMake`, `Make`, and `CTest` in **tmux** windows asynchronously | Allows tests to run without blocking Vim, keeping the editor responsive |
+| **3. Monitor `LastTest.log` in Real-Time** | Use a **tmux** window to continuously tail `LastTest.log` and capture real-time updates | Provides immediate feedback for each test suite as it finishes |
+| **4. Update Suite States**  | As `LastTest.log` is updated, extract test suite results and update their states in the vertical window | Display **Waiting**, **Running**, **Passed**, **Failed** for each suite |
+| **5. Popup on Enter**       | When a user presses **Enter** on a test suite, display its detailed output in a popup | Parse and format the test suite log for better readability |
+| **6. Parse and Show Test Units** | When pressing **Space** on a test suite, display the state of each test unit in the vertical window | Extract test unit results from `LastTest.log` and show **Passed**, **Failed**, etc. |
+| **7. Update Test Unit States** | As each test unit is executed, update the vertical window with real-time status of test units | States: **Waiting**, **Running**, **Passed**, **Failed** |
+
+---
+
+### **Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**
+
+#### **Using `vim-rooter` for Simplifying Project Navigation**:
+- **Purpose**: `vim-rooter` automatically sets the working directory to the project root based on the folder structure.
+- **Impact**: This ensures that when we run `CMake`, `Make`, and `CTest`, they are executed in the correct project context, simplifying the build and test process.
+  
+#### **Using `vim-dispatch` and `tmux` for Asynchronous Execution**:
+- **vim-dispatch**:
+  - Allows Vim to trigger external commands asynchronously, meaning `CMake`, `Make`, and `CTest` can run without blocking Vim. This enables developers to continue working while tests are being executed in the background.
+  
+- **tmux**:
+  - **Why use tmux?**: Each test suite runs in its own **tmux** window (triggered by `vim-dispatch`). `tmux` sessions allow us to:
+    1. **Run multiple commands in parallel**.
+    2. **Monitor the output of `LastTest.log` in real-time** in a separate pane or window.
+  - **Monitor Output**: Using a separate `tmux` window, we can run a `tail -f` command on the `LastTest.log` file, capturing test results as they are written. This allows us to provide **real-time updates** to the Vim window.
+
+#### **Workflow with `vim-dispatch` and `tmux`**:
+1. **vim-dispatch** starts the `CMake`, `Make`, and `CTest` commands asynchronously in **tmux** windows.
+2. A separate `tmux` pane tails the `LastTest.log`
+
+ file for real-time updates.
+3. As each test suite finishes, the results are written to `LastTest.log`, and we parse them to update the Vim window with the new state (Running → Passed/Failed).
+4. Developers can continue working in Vim while the tests are running asynchronously.
+
+---
