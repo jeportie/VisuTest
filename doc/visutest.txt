@@ -9,13 +9,18 @@ Commands
 --------
 
 :VisuTest
-    Opens the VisuTest vertical window for test suite management.
+    Opens the VisuTest vertical window for test suite management. The window will display test suite names parsed from the `test_src/` folder with Nerd Font icons.
 
 :VisuTestClose
     Closes the VisuTest vertical window.
 
 :VisuTestToggle
     Toggles the VisuTest window between open and closed states.
+
+Test Suite Display
+------------------
+
+The test suite names are automatically extracted from the `test_src/` folder, and they are displayed with the Nerd Font icon (🔧) before the name.
 
 Help
 ----
@@ -24,3 +29,4 @@ For more details, see the project README.md or visit the project repository.
 
 ---
 vim:tw=78:ts=8:ft=help:norl:
+

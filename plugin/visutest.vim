@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 17:12:42 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 17:26:28 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -42,7 +42,43 @@ function! VisuTestOpenWindow()
   setlocal nobuflisted            " Hide buffer from buffer list
 
   " Display placeholder text (can be changed later)
-  normal! iVisuTest - Test Suite Overview
+  call VisuTestDisplayTestSuites()
+endfunction
+
+" Function to parse test_src/ folder and extract test suite names
+function! VisuTestGetTestSuites()
+  let l:test_suites = []
+
+  " Path to the test_src/ folder
+  let l:test_src_dir = expand('%:p:h') . '/../test_src/'
+
+  " Get all .c files from test_src/ directory
+  let l:files = globpath(l:test_src_dir, '**/test_*.c', 0, 1)
+
+  " Loop through each file and extract the test suite name
+  for l:file in l:files
+    " Remove the directory path and prefix "test_" to get the suite name
+    let l:filename = fnamemodify(l:file, ':t')
+    let l:test_suite = substitute(l:filename, '^test_', '', '')
+    let l:test_suite = substitute(l:test_suite, '\.c$', '', '')
+    call add(l:test_suites, l:test_suite)
+  endfor
+
+  return l:test_suites
+endfunction
+
+" Function to display the test suites in the window with Nerd Font icons
+function! VisuTestDisplayTestSuites()
+  " Get the list of test suites
+  let l:test_suites = VisuTestGetTestSuites()
+
+  " Clear the current buffer content
+  execute '%delete _'
+
+  " Display each test suite with the Nerd Font icon (f06ff)
+  for l:suite in l:test_suites
+    call append(line('$'), "\uf06ff " . l:suite)
+  endfor
 endfunction
 
 " Function to close the VisuTest window
