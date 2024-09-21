@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 15:44:19 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 17:10:30 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -45,5 +45,32 @@ function! VisuTestOpenWindow()
   normal! iVisuTest - Test Suite Overview
 endfunction
 
-" Command to open the window
+" Function to close the VisuTest window
+function! VisuTestCloseWindow()
+  " Check if there is a window with the filetype 'visutest'
+  for win in range(1, winnr('$'))
+    if getbufvar(winbufnr(win), '&filetype') ==# 'visutest'
+      execute win . 'wincmd c'
+      return
+    endif
+  endfor
+endfunction
+
+" Toggle between opening and closing the window
+function! VisuTestToggleWindow()
+  " Check if the VisuTest window is already open
+  for win in range(1, winnr('$'))
+    if getbufvar(winbufnr(win), '&filetype') ==# 'visutest'
+      call VisuTestCloseWindow()
+      return
+    endif
+  endfor
+
+  " If not open, open the window
+  call VisuTestOpenWindow()
+endfunction
+
+" Commands to open, close, and toggle the VisuTest window
 command! VisuTest :call VisuTestOpenWindow()
+command! VisuTestClose :call VisuTestCloseWindow()
+command! VisuTestToggle :call VisuTestToggleWindow()
