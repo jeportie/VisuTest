@@ -5,15 +5,8 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 VisuTest	plugin/visutest.vim	/^command! VisuTest :call VisuTestOpenWindow()$/;"	c
-VisuTestClose	plugin/visutest.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
-VisuTestCloseWindow	plugin/visutest.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestDisplayTestSuites	plugin/visutest.vim	/^function! VisuTestDisplayTestSuites()$/;"	f
-VisuTestGetSelectedSuite	plugin/visutest.vim	/^function! VisuTestGetSelectedSuite()$/;"	f
 VisuTestGetTestSuites	plugin/visutest.vim	/^function! VisuTestGetTestSuites()$/;"	f
 VisuTestGetTestUnits	plugin/visutest.vim	/^function! VisuTestGetTestUnits(suite_file)$/;"	f
 VisuTestOpenWindow	plugin/visutest.vim	/^function! VisuTestOpenWindow()$/;"	f
-VisuTestShowUnits	plugin/visutest.vim	/^command! VisuTestShowUnits :call VisuTestShowUnits()$/;"	c
-VisuTestShowUnits	plugin/visutest.vim	/^function! VisuTestShowUnits()$/;"	f
-VisuTestToggle	plugin/visutest.vim	/^command! VisuTestToggle :call VisuTestToggleWindow()$/;"	c
-VisuTestToggleWindow	plugin/visutest.vim	/^function! VisuTestToggleWindow()$/;"	f
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
