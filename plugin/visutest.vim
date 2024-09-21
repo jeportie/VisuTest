@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:58:05 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 19:54:31 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -82,12 +82,25 @@ function! VisuTestDisplayTestSuites()
   " Clear the current buffer content
   execute '%delete _'
 
-  " Add a simple title at the top
-  call append(line('$'), 'VisuTest')
+  " Add VisuTest title in red and surround it with an ASCII box
+  call append(line('$'), '╔══════════════════════════╗')
+  call append(line('$'), '║        VisuTest          ║')
+  call append(line('$'), '╚══════════════════════════╝')
+  " Color the title in red
+  highlight VisuTestTitle ctermfg=1 guifg=red
+  syntax match VisuTestTitle "VisuTest"
+  call matchadd('VisuTestTitle', 'VisuTest')
+
   call append(line('$'), '')
 
-  " Add a nice separator line after the title
-  call append(line('$'), '══════════════════════════════════════════════')
+  " Add the test suites header in pink
+  call append(line('$'), '------------------------Test Suits------------------------')
+  " Color the test suites header in pink
+  highlight TestSuitesHeader ctermfg=13 guifg=lightpink
+  syntax match TestSuitesHeader "Test Suits"
+  call matchadd('TestSuitesHeader', 'Test Suits')
+
+  call append(line('$'), '')
 
   " Get the list of test suites
   let l:test_suites = VisuTestGetTestSuites()
@@ -96,11 +109,13 @@ function! VisuTestDisplayTestSuites()
   if empty(l:test_suites)
     call append(line('$'), "No test suites found.")
   else
-    " Display each test suite with the orange circle icon (🟠)
+    " Display each test suite with the arrow icon (➔) and the Nerd Font eba5 icon
     for l:suite in l:test_suites
-      call append(line('$'), "🟠 " . l:suite)
-      " Add an ASCII art separator after each test suite
-      call append(line('$'), '──────────────────────────────────────────────')
+      call append(line('$'), "➔ \uEBA5 " . l:suite)
+      " Color the test suite names in light blue
+      highlight TestSuiteName ctermfg=12 guifg=lightblue
+      syntax match TestSuiteName l:suite
+      call matchadd('TestSuiteName', l:suite)
     endfor
   endif
 
