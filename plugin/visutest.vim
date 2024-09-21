@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 17:46:54 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 17:57:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -67,14 +67,6 @@ function! VisuTestGetTestSuites()
     let l:filename = fnamemodify(l:file, ':t')
     let l:test_suite = substitute(l:filename, '^test_', '', '')
     let l:test_suite = substitute(l:test_suite, '\.c$', '', '')
-    
-    " Get the sub-folder if applicable and display it in the suite name
-    let l:folder = fnamemodify(l:file, ':h')
-    if l:folder !=# l:test_src_dir
-      let l:sub_folder = fnamemodify(l:folder, ':t')
-      let l:test_suite = l:sub_folder . '/' . l:test_suite
-    endif
-
     call add(l:test_suites, l:test_suite)
   endfor
 
