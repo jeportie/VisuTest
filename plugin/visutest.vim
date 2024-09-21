@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:10:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:13:25 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,6 +34,7 @@ function! VisuTestOpenWindow()
   setlocal nonumber               " Disable line numbers
   setlocal norelativenumber       " Disable relative line numbers
   setlocal signcolumn=no          " Disable the sign column
+  setlocal winfixwidth            " Prevent window from resizing
 
   " Set the filetype for identification
   setlocal filetype=visutest
@@ -43,6 +44,11 @@ function! VisuTestOpenWindow()
 
   " Call the function to display test suites
   call VisuTestDisplayTestSuites()
+
+  " Fix the window size once again
+  let l:current_width = winwidth(0)
+  let l:split_width = float2nr(l:current_width * 0.25)
+  execute "vertical resize " . l:split_width
 endfunction
 
 " Function to parse test_src/ folder and extract test suite names
@@ -83,7 +89,7 @@ function! VisuTestDisplayTestSuites()
     for l:suite in l:test_suites
       call append(line('$'), "\uF055 " . l:suite)
     endfor
-    " Highlight icons in orange
+    " Define syntax for Nerd Font icon and apply highlighting in orange
     syntax match VisuTestIcon "^\uF055"
     highlight VisuTestIcon ctermfg=208 guifg=#FFA500
   endif
