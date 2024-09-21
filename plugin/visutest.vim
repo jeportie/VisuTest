@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:38:20 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:51:03 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -18,8 +18,8 @@ let g:loaded_visutest = 1
 
 " Function to open an empty vertical window and keep it stable
 function! VisuTestOpenWindow()
-  " Set a fixed width for the vertical window (1/4 of the total width)
-  let l:split_width = float2nr(&columns * 0.25)
+  " Set a fixed width for the vertical window (1/5 of the total width)
+  let l:split_width = float2nr(&columns * 0.20)
 
   " Open a new vertical window on the right with fixed width
   botright vertical new
@@ -70,13 +70,20 @@ function! VisuTestGetTestSuites()
   return l:test_suites
 endfunction
 
-" Function to display the test suites in the window with an orange circle icon
+" Function to display the test suites in the window with normal title and ASCII art separators
 function! VisuTestDisplayTestSuites()
-  " Get the list of test suites
-  let l:test_suites = VisuTestGetTestSuites()
-
   " Clear the current buffer content
   execute '%delete _'
+
+  " Add a simple title at the top
+  call append(line('$'), 'VisuTest')
+  call append(line('$'), '')
+
+  " Add a nice separator line after the title
+  call append(line('$'), '══════════════════════════════════════════════')
+
+  " Get the list of test suites
+  let l:test_suites = VisuTestGetTestSuites()
 
   " Check if any test suites were found
   if empty(l:test_suites)
@@ -85,6 +92,8 @@ function! VisuTestDisplayTestSuites()
     " Display each test suite with the orange circle icon (🟠)
     for l:suite in l:test_suites
       call append(line('$'), "🟠 " . l:suite)
+      " Add an ASCII art separator after each test suite
+      call append(line('$'), '──────────────────────────────────────────────')
     endfor
   endif
 endfunction
@@ -113,8 +122,8 @@ function! VisuTestToggleWindow()
   " If not open, open the window
   call VisuTestOpenWindow()
 
-  " Ensure window remains 1/4 size
-  let l:split_width = float2nr(&columns * 0.25)
+  " Ensure window remains 1/5 size
+  let l:split_width = float2nr(&columns * 0.20)
   execute "vertical resize " . l:split_width
 endfunction
 
@@ -122,4 +131,3 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
-
