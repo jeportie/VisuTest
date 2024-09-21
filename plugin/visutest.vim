@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:27:22 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:34:56 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -87,6 +87,13 @@ function! VisuTestDisplayTestSuites()
       call append(line('$'), "\uF111 " . l:suite)
     endfor
   endif
+
+  " Explicitly reload the syntax file
+  execute "syntax enable"
+  execute "runtime! syntax/visutest.vim"
+
+  " Force highlighting to refresh
+  syntax sync fromstart
 endfunction
 
 " Function to close the VisuTest window
