@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:13:25 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:16:50 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -16,13 +16,12 @@ if exists("g:loaded_visutest")
 endif
 let g:loaded_visutest = 1
 
-" Function to open an empty vertical window
+" Function to open an empty vertical window and keep it stable
 function! VisuTestOpenWindow()
-  " Split the window vertically to 1/4 of the total width
-  let l:current_width = winwidth(0)
-  let l:split_width = float2nr(l:current_width * 0.25)
+  " Set a fixed width for the vertical window (1/4 of the total width)
+  let l:split_width = float2nr(&columns * 0.25)
 
-  " Open a new vertical window on the right
+  " Open a new vertical window on the right with fixed width
   botright vertical new
   execute "vertical resize " . l:split_width
 
@@ -34,7 +33,7 @@ function! VisuTestOpenWindow()
   setlocal nonumber               " Disable line numbers
   setlocal norelativenumber       " Disable relative line numbers
   setlocal signcolumn=no          " Disable the sign column
-  setlocal winfixwidth            " Prevent window from resizing
+  setlocal winfixwidth            " Lock the window width
 
   " Set the filetype for identification
   setlocal filetype=visutest
@@ -45,9 +44,7 @@ function! VisuTestOpenWindow()
   " Call the function to display test suites
   call VisuTestDisplayTestSuites()
 
-  " Fix the window size once again
-  let l:current_width = winwidth(0)
-  let l:split_width = float2nr(l:current_width * 0.25)
+  " Fix the window size
   execute "vertical resize " . l:split_width
 endfunction
 
@@ -73,7 +70,7 @@ function! VisuTestGetTestSuites()
   return l:test_suites
 endfunction
 
-" Function to display the test suites in the window with Nerd Font icons
+" Function to display the test suites in the window with pre-colored circle icons
 function! VisuTestDisplayTestSuites()
   " Get the list of test suites
   let l:test_suites = VisuTestGetTestSuites()
@@ -85,13 +82,10 @@ function! VisuTestDisplayTestSuites()
   if empty(l:test_suites)
     call append(line('$'), "No test suites found.")
   else
-    " Display each test suite with the Nerd Font icon (\uF055)
+    " Display each test suite with the orange circle icon (\uF111)
     for l:suite in l:test_suites
-      call append(line('$'), "\uF055 " . l:suite)
+      call append(line('$'), "\uF111 " . l:suite)
     endfor
-    " Define syntax for Nerd Font icon and apply highlighting in orange
-    syntax match VisuTestIcon "^\uF055"
-    highlight VisuTestIcon ctermfg=208 guifg=#FFA500
   endif
 endfunction
 
@@ -120,8 +114,7 @@ function! VisuTestToggleWindow()
   call VisuTestOpenWindow()
 
   " Ensure window remains 1/4 size
-  let l:current_width = winwidth(0)
-  let l:split_width = float2nr(l:current_width * 0.25)
+  let l:split_width = float2nr(&columns * 0.25)
   execute "vertical resize " . l:split_width
 endfunction
 
@@ -129,3 +122,4 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
+
