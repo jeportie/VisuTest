@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 22:28:39 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:32:21 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -176,7 +176,7 @@ function! VisuTestDisplayTestSuites()
       " Display test units under the suite name
       if !empty(l:test_units)
         for l:test_unit in l:test_units
-          let l:test_unit_display = "➔ \uEBA5 " . l:test_unit
+          let l:test_unit_display = "➔ \uF4AA " . l:test_unit
           call append(line('$'), '    ' . l:test_unit_display)
         endfor
       else
@@ -211,7 +211,7 @@ endfunction
 " Function to get the selected test suite name from the current line
 function! VisuTestGetSelectedSuite()
   let l:line = getline(".")  " Get the current line
-  let l:suite_name = substitute(l:line, '^➔ \uEBA5 ', '', '')  " Remove icons
+  let l:suite_name = substitute(l:line, '^➔ \uF4AA ', '', '')  " Remove icons
   return l:suite_name
 endfunction
 
