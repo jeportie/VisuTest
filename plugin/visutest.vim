@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 21:53:36 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:06:05 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -42,11 +42,15 @@ function! VisuTestOpenWindow()
   " Prevent buffer from being listed
   setlocal nobuflisted            " Hide buffer from buffer list
 
-  " Call the function to display test suites and test units
+  " Call the function to display test suites
   call VisuTestDisplayTestSuites()
 
   " Fix the window size
   execute "vertical resize " . l:split_width
+
+  " Disable buffer switching commands like bnext/bprev in this buffer
+  nnoremap <buffer> <silent> :bnext <NOP>
+  nnoremap <buffer> <silent> :bprev <NOP>
 
   " Set the buffer back to read-only
   setlocal nomodifiable
@@ -100,12 +104,24 @@ function! VisuTestDisplayTestSuites()
   " Clear the current buffer content
   execute '%delete _'
 
-  " Add VisuTest title
-  call append(line('$'), 'VisuTest')
+  " Add VisuTest title in red and surround it with an ASCII box
+  call append(line('$'), '╔══════════════════════════╗')
+  call append(line('$'), '║        VisuTest          ║')
+  call append(line('$'), '╚══════════════════════════╝')
+  " Color the title in red
+  highlight VisuTestTitle ctermfg=1 guifg=red
+  syntax match VisuTestTitle "VisuTest"
+  call matchadd('VisuTestTitle', 'VisuTest')
+
   call append(line('$'), '')
 
-  " Add the test suites header
-  call append(line('$'), 'Test Suites:')
+  " Add the test suites header in pink, centered with fewer dashes
+  call append(line('$'), '------------ Test Suits ------------')
+  " Color the test suites header in pink
+  highlight TestSuitesHeader ctermfg=13 guifg=lightpink
+  syntax match TestSuitesHeader "Test Suits"
+  call matchadd('TestSuitesHeader', 'Test Suits')
+
   call append(line('$'), '')
 
   " Get the list of test suites
@@ -115,14 +131,30 @@ function! VisuTestDisplayTestSuites()
   if empty(l:test_suites)
     call append(line('$'), "No test suites found.")
   else
-    " Display each test suite and its test units
+    " Display each test suite with the arrow icon (➔) and the Nerd Font eba5 icon
     for l:suite_file in l:test_suites
       " Extract the suite name from the file name
       let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
       let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
 
-      " Display the suite name
-      call append(line('$'), l:suite_name)
+      let l:display_line = "➔ \uEBA5 " . l:suite_name
+      call append(line('$'), l:display_line)
+
+      " Color the arrow in orange
+      highlight ArrowIcon ctermfg=214 guifg=orange
+      execute 'syntax match ArrowIcon "➔"'
+      call matchadd('ArrowIcon', '➔')
+
+      " Color the Nerd Font icon (eba5) in white
+      highlight NerdFontIcon ctermfg=15 guifg=white
+      execute 'syntax match NerdFontIcon "\uEBA5"'
+      call matchadd('NerdFontIcon', '\uEBA5')
+
+      " Color the test suite names in lighter blue
+      highlight TestSuiteName ctermfg=81 guifg=#add8e6
+      let l:escaped_suite = escape(l:suite_name, '\')
+      execute 'syntax match TestSuiteName "' . l:escaped_suite . '"'
+      call matchadd('TestSuiteName', l:suite_name)
 
       " Get test units for the suite
       let l:test_units = VisuTestGetTestUnits(l:suite_file)
@@ -140,7 +172,83 @@ function! VisuTestDisplayTestSuites()
 
   " Set the buffer back to unmodifiable
   setlocal nomodifiable
+
+  " Mapping <Enter> key to show test units for the selected suite
+  nnoremap <buffer> <silent> <Enter> :call VisuTestShowUnits()<CR>
 endfunction
 
-" Commands to open and toggle the VisuTest window
+" Function to get the selected test suite name from the current line
+function! VisuTestGetSelectedSuite()
+  let l:line = getline(".")  " Get the current line
+  let l:suite_name = substitute(l:line, '^➔ \uEBA5 ', '', '')  " Remove icons
+  return l:suite_name
+endfunction
+
+" Function to display test units for the selected test suite
+function! VisuTestShowUnits()
+  " Get the selected suite name
+  let l:suite_name = VisuTestGetSelectedSuite()
+
+  " Get the list of test suites
+  let l:test_suites = VisuTestGetTestSuites()
+
+  " Find the suite file corresponding to the selected suite name
+  for l:suite_file in l:test_suites
+    let l:extracted_suite = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
+    let l:extracted_suite = substitute(l:extracted_suite, '\.c$', '', '')
+
+    if l:extracted_suite == l:suite_name
+      " Get test units for the suite
+      let l:test_units = VisuTestGetTestUnits(l:suite_file)
+
+      " Display test units under the selected suite
+      call append(line('$'), '  Test Units for ' . l:extracted_suite . ':')
+      if !empty(l:test_units)
+        for l:test_unit in l:test_units
+          call append(line('$'), '    - ' . l:test_unit)
+        endfor
+      else
+        call append(line('$'), '  No test units found.')
+      endif
+
+      break
+    endif
+  endfor
+endfunction
+
+" Function to close the VisuTest window
+function! VisuTestCloseWindow()
+  " Check if there is a window with the filetype 'visutest'
+  for win in range(1, winnr('$'))
+    if getbufvar(winbufnr(win), '&filetype') ==# 'visutest'
+      execute win . 'wincmd c'
+      return
+    endif
+  endfor
+endfunction
+
+" Toggle between opening and closing the window
+function! VisuTestToggleWindow()
+  " Check if the VisuTest window is already open
+  for win in range(1, winnr('$'))
+    if getbufvar(winbufnr(win), '&filetype') ==# 'visutest'
+      call VisuTestCloseWindow()
+      return
+    endif
+  endfor
+
+  " If not open, open the window
+  call VisuTestOpenWindow()
+
+  " Ensure window remains 1/5 size
+  let l:split_width = float2nr(&columns * 0.20)
+  execute "vertical resize " . l:split_width
+endfunction
+
+" Commands to open, close, and toggle the VisuTest window
 command! VisuTest :call VisuTestOpenWindow()
+command! VisuTestClose :call VisuTestCloseWindow()
+command! VisuTestToggle :call VisuTestToggleWindow()
+
+" Command to show the test units for the currently selected test suite
+command! VisuTestShowUnits :call VisuTestShowUnits()
