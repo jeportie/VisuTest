@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 17:40:18 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 17:46:54 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -49,13 +49,13 @@ endfunction
 function! VisuTestGetTestSuites()
   let l:test_suites = []
 
-  " Path to the test_src/ folder
-  let l:test_src_dir = expand('%:p:h') . '/../test_src/'
+  " Use the current directory and assume test_src/ is at the same level
+  let l:test_src_dir = getcwd() . '/test_src/'
 
   " Debugging: Ensure test_src path is correct
   echom "test_src directory: " . l:test_src_dir
 
-  " Get all .c files from test_src/ directory
+  " Get all .c files from test_src/ directory and its subdirectories
   let l:files = globpath(l:test_src_dir, '**/test_*.c', 0, 1)
 
   " Debugging: Ensure files are being found
@@ -67,6 +67,14 @@ function! VisuTestGetTestSuites()
     let l:filename = fnamemodify(l:file, ':t')
     let l:test_suite = substitute(l:filename, '^test_', '', '')
     let l:test_suite = substitute(l:test_suite, '\.c$', '', '')
+    
+    " Get the sub-folder if applicable and display it in the suite name
+    let l:folder = fnamemodify(l:file, ':h')
+    if l:folder !=# l:test_src_dir
+      let l:sub_folder = fnamemodify(l:folder, ':t')
+      let l:test_suite = l:sub_folder . '/' . l:test_suite
+    endif
+
     call add(l:test_suites, l:test_suite)
   endfor
 
