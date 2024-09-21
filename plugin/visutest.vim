@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 22:06:05 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:21:26 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -63,15 +63,29 @@ function! VisuTestGetTestUnits(suite_file)
   " Read the content of the .c file
   let l:file_content = readfile(a:suite_file)
 
-  " Regular expression to match test unit function declarations (e.g., void test_*())
-  let l:pattern = 'void\s\+test_\w\+\s*('
+  " Regular expression to match the suite function declaration (e.g., Suite *ft_split_suite)
+  let l:suite_pattern = 'Suite\s*\*.*_suite\s*\(.*\)'
+  let l:test_case_pattern = 'tcase_add_test\s*\(.*,\s*\zs\w\+\ze\s*\)'
 
-  " Scan each line of the file and look for test unit functions
+  " Check if the suite function is found
+  let l:in_suite_function = 0
   for l:line in l:file_content
-    if match(l:line, l:pattern) != -1
-      " Extract the function name (e.g., test_case1_function_name1)
-      let l:function_name = matchstr(l:line, '\vtest_\w+')
-      call add(l:test_units, l:function_name)
+    " If the suite function starts
+    if match(l:line, l:suite_pattern) != -1
+      let l:in_suite_function = 1
+    endif
+
+    " Inside the suite function, find test cases
+    if l:in_suite_function
+      let l:test_case = matchstr(l:line, l:test_case_pattern)
+      if !empty(l:test_case)
+        call add(l:test_units, l:test_case)
+      endif
+    endif
+
+    " End of suite function (when return statement is found)
+    if l:in_suite_function && match(l:line, 'return\s') != -1
+      let l:in_suite_function = 0
     endif
   endfor
 
@@ -116,7 +130,7 @@ function! VisuTestDisplayTestSuites()
   call append(line('$'), '')
 
   " Add the test suites header in pink, centered with fewer dashes
-  call append(line('$'), '------------ Test Suits ------------')
+  call append(line('$'), '-------- Test Suits --------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
