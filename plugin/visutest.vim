@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:16:50 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:27:22 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -36,7 +36,7 @@ function! VisuTestOpenWindow()
   setlocal winfixwidth            " Lock the window width
 
   " Set the filetype for identification
-  setlocal filetype=visutest
+  setlocal filetype=visutest      " This will trigger the custom syntax file
 
   " Prevent buffer from being listed
   setlocal nobuflisted            " Hide buffer from buffer list
@@ -122,4 +122,3 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
-
