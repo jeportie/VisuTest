@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:02:55 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:07:10 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -83,6 +83,9 @@ function! VisuTestDisplayTestSuites()
     for l:suite in l:test_suites
       call append(line('$'), "\uF055 " . l:suite)
     endfor
+    " Highlight icons in orange
+    syntax match VisuTestIcon "^\uF055"
+    highlight VisuTestIcon ctermfg=208 guifg=#FFA500
   endif
 endfunction
 
@@ -109,6 +112,11 @@ function! VisuTestToggleWindow()
 
   " If not open, open the window
   call VisuTestOpenWindow()
+
+  " Ensure window remains 1/4 size
+  let l:current_width = winwidth(0)
+  let l:split_width = float2nr(l:current_width * 0.25)
+  execute "vertical resize " . l:split_width
 endfunction
 
 " Commands to open, close, and toggle the VisuTest window
