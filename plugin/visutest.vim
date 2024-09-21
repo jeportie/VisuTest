@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 15:39:20 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 15:44:19 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -35,9 +35,11 @@ function! VisuTestOpenWindow()
   setlocal norelativenumber       " Disable relative line numbers
   setlocal signcolumn=no          " Disable the sign column
 
-  " Name the buffer (no need for setbufvar or bufname)
+  " Set the filetype for identification
   setlocal filetype=visutest
-"  setlocal nobuflisted            " Hide buffer from buffer list
+
+  " Prevent buffer from being listed
+  setlocal nobuflisted            " Hide buffer from buffer list
 
   " Display placeholder text (can be changed later)
   normal! iVisuTest - Test Suite Overview
