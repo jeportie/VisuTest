@@ -1,32 +1,183 @@
-*visutest.txt*    VisuTest - C Test Suite Management Plugin for Vim
 
-VisuTest Plugin
-===============
+```plaintext
+==============================================================================
+                         VisuTest Plugin Documentation
+==============================================================================
 
-VisuTest enhances the C development workflow in Vim by integrating automated testing and real-time feedback directly in the editor.
+INTRODUCTION
+------------------------------------------------------------------------------
 
-Commands
---------
+VisuTest is a Vim plugin designed to improve the development and testing
+workflow for C projects by displaying test suites in a dedicated vertical 
+window inside Vim. The plugin enforces a standardized project layout and 
+provides a clean and dynamic display for test results and their status.
 
-:VisuTest
-    Opens the VisuTest vertical window for test suite management. The window will display test suite names parsed from the `test_src/` folder with Nerd Font icons.
+The current version of VisuTest allows users to:
+- View test suites in a visually appealing, organized format.
+- Automatically parse test suite names from the `test_src/` directory.
+- Display test suite names along with icons for state (using Nerd Fonts).
+- Provide color customization for various elements like icons and text.
+- Use toggle commands to quickly show or hide the test suite window.
 
-:VisuTestClose
-    Closes the VisuTest vertical window.
+------------------------------------------------------------------------------
 
-:VisuTestToggle
-    Toggles the VisuTest window between open and closed states.
+PLUGIN USAGE
+------------------------------------------------------------------------------
 
-Test Suite Display
-------------------
+The VisuTest plugin provides a set of commands to manage the test suite 
+display window and control its behavior.
 
-The test suite names are automatically extracted from the `test_src/` folder, and they are displayed with the Nerd Font icon (🔧) before the name.
+### Commands:
 
-Help
-----
+- `:VisuTest`
+  Opens the VisuTest window to display test suites parsed from the `test_src/`
+  directory. Test suite names are shown in light blue, and icons are used to
+  indicate the state of each test suite.
 
-For more details, see the project README.md or visit the project repository.
+- `:VisuTestClose`
+  Closes the VisuTest window if it is open.
 
----
-vim:tw=78:ts=8:ft=help:norl:
+- `:VisuTestToggle`
+  Toggles the VisuTest window on and off.
 
+------------------------------------------------------------------------------
+
+WINDOW DISPLAY
+------------------------------------------------------------------------------
+
+When the VisuTest window is opened, it displays the following elements:
+
+1. **VisuTest Title**:
+   - Displayed in red and surrounded by an ASCII box.
+   - This serves as the title of the window and appears at the top.
+   
+   Example:
+   ```
+   ╔══════════════════════════╗
+   ║        VisuTest          ║
+   ╚══════════════════════════╝
+   ```
+
+2. **Test Suits Header**:
+   - A centered header that separates the title from the list of test suites.
+   - Displayed in pink with the following format:
+   
+   ```
+   ------------ Test Suits ------------
+   ```
+
+3. **Test Suites List**:
+   - Each test suite parsed from the `test_src/` folder is displayed with:
+     - **Arrow Icon (➔)** in **orange**.
+     - **Nerd Font icon (eba5)** in **white**.
+     - The test suite name in **light blue**.
+   
+   Example:
+   ```
+   ➔ 󱮥 test_suite1
+   ➔ 󱮥 test_suite2
+   ➔ 󱮥 test_suite3
+   ```
+
+4. **Color Customization**:
+   - The following elements are colorized for a visually appealing display:
+     - **VisuTest title**: Red.
+     - **Test suits header**: Pink.
+     - **Arrow icon (➔)**: Orange.
+     - **Nerd Font icon (󱮥)**: White.
+     - **Test suite names**: Light blue.
+
+------------------------------------------------------------------------------
+
+PROJECT STRUCTURE
+------------------------------------------------------------------------------
+
+VisuTest expects the following project structure:
+
+```
+└── Project Root
+    ├── include/
+    │   ├── project.h
+    │   └── defines.h
+    ├── lib/
+    │   ├── libfoo.a           # Example static library
+    │   └── libbar.so          # Example shared library
+    ├── assets/
+    │   ├── logo.png           # Project logo or image assets
+    │   └── config.json        # Configuration files or templates
+    ├── main.c
+    ├── src/
+    │   ├── function_name1.c
+    │   ├── function_name2.c
+    │   └── [...]
+    ├── test_src/              # Directory containing test files
+    │   ├── test_function_name1.c
+    │   ├── test_function_name2.c
+    │   └── [...]
+    ├── ycm_extra_conf.py      # Configuration for YouCompleteMe plugin
+    ├── .vimspector.json       # Configuration file for Vimspector plugin
+    ├── Makefile
+    └── .gitignore
+```
+
+Test files are expected to reside in the `test_src/` folder and follow a naming 
+pattern where each test suite starts with `test_` followed by the function name.
+
+For example:
+```
+test_src/
+├── test_function_name1.c
+├── test_function_name2.c
+└── [...]
+```
+
+------------------------------------------------------------------------------
+
+INSTALLATION
+------------------------------------------------------------------------------
+
+To install VisuTest, you can use your preferred Vim plugin manager. Here is an
+example using Vundle:
+
+1. Add the following to your `.vimrc`:
+   ```
+   Plugin 'path_to_visutest_plugin'
+   ```
+
+2. Save the `.vimrc` file and run:
+   ```
+   :PluginInstall
+   ```
+
+3. Restart Vim and use the command `:VisuTest` to open the window and start
+   using the plugin.
+
+------------------------------------------------------------------------------
+
+CONTRIBUTION
+------------------------------------------------------------------------------
+
+We welcome contributions! Please follow the code structure and submit your 
+pull requests or issues through the repository.
+
+------------------------------------------------------------------------------
+
+LICENSE
+------------------------------------------------------------------------------
+
+This plugin is open-source and released under the MIT License.
+
+------------------------------------------------------------------------------
+```
+
+### Changes in the `doc.txt`:
+1. **Updated appearance**: Added sections that describe the new design of the window with icons and colors.
+2. **Detailed command descriptions**: Clarified how to use the commands like `:VisuTest`, `:VisuTestClose`, and `:VisuTestToggle`.
+3. **Example layouts**: Added examples of the window elements with color and icon descriptions.
+4. **Updated project structure expectations**: Reiterated the expected `test_src/` folder layout.
+
+### Next Steps:
+1. Save this updated `doc.txt` to your plugin directory.
+2. You can access this documentation using Vim's `:help` command.
+
+Let me know if everything looks good!

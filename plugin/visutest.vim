@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 20:09:00 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 21:27:29 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -52,6 +52,28 @@ function! VisuTestOpenWindow()
   setlocal nomodifiable
 endfunction
 
+" Function to parse test units inside each .c file in test_src/
+function! VisuTestGetTestUnits(suite_file)
+  let l:test_units = []
+
+  " Read the content of the .c file
+  let l:file_content = readfile(a:suite_file)
+
+  " Regular expression to match test unit function declarations (e.g., void test_*())
+  let l:pattern = 'void\s\+test_\w\+\s*('
+
+  " Scan each line of the file and look for test unit functions
+  for l:line in l:file_content
+    if match(l:line, l:pattern) != -1
+      " Extract the function name (e.g., test_case1_function_name1)
+      let l:function_name = matchstr(l:line, '\vtest_\w+')
+      call add(l:test_units, l:function_name)
+    endif
+  endfor
+
+  return l:test_units
+endfunction
+
 " Function to parse test_src/ folder and extract test suite names
 function! VisuTestGetTestSuites()
   let l:test_suites = []
@@ -64,17 +86,13 @@ function! VisuTestGetTestSuites()
 
   " Loop through each file and extract the test suite name
   for l:file in l:files
-    " Remove the directory path and prefix "test_" to get the suite name
-    let l:filename = fnamemodify(l:file, ':t')
-    let l:test_suite = substitute(l:filename, '^test_', '', '')
-    let l:test_suite = substitute(l:test_suite, '\.c$', '', '')
-    call add(l:test_suites, l:test_suite)
+    call add(l:test_suites, l:file)
   endfor
 
   return l:test_suites
 endfunction
 
-" Function to display the test suites in the window with normal title and ASCII art separators
+" Function to display the test suites and test units
 function! VisuTestDisplayTestSuites()
   " Temporarily make the buffer modifiable
   setlocal modifiable
@@ -94,7 +112,7 @@ function! VisuTestDisplayTestSuites()
   call append(line('$'), '')
 
   " Add the test suites header in pink, centered with fewer dashes
-  call append(line('$'), '------- Test Suits ------------')
+  call append(line('$'), '------------ Test Suits ------------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
@@ -110,8 +128,12 @@ function! VisuTestDisplayTestSuites()
     call append(line('$'), "No test suites found.")
   else
     " Display each test suite with the arrow icon (➔) and the Nerd Font eba5 icon
-    for l:suite in l:test_suites
-      let l:display_line = "➔ \uEBA5 " . l:suite
+    for l:suite_file in l:test_suites
+      " Extract the suite name from the file name
+      let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
+      let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
+
+      let l:display_line = "➔ \uEBA5 " . l:suite_name
       call append(line('$'), l:display_line)
 
       " Color the arrow in orange
@@ -126,15 +148,33 @@ function! VisuTestDisplayTestSuites()
 
       " Color the test suite names in lighter blue
       highlight TestSuiteName ctermfg=81 guifg=#add8e6
-      let l:escaped_suite = escape(l:suite, '\')
-      " Build the match command for the test suite name
+      let l:escaped_suite = escape(l:suite_name, '\')
       execute 'syntax match TestSuiteName "' . l:escaped_suite . '"'
-      call matchadd('TestSuiteName', l:suite)
+      call matchadd('TestSuiteName', l:suite_name)
+
+      " Handle displaying test units when Space is pressed
+      autocmd! BufWinEnter <buffer> nnoremap <buffer> <silent> <Space> :call VisuTestDisplayTestUnits(' . l:suite_file . ')<CR>'
     endfor
   endif
 
   " Set the buffer back to unmodifiable
   setlocal nomodifiable
+endfunction
+
+" Function to display test units when Space is pressed
+function! VisuTestDisplayTestUnits(suite_file)
+  " Get the test units for the selected suite
+  let l:test_units = VisuTestGetTestUnits(a:suite_file)
+
+  " Append test units under the suite name
+  if !empty(l:test_units)
+    call append(line('$'), '  Test Units:')
+    for l:test_unit in l:test_units
+      call append(line('$'), '    - ' . l:test_unit)
+    endfor
+  else
+    call append(line('$'), '  No test units found.')
+  endif
 endfunction
 
 " Function to close the VisuTest window

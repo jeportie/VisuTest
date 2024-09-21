@@ -8,7 +8,9 @@ VisuTest	plugin/visutest.vim	/^command! VisuTest :call VisuTestOpenWindow()$/;"	
 VisuTestClose	plugin/visutest.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
 VisuTestCloseWindow	plugin/visutest.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestDisplayTestSuites	plugin/visutest.vim	/^function! VisuTestDisplayTestSuites()$/;"	f
+VisuTestDisplayTestUnits	plugin/visutest.vim	/^function! VisuTestDisplayTestUnits(suite_file)$/;"	f
 VisuTestGetTestSuites	plugin/visutest.vim	/^function! VisuTestGetTestSuites()$/;"	f
+VisuTestGetTestUnits	plugin/visutest.vim	/^function! VisuTestGetTestUnits(suite_file)$/;"	f
 VisuTestOpenWindow	plugin/visutest.vim	/^function! VisuTestOpenWindow()$/;"	f
 VisuTestToggle	plugin/visutest.vim	/^command! VisuTestToggle :call VisuTestToggleWindow()$/;"	c
 VisuTestToggleWindow	plugin/visutest.vim	/^function! VisuTestToggleWindow()$/;"	f
