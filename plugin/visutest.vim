@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 22:32:21 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:34:47 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -151,7 +151,7 @@ function! VisuTestDisplayTestSuites()
       let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
       let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
 
-      let l:display_line = "➔ \uEBA5 " . l:suite_name
+      let l:display_line = "➔ \uF4AA " . l:suite_name
       call append(line('$'), l:display_line)
 
       " Color the arrow in orange
@@ -159,10 +159,10 @@ function! VisuTestDisplayTestSuites()
       execute 'syntax match ArrowIcon "➔"'
       call matchadd('ArrowIcon', '➔')
 
-      " Color the Nerd Font icon (eba5) in white
+      " Color the Nerd Font icon (f4aa) in white
       highlight NerdFontIcon ctermfg=15 guifg=white
-      execute 'syntax match NerdFontIcon "\uEBA5"'
-      call matchadd('NerdFontIcon', '\uEBA5')
+      execute 'syntax match NerdFontIcon "\uF4AA"'
+      call matchadd('NerdFontIcon', '\uF4AA')
 
       " Color the test suite names in lighter blue
       highlight TestSuiteName ctermfg=81 guifg=#add8e6
