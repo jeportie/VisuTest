@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 17:26:28 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 17:40:18 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -41,7 +41,7 @@ function! VisuTestOpenWindow()
   " Prevent buffer from being listed
   setlocal nobuflisted            " Hide buffer from buffer list
 
-  " Display placeholder text (can be changed later)
+  " Call the function to display test suites
   call VisuTestDisplayTestSuites()
 endfunction
 
@@ -52,8 +52,14 @@ function! VisuTestGetTestSuites()
   " Path to the test_src/ folder
   let l:test_src_dir = expand('%:p:h') . '/../test_src/'
 
+  " Debugging: Ensure test_src path is correct
+  echom "test_src directory: " . l:test_src_dir
+
   " Get all .c files from test_src/ directory
   let l:files = globpath(l:test_src_dir, '**/test_*.c', 0, 1)
+
+  " Debugging: Ensure files are being found
+  echom "Files found: " . join(l:files, ", ")
 
   " Loop through each file and extract the test suite name
   for l:file in l:files
@@ -75,10 +81,15 @@ function! VisuTestDisplayTestSuites()
   " Clear the current buffer content
   execute '%delete _'
 
-  " Display each test suite with the Nerd Font icon (f06ff)
-  for l:suite in l:test_suites
-    call append(line('$'), "\uf06ff " . l:suite)
-  endfor
+  " Check if any test suites were found
+  if empty(l:test_suites)
+    call append(line('$'), "No test suites found.")
+  else
+    " Display each test suite with the Nerd Font icon (f06ff)
+    for l:suite in l:test_suites
+      call append(line('$'), "\uf06ff " . l:suite)
+    endfor
+  endif
 endfunction
 
 " Function to close the VisuTest window
