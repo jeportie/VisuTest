@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 15:27:39 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 15:36:23 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -27,21 +27,19 @@ function! VisuTestOpenWindow()
   execute "vertical resize " . l:split_width
 
   " Set buffer settings for this window
-  setlocal buftype=nofile
-  setlocal bufhidden=hide
-  setlocal noswapfile
-  setlocal nowrap
-  setlocal nonumber
-  setlocal norelativenumber
-  setlocal signcolumn=no
+  setlocal buftype=nofile         " Buffer has no associated file
+  setlocal bufhidden=hide         " Hide buffer when abandoned
+  setlocal noswapfile             " Do not use swapfile
+  setlocal nowrap                 " Do not wrap text
+  setlocal nonumber               " Disable line numbers
+  setlocal norelativenumber       " Disable relative line numbers
+  setlocal signcolumn=no          " Disable the sign column
 
-  " Set a name for the buffer
+  " Name the buffer (no need for setbufvar or bufname)
   setlocal filetype=visutest
-  setlocal buftype=nofile
-  setlocal nobuflisted
-  setlocal bufhidden=wipe
+  setlocal nobuflisted            " Hide buffer from buffer list
 
-  " Display placeholder text (you can leave this empty for now)
+  " Display placeholder text (can be changed later)
   normal! iVisuTest - Test Suite Overview
 endfunction
 
