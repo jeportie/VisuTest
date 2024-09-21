@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 20:07:52 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 20:09:00 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -94,7 +94,7 @@ function! VisuTestDisplayTestSuites()
   call append(line('$'), '')
 
   " Add the test suites header in pink, centered with fewer dashes
-  call append(line('$'), '------------ Test Suits ------------')
+  call append(line('$'), '------- Test Suits ------------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
