@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 20:04:01 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 20:07:52 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -93,8 +93,8 @@ function! VisuTestDisplayTestSuites()
 
   call append(line('$'), '')
 
-  " Add the test suites header in pink
-  call append(line('$'), '------------------------Test Suits------------------------')
+  " Add the test suites header in pink, centered with fewer dashes
+  call append(line('$'), '------------ Test Suits ------------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
@@ -113,13 +113,19 @@ function! VisuTestDisplayTestSuites()
     for l:suite in l:test_suites
       let l:display_line = "➔ \uEBA5 " . l:suite
       call append(line('$'), l:display_line)
+
+      " Color the arrow in orange
+      highlight ArrowIcon ctermfg=214 guifg=orange
+      execute 'syntax match ArrowIcon "➔"'
+      call matchadd('ArrowIcon', '➔')
+
       " Color the Nerd Font icon (eba5) in white
       highlight NerdFontIcon ctermfg=15 guifg=white
-      execute 'syntax match NerdFontIcon "➔ \uEBA5"'
-      call matchadd('NerdFontIcon', '➔ \uEBA5')
+      execute 'syntax match NerdFontIcon "\uEBA5"'
+      call matchadd('NerdFontIcon', '\uEBA5')
 
-      " Color the test suite names in light blue
-      highlight TestSuiteName ctermfg=12 guifg=lightblue
+      " Color the test suite names in lighter blue
+      highlight TestSuiteName ctermfg=81 guifg=#add8e6
       let l:escaped_suite = escape(l:suite, '\')
       " Build the match command for the test suite name
       execute 'syntax match TestSuiteName "' . l:escaped_suite . '"'
@@ -164,4 +170,3 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
-
