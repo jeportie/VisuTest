@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 22:42:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:47:02 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -181,7 +181,7 @@ function! VisuTestDisplayTestSuites()
         endfor
       else
         " Display no test units found in red with f06a icon
-        let l:no_test_display = "➔ \uFAD5 No test units found"
+        let l:no_test_display = "➔ 󰗖 No test units found"
         call append(line('$'), '    ' . l:no_test_display)
 
         " Color the no-test case arrow in orange and icon in red
@@ -190,8 +190,8 @@ function! VisuTestDisplayTestSuites()
         call matchadd('NoTestArrow', '➔')
 
         highlight NoTestIcon ctermfg=1 guifg=red
-        execute 'syntax match NoTestIcon "\uFAD5"'
-        call matchadd('NoTestIcon', '\uFAD5')
+        execute 'syntax match NoTestIcon "󰗖"'
+        call matchadd('NoTestIcon', '󰗖')
 
         " Color the "No test units found" text in red
         highlight NoTestText ctermfg=1 guifg=red
