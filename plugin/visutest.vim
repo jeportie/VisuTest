@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 19:57:39 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 19:59:50 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -94,7 +94,7 @@ function! VisuTestDisplayTestSuites()
   call append(line('$'), '')
 
   " Add the test suites header in pink
-  call append(line('$'), '--------Test Suits------------------------')
+  call append(line('$'), '------------------------Test Suits------------------------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
@@ -116,7 +116,8 @@ function! VisuTestDisplayTestSuites()
       highlight TestSuiteName ctermfg=12 guifg=lightblue
       " Escape any special characters in l:suite to safely match it
       let l:escaped_suite = escape(l:suite, '\')
-      syntax match TestSuiteName "➔ \uEBA5 " . l:escaped_suite
+      " Build the match command using execute to concatenate strings
+      execute 'syntax match TestSuiteName "➔ \uEBA5 ' . l:escaped_suite . '"'
       call matchadd('TestSuiteName', "➔ \uEBA5 " . l:escaped_suite)
     endfor
   endif
@@ -158,4 +159,3 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
-
