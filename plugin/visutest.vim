@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 19:59:50 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 20:04:01 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -111,14 +111,19 @@ function! VisuTestDisplayTestSuites()
   else
     " Display each test suite with the arrow icon (➔) and the Nerd Font eba5 icon
     for l:suite in l:test_suites
-      call append(line('$'), "➔ \uEBA5 " . l:suite)
+      let l:display_line = "➔ \uEBA5 " . l:suite
+      call append(line('$'), l:display_line)
+      " Color the Nerd Font icon (eba5) in white
+      highlight NerdFontIcon ctermfg=15 guifg=white
+      execute 'syntax match NerdFontIcon "➔ \uEBA5"'
+      call matchadd('NerdFontIcon', '➔ \uEBA5')
+
       " Color the test suite names in light blue
       highlight TestSuiteName ctermfg=12 guifg=lightblue
-      " Escape any special characters in l:suite to safely match it
       let l:escaped_suite = escape(l:suite, '\')
-      " Build the match command using execute to concatenate strings
-      execute 'syntax match TestSuiteName "➔ \uEBA5 ' . l:escaped_suite . '"'
-      call matchadd('TestSuiteName', "➔ \uEBA5 " . l:escaped_suite)
+      " Build the match command for the test suite name
+      execute 'syntax match TestSuiteName "' . l:escaped_suite . '"'
+      call matchadd('TestSuiteName', l:suite)
     endfor
   endif
 
@@ -159,3 +164,4 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
+
