@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:51:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:56:10 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,6 +34,8 @@ function! VisuTestOpenWindow()
   setlocal norelativenumber       " Disable relative line numbers
   setlocal signcolumn=no          " Disable the sign column
   setlocal winfixwidth            " Lock the window width
+  setlocal nomodifiable           " Make the buffer read-only
+  setlocal nomodified             " Mark buffer as unmodified
 
   " Set the filetype for identification
   setlocal filetype=visutest
@@ -96,6 +98,9 @@ function! VisuTestDisplayTestSuites()
       call append(line('$'), '──────────────────────────────────────────────')
     endfor
   endif
+
+  " Set the buffer to be unmodifiable to prevent writing or insert mode
+  setlocal nomodifiable
 endfunction
 
 " Function to close the VisuTest window
@@ -131,3 +136,4 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
+
