@@ -11,6 +11,12 @@ Commands
 :VisuTest
     Opens the VisuTest vertical window for test suite management.
 
+:VisuTestClose
+    Closes the VisuTest vertical window.
+
+:VisuTestToggle
+    Toggles the VisuTest window between open and closed states.
+
 Help
 ----
 
@@ -18,4 +24,3 @@ For more details, see the project README.md or visit the project repository.
 
 ---
 vim:tw=78:ts=8:ft=help:norl:
-
