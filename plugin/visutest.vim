@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 21:38:08 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 21:46:43 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -48,12 +48,12 @@ function! VisuTestOpenWindow()
   " Fix the window size
   execute "vertical resize " . l:split_width
 
-  " Set the buffer back to read-only
-  setlocal nomodifiable
-
   " Disable buffer switching commands like bnext/bprev in this buffer
   nnoremap <buffer> <silent> :bnext <NOP>
   nnoremap <buffer> <silent> :bprev <NOP>
+
+  " Set the buffer back to read-only
+  setlocal nomodifiable
 endfunction
 
 " Function to parse test units inside each .c file in test_src/
@@ -116,7 +116,7 @@ function! VisuTestDisplayTestSuites()
   call append(line('$'), '')
 
   " Add the test suites header in pink, centered with fewer dashes
-  call append(line('$'), '------ Test Suits ------------')
+  call append(line('$'), '------------ Test Suits ------------')
   " Color the test suites header in pink
   highlight TestSuitesHeader ctermfg=13 guifg=lightpink
   syntax match TestSuitesHeader "Test Suits"
@@ -160,6 +160,9 @@ function! VisuTestDisplayTestSuites()
 
   " Set the buffer back to unmodifiable
   setlocal nomodifiable
+
+  " Mapping <Enter> key to show test units for the selected suite
+  nnoremap <buffer> <silent> <Enter> :call VisuTestShowUnits()<CR>
 endfunction
 
 " Function to get the selected test suite name from the current line
@@ -237,4 +240,3 @@ command! VisuTestToggle :call VisuTestToggleWindow()
 
 " Command to show the test units for the currently selected test suite
 command! VisuTestShowUnits :call VisuTestShowUnits()
-
