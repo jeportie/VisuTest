@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:56:10 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:58:05 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,8 +34,7 @@ function! VisuTestOpenWindow()
   setlocal norelativenumber       " Disable relative line numbers
   setlocal signcolumn=no          " Disable the sign column
   setlocal winfixwidth            " Lock the window width
-  setlocal nomodifiable           " Make the buffer read-only
-  setlocal nomodified             " Mark buffer as unmodified
+  setlocal modifiable             " Temporarily make the buffer modifiable
 
   " Set the filetype for identification
   setlocal filetype=visutest
@@ -48,6 +47,9 @@ function! VisuTestOpenWindow()
 
   " Fix the window size
   execute "vertical resize " . l:split_width
+
+  " Set the buffer back to read-only
+  setlocal nomodifiable
 endfunction
 
 " Function to parse test_src/ folder and extract test suite names
@@ -74,6 +76,9 @@ endfunction
 
 " Function to display the test suites in the window with normal title and ASCII art separators
 function! VisuTestDisplayTestSuites()
+  " Temporarily make the buffer modifiable
+  setlocal modifiable
+
   " Clear the current buffer content
   execute '%delete _'
 
@@ -99,7 +104,7 @@ function! VisuTestDisplayTestSuites()
     endfor
   endif
 
-  " Set the buffer to be unmodifiable to prevent writing or insert mode
+  " Set the buffer back to unmodifiable
   setlocal nomodifiable
 endfunction
 
@@ -136,4 +141,3 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
-
