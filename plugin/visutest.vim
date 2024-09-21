@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 22:21:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 22:28:39 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -176,10 +176,27 @@ function! VisuTestDisplayTestSuites()
       " Display test units under the suite name
       if !empty(l:test_units)
         for l:test_unit in l:test_units
-          call append(line('$'), '    - ' . l:test_unit)
+          let l:test_unit_display = "➔ \uEBA5 " . l:test_unit
+          call append(line('$'), '    ' . l:test_unit_display)
         endfor
       else
-        call append(line('$'), '    No test units found.')
+        " Display no test units found in red with f06a icon
+        let l:no_test_display = "➔ \uF06A No test units found"
+        call append(line('$'), '    ' . l:no_test_display)
+
+        " Color the no-test case arrow in orange and icon in red
+        highlight NoTestArrow ctermfg=214 guifg=orange
+        execute 'syntax match NoTestArrow "➔"'
+        call matchadd('NoTestArrow', '➔')
+
+        highlight NoTestIcon ctermfg=1 guifg=red
+        execute 'syntax match NoTestIcon "\uF06A"'
+        call matchadd('NoTestIcon', '\uF06A')
+
+        " Color the "No test units found" text in red
+        highlight NoTestText ctermfg=1 guifg=red
+        syntax match NoTestText "No test units found"
+        call matchadd('NoTestText', 'No test units found')
       endif
     endfor
   endif
