@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 17:57:24 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:02:55 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -52,14 +52,8 @@ function! VisuTestGetTestSuites()
   " Use the current directory and assume test_src/ is at the same level
   let l:test_src_dir = getcwd() . '/test_src/'
 
-  " Debugging: Ensure test_src path is correct
-  echom "test_src directory: " . l:test_src_dir
-
   " Get all .c files from test_src/ directory and its subdirectories
   let l:files = globpath(l:test_src_dir, '**/test_*.c', 0, 1)
-
-  " Debugging: Ensure files are being found
-  echom "Files found: " . join(l:files, ", ")
 
   " Loop through each file and extract the test suite name
   for l:file in l:files
@@ -85,9 +79,9 @@ function! VisuTestDisplayTestSuites()
   if empty(l:test_suites)
     call append(line('$'), "No test suites found.")
   else
-    " Display each test suite with the Nerd Font icon (f06ff)
+    " Display each test suite with the Nerd Font icon (\uF055)
     for l:suite in l:test_suites
-      call append(line('$'), "\uf06ff " . l:suite)
+      call append(line('$'), "\uF055 " . l:suite)
     endfor
   endif
 endfunction
