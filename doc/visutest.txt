@@ -1,0 +1,21 @@
+*visutest.txt*    VisuTest - C Test Suite Management Plugin for Vim
+
+VisuTest Plugin
+===============
+
+VisuTest enhances the C development workflow in Vim by integrating automated testing and real-time feedback directly in the editor.
+
+Commands
+--------
+
+:VisuTest
+    Opens the VisuTest vertical window for test suite management.
+
+Help
+----
+
+For more details, see the project README.md or visit the project repository.
+
+---
+vim:tw=78:ts=8:ft=help:norl:
+
