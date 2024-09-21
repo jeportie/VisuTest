@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 15:36:23 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 15:39:20 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -37,7 +37,7 @@ function! VisuTestOpenWindow()
 
   " Name the buffer (no need for setbufvar or bufname)
   setlocal filetype=visutest
-  setlocal nobuflisted            " Hide buffer from buffer list
+"  setlocal nobuflisted            " Hide buffer from buffer list
 
   " Display placeholder text (can be changed later)
   normal! iVisuTest - Test Suite Overview
