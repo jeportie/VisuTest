@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/21 18:34:56 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/21 18:38:20 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -36,7 +36,7 @@ function! VisuTestOpenWindow()
   setlocal winfixwidth            " Lock the window width
 
   " Set the filetype for identification
-  setlocal filetype=visutest      " This will trigger the custom syntax file
+  setlocal filetype=visutest
 
   " Prevent buffer from being listed
   setlocal nobuflisted            " Hide buffer from buffer list
@@ -70,7 +70,7 @@ function! VisuTestGetTestSuites()
   return l:test_suites
 endfunction
 
-" Function to display the test suites in the window with pre-colored circle icons
+" Function to display the test suites in the window with an orange circle icon
 function! VisuTestDisplayTestSuites()
   " Get the list of test suites
   let l:test_suites = VisuTestGetTestSuites()
@@ -82,18 +82,11 @@ function! VisuTestDisplayTestSuites()
   if empty(l:test_suites)
     call append(line('$'), "No test suites found.")
   else
-    " Display each test suite with the orange circle icon (\uF111)
+    " Display each test suite with the orange circle icon (🟠)
     for l:suite in l:test_suites
-      call append(line('$'), "\uF111 " . l:suite)
+      call append(line('$'), "🟠 " . l:suite)
     endfor
   endif
-
-  " Explicitly reload the syntax file
-  execute "syntax enable"
-  execute "runtime! syntax/visutest.vim"
-
-  " Force highlighting to refresh
-  syntax sync fromstart
 endfunction
 
 " Function to close the VisuTest window
@@ -129,3 +122,4 @@ endfunction
 command! VisuTest :call VisuTestOpenWindow()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow()
+
