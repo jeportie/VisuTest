@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:20:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:22:30 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -88,7 +88,6 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestText', 'No test units found')
 endfunction
 
-" Function to display the popup window when a test suite is clicked
 function! visutest_ui#ShowTestSuitePopup()
   " The mock data for the test log
   let l:popup_content = [
@@ -114,10 +113,10 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'col': 'cursor+1',
         \ 'minwidth': 50,          " Minimum width of the popup
         \ 'minheight': 10,         " Minimum height of the popup
-        \ 'border': [],
+        \ 'border': [],            " No border for the popup
         \ 'padding': [0,1,0,1],    " Padding for the text inside the popup
         \ 'zindex': 10,            " Ensure the popup is on top
         \ 'mapping': 0,            " Disable key mappings inside the popup
-        \ 'close': 'click',        " Close the popup when clicked
+        \ 'close': 'click'         " Close the popup when clicked
         \ })
 endfunction
