@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:32:25 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:38:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,13 +34,11 @@ function! visutest_ui#SetupWindowUI()
 
   " Call function to display test suites
   call visutest_tests#DisplayTestSuites()
-
-  " Key mapping to close the window when 'q' is pressed
-  nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Disable buffer switching commands like bnext/bprev in this buffer
   nnoremap <buffer> <silent> :bnext <NOP>
   nnoremap <buffer> <silent> :bprev <NOP>
-
+  " Key mapping to close the window when 'q' is pressed
+  nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Set the buffer back to read-only
   setlocal nomodifiable
 endfunction
