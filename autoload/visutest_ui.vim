@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:55:44 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 18:00:50 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -41,9 +41,7 @@ function! visutest_ui#SetupWindowUI()
   nnoremap <buffer> <silent> <CR> :call visutest_ui#ShowTestSuitePopup()<CR>
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
-  " Mouse click mapping to open the popup window
-  nnoremap <buffer> <silent> <LeftMouse> :call visutest_ui#ShowTestSuitePopup()<CR>
-  " Set the buffer back to read-only
+   " Set the buffer back to read-only
   setlocal nomodifiable
 endfunction
 
@@ -120,11 +118,16 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
-        \ 'mousemappings': 0,
+        \ 'mousemappings': [],
         \ 'mapping': 1
         \ })
 
-  " Bind Enter to close the popup window using the popup ID
-  call popup_setoptions(l:popup_id, {'keymappings': {'<CR>': 'call popup_close(' . l:popup_id . ')'}})
+  " Bind <Enter> and <Esc> to close the popup window using the popup ID
+  call popup_setoptions(l:popup_id, {
+        \ 'keymappings': {
+        \   '<CR>': ':call popup_close(' . l:popup_id . ')<CR>',
+        \   '<Esc>': ':call popup_close(' . l:popup_id . ')<CR>'
+        \ }
+        \ })
 endfunction
 
