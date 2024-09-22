@@ -6,13 +6,13 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 12:44:52 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:20:13 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 " Setup UI for the VisuTest window
-function! visutest#SetupWindowUI()
-  echo "Inside visutest#SetupWindowUI"
+function! visutest_ui#SetupWindowUI()
+  echo "Inside visutest_ui#SetupWindowUI"
   " Set a fixed width for the vertical window (1/5 of the total width)
   let l:split_width = float2nr(&columns * 0.20)
 
@@ -34,7 +34,7 @@ function! visutest#SetupWindowUI()
   setlocal nobuflisted            " Prevent buffer from being listed
 
   " Call function to display test suites
-  call visutest#DisplayTestSuites()
+  call visutest_ui#DisplayTestSuites()
 
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
@@ -47,7 +47,7 @@ function! visutest#SetupWindowUI()
 endfunction
 
 " Function to setup syntax highlighting and icons
-function! visutest#SetupHighlighting()
+function! visutest_ui#SetupHighlighting()
   " Highlight the title in red
   highlight VisuTestTitle ctermfg=1 guifg=red
   syntax match VisuTestTitle "VisuTest"

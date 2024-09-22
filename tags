@@ -9,15 +9,15 @@ VisuTestClose	plugin/visutest_commands.vim	/^command! VisuTestClose :call VisuTe
 VisuTestCloseWindow	plugin/visutest_core.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"	f
 VisuTestResizeWindow	plugin/visutest.vim	/^function! VisuTestResizeWindow()$/;"	f
-VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest#ShowUnits()$/;"	c
+VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() | call VisuTestResizeWindow()$/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
-visutest#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest#DisplayTestSuites()$/;"	f
-visutest#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest#GetSelectedSuite()$/;"	f
-visutest#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest#GetTestSuites()$/;"	f
-visutest#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest#GetTestUnits(suite_file)$/;"	f
-visutest#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest#SetupHighlighting()$/;"	f
-visutest#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest#SetupWindowUI()$/;"	f
-visutest#ShowUnits	autoload/visutest_tests.vim	/^function! visutest#ShowUnits()$/;"	f
+visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
+visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
+visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f
+visutest_tests#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestUnits(suite_file)$/;"	f
+visutest_tests#ShowUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ShowUnits()$/;"	f
+visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
+visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
