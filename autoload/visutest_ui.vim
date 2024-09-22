@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:23:02 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:29:12 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -148,6 +148,6 @@ endfunction
 
 " Function to handle popup closure
 function! visutest_ui#ClosePopup(popup_id)
-  call popup_close(a:popup_id)
+  call popup_clear(1)
 endfunction
 
