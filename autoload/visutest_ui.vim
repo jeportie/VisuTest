@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:25:47 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:30:16 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -98,8 +98,16 @@ if !exists('g:visutest_popups')
 endif
 
 " Function to show the test suite popup
+" autoload/visutest_ui.vim
+
+" Initialize a global list to store active popup IDs
+if !exists('g:visutest_popups')
+  let g:visutest_popups = []
+endif
+
+" Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
-  " Define the content of the popup
+  " Define the content of the popup as a list of strings
   let l:popup_content = [
         \ '----------------------------------------------------------',
         \ '1/1 Testing: ft_split_test',
@@ -118,6 +126,12 @@ function! visutest_ui#ShowTestSuitePopup()
         \ '',
         \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
+
+  " Verify that popup_content is a list
+  if type(l:popup_content) != type([])
+    echoerr "Popup content must be a list."
+    return
+  endif
 
   " Calculate center of the screen for popup positioning
   let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
@@ -154,7 +168,7 @@ function! visutest_ui#ShowTestSuitePopup()
 
   " Check if popup creation was successful
   if l:popup_id == -1
-    echo "Failed to create popup."
+    echoerr "Failed to create popup."
     return
   endif
 
@@ -178,3 +192,4 @@ function! visutest_ui#CloseTestSuitePopup()
     unlet b:visutest_popup
   endif
 endfunction
+
