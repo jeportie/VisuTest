@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:11:39 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:34:30 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -41,6 +41,8 @@ function! visutest_ui#SetupWindowUI()
   nnoremap <buffer> <silent> <CR> :call visutest_ui#ShowTestSuitePopup()<CR>
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
+  " Key mapping to close the popup when 'p' is pressed
+  nnoremap <buffer> p :call visutest_ui#ClosePopup(popup_id)<CR>
    " Set the buffer back to read-only
   setlocal nomodifiable
 endfunction
@@ -86,11 +88,7 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestText', 'No test units found')
 endfunction
 
-" Function to handle popup closure
-function! visutest_ui#ClosePopup(popup_id)
-  echo "Closing popup: " . a:popup_id
-  call popup_close(a:popup_id)
-endfunction
+
 
 " Initialize a global list to store active popup IDs
 if !exists('g:visutest_popups')
@@ -117,11 +115,6 @@ let l:popup_content = [
         \ '',
         \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
-  " Verify it's a list
-  if type(l:popup_content) != type([])
-    echoerr "Error: popup_content must be a list."
-    return
-  endif
 
     " Calculate center of the screen for popup positioning
   let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
@@ -134,10 +127,6 @@ let l:popup_content = [
         \ 'minwidth': 20,
         \ 'minheight': 5,
         \ 'border': [],
-        \ 'keymappings': {
-        \   '<CR>': 'close',
-        \   'q': 'close',
-        \   '<Esc>': 'close'
         \ },
         \ }
 
@@ -161,7 +150,6 @@ function! visutest_ui#CloseTestSuitePopup()
   if !empty(g:visutest_popups)
     let l:popup_id = remove(g:visutest_popups, -1)
     call popup_close(l:popup_id)
-    echo "Popup closed: " . l:popup_id
   endif
 
   " Optionally, unset buffer-local variables if used
@@ -170,3 +158,7 @@ function! visutest_ui#CloseTestSuitePopup()
   endif
 endfunction
 
+" Function to handle popup closure
+function! visutest_ui#ClosePopup(popup_id)
+  call popup_close(a:popup_id)
+endfunction
