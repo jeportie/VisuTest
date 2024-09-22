@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:02:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:03:42 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -127,15 +127,29 @@ let l:popup_content = [
   let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
   let l:winwidth = float2nr(&columns / 2) - 25
 
-  " Minimal popup options
+  " Define popup options
   let l:popup_options = {
-        \ 'line': 10,
-        \ 'col': 10,
-        \ 'minwidth': 20,
-        \ 'minheight': 5,
+        \ 'line': l:winheight,
+        \ 'col': l:winwidth,
+        \ 'minwidth': 50,
+        \ 'minheight': 10,
         \ 'border': [],
+        \ 'padding': [0,1,0,1],
+        \ 'zindex': 10,
+        \ 'mousemappings': 0,
+        \ 'mapping': 1,
+        \ 'focusable': 1,
+        \ 'wrap': 1,
+        \ 'title': ' Test Suite Results ',
+        \ 'title_pos': 'center',
+        \ 'highlight': 'Normal',
+        \ 'borderhighlight': 'Normal',
+        \ 'close_on_escape': 1,  " Allow <Esc> to close
+        \ 'scrollbar': v:false,
         \ 'keymappings': {
+        \   '<CR>': 'close',
         \   'q': 'close',
+        \   '<Esc>': 'close'
         \ },
         \ }
 
