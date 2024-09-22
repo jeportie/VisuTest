@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 11:58:11 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 12:01:49 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:30:00 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -19,7 +19,7 @@ let g:loaded_visutest_core = 1
 " Function to open the VisuTest window
 function! VisuTestOpenWindow()
   " Call the autoload function to setup UI
-  call visutest#SetupWindowUI()
+  call visutest_ui#SetupWindowUI()
 endfunction
 
 " Function to close the VisuTest window

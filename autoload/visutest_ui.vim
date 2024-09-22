@@ -6,13 +6,12 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:20:13 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:29:18 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 " Setup UI for the VisuTest window
 function! visutest_ui#SetupWindowUI()
-  echo "Inside visutest_ui#SetupWindowUI"
   " Set a fixed width for the vertical window (1/5 of the total width)
   let l:split_width = float2nr(&columns * 0.20)
 
@@ -34,7 +33,7 @@ function! visutest_ui#SetupWindowUI()
   setlocal nobuflisted            " Prevent buffer from being listed
 
   " Call function to display test suites
-  call visutest_ui#DisplayTestSuites()
+  call visutest_tests#DisplayTestSuites()
 
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
