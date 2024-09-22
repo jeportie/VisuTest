@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:32:06 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:40:28 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -23,4 +23,4 @@ let g:loaded_visutest = 1
 "endfunction
 
 " Autocommand to resize the VisuTest window when Vim is resized
-autocmd VimResized * call VisuTestResizeWindow()
+"autocmd VimResized * call VisuTestResizeWindow()
