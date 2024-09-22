@@ -8,7 +8,6 @@ VisuTest	plugin/visutest_commands.vim	/^command! VisuTest :call visutest_ui#Setu
 VisuTestClose	plugin/visutest_commands.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
 VisuTestCloseWindow	plugin/visutest_core.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"	f
-VisuTestResizeWindow	plugin/visutest.vim	/^function! VisuTestResizeWindow()$/;"	f
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() | call VisuTestResizeWindow()$/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f

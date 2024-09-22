@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:29:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 15:32:06 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -17,10 +17,10 @@ endif
 let g:loaded_visutest = 1
 
 " Function to ensure window remains 1/5 of the total width
-function! VisuTestResizeWindow()
-  let l:split_width = float2nr(&columns * 0.20)
-  execute "vertical resize " . l:split_width
-endfunction
+"function! VisuTestResizeWindow()
+"  let l:split_width = float2nr(&columns * 0.20)
+"  execute "vertical resize " . l:split_width
+"endfunction
 
 " Autocommand to resize the VisuTest window when Vim is resized
 autocmd VimResized * call VisuTestResizeWindow()
