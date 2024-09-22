@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 18:08:11 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 18:08:53 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -125,8 +125,8 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
-        \ 'mousemappings': [],          " Disable mouse interactions
-        \ 'mapping': 1                  " Enable key mappings
+        \ 'mousemappings': [],
+        \ 'mapping': 1
         \ })
 
   " Bind <Enter> and <Esc> to close the popup window using callback functions
