@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:24:07 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:28:00 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -107,16 +107,17 @@ function! visutest_ui#ShowTestSuitePopup()
         \ '----------------------------------------------------------'
         \ ]
 
-  " Create a popup window with the test log
+  " Create a popup window with the test log, positioned on the left side and closed on Enter
   call popup_create(l:popup_content, {
-        \ 'line': 'cursor+1',
-        \ 'col': 'cursor+1',
-        \ 'minwidth': 50,
-        \ 'minheight': 10,
-        \ 'border': [],
-        \ 'padding': [0,1,0,1],
-        \ 'zindex': 10,
-        \ 'mapping': 0,
-        \ 'close': 'click'
+        \ 'line': 3,            " Position popup 3 lines from the top
+        \ 'col': 2,             " Position popup 2 columns from the left
+        \ 'minwidth': 50,       " Minimum width of the popup
+        \ 'minheight': 10,      " Minimum height of the popup
+        \ 'border': [],         " No border for the popup
+        \ 'padding': [0,1,0,1], " Padding for the text inside the popup
+        \ 'zindex': 10,         " Ensure the popup is on top
+        \ 'mapping': 0,         " Disable key mappings inside the popup
+        \ 'close': 'click',     " Close the popup when clicked
+        \ 'filter': 'popup_filter_enter', " Close the popup on Enter
         \ })
 endfunction
