@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:34:30 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:38:12 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -97,7 +97,7 @@ endif
 
 " Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
-let l:popup_content = [
+  let l:popup_content = [
         \ '----------------------------------------------------------',
         \ '1/1 Testing: ft_split_test',
         \ '1/1 Test: ft_split_test',
@@ -116,18 +116,17 @@ let l:popup_content = [
         \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
 
-    " Calculate center of the screen for popup positioning
+  " Calculate center of the screen for popup positioning
   let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
   let l:winwidth = float2nr(&columns / 2) - 25
 
   " Define popup options
   let l:popup_options = {
-        \ 'line': 10,
-        \ 'col': 10,
+        \ 'line': l:winheight,
+        \ 'col': l:winwidth,
         \ 'minwidth': 20,
         \ 'minheight': 5,
-        \ 'border': [],
-        \ },
+        \ 'border': []
         \ }
 
   " Create the popup
