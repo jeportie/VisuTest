@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:40:28 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:24:41 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -24,3 +24,21 @@ let g:loaded_visutest = 1
 
 " Autocommand to resize the VisuTest window when Vim is resized
 "autocmd VimResized * call VisuTestResizeWindow()
+
+" Load the core and UI modules
+runtime! autoload/visutest_core.vim
+runtime! autoload/visutest_ui.vim
+
+" Function to setup autocommands
+function! visutest#SetupAutocmds()
+  augroup visutest_popup_management
+    autocmd!
+    " Close popup when leaving any window
+    autocmd WinLeave * call visutest_ui#CloseTestSuitePopup()
+    " Close popup when entering a new buffer
+    autocmd BufEnter * call visutest_ui#CloseTestSuitePopup()
+  augroup END
+endfunction
+
+" Initialize autocommands
+call visutest#SetupAutocmds()

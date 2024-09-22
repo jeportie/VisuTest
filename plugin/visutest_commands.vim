@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:15:51 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:19:17 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:22:36 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -15,5 +15,5 @@ command! VisuTest :call visutest_ui#SetupWindowUI()
 command! VisuTestClose :call VisuTestCloseWindow()
 command! VisuTestToggle :call VisuTestToggleWindow() 
 command! VisuTestShowUnits :call visutest_tests#ShowUnits()
-" Add a command to manually trigger the popup window for the test suite
-command! VisuTestPopup :call visutest_ui#ShowTestSuitePopup()
+" Define a command to toggle the test suite popup
+command! VisuTestTogglePopup call visutest_core#TogglePopup()

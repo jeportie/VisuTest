@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 21:52:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:19:46 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -92,9 +92,14 @@ function! visutest_ui#ClosePopup(popup_id)
   call popup_close(a:popup_id)
 endfunction
 
+" Initialize a global list to store active popup IDs
+if !exists('g:visutest_popups')
+  let g:visutest_popups = []
+endif
+
 " Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
-  " The mock data for the test log
+  " Define the content of the popup
   let l:popup_content = [
         \ '----------------------------------------------------------',
         \ '1/1 Testing: ft_split_test',
@@ -115,11 +120,11 @@ function! visutest_ui#ShowTestSuitePopup()
         \ ]
 
   " Calculate center of the screen for popup positioning
-  let l:winheight = float2nr(&lines / 2)
+  let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
   let l:winwidth = float2nr(&columns / 2) - 25
 
-  " Create the popup and store the popup ID
-  let l:popup_id = popup_create(l:popup_content, {
+  " Define popup options
+  let l:popup_options = {
         \ 'line': l:winheight,
         \ 'col': l:winwidth,
         \ 'minwidth': 50,
@@ -130,16 +135,46 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'mousemappings': 0,
         \ 'mapping': 1,
         \ 'focusable': 1,
+        \ 'wrap': 1,
+        \ 'title': ' Test Suite Results ',
+        \ 'title_pos': 'center',
+        \ 'highlight': 'Normal',
+        \ 'borderhighlight': 'Normal',
+        \ 'close_on_escape': 1,  " Allow <Esc> to close
+        \ 'scrollbar': v:false,
         \ 'keymappings': {
         \   '<CR>': 'close',
         \   'q': 'close',
         \   '<Esc>': 'close'
         \ },
-        \ })
+        \ }
 
-  " Optional: Handle popup creation failure
+  " Create the popup
+  let l:popup_id = popup_create(l:popup_content, l:popup_options)
+
+  " Check if popup creation was successful
   if l:popup_id == -1
     echo "Failed to create popup."
     return
+  endif
+
+  " Store the popup ID in the global list
+  call add(g:visutest_popups, l:popup_id)
+
+  " Optionally, set buffer-local variable to track the popup
+  let b:visutest_popup = l:popup_id
+endfunction
+
+" Function to close the test suite popup
+function! visutest_ui#CloseTestSuitePopup()
+  " Close the most recent popup
+  if !empty(g:visutest_popups)
+    let l:popup_id = remove(g:visutest_popups, -1)
+    call popup_close(l:popup_id)
+  endif
+
+  " Optionally, unset buffer-local variables if used
+  if exists('b:visutest_popup')
+    unlet b:visutest_popup
   endif
 endfunction
