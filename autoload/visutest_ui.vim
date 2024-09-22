@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:06:51 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:09:07 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -95,7 +95,6 @@ if !exists('g:visutest_popups')
 endif
 
 " Function to show the test suite popup
-" Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
   let l:popup_content = [
         \ '----------------------------------------------------------',
@@ -126,16 +125,11 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'col': l:winwidth,
         \ 'minwidth': 20,
         \ 'minheight': 5,
-        \ 'border': [],
-        \ 'callback': 'visutest_ui#SetupPopupHighlighting',
-        \ 'filter': 'visutest_ui#PopupKeyMappings'
+        \ 'border': []
         \ }
 
   " Create the popup
   let l:popup_id = popup_create(l:popup_content, l:popup_options)
-
-  " Set filetype for syntax highlighting
-  call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
 
   " Check for success
   if l:popup_id == -1
@@ -146,6 +140,12 @@ function! visutest_ui#ShowTestSuitePopup()
   " Track the popup
   call add(g:visutest_popups, l:popup_id)
   let b:visutest_popup = l:popup_id
+
+  " Set filetype for syntax highlighting
+  call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
+
+  " Apply syntax highlighting for better visuals
+  call visutest_ui#SetupPopupHighlighting()
 endfunction
 
 " Function to setup syntax highlighting for popup
