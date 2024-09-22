@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:03:42 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:04:25 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -144,7 +144,7 @@ let l:popup_content = [
         \ 'title_pos': 'center',
         \ 'highlight': 'Normal',
         \ 'borderhighlight': 'Normal',
-        \ 'close_on_escape': 1,  " Allow <Esc> to close
+        \ 'close_on_escape': 1,
         \ 'scrollbar': v:false,
         \ 'keymappings': {
         \   '<CR>': 'close',
