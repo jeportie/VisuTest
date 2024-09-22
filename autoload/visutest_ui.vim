@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:39:51 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:44:12 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -42,7 +42,9 @@ function! visutest_ui#SetupWindowUI()
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Key mapping to close the popup when 'p' is pressed
-  nnoremap <buffer> p :call visutest_ui#ClosePopup(b:visutest_popup)<CR>
+  nnoremap <buffer> <silent> <Esc> :call visutest_ui#ClosePopup(b:visutest_popup)<CR>
+nnoremap <buffer> <silent> q :call visutest_ui#ClosePopup(b:visutest_popup)<CR>
+nnoremap <buffer> <silent> <CR> :call visutest_ui#ClosePopup(b:visutest_popup)<CR>
    " Set the buffer back to read-only
   setlocal nomodifiable
 endfunction
@@ -141,20 +143,6 @@ function! visutest_ui#ShowTestSuitePopup()
   " Track the popup
   call add(g:visutest_popups, l:popup_id)
   let b:visutest_popup = l:popup_id
-endfunction
-
-" Function to close the test suite popup
-function! visutest_ui#CloseTestSuitePopup()
-  " Close the most recent popup
-  if !empty(g:visutest_popups)
-    let l:popup_id = remove(g:visutest_popups, -1)
-    call popup_close(l:popup_id)
-  endif
-
-  " Optionally, unset buffer-local variables if used
-  if exists('b:visutest_popup')
-    unlet b:visutest_popup
-  endif
 endfunction
 
 " Function to handle popup closure
