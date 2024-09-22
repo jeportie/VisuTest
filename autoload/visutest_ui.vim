@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:30:04 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:39:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -107,17 +107,20 @@ function! visutest_ui#ShowTestSuitePopup()
         \ '----------------------------------------------------------'
         \ ]
 
-  " Create a popup window with the test log, positioned on the left side and closed on Enter
+  " Calculate center of the screen for popup positioning
+  let l:winheight = float2nr(&lines / 2)
+  let l:winwidth = float2nr(&columns / 2) - 25  " Adjust based on minwidth (50 / 2)
+
+  " Create a popup window with the test log, centered and closed on Enter
   call popup_create(l:popup_content, {
-        \ 'line': 3,
-        \ 'col': 2,
+        \ 'line': l:winheight,
+        \ 'col': l:winwidth,
         \ 'minwidth': 50,
         \ 'minheight': 10,
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
         \ 'mapping': 0,
-        \ 'close': 'click',
         \ 'filter': 'popup_filter_enter'
         \ })
 endfunction
