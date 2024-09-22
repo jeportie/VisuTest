@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:30:40 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:38:03 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -94,9 +94,10 @@ if !exists('g:visutest_popups')
   let g:visutest_popups = []
 endif
 
-" Function to show the test suite popup
+" Function to show the test suite popup with a title and icons
 function! visutest_ui#ShowTestSuitePopup()
   let l:popup_content = [
+        \ '🖥️  **VisuTest - Test Suite Overview** 🛠️',
         \ '----------------------------------------------------------',
         \ '1/1 Testing: ft_split_test',
         \ '1/1 Test: ft_split_test',
@@ -107,7 +108,7 @@ function! visutest_ui#ShowTestSuitePopup()
         \ '----------------------------------------------------------',
         \ 'Running suite(s): ft_split',
         \ '100%: Checks: 5, Failures: 0, Errors: 0',
-        \ '🟢  All tests passed',
+        \ '🟢 ✅ All tests passed successfully!',
         \ '<end of output>',
         \ 'Test time =   0.00 sec',
         \ '----------------------------------------------------------',
@@ -150,4 +151,3 @@ endfunction
 function! visutest_ui#ClosePopup()
   call popup_clear(1)
 endfunction
-
