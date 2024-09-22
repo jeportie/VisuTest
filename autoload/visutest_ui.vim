@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 18:08:53 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 21:52:26 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -109,7 +109,9 @@ function! visutest_ui#ShowTestSuitePopup()
         \ '🟢  All tests passed',
         \ '<end of output>',
         \ 'Test time =   0.00 sec',
-        \ '----------------------------------------------------------'
+        \ '----------------------------------------------------------',
+        \ '',
+        \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
 
   " Calculate center of the screen for popup positioning
@@ -125,16 +127,19 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
-        \ 'mousemappings': [],
-        \ 'mapping': 1
-        \ })
-
-  " Bind <Enter> and <Esc> to close the popup window using callback functions
-  call popup_setoptions(l:popup_id, {
+        \ 'mousemappings': 0,
+        \ 'mapping': 1,
+        \ 'focusable': 1,
         \ 'keymappings': {
-        \   '<CR>': function('visutest_ui#ClosePopup', [l:popup_id]),
-        \   '<Esc>': function('visutest_ui#ClosePopup', [l:popup_id])
-        \ }
+        \   '<CR>': 'close',
+        \   'q': 'close',
+        \   '<Esc>': 'close'
+        \ },
         \ })
-endfunction
 
+  " Optional: Handle popup creation failure
+  if l:popup_id == -1
+    echo "Failed to create popup."
+    return
+  endif
+endfunction
