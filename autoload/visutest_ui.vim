@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:51:49 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:53:09 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -109,9 +109,9 @@ function! visutest_ui#ShowTestSuitePopup()
 
   " Calculate center of the screen for popup positioning
   let l:winheight = float2nr(&lines / 2)
-  let l:winwidth = float2nr(&columns / 2) - 25
+  let l:winwidth = float2nr(&columns / 2) - 25  " Adjust for width
 
-  " Create a popup window with the test log, centered, and disable mouse interaction
+  " Create a popup window with the test log, centered
   let l:popup_id = popup_create(l:popup_content, {
         \ 'line': l:winheight,
         \ 'col': l:winwidth,
@@ -120,11 +120,13 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
-        \ 'mapping': 1,
-        \ 'mousemappings': 0
+        \ 'mapping': 1
         \ })
 
+  " Disable mouse support for the popup window
+  call popup_setoptions(l:popup_id, {'mousemappings': 0})
+
   " Map Enter to close the popup window
-  call popup_setoptions(l:popup_id, {'filter': 'popup_filter_key', 'keymappings': {'<CR>': 'call popup_close(' . l:popup_id . ')'}})
+  nnoremap <buffer> <CR> :call popup_close(l:popup_id)<CR>
 endfunction
 
