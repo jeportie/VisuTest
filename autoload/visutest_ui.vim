@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:58:44 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:00:30 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -100,11 +100,24 @@ endif
 " Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
   " Minimal popup content
-  let l:popup_content = [
-        \ 'Hello, World!',
-        \ 'Press q to close.'
+let l:popup_content = [
+        \ '----------------------------------------------------------',
+        \ '1/1 Testing: ft_split_test',
+        \ '1/1 Test: ft_split_test',
+        \ 'Command: "/home/user/test/test_ft_split"',
+        \ 'Directory: /home/user/test',
+        \ '"ft_split_test" start time: Sep 20 15:05 CEST',
+        \ 'Output:',
+        \ '----------------------------------------------------------',
+        \ 'Running suite(s): ft_split',
+        \ '100%: Checks: 5, Failures: 0, Errors: 0',
+        \ '🟢  All tests passed',
+        \ '<end of output>',
+        \ 'Test time =   0.00 sec',
+        \ '----------------------------------------------------------',
+        \ '',
+        \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
-
   " Verify it's a list
   if type(l:popup_content) != type([])
     echoerr "Error: popup_content must be a list."
