@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:45:38 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:52:59 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,9 +34,9 @@ function! visutest#SetupAutocmds()
   augroup visutest_popup_management
     autocmd!
     " Close popup when leaving any window
-    autocmd WinLeave * call visutest_ui#CloseTestSuitePopup()
+    autocmd WinLeave * call visutest_ui#ClosePopup()
     " Close popup when entering a new buffer
-    autocmd BufEnter * call visutest_ui#CloseTestSuitePopup()
+    autocmd BufEnter * call visutest_ui#ClosePopup()
   augroup END
 endfunction
 
