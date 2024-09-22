@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:04:25 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:06:12 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -135,7 +135,6 @@ let l:popup_content = [
         \ 'minheight': 10,
         \ 'border': [],
         \ 'padding': [0,1,0,1],
-        \ 'zindex': 10,
         \ 'mousemappings': 0,
         \ 'mapping': 1,
         \ 'focusable': 1,
@@ -145,7 +144,6 @@ let l:popup_content = [
         \ 'highlight': 'Normal',
         \ 'borderhighlight': 'Normal',
         \ 'close_on_escape': 1,
-        \ 'scrollbar': v:false,
         \ 'keymappings': {
         \   '<CR>': 'close',
         \   'q': 'close',
