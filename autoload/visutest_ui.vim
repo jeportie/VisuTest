@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:00:30 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:02:32 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -99,7 +99,6 @@ endif
 
 " Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
-  " Minimal popup content
 let l:popup_content = [
         \ '----------------------------------------------------------',
         \ '1/1 Testing: ft_split_test',
@@ -123,6 +122,10 @@ let l:popup_content = [
     echoerr "Error: popup_content must be a list."
     return
   endif
+
+    " Calculate center of the screen for popup positioning
+  let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
+  let l:winwidth = float2nr(&columns / 2) - 25
 
   " Minimal popup options
   let l:popup_options = {
