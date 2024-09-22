@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:57:15 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:58:44 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -99,94 +99,42 @@ endif
 
 " Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
-  " Define the content of the popup as a single string with newlines
-  let l:popup_content = '----------------------------------------------------------
-1/1 Testing: ft_split_test
-1/1 Test: ft_split_test
-Command: "/home/user/test/test_ft_split"
-Directory: /home/user/test
-"ft_split_test" start time: Sep 20 15:05 CEST
-Output:
-----------------------------------------------------------
-Running suite(s): ft_split
-100%: Checks: 5, Failures: 0, Errors: 0
-🟢  All tests passed
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
+  " Minimal popup content
+  let l:popup_content = [
+        \ 'Hello, World!',
+        \ 'Press q to close.'
+        \ ]
 
-Press <Enter>, "q", or <Esc> to close this popup.'
-
-  " Debugging: Check the type and content of l:popup_content
-  echo "Type of popup_content: " . type(l:popup_content)
-  echo "Content of popup_content: " . string(l:popup_content)
-
-  " Verify that popup_content is a string or list
-  if type(l:popup_content) != type('') && type(l:popup_content) != type([])
-    echoerr "Error: popup_content must be a string or a list."
+  " Verify it's a list
+  if type(l:popup_content) != type([])
+    echoerr "Error: popup_content must be a list."
     return
   endif
 
-  " Calculate center of the screen for popup positioning
-  let l:winheight = float2nr(&lines / 2 - len(split(l:popup_content, "\n")) / 2)
-  let l:winwidth = float2nr(&columns / 2) - 25
-
-  " Define popup options
+  " Minimal popup options
   let l:popup_options = {
-        \ 'line': l:winheight,
-        \ 'col': l:winwidth,
-        \ 'minwidth': 50,
-        \ 'minheight': 10,
+        \ 'line': 10,
+        \ 'col': 10,
+        \ 'minwidth': 20,
+        \ 'minheight': 5,
         \ 'border': [],
-        \ 'padding': [0,1,0,1],
-        \ 'zindex': 10,
-        \ 'mousemappings': 0,
-        \ 'mapping': 1,
-        \ 'focusable': 1,
-        \ 'wrap': 1,
-        \ 'title': ' Test Suite Results ',
-        \ 'title_pos': 'center',
-        \ 'highlight': 'Normal',
-        \ 'borderhighlight': 'Normal',
-        \ 'close_on_escape': 1,
-        \ 'scrollbar': v:false,
         \ 'keymappings': {
-        \   '<CR>': 'close',
         \   'q': 'close',
-        \   '<Esc>': 'close'
         \ },
         \ }
-
-  " Debugging: Check the type and content of l:popup_options
-  echo "Type of popup_options: " . type(l:popup_options)
-  echo "Content of popup_options: " . string(l:popup_options)
-
-  " Verify that popup_options is a dictionary
-  if type(l:popup_options) != type({})
-    echoerr "Error: popup_options must be a dictionary."
-    return
-  endif
 
   " Create the popup
   let l:popup_id = popup_create(l:popup_content, l:popup_options)
 
-  " Debugging: Check the popup ID returned
-  echo "Popup ID: " . l:popup_id
-
-  " Check if popup creation was successful
+  " Check for success
   if l:popup_id == -1
     echoerr "Failed to create popup."
     return
   endif
 
-  " Store the popup ID in the global list
+  " Track the popup
   call add(g:visutest_popups, l:popup_id)
-
-  " Optionally, set buffer-local variable to track the popup
   let b:visutest_popup = l:popup_id
-
-  " Debugging: Confirm popup creation
-  echo "Popup created with ID: " . l:popup_id
 endfunction
 
 " Function to close the test suite popup
