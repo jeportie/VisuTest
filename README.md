@@ -56,10 +56,11 @@ VisuTest enforces a standardized project layout to maintain consistency across p
 
 - Displays test suite statuses in a vertical window occupying 1/4 of the screen.
 - Test results are updated in real-time with visual feedback:
-  - **Green icon**: Test passed.
-  - **Red icon**: Test failed.
-  - **Empty circle**: Test not yet run.
-  
+  - **Waiting**: Before the test starts. -> Blue Icon or Empty Circle
+  - **Running**: During test execution. -> Yellow Icon
+  - **Passed**: When the unit passes. -> Green Icon
+  - **Failed**: When the unit fails. -> Red Icon
+
 ![Screenshot from 2024-09-23 00-49-48](https://github.com/user-attachments/assets/ab050bff-95a3-41ce-a75f-ba380f8a6162)
 
 
