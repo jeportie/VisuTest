@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:42:06 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:45:04 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -37,8 +37,8 @@ function! visutest_ui#SetupWindowUI()
   " Disable buffer switching commands like bnext/bprev in this buffer
   nnoremap <buffer> <silent> :bnext <NOP>
   nnoremap <buffer> <silent> :bprev <NOP>
-   " Enable mouse support
-  setlocal mouse=a
+  " Bind Enter to trigger the popup if the cursor is on a test suite title
+  nnoremap <buffer> <silent> <CR> :call visutest_ui#ShowTestSuitePopup()<CR>
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Mouse click mapping to open the popup window
