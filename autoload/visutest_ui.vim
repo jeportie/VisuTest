@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:14:36 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:20:26 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -88,3 +88,36 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestText', 'No test units found')
 endfunction
 
+" Function to display the popup window when a test suite is clicked
+function! visutest_ui#ShowTestSuitePopup()
+  " The mock data for the test log
+  let l:popup_content = [
+        \ '----------------------------------------------------------',
+        \ '1/1 Testing: ft_split_test',
+        \ '1/1 Test: ft_split_test',
+        \ 'Command: "/home/user/test/test_ft_split"',
+        \ 'Directory: /home/user/test',
+        \ '"ft_split_test" start time: Sep 20 15:05 CEST',
+        \ 'Output:',
+        \ '----------------------------------------------------------',
+        \ 'Running suite(s): ft_split',
+        \ '100%: Checks: 5, Failures: 0, Errors: 0',
+        \ '🟢  All tests passed',
+        \ '<end of output>',
+        \ 'Test time =   0.00 sec',
+        \ '----------------------------------------------------------'
+        \ ]
+
+  " Create a popup window with the test log
+  call popup_create(l:popup_content, {
+        \ 'line': 'cursor+1',      " Open near the cursor
+        \ 'col': 'cursor+1',
+        \ 'minwidth': 50,          " Minimum width of the popup
+        \ 'minheight': 10,         " Minimum height of the popup
+        \ 'border': [],
+        \ 'padding': [0,1,0,1],    " Padding for the text inside the popup
+        \ 'zindex': 10,            " Ensure the popup is on top
+        \ 'mapping': 0,            " Disable key mappings inside the popup
+        \ 'close': 'click',        " Close the popup when clicked
+        \ })
+endfunction
