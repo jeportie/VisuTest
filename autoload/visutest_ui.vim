@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:51:11 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:04:38 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -89,8 +89,6 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestText', 'No test units found')
 endfunction
 
-
-
 " Initialize a global list to store active popup IDs
 if !exists('g:visutest_popups')
   let g:visutest_popups = []
@@ -144,7 +142,32 @@ function! visutest_ui#ShowTestSuitePopup()
   let b:visutest_popup = l:popup_id
 endfunction
 
+" Function to setup syntax highlighting for popup
+function! visutest_ui#SetupPopupHighlighting()
+  " Highlight the test suite title
+  syntax match VisuTestSuiteTitle "Running Test Suite:.*"
+  highlight VisuTestSuiteTitle ctermfg=10 guifg=#00ff00
 
+  " Highlight the test command
+  syntax match VisuTestCommand "Command:.*"
+  highlight VisuTestCommand ctermfg=12 guifg=#4682b4
+
+  " Highlight the test directory
+  syntax match VisuTestDirectory "Directory:.*"
+  highlight VisuTestDirectory ctermfg=14 guifg=#87ceeb
+
+  " Highlight the checks and results in green
+  syntax match VisuTestResults "100%: Checks:.*"
+  highlight VisuTestResults ctermfg=2 guifg=#00ff00
+
+  " Highlight test success
+  syntax match VisuTestSuccess "All tests passed"
+  highlight VisuTestSuccess ctermfg=10 guifg=#32cd32
+
+  " Highlight test time
+  syntax match VisuTestTime "Test time =.*"
+  highlight VisuTestTime ctermfg=11 guifg=#ffd700
+endfunction
 
 " Function to handle popup closure
 function! visutest_ui#ClosePopup(popup_id)

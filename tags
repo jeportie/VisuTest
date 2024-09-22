@@ -23,5 +23,6 @@ visutest_tests#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest_tes
 visutest_tests#ShowUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ShowUnits()$/;"	f
 visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePopup(popup_id)$/;"	f
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
+visutest_ui#SetupPopupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupPopupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
