@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:49:43 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:51:11 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -114,7 +114,7 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'Test time =   0.00 sec',
         \ '----------------------------------------------------------',
         \ '',
-        \ 'Press <Enter>, "q", or <Esc> to close this popup.'
+        \ 'Press <Esc> to close this popup.'
         \ ]
 
   " Calculate center of the screen for popup positioning
@@ -144,19 +144,7 @@ function! visutest_ui#ShowTestSuitePopup()
   let b:visutest_popup = l:popup_id
 endfunction
 
-" Function to close the test suite popup
-function! visutest_ui#CloseTestSuitePopup()
-  " Close the most recent popup
-  if !empty(g:visutest_popups)
-    let l:popup_id = remove(g:visutest_popups, -1)
-    call popup_close(l:popup_id)
-  endif
 
-  " Optionally, unset buffer-local variables if used
-  if exists('b:visutest_popup')
-    unlet b:visutest_popup
-  endif
-endfunction
 
 " Function to handle popup closure
 function! visutest_ui#ClosePopup(popup_id)

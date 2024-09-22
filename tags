@@ -16,14 +16,12 @@ g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
-visutest_core#TogglePopup	autoload/visutest_core.vim	/^function! visutest_core#TogglePopup()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
 visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f
 visutest_tests#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestUnits(suite_file)$/;"	f
 visutest_tests#ShowUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ShowUnits()$/;"	f
 visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePopup(popup_id)$/;"	f
-visutest_ui#CloseTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#CloseTestSuitePopup()$/;"	f
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
