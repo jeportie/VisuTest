@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 18:00:50 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 18:08:11 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -86,6 +86,13 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestText', 'No test units found')
 endfunction
 
+" Function to handle popup closure
+function! visutest_ui#ClosePopup(popup_id)
+  echo "Closing popup: " . a:popup_id
+  call popup_close(a:popup_id)
+endfunction
+
+" Function to show the test suite popup
 function! visutest_ui#ShowTestSuitePopup()
   " The mock data for the test log
   let l:popup_content = [
@@ -118,15 +125,15 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'border': [],
         \ 'padding': [0,1,0,1],
         \ 'zindex': 10,
-        \ 'mousemappings': [],
-        \ 'mapping': 1
+        \ 'mousemappings': [],          " Disable mouse interactions
+        \ 'mapping': 1                  " Enable key mappings
         \ })
 
-  " Bind <Enter> and <Esc> to close the popup window using the popup ID
+  " Bind <Enter> and <Esc> to close the popup window using callback functions
   call popup_setoptions(l:popup_id, {
         \ 'keymappings': {
-        \   '<CR>': ':call popup_close(' . l:popup_id . ')<CR>',
-        \   '<Esc>': ':call popup_close(' . l:popup_id . ')<CR>'
+        \   '<CR>': function('visutest_ui#ClosePopup', [l:popup_id]),
+        \   '<Esc>': function('visutest_ui#ClosePopup', [l:popup_id])
         \ }
         \ })
 endfunction
