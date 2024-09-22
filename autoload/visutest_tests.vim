@@ -6,9 +6,57 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:11:04 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 15:29:20 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 01:40:01 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
+
+" State variable to track visibility
+let g:visutest_tests_show_units = 1
+
+" Function to toggle display of test units under test suites
+function! visutest_tests#ToggleUnits()
+  if g:visutest_tests_show_units
+    " If currently showing, hide the test units
+    let g:visutest_tests_show_units = 0
+    call visutest_tests#HideUnits()
+  else
+    " If currently hidden, show the test units
+    let g:visutest_tests_show_units = 1
+    call visutest_tests#DisplayTestSuites()
+  endif
+endfunction
+
+" Function to hide the test units
+function! visutest_tests#HideUnits()
+  setlocal modifiable
+  execute '%delete _'
+
+  " Add header
+  call append(line('$'), '╔══════════════════════════╗')
+  call append(line('$'), '║        VisuTest          ║')
+  call append(line('$'), '╚══════════════════════════╝')
+  call append(line('$'), '')
+
+  " Setup highlighting for icons, colors, etc.
+  call visutest_ui#SetupHighlighting()
+
+  call append(line('$'), '-------- Test Suites --------')
+  call append(line('$'), '')
+
+  let l:test_suites = visutest_tests#GetTestSuites()
+  if empty(l:test_suites)
+    call append(line('$'), "No test suites found.")
+  else
+    for l:suite_file in l:test_suites
+      let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
+      let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
+      let l:display_line = "➔ 󰏦 " . l:suite_name
+      call append(line('$'), l:display_line)
+    endfor
+  endif
+
+  setlocal nomodifiable
+endfunction
 
 " Function to get test units inside each .c file in test_src/
 function! visutest_tests#GetTestUnits(suite_file)
@@ -74,7 +122,7 @@ function! visutest_tests#DisplayTestSuites()
       call append(line('$'), l:display_line)
 
       let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
-      if !empty(l:test_units)
+      if !empty(l:test_units) && g:visutest_tests_show_units
         for l:test_unit in l:test_units
           let l:test_unit_display = "➔ 󰏦 " . l:test_unit
           call append(line('$'), '    ' . l:test_unit_display)
@@ -127,3 +175,6 @@ function! visutest_tests#ShowUnits()
     endif
   endfor
 endfunction
+
+" Map 'p' in normal mode to toggle test units
+nnoremap <silent> p :call visutest_tests#ToggleUnits()<CR>
