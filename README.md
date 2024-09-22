@@ -59,8 +59,8 @@ VisuTest enforces a standardized project layout to maintain consistency across p
   - **Green icon**: Test passed.
   - **Red icon**: Test failed.
   - **Empty circle**: Test not yet run.
+  
 ![Screenshot from 2024-09-23 00-49-48](https://github.com/user-attachments/assets/ab050bff-95a3-41ce-a75f-ba380f8a6162)
-
 
 
 #### 4. Detailed Logs for Each Test
@@ -70,8 +70,8 @@ VisuTest enforces a standardized project layout to maintain consistency across p
   - Execution commands and time.
   - Test output and results.
   - Any errors encountered during the test.
+    
 ![Screenshot from 2024-09-23 00-49-19](https://github.com/user-attachments/assets/cd753578-eca0-4f7b-aaa1-f72507dc757e)
-
 
 
 #### 5. Test Suite Approval Workflow
