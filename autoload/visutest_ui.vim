@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:20:45 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:22:41 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -144,8 +144,6 @@ function! visutest_ui#ShowTestSuitePopup()
   " Set filetype for syntax highlighting
   call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
 
-  " Apply syntax highlighting for better visuals
-  call visutest_ui#SetupPopupHighlighting()
 endfunction
 
 " Function to handle popup closure
