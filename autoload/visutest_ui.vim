@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:09:51 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 23:10:42 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -129,19 +129,13 @@ let l:popup_content = [
 
   " Define popup options
   let l:popup_options = {
-        \ 'line': l:winheight,
-        \ 'col': l:winwidth,
-        \ 'minwidth': 50,
-        \ 'minheight': 10,
+        \ 'line': 10,
+        \ 'col': 10,
+        \ 'minwidth': 20,
+        \ 'minheight': 5,
         \ 'border': [],
-        \ 'title': ' Test Suite Results ',
-        \ 'title_pos': 'center',
-        \ 'highlight': 'Normal',
-        \ 'borderhighlight': 'Normal',
         \ 'keymappings': {
-        \   '<CR>': 'close',
         \   'q': 'close',
-        \   '<Esc>': 'close'
         \ },
         \ }
 
