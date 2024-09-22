@@ -12,9 +12,15 @@ VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :cal
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestTogglePopup	plugin/visutest_commands.vim	/^command! VisuTestTogglePopup call visutest_core#TogglePopup()$/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
+b:visutest_popup	autoload/visutest_ui.vim	/^  let b:visutest_popup = l:popup_id$/;"	v
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
+l:popup_content	autoload/visutest_ui.vim	/^  let l:popup_content = '----------------------------------------------------------$/;"	v
+l:popup_id	autoload/visutest_ui.vim	/^  let l:popup_id = popup_create(l:popup_content, l:popup_options)$/;"	v
+l:popup_options	autoload/visutest_ui.vim	/^  let l:popup_options = {$/;"	v
+l:winheight	autoload/visutest_ui.vim	/^  let l:winheight = float2nr(&lines \/ 2 - len(split(l:popup_content, "\\n")) \/ 2)$/;"	v
+l:winwidth	autoload/visutest_ui.vim	/^  let l:winwidth = float2nr(&columns \/ 2) - 25$/;"	v
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
 visutest_core#TogglePopup	autoload/visutest_core.vim	/^function! visutest_core#TogglePopup()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
@@ -26,4 +32,3 @@ visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePop
 visutest_ui#CloseTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#CloseTestSuitePopup()$/;"	f
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
-visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
