@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:29:12 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:30:40 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -42,7 +42,7 @@ function! visutest_ui#SetupWindowUI()
   " Key mapping to close the window when 'q' is pressed
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Key mapping to close the popup when 'p' is pressed
-  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup(b:visutest_popup)<CR>
+  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 
    " Set the buffer back to read-only
   setlocal nomodifiable
@@ -147,7 +147,7 @@ function! visutest_ui#ShowTestSuitePopup()
 endfunction
 
 " Function to handle popup closure
-function! visutest_ui#ClosePopup(popup_id)
+function! visutest_ui#ClosePopup()
   call popup_clear(1)
 endfunction
 

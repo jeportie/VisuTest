@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 23:58:47 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:35:36 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -33,13 +33,12 @@ runtime! autoload/visutest_ui.vim
 function! visutest#SetupAutocmds()
   augroup visutest_popup_management
     autocmd!
-    " Close popup when leaving any window, but only if b:visutest_popup is defined
-    autocmd WinLeave * if exists('b:visutest_popup') | call visutest_ui#ClosePopup(b:visutest_popup) | endif
-    " Close popup when entering a new buffer, but only if b:visutest_popup is defined
-    autocmd BufEnter * if exists('b:visutest_popup') | call visutest_ui#ClosePopup(b:visutest_popup) | endif
+    " Close popup when leaving any window
+    autocmd WinLeave * call visutest_ui#ClosePopup()
+    " Close popup when entering a new buffer
+    autocmd BufEnter * call visutest_ui#ClosePopup()
   augroup END
 endfunction
-
 
 " Initialize autocommands
 call visutest#SetupAutocmds()
