@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-VisuTest	plugin/visutest_commands.vim	/^command! VisuTest :call visutest#SetupWindowUI() | call VisuTestResizeWindow()$/;"	c
+VisuTest	plugin/visutest_commands.vim	/^command! VisuTest :call visutest_ui#SetupWindowUI() | call VisuTestResizeWindow()$/;"	c
 VisuTestClose	plugin/visutest_commands.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
 VisuTestCloseWindow	plugin/visutest_core.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"	f
