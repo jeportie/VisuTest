@@ -1,363 +1,247 @@
-# VisuTest Plugin Alpha_version - Project Start Recap
+# VisuTest Plugin - Alpha Version
 
 ## Introduction
 
-VisuTest is a Vim plugin designed to enhance the C development workflow by integrating automated testing, real-time feedback, and intelligent test generation directly into the editor. By leveraging existing tools like `vim-dispatch`, `tmux`, and `vim-rooter`, along with future features such as ChatGPT API integration, VisuTest aims to streamline the coding and testing process for developers.
+VisuTest is a Vim plugin designed to optimize the C development workflow by integrating automated testing, real-time feedback, and intelligent test generation directly into the editor. It simplifies the process of developing and testing C functions by enforcing project structure and providing real-time test execution. The plugin operates asynchronously, utilizing a server-based architecture to build and run tests without disrupting the user’s workflow.
+
+This plugin ensures that each function is tested individually, following best practices from extreme programming to improve code quality, maintainability, and collaboration.
 
 ---
 
-## Functionality Description
+## Key Features
 
-### Group 1: Project Structure Management
+### 1. Standardized Project Structure
 
-#### 1. Standardized Project Folder Layout
+VisuTest enforces a standardized project layout to maintain consistency across projects and ensure smooth navigation and management. The structure allows for multiple header files across the source directory but requires a main header file, named after the project folder, which links all the sub-headers. This approach facilitates clear, organized code and makes it easy to parse and update the CMakeLists.txt file.
 
-**Purpose**: Enforce a specific project structure for consistency and ease of navigation.
-
-**Project Hierarchy**:
+**Project Folder Layout**:
 
 ```
 └── Project Root
     ├── include/
-    │   ├── project.h
+    │   ├── project.h               # Main project header linking all sub-headers
     │   └── defines.h
     ├── lib/
-    │   ├── libfoo.a           # Example static library
-    │   └── libbar.so          # Example shared library
+    │   ├── libfoo.a                # Example static library
+    │   └── libbar.so               # Example shared library
     ├── assets/
-    │   ├── logo.png           # Project logo or image assets
-    │   └── config.json        # Configuration files or templates
+    │   ├── logo.png                # Project logo or image assets
+    │   └── config.json             # Configuration files or templates
     ├── main.c
     ├── src/
     │   ├── sub_folder_name1/
-    │   │   └── function_name1.c
-    │   ├── function_name2.c
-    │   ├── function_name3.c
-    │   └── [...].c
+    │   │   ├── function_name1.c
+    │   │   ├── module1.h           # Additional header in subfolder
+    │   └── function_name2.c
     ├── test_src/
-    │   ├── CMakeLists.txt
+    │   ├── CMakeLists.txt          # Managed by VisuTest for test integration
     │   ├── sub_folder_name1/
     │   │   └── test_function_name1.c
     │   ├── test_function_name2.c
-    │   ├── test_function_name3.c
-    │   └── test_[...].c
-    ├── ycm_extra_conf.py      # Configuration for YouCompleteMe plugin
-    ├── .vimspector.json       # Configuration file for Vimspector plugin
+    ├── ycm_extra_conf.py           # Configuration for YouCompleteMe plugin
+    ├── .vimspector.json            # Configuration file for Vimspector plugin
     ├── Makefile
     └── .gitignore
 ```
+**Key Rules**:
+- **Single Function per `.c` File**: Each `.c` file in `src/` contains only one public function, with helper functions permitted. The file is named after the public function it implements.
+- **Multiple Header Files**: Header files (`.h`) can exist in different subdirectories but must all be linked to the main project header for clarity and ease of compilation.
+- **Test Files**: Located in `test_src/`, each test file mirrors the structure of its corresponding source file in `src/` and is prefixed with `test_`.
 
-**Rules**:
+---
+### 2. User Interface
 
-- **One Function per File**:
-  - Each `.c` file in `src/` contains a single public function, with up to 4 static helper functions.
-  - `.c` files are named after their public function.
-  - Functions are declared in `project.h`.
-- **Test Files**:
-  - Located in `test_src/`, mirroring the directory structure of `src/`.
-  - Prefixed with `test_` (e.g., `test_function_name1.c`).
-  - For example, `src/sub_folder_name1/function_name1.c` has a test file at `test_src/sub_folder_name1/test_function_name1.c`.
-- **Directory Hierarchy Management**:
-  - The plugin manages folder structures from `src/` to `test_src/`, ensuring test files correspond to their source files.
+#### 3. Vertical Window for Test Suites
 
-#### 2. Auto-Creation of Test Files for New Functions
+- Displays test suite statuses in a vertical window occupying 1/4 of the screen.
+- Test results are updated in real-time with visual feedback:
+  - **Green icon**: Test passed.
+  - **Red icon**: Test failed.
+  - **Empty circle**: Test not yet run.
 
-**Purpose**: Streamline the test creation process.
+#### 4. Detailed Logs for Each Test
 
-**Behavior**:
+- Users can access detailed logs for individual test suites by pressing **Enter** on a test in the vertical window.
+- Logs show:
+  - Execution commands and time.
+  - Test output and results.
+  - Any errors encountered during the test.
 
-- Detects new `.c` files added to `src/`, including subdirectories.
-- Automatically creates corresponding test files in `test_src/`, maintaining the same directory structure.
-- Updates `CMakeLists.txt` accordingly.
-- New test files are in **pending approval** status.
-
-#### 3. Automatic CMakeLists.txt Update for Test Files
-
-**Purpose**: Keep the build configuration up-to-date with new tests.
-
-**Behavior**:
-
-- Updates `CMakeLists.txt` in `test_src/` whenever a new test suite is created or approved.
-- Manages the directory hierarchy from `src/` to ensure test files are correctly linked.
-- Ensures inclusion of all tests in the build process.
-
-### Group 2: User Interface
-
-#### 4. Vertical Window Display
-
-**Purpose**: Display test suite statuses in a vertical window occupying 1/4 of the Vim window.
-
-**Behavior**:
-
-- Shows test suites with their current state using icons:
-  - **Empty circle**: Test not run.
-  - **Green circle**: Test passed.
-  - **Red circle**: Test failed.
-- Press **Space** on a test suite name to display individual test units state using icons.
-- Updates dynamically based on `LastTest.log`.
-<img width="327" alt="Screenshot 2024-09-20 at 22 53 05" src="https://github.com/user-attachments/assets/ae9bb0f2-726c-477b-80ae-86e3f619f7b5">
-
-#### 5. Popup Window for Test Suite Logs
-
-**Purpose**: Show detailed test logs for a specific test suite.
-
-**Behavior**:
-
-- Press **Enter** on a test suite name in the vertical window to open a popup.
-- Displays:
-  - Command execution details.
-  - Start time.
-  - Test output.
-  - Results from `LastTest.log`.
-<img width="776" alt="Screenshot 2024-09-20 at 22 59 54" src="https://github.com/user-attachments/assets/bdf67cce-dfa6-4d75-af04-063235bd6f8d">
-
-#### 6. Test Suite Approval System
-
-**Purpose**: Allow users to approve, edit, or reject auto-generated test suites.
-
-**Behavior**:
+#### 5. Test Suite Approval Workflow
 
 - Newly generated tests are marked as **pending approval**.
-- User options:
-  - **Approve**: Test is added and run.
-  - **Edit**: Modify the test before approving.
-  - **Reject**: Discard the test if unnecessary.
-
-### Group 3: Test Execution
-
-#### 7. Real-Time Test Execution
-
-**Purpose**: Automatically run tests when exiting insert mode.
-
-**Behavior**:
-
-- Triggers `CTest` upon exiting insert mode.
-- Updates test results in real-time.
-- Reflects each test suite's status immediately.
-
-#### 8. Real-Time Test Status Update
-
-**Purpose**: Provide immediate feedback on code changes.
-
-**Behavior**:
-
-- Dynamically updates test icons based on the latest test results.
-- Parses `LastTest.log` after each test run.
-- Reflects pass, fail, or not tested statuses.
-
-### Group 4: Integration with Existing Vim Plugins
-
-#### 9. Integration with Existing Vim Plugins
-
-- **vim-dispatch & tmux**
-
-  - **Purpose**: Run `CMake`, `make`, and `CTest` asynchronously.
-  - **Behavior**:
-    - Executes build and test commands in the background without interrupting the workflow.
-    - Utilizes `vim-dispatch` and `tmux` for seamless asynchronous operations.
-
-- **vim-rooter**
-
-  - **Purpose**: Automatically set the project’s root directory.
-  - **Behavior**:
-    - Detects the project root based on the standardized folder layout.
-    - Ensures smooth access to the CMake build system and source files.
-
-### Group 5: ChatGPT Integration
-
-#### 10. ChatGPT Integration for Test Generation
-
-**Purpose**: Automatically generate C `Check` test suites in real-time.
-
-**Behavior**:
-
-- Analyzes `.h` and `.c` files to detect new functions.
-- Proposes a `Check` test suite based on:
-  - Function prototype.
-  - Existing code context.
-- Marks the test as pending until user approval.
-
-*(Note: ChatGPT integration will be implemented at the end, as per the latest instructions.)*
+- Users can approve, edit, or reject tests through the interface, streamlining the test creation and approval process.
 
 ---
 
-## Feature Summary Table
+### Real-Time Test Execution and Status Updates
 
-| **Feature Group**               | **Feature**                          | **Description**                                                                                             | **Plugins/Tools Used**             |
-|---------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------|
-| **Project Structure Management**| Standardized Project Folder Layout   | Enforce project structure with one function per file and organized test files, including path mirroring.     | Custom Plugin Logic                |
-|                                 | Auto-Creation of Test Files          | Automatically create test files in `test_src/` for new source files in `src/`, managing directory hierarchy. | Custom Plugin Logic                |
-|                                 | Auto CMakeLists.txt Update for Tests | Automatically update `CMakeLists.txt` when new tests are added or approved, considering folder structure.    | Custom Plugin Logic                |
-| **User Interface**              | Vertical Window                      | 1/4 size vertical window displaying test suite statuses with icons.                                          | Vim                                 |
-|                                 | Test Suite Logs Popup                | Press **Enter** on a test suite to display detailed test output from `LastTest.log`.                         | Vim                                 |
-|                                 | Test Suite Approval System           | Allow user to approve, edit, or reject auto-generated test suites.                                           | Custom Plugin Logic                |
-| **Test Execution**              | Real-Time Test Execution on Insert Exit | Automatically run `CTest` upon exiting insert mode and update test results.                                  | Vim, vim-dispatch                  |
-|                                 | Real-Time Test Status Update         | Dynamically update test icons based on test results after each run.                                          | Vim, CTest                         |
-| **Integration**                 | Integration with Existing Vim Plugins| Run `CMake`, `make`, and `CTest` asynchronously using `vim-dispatch` and `tmux`; auto root detection.        | vim-dispatch, tmux, vim-rooter     |
-| **ChatGPT Integration**         | ChatGPT API for Test Generation      | Automatically generate C `Check` test suites for new functions in real-time. *(Implemented at the end)*      | ChatGPT API                        |
+#### 6. Asynchronous Test Execution
+
+- Automatically runs tests upon exiting insert mode.
+- Real-time feedback on the test execution process is provided through dynamic updates to the test window, ensuring that users are always aware of the current test status.
+
+#### 7. Test Unit and Test Suite Parsing
+
+- VisuTest parses test files to extract both test suites and individual test cases (units).
+- Displays test suites in the vertical window, allowing users to inspect and manage their test cases easily.
 
 ---
 
-## VisuTest Plugin Project Structure
+### 3. Server-Based Asynchronous Test Execution
 
-```
+VisuTest leverages a server-based system to run tests asynchronously, allowing users to continue working in Vim while tests are executed in the background.
+
+#### **1. Popup Window with Test Output on Enter**
+- **Trigger**: When a user presses **Enter** on a test suite in the vertical window.
+- **Action**: Open a buffer (popup window) that displays the **detailed output** of the test suite.
+  
+  ```
+  ----------------------------------------------------------
+  1/1 Testing: ft_split_test
+  1/1 Test: ft_split_test
+  Command: "/home/user/test/test_ft_split"
+  Directory: /home/user/test
+  "ft_split_test" start time: Sep 20 15:05 CEST
+  Output:
+  ----------------------------------------------------------
+  Running suite(s): ft_split
+  100%: Checks: 5, Failures: 0, Errors: 0
+  🟢  All tests passed
+  <end of output>
+  Test time =   0.00 sec
+  ----------------------------------------------------------
+  ```
+
+- **How It Works**: 
+  - The `LastTest.log` file is parsed to extract the detailed output for the corresponding test suite.
+  - The log is displayed in a new buffer when triggered by **Enter**.
+
+#### **2. Parsing and Updating Test Unit States**
+- **Trigger**: When a user presses **Space** on a test suite in the vertical window.
+- **Action**: Display all **test units** (individual test cases) under that test suite and their states.
+
+  **Test Unit States**:
+  - **Waiting**: Before the test starts.
+  - **Running**: During test execution.
+  - **Passed**: When the unit passes.
+  - **Failed**: When the unit fails.
+
+---
+
+### 3. Extreme Programming and the Importance of Testing
+
+Extreme programming (XP) advocates for continuous testing and incremental development to deliver high-quality software. By enforcing one function per file and ensuring each function is tested individually, VisuTest aligns with XP principles. Testing each function in isolation ensures that issues are caught early, and the code remains modular, maintainable, and easy to refactor.
+
+**Why This Approach Matters**:
+- **Improved Code Quality**: Isolating and testing functions ensures bugs are identified at the source, improving overall code reliability.
+- **Rapid Feedback**: Immediate feedback from test results allows for faster iteration and development, reducing the time between writing and verifying code.
+- **Simplified Collaboration**: A well-structured project with clear function responsibilities and associated tests enables easier team collaboration and faster integration of new code.
+
+VisuTest streamlines this process by automating test file creation, handling CMakeLists updates, and providing real-time test execution and status updates.
+---
+
+## Plugin Features and Commands
+
+### Features Overview
+
+| **Feature**                          | **Description**                                                                                       |
+|--------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Standardized Project Structure**   | Enforces a clear folder structure and one function per `.c` file with corresponding tests.             |
+| **Server-Based Asynchronous Testing**| Runs tests asynchronously, updating results in real-time without blocking Vim.                         |
+| **Automatic Test File Creation**     | Automatically generates test files in `test_src/` when a new source file is created in `src/`.         |
+| **CMakeLists.txt Auto-Update**       | Automatically updates `CMakeLists.txt` to include new tests.                                           |
+| **Vertical Test Status Window**      | Displays test statuses in a 1/4 vertical window with real-time updates and detailed test logs.          |
+| **Test Approval Workflow**           | Users can approve, edit, or reject auto-generated tests before they are run.                           |
+
+### Commands Overview
+
+| **Command**           | **Description**                                 |
+|-----------------------|-------------------------------------------------|
+| `:VisuTest`           | Opens the VisuTest window.                      |
+| `:VisuTestClose`      | Closes the VisuTest window.                     |
+| `:VisuTestToggle`     | Toggles the VisuTest window on/off.             |
+| `:VisuTestShowUnits`  | Displays the test units for a selected test.    |
+
+---
+
+## Plan for Server-Listening System for Asynchronous Test Execution
+
+### **Overview**
+
+A server-based system manages the execution of commands like `CMake`, `make`, and `CTest`. Vim sends requests to this server for running tests, and the server asynchronously executes the commands, sending results back to Vim for display.
+
+**Components**:
+1. **Vim Client**: Vim sends test execution requests to the server using `jobstart()` or `system()` to communicate via sockets or HTTP.
+2. **Server Process**: The server (Python or Node.js) listens for requests, executes the tests asynchronously, and sends the results back to Vim.
+3. **Real-Time Test Status Updates**: The server sends status updates back to Vim, which updates the vertical window with test progress and logs.
+
+---
+
+## Updated VisuTest Plugin Project Structure
+
+```bash
 visutest/
 ├── autoload/
-│   └── visutest.vim            # Core functions loaded on demand
+│   └── visutest.vim            # Core Vim functions for plugin behavior
 ├── plugin/
-│   └── visutest.vim            # Main plugin script loaded on startup
-├── doc/
-│   └── visutest.txt            # Plugin documentation for :help
-├── ftplugin/
-│   └── c.vim                   # Filetype-specific settings for C files
-├── syntax/
-│   └── visutest.vim            # Syntax highlighting definitions (if any)
+│   └── visutest.vim            # Main plugin logic loaded at startup
+├── server/
+│   ├── server.py               # Python server handling test execution
+│   ├── requirements.txt        # Python dependencies (e.g., Flask, socket, etc.)
+│   └── utils.py                # Utility functions for server-side tasks
 ├── scripts/
-│   ├── folder_watcher.py       # Monitors src/ directory for new files
-│   ├── test_generator.py       # Generates tests via ChatGPT API
-│   ├── cmakelists_updater.py   # Updates CMakeLists.txt automatically
-│   └── utils.py                # Common utility functions
-├── resources/
-│   ├── icons/
-│   │   ├── empty_circle.png
-│   │   ├── green_circle.png
-│   │   └── red_circle.png
-│   └── assets/                 # Additional assets
+│   └── client.vim              # Vimscript client for communicating with the server
 ├── tests/
-│   └── test_visutest.vim       # Automated tests for plugin functionality
-├── config/
-│   ├── default_config.vim      # Default configuration settings
-│   └── vimspector.json         # Vimspector configuration file
-├── .gitignore                  # Git ignore file
-├── README.md                   # Project overview and instructions
+│   └── test_visutest.vim       # Automated tests for plugin behavior
+├── README.md                   # Project documentation
 ├── LICENSE                     # Licensing information
-└── setup.sh                    # Script to install dependencies
+└── config/
+    └── default_config.vim      # Default Vim settings for the plugin
 ```
+
 ---
 
-## Recap of the Structural Implementation Plan
+## Installation and Setup
 
-### Phase 1: Initial Setup and Core Integration
+### Requirements:
+- Vim or Neovim
+- A server runtime (Python, Node.js, etc.) for asynchronous test execution.
+- `CMake` and `CTest` for test management.
 
-1. **Project Initialization**
+### Installation:
+1. Clone the VisuTest repository:
+   ```
+   git clone https://github.com/yourusername/visutest ~/.vim/pack/plugins/start/visutest
+   ```
 
-   - **Version Control**: Initialize Git repository.
-   - **Project Structure**: Establish directory layout, including `lib/` and `assets/` folders.
+2. Run the setup script to install dependencies:
+   ```
+   ./setup.sh
+   ```
 
-2. **Integration with Existing Vim Plugins**
+3. Start Vim/Neovim and use `:VisuTest` to launch the plugin window.
 
-   - **vim-rooter**: Ensure automatic project root detection.
-   - **vim-dispatch & tmux**: Configure for asynchronous operations.
+---
 
-3. **Standardized Project Folder Layout Enforcement**
+## Roadmap
 
-   - Implement checks for correct folder structure, including managing directory hierarchy from `src/` to `test_src/`.
-   - Enforce naming conventions and path mirroring for test files.
+1. **Feature Enhancements**:
+   - Additional customization options for the user interface.
+   - Expanded support for complex CMake structures.
 
-### Phase 2: Documentation and User Guide Development
+2. **Performance Improvements**:
+   - Optimize the server for handling larger test suites.
+   - Improve resource management during asynchronous execution.
 
-4. **ReadMe and Documentation Creation**
+3. **Robust Error Handling**:
+   - Develop enhanced error handling for test failures and communication issues with the server.
 
-   - **Purpose**: Build all manuals and documentation before coding.
-   - **Tasks**:
-     - Create a comprehensive `README.md` covering:
-       - Project overview.
-       - Installation instructions.
-       - Usage guide.
-       - Feature descriptions.
-     - Develop user manuals and help files (`doc/visutest.txt`).
-     - Outline contribution guidelines and code of conduct.
+---
 
-### Phase 3: User Interface Development
+## License
 
-5. **Vertical Window Implementation**
-
-   - Create a vertical window to display test suites and statuses.
-   - Design iconography for test states.
-
-6. **Popup Window for Test Suite Logs**
-
-   - Implement functionality to display detailed logs on demand.
-   - Parse and present data from `LastTest.log`.
-
-7. **Test Suite Approval System**
-
-   - Mark auto-generated tests as pending.
-   - Provide user interface for approval, editing, or rejection.
-
-### Phase 4: Test Execution and Status Updates
-
-8. **Real-Time Test Execution on Insert Mode Exit**
-
-   - Detect exit from insert mode.
-   - Trigger asynchronous `CTest` execution.
-
-9. **Real-Time Test Status Update**
-
-   - Monitor `LastTest.log` for changes.
-   - Update test statuses in the vertical window.
-
-### Phase 5: Automated Test File Management
-
-10. **Auto-Creation of Test Files for New Functions**
-
-    - Implement folder watcher for `src/`, including subdirectories.
-    - Generate corresponding test files in `test_src/`, maintaining directory structure.
-
-11. **Automatic CMakeLists.txt Update**
-
-    - Programmatically update `CMakeLists.txt` when new tests are added.
-    - Ensure correct linking and inclusion of tests, considering folder hierarchy.
-
-### Phase 6: ChatGPT Integration (Implemented at the End)
-
-12. **Implement ChatGPT API Integration**
-
-    - Set up secure API access.
-    - Develop communication module for API interaction.
-
-13. **Automatic Test Generation Logic**
-
-    - Analyze code to detect new functions.
-    - Use ChatGPT to generate test suites.
-
-14. **Test Suite Approval System Enhancement**
-
-    - Integrate ChatGPT-generated tests into the approval workflow.
-
-### Phase 7: Enhancements and Optimizations
-
-15. **Performance Optimization**
-
-    - Implement debounce mechanisms to prevent excessive triggers.
-    - Optimize code for efficiency.
-
-16. **Error Handling and Notifications**
-
-    - Develop robust error handling.
-    - Inform users of issues through notifications.
-
-17. **User Configuration Options**
-
-    - Allow customization via configuration files or Vim settings.
-    - Document configurable options.
-
-### Phase 8: Testing and Finalization
-
-18. **Automated Testing of the Plugin**
-
-    - Write tests for plugin features.
-    - Set up continuous integration.
-
-19. **Prepare for Release**
-
-    - Versioning and tagging.
-    - Compatibility checks across environments.
-
-20. **Community Engagement**
-
-    - Set up channels for feedback and support.
-    - Provide contribution guidelines.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
