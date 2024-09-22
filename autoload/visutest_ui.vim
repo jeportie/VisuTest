@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:55:13 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:57:15 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -98,7 +98,7 @@ if !exists('g:visutest_popups')
 endif
 
 " Function to show the test suite popup
-ffunction! visutest_ui#ShowTestSuitePopup()
+function! visutest_ui#ShowTestSuitePopup()
   " Define the content of the popup as a single string with newlines
   let l:popup_content = '----------------------------------------------------------
 1/1 Testing: ft_split_test
