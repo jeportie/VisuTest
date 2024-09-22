@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 22:30:16 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 22:42:08 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -97,10 +97,8 @@ if !exists('g:visutest_popups')
   let g:visutest_popups = []
 endif
 
-" Function to show the test suite popup
-" autoload/visutest_ui.vim
 
-" Initialize a global list to store active popup IDs
+" Initialize a global list to store active popup IDs if not already defined
 if !exists('g:visutest_popups')
   let g:visutest_popups = []
 endif
@@ -127,9 +125,13 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'Press <Enter>, "q", or <Esc> to close this popup.'
         \ ]
 
+  " Debugging: Check the type and content of l:popup_content
+  echo "Type of popup_content: " . type(l:popup_content)
+  echo "Content of popup_content: " . string(l:popup_content)
+
   " Verify that popup_content is a list
   if type(l:popup_content) != type([])
-    echoerr "Popup content must be a list."
+    echoerr "Error: popup_content must be a list."
     return
   endif
 
@@ -163,8 +165,21 @@ function! visutest_ui#ShowTestSuitePopup()
         \ },
         \ }
 
+  " Debugging: Check the type and content of l:popup_options
+  echo "Type of popup_options: " . type(l:popup_options)
+  echo "Content of popup_options: " . string(l:popup_options)
+
+  " Verify that popup_options is a dictionary
+  if type(l:popup_options) != type({})
+    echoerr "Error: popup_options must be a dictionary."
+    return
+  endif
+
   " Create the popup
   let l:popup_id = popup_create(l:popup_content, l:popup_options)
+
+  " Debugging: Check the popup ID returned
+  echo "Popup ID: " . l:popup_id
 
   " Check if popup creation was successful
   if l:popup_id == -1
@@ -185,6 +200,7 @@ function! visutest_ui#CloseTestSuitePopup()
   if !empty(g:visutest_popups)
     let l:popup_id = remove(g:visutest_popups, -1)
     call popup_close(l:popup_id)
+    echo "Popup closed: " . l:popup_id
   endif
 
   " Optionally, unset buffer-local variables if used
