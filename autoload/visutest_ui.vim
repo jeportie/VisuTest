@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/22 17:39:24 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/22 17:42:06 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -89,38 +89,50 @@ function! visutest_ui#SetupHighlighting()
 endfunction
 
 function! visutest_ui#ShowTestSuitePopup()
-  " The mock data for the test log
-  let l:popup_content = [
-        \ '----------------------------------------------------------',
-        \ '1/1 Testing: ft_split_test',
-        \ '1/1 Test: ft_split_test',
-        \ 'Command: "/home/user/test/test_ft_split"',
-        \ 'Directory: /home/user/test',
-        \ '"ft_split_test" start time: Sep 20 15:05 CEST',
-        \ 'Output:',
-        \ '----------------------------------------------------------',
-        \ 'Running suite(s): ft_split',
-        \ '100%: Checks: 5, Failures: 0, Errors: 0',
-        \ '🟢  All tests passed',
-        \ '<end of output>',
-        \ 'Test time =   0.00 sec',
-        \ '----------------------------------------------------------'
-        \ ]
+  " Get the current line the cursor is on
+  let l:current_line = getline(".")
 
-  " Calculate center of the screen for popup positioning
-  let l:winheight = float2nr(&lines / 2)
-  let l:winwidth = float2nr(&columns / 2) - 25  " Adjust based on minwidth (50 / 2)
+  " Define a pattern to match test suite titles (adjust this pattern as needed)
+  let l:test_suite_pattern = '^\s*➔.*\w\+\s*$'
 
-  " Create a popup window with the test log, centered and closed on Enter
-  call popup_create(l:popup_content, {
-        \ 'line': l:winheight,
-        \ 'col': l:winwidth,
-        \ 'minwidth': 50,
-        \ 'minheight': 10,
-        \ 'border': [],
-        \ 'padding': [0,1,0,1],
-        \ 'zindex': 10,
-        \ 'mapping': 0,
-        \ 'filter': 'popup_filter_enter'
-        \ })
+  " Check if the current line matches the test suite title pattern
+  if l:current_line =~ l:test_suite_pattern
+    " The mock data for the test log
+    let l:popup_content = [
+          \ '----------------------------------------------------------',
+          \ '1/1 Testing: ft_split_test',
+          \ '1/1 Test: ft_split_test',
+          \ 'Command: "/home/user/test/test_ft_split"',
+          \ 'Directory: /home/user/test',
+          \ '"ft_split_test" start time: Sep 20 15:05 CEST',
+          \ 'Output:',
+          \ '----------------------------------------------------------',
+          \ 'Running suite(s): ft_split',
+          \ '100%: Checks: 5, Failures: 0, Errors: 0',
+          \ '🟢  All tests passed',
+          \ '<end of output>',
+          \ 'Test time =   0.00 sec',
+          \ '----------------------------------------------------------'
+          \ ]
+
+    " Calculate center of the screen for popup positioning
+    let l:winheight = float2nr(&lines / 2)
+    let l:winwidth = float2nr(&columns / 2) - 25  " Adjust based on minwidth (50 / 2)
+
+    " Create a popup window with the test log, centered and closed on Enter
+    call popup_create(l:popup_content, {
+          \ 'line': l:winheight,
+          \ 'col': l:winwidth,
+          \ 'minwidth': 50,
+          \ 'minheight': 10,
+          \ 'border': [],
+          \ 'padding': [0,1,0,1],
+          \ 'zindex': 10,
+          \ 'mapping': 0,
+          \ 'filter': 'popup_filter_enter'
+          \ })
+  else
+    " If no test suite title found on the current line, give a warning
+    echo "No test suite found on the current line."
+  endif
 endfunction
