@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:09:07 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/23 00:13:38 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -95,6 +95,7 @@ if !exists('g:visutest_popups')
 endif
 
 " Function to show the test suite popup
+" Function to show the test suite popup with text properties
 function! visutest_ui#ShowTestSuitePopup()
   let l:popup_content = [
         \ '----------------------------------------------------------',
@@ -125,7 +126,8 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'col': l:winwidth,
         \ 'minwidth': 20,
         \ 'minheight': 5,
-        \ 'border': []
+        \ 'border': [],
+        \ 'textprop': 1
         \ }
 
   " Create the popup
@@ -141,42 +143,36 @@ function! visutest_ui#ShowTestSuitePopup()
   call add(g:visutest_popups, l:popup_id)
   let b:visutest_popup = l:popup_id
 
-  " Set filetype for syntax highlighting
-  call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
-
-  " Apply syntax highlighting for better visuals
-  call visutest_ui#SetupPopupHighlighting()
+  " Set text properties for color
+  call visutest_ui#AddTextProperties()
 endfunction
 
-" Function to setup syntax highlighting for popup
-function! visutest_ui#SetupPopupHighlighting()
-  " Set syntax highlighting for the popup
-  setlocal syntax=on
+" Function to add text properties for color
+function! visutest_ui#AddTextProperties()
+  " Define text property types with specific colors
+  call prop_type_add('visutest_title', {'highlight': 'VisuTestTitle'})
+  call prop_type_add('visutest_command', {'highlight': 'VisuTestCommand'})
+  call prop_type_add('visutest_directory', {'highlight': 'VisuTestDirectory'})
+  call prop_type_add('visutest_results', {'highlight': 'VisuTestResults'})
+  call prop_type_add('visutest_success', {'highlight': 'VisuTestSuccess'})
+  call prop_type_add('visutest_time', {'highlight': 'VisuTestTime'})
 
-  " Highlight the test suite title
-  syntax match VisuTestSuiteTitle "Running Test Suite:.*"
-  highlight VisuTestSuiteTitle ctermfg=10 guifg=#00ff00
-
-  " Highlight the test command
-  syntax match VisuTestCommand "Command:.*"
-  highlight VisuTestCommand ctermfg=12 guifg=#4682b4
-
-  " Highlight the test directory
-  syntax match VisuTestDirectory "Directory:.*"
-  highlight VisuTestDirectory ctermfg=14 guifg=#87ceeb
-
-  " Highlight the checks and results in green
-  syntax match VisuTestResults "100%: Checks:.*"
-  highlight VisuTestResults ctermfg=2 guifg=#00ff00
-
-  " Highlight test success
-  syntax match VisuTestSuccess "All tests passed"
-  highlight VisuTestSuccess ctermfg=10 guifg=#32cd32
-
-  " Highlight test time
-  syntax match VisuTestTime "Test time =.*"
-  highlight VisuTestTime ctermfg=11 guifg=#ffd700
+  " Add text properties to specific lines in the popup
+  call prop_add(2, 1, {'length': 30, 'type': 'visutest_title'})
+  call prop_add(4, 1, {'length': 30, 'type': 'visutest_command'})
+  call prop_add(5, 1, {'length': 30, 'type': 'visutest_directory'})
+  call prop_add(9, 1, {'length': 50, 'type': 'visutest_results'})
+  call prop_add(10, 1, {'length': 20, 'type': 'visutest_success'})
+  call prop_add(12, 1, {'length': 30, 'type': 'visutest_time'})
 endfunction
+
+" Define highlight groups for text properties
+highlight VisuTestTitle ctermfg=10 guifg=#00ff00
+highlight VisuTestCommand ctermfg=12 guifg=#4682b4
+highlight VisuTestDirectory ctermfg=14 guifg=#87ceeb
+highlight VisuTestResults ctermfg=2 guifg=#00ff00
+highlight VisuTestSuccess ctermfg=10 guifg=#32cd32
+highlight VisuTestTime ctermfg=11 guifg=#ffd700
 
 " Function to handle popup closure
 function! visutest_ui#ClosePopup(popup_id)
