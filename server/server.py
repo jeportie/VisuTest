@@ -1,33 +1,31 @@
 import subprocess
 import socket
 import os
-import sys
 import time
 
-def run_tests(project_root):
-    """
-    Run the ctest command in the test_src directory within the provided project root.
-    """
-    test_src_dir = os.path.join(project_root, "test_src")
+def run_tests():
+    # Run ctest command in the test_src directory
     try:
-        subprocess.run(["ctest"], cwd=test_src_dir, check=True)
+        subprocess.run(["ctest"], cwd="test_src", check=True)
     except subprocess.CalledProcessError as e:
         return f"ERROR: {e}"
     return "SUCCESS"
 
-def monitor_log_and_send_updates(client_socket, project_root):
-    """
-    Monitor the LastTest.log file in the project_root and send updates to the client.
-    """
-    log_file = os.path.join(project_root, "test_src", "Testing", "Temporary", "LastTest.log")
+def monitor_log_and_send_updates(client_socket):
+    # Adjust the path to LastTest.log inside test_src/Testing/Temporary/
+    log_file = os.path.join(os.getcwd(), "test_src", "Testing", "Temporary", "LastTest.log")
 
-    # Check if LastTest.log exists
+    # Make sure the log file exists
     if not os.path.exists(log_file):
         client_socket.send("ERROR: LastTest.log not found.".encode())
+        print("Log file not found:", log_file)  # Debug print
         return
+    else:
+        print("Log file found:", log_file)  # Debug print
 
     # Open the LastTest.log for reading from the beginning
     with open(log_file, "r") as log:
+        # Start from the beginning of the file
         current_test_suite = []
         test_in_progress = False
 
@@ -35,12 +33,12 @@ def monitor_log_and_send_updates(client_socket, project_root):
             new_line = log.readline()
 
             if new_line:
-                # Log the line for debugging purposes (you can remove this later)
-                print(f"Read line: {new_line.strip()}")
+                print(f"Read line: {new_line.strip()}")  # Debug print
 
                 # Detect the start of a test suite block (line containing "Testing:")
-                if "Testing:" in new_line and "Test:" in new_line:
-                    test_name = new_line.split("Testing: ")[-1].strip()
+                if "Testing:" in new_line:
+                    test_name = new_line.split("Testing:")[-1].strip()
+                    print(f"Detected start of test suite: {test_name}")  # Debug print
 
                     # Send the running signal for this test suite
                     client_socket.send(f"RUNNING: {test_name}\n".encode())
@@ -67,14 +65,12 @@ def monitor_log_and_send_updates(client_socket, project_root):
                     current_test_suite = []
                     test_in_progress = False
             else:
-                # For testing, we'll exit the loop after reading the whole file
-                # In a real scenario, use `time.sleep(0.1)` to wait for new data
+                # Since we're dealing with a static file during testing, break the loop
                 break
 
-def start_server(project_root):
-    """
-    Start the server and wait for connections to handle test execution requests.
-    """
+    print("Finished sending updates to client.")
+
+def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # Allow the socket to be reused
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -89,11 +85,11 @@ def start_server(project_root):
         request = client_socket.recv(1024).decode()
 
         if request == "START_TEST":
-            test_status = run_tests(project_root)
+            test_status = "SUCCESS"  # For testing, we assume tests ran successfully
 
             # If tests ran successfully, start monitoring the log
             if test_status == "SUCCESS":
-                monitor_log_and_send_updates(client_socket, project_root)
+                monitor_log_and_send_updates(client_socket)
             else:
                 client_socket.send(f"{test_status}\n".encode())  # Send error message to Vim
         else:
@@ -103,17 +99,5 @@ def start_server(project_root):
         print(f"Connection with {addr} closed.")
 
 if __name__ == "__main__":
-    # Ensure the project root is provided as a command-line argument
-    if len(sys.argv) < 2:
-        print("Usage: python server.py <project_root>")
-        sys.exit(1)
-
-    project_root = sys.argv[1]
-    
-    # Validate if the provided project root is a valid directory
-    if not os.path.isdir(project_root):
-        print(f"ERROR: The provided project root '{project_root}' is not a valid directory.")
-        sys.exit(1)
-
-    start_server(project_root)
+    start_server()
 
