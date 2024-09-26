@@ -12,11 +12,16 @@ VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :cal
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestTogglePopup	plugin/visutest_commands.vim	/^command! VisuTestTogglePopup call visutest_core#TogglePopup()$/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
+connect_to_server	server/test_server.py	/^def connect_to_server():$/;"	f
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
 g:visutest_tests_show_units	autoload/visutest_tests.vim	/^let g:visutest_tests_show_units = 1$/;"	v
+mock_last_test_log	server/test_server.py	/^def mock_last_test_log():$/;"	f
+monitor_log_and_send_updates	server/server.py	/^def monitor_log_and_send_updates(client_socket):$/;"	f
 p	autoload/visutest_tests.vim	/^nnoremap <silent> p :call visutest_tests#ToggleUnits()<CR>$/;"	m
+run_tests	server/server.py	/^def run_tests():$/;"	f
+start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
