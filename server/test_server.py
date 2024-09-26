@@ -1,54 +1,28 @@
-
 import socket
 import os
+import subprocess
+import time
 
-def mock_last_test_log():
-    """Create a mock LastTest.log file with the provided content."""
-    log_content = """\
-Total Test time (real) =   0.00 sec
-Start testing: Sep 26 11:45 UTC
-----------------------------------------------------------
-1/2 Testing: test_ms_get_user_input
-1/2 Test: test_ms_get_user_input
-Command: "/root/projects/minishell/test_src/test_ms_get_user_input"
-Directory: /root/projects/minishell/test_src
-"test_ms_get_user_input" start time: Sep 26 11:45 UTC
-Output:
-----------------------------------------------------------
-Running suite(s): Minishell
-100%: Checks: 3, Failures: 0, Errors: 0
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Passed.
-"test_ms_get_user_input" end time: Sep 26 11:45 UTC
-"test_ms_get_user_input" time elapsed: 00:00:00
-----------------------------------------------------------
+def start_server():
+    """Start the server and pass the project root as an argument."""
+    project_root = os.getcwd()  # Get the current working directory (or specify a path)
+    
+    # Path to the server script
+    server_script = os.path.join(os.path.dirname(__file__), 'server.py')
 
-2/2 Testing: test_ms_init_shell
-2/2 Test: test_ms_init_shell
-Command: "/root/projects/minishell/test_src/test_ms_init_shell"
-Directory: /root/projects/minishell/test_src
-"test_ms_init_shell" start time: Sep 26 11:45 UTC
-Output:
-----------------------------------------------------------
-Running suite(s): Minishell
-100%: Checks: 1, Failures: 0, Errors: 0
-<end of output>
-Test time =   0.00 sec
-----------------------------------------------------------
-Test Passed.
-"test_ms_init_shell" end time: Sep 26 11:45 UTC
-"test_ms_init_shell" time elapsed: 00:00:00
-----------------------------------------------------------
-End testing: Sep 26 11:45 UTC
-"""
-    with open("LastTest.log", "w") as f:
-        f.write(log_content)
+    # Start the server process
+    server_process = subprocess.Popen(['python3', server_script, project_root], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    # Give the server some time to start up
+    time.sleep(1)
+    
+    return server_process
 
 def connect_to_server():
     """Simulate Vim connecting to the server and receiving output."""
-    mock_last_test_log()  # Create the mock LastTest.log for the server to read
+    
+    # Start the server
+    server_process = start_server()
 
     # Connect to the server
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -66,5 +40,10 @@ def connect_to_server():
 
     client_socket.close()
 
+    # Terminate the server process after the tests
+    server_process.terminate()
+    server_process.wait()
+
 if __name__ == "__main__":
     connect_to_server()
+
