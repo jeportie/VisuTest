@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:38:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 14:29:05 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -43,6 +43,9 @@ function! visutest_ui#SetupWindowUI()
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   " Key mapping to close the popup when 'p' is pressed
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
+  " Key mapping to run tests when 'r' is pressed
+  nnoremap <buffer> r :VisuTestRun<CR>
+
 
    " Set the buffer back to read-only
   setlocal nomodifiable
@@ -94,27 +97,18 @@ if !exists('g:visutest_popups')
   let g:visutest_popups = []
 endif
 
-" Function to show the test suite popup with a title and icons
+" Function to show the test suite popup with the actual test log
 function! visutest_ui#ShowTestSuitePopup()
-  let l:popup_content = [
-        \ '🖥️  **VisuTest - Test Suite Overview** 🛠️',
-        \ '----------------------------------------------------------',
-        \ '1/1 Testing: ft_split_test',
-        \ '1/1 Test: ft_split_test',
-        \ 'Command: "/home/user/test/test_ft_split"',
-        \ 'Directory: /home/user/test',
-        \ '"ft_split_test" start time: Sep 20 15:05 CEST',
-        \ 'Output:',
-        \ '----------------------------------------------------------',
-        \ 'Running suite(s): ft_split',
-        \ '100%: Checks: 5, Failures: 0, Errors: 0',
-        \ '🟢 ✅ All tests passed successfully!',
-        \ '<end of output>',
-        \ 'Test time =   0.00 sec',
-        \ '----------------------------------------------------------',
-        \ '',
-        \ 'Press <Esc> to close this popup.'
-        \ ]
+  " Get the selected test suite name
+  let l:line = getline(".")
+  let l:test_name = matchstr(l:line, '\zs\w\+$')
+
+  " Retrieve the log for the selected test
+  if has_key(g:visutest_test_logs, l:test_name)
+    let l:popup_content = g:visutest_test_logs[l:test_name]
+  else
+    let l:popup_content = ['No log available for this test suite.']
+  endif
 
   " Calculate center of the screen for popup positioning
   let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
@@ -124,9 +118,11 @@ function! visutest_ui#ShowTestSuitePopup()
   let l:popup_options = {
         \ 'line': l:winheight,
         \ 'col': l:winwidth,
-        \ 'minwidth': 20,
-        \ 'minheight': 5,
-        \ 'border': []
+        \ 'minwidth': 50,
+        \ 'minheight': 10,
+        \ 'border': [],
+        \ 'title': 'Test Suite: ' . l:test_name,
+        \ 'wrap': v:false,
         \ }
 
   " Create the popup
@@ -142,12 +138,52 @@ function! visutest_ui#ShowTestSuitePopup()
   call add(g:visutest_popups, l:popup_id)
   let b:visutest_popup = l:popup_id
 
-  " Set filetype for syntax highlighting
-  call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
+  " Set filetype for syntax highlighting if needed
+  " call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
 
+  " Bind <Esc> to close the popup
+  call popup_setoptions(l:popup_id, {'mapping': v:true})
+  call popup_filter_menu(l:popup_id, ['<Esc>'])
+  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 endfunction
 
 " Function to handle popup closure
 function! visutest_ui#ClosePopup()
   call popup_clear(1)
 endfunction
+
+" Function to update the test status in the UI
+function! visutest_ui#UpdateTestStatus(test_name, status)
+  " Find the line number where the test is displayed
+  let l:bufnr = bufnr('%')
+  let l:lines = getline(1, '$')
+  let l:line_num = 0
+  let l:updated_line = ''
+
+  for idx in range(len(l:lines))
+    let l:line = l:lines[idx]
+    if l:line =~ '➔ 󰏦 ' . a:test_name
+      let l:line_num = idx + 1  " Line numbers start from 1
+      " Update the icon based on status
+      if a:status ==# 'running'
+        let l:icon = '🟡'  " Yellow circle for running
+      elseif a:status ==# 'passed'
+        let l:icon = '🟢'  " Green circle for passed
+      elseif a:status ==# 'failed'
+        let l:icon = '🔴'  " Red circle for failed
+      else
+        let l:icon = '⚪'  " White circle for unknown
+      endif
+
+      " Construct the updated line
+      let l:updated_line = substitute(l:line, '^.\zs.', l:icon, '')
+      " Update the line in the buffer
+      call setline(l:line_num, l:updated_line)
+      break
+    endif
+  endfor
+
+  " Refresh the display
+  redraw
+endfunction
+

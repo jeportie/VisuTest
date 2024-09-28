@@ -314,6 +314,7 @@ VisuTest	plugin/visutest_commands.vim	/^command! VisuTest :call visutest_ui#Setu
 VisuTestClose	plugin/visutest_commands.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
 VisuTestCloseWindow	plugin/visutest_core.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"	f
+VisuTestRun	plugin/visutest_commands.vim	/^command! VisuTestRun :call visutest_core#StartTests()$/;"	c
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestTogglePopup	plugin/visutest_commands.vim	/^command! VisuTestTogglePopup call visutest_core#TogglePopup()$/;"	c
@@ -351,6 +352,9 @@ qnxnto	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char c
 run_tests	server/server.py	/^def run_tests():$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
+visutest_core#OnClose	autoload/visutest_core.vim	/^function! visutest_core#OnClose(channel)$/;"	f
+visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(channel, msg)$/;"	f
+visutest_core#StartTests	autoload/visutest_core.vim	/^function! visutest_core#StartTests()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
 visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f
@@ -362,4 +366,5 @@ visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePop
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
+visutest_ui#UpdateTestStatus	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateTestStatus(test_name, status)$/;"	f
 volatile	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
