@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 21:45:37 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 21:48:29 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -89,9 +89,9 @@ function! visutest_core#StartTests()
   " Use job_start() to run the client script
   let l:cmd = ['python3', l:client_script]
   let l:opts = {
-        \ 'on_stdout': function('visutest_core#OnData'),
-        \ 'on_stderr': function('visutest_core#OnError'),
-        \ 'on_exit': function('visutest_core#OnExit'),
+        \ 'out_cb': function('visutest_core#ServerOutput'),
+        \ 'err_cb': function('visutest_core#ServerError'),
+        \ 'exit_cb': function('visutest_core#ServerExit'),
         \ }
 
   let g:visutest_client_job = job_start(l:cmd, l:opts)
