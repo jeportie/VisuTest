@@ -6,37 +6,30 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 21:37:06 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 21:45:37 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 " Function to start the server
+" Function to start the server
 function! visutest_core#StartServer()
-  " Define the absolute path to the server script
-  let l:server_script = '/root/.vim/plugged/VisuTest/server/server.py'
-
-  " Debugging: Print server script path
-  echom "Server Script: " . l:server_script
-
-  " Check if the server script exists and is readable
-  if !filereadable(l:server_script)
-    echoerr "Server script not found or unreadable: " . l:server_script
-    return
-  endif
+  " Define the path to the server script
+  let l:script_path = expand('<sfile>:p:h')
+  let l:plugin_root = fnamemodify(l:script_path, ':h')
+  let l:server_script = l:plugin_root . '/server/server.py'
 
   " Check if the server is already running
   if exists('g:visutest_server_job') && job_status(g:visutest_server_job) ==# 'run'
     " Server is already running
-    echom "VisuTest server is already running."
     return
   endif
 
   " Start the server using job_start()
   let l:cmd = ['python3', l:server_script]
   let l:opts = {
-        \ 'on_stdout': function('visutest_core#ServerOutput'),
-        \ 'on_stderr': function('visutest_core#ServerError'),
-        \ 'on_exit': function('visutest_core#ServerExit'),
+        \ 'out_cb': function('visutest_core#ServerOutput'),
+        \ 'err_cb': function('visutest_core#ServerError'),
+        \ 'exit_cb': function('visutest_core#ServerExit'),
         \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
