@@ -356,6 +356,9 @@ visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$
 visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(job_id, data, event)$/;"	f
 visutest_core#OnError	autoload/visutest_core.vim	/^function! visutest_core#OnError(job_id, data, event)$/;"	f
 visutest_core#OnExit	autoload/visutest_core.vim	/^function! visutest_core#OnExit(job_id, exit_code, event)$/;"	f
+visutest_core#ServerError	autoload/visutest_core.vim	/^function! visutest_core#ServerError(job_id, data, event)$/;"	f
+visutest_core#ServerExit	autoload/visutest_core.vim	/^function! visutest_core#ServerExit(job_id, exit_status, event)$/;"	f
+visutest_core#ServerOutput	autoload/visutest_core.vim	/^function! visutest_core#ServerOutput(job_id, data, event)$/;"	f
 visutest_core#StartServer	autoload/visutest_core.vim	/^function! visutest_core#StartServer()$/;"	f
 visutest_core#StartTests	autoload/visutest_core.vim	/^function! visutest_core#StartTests()$/;"	f
 visutest_core#StopServer	autoload/visutest_core.vim	/^function! visutest_core#StopServer()$/;"	f

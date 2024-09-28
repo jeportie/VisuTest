@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 20:28:44 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 20:33:59 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -23,33 +23,41 @@ function! visutest_core#StartServer()
     return
   endif
 
-  " Start the server using jobstart()
+  " Start the server using job_start()
   let l:cmd = ['python3', l:server_script]
   let l:opts = {
         \ 'rpc': v:false,
         \ 'detach': v:true,
-        \ 'stdout_buffered': v:false,
-        \ 'stderr_buffered': v:false,
+        \ 'out_cb': function('visutest_core#ServerOutput'),
+        \ 'err_cb': function('visutest_core#ServerError'),
+        \ 'exit_cb': function('visutest_core#ServerExit'),
         \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
 
-  if g:visutest_server_job <= 0
+  if g:visutest_server_job == 0
     echoerr "Failed to start the VisuTest server."
   else
     echom "VisuTest server started."
   endif
 endfunction
 
+" Placeholder functions for server callbacks
+function! visutest_core#ServerOutput(job_id, data, event)
+  " Handle server output if needed
+endfunction
+
+function! visutest_core#ServerError(job_id, data, event)
+  " Handle server error output if needed
+endfunction
+
+function! visutest_core#ServerExit(job_id, exit_status, event)
+  " Handle server exit if needed
+endfunction
 
 function! visutest_core#StartTests()
   " Ensure the server is running
   call visutest_core#StartServer()
-
-  if exists('g:visutest_client_job') && job_status(g:visutest_client_job) ==# 'run'
-    echo "Tests are already running."
-    return
-  endif
 
   " Define the path to the client script
   let l:script_path = expand('<sfile>:p:h')
@@ -61,19 +69,17 @@ function! visutest_core#StartTests()
     let g:visutest_test_logs = {}
   endif
 
-  " Use jobstart() to run the client script
+  " Use job_start() to run the client script
   let l:cmd = ['python3', l:client_script]
   let l:opts = {
-        \ 'on_stdout': 'visutest_core#OnData',
-        \ 'on_stderr': 'visutest_core#OnError',
-        \ 'on_exit': 'visutest_core#OnExit',
-        \ 'stdout_buffered': v:false,
-        \ 'stderr_buffered': v:false,
+        \ 'out_cb': function('visutest_core#OnData'),
+        \ 'err_cb': function('visutest_core#OnError'),
+        \ 'exit_cb': function('visutest_core#OnExit'),
         \ }
 
   let g:visutest_client_job = job_start(l:cmd, l:opts)
 
-  if g:visutest_client_job <= 0
+  if g:visutest_client_job == 0
     echoerr "Failed to start the VisuTest client."
   else
     echom "VisuTest client started."
@@ -121,7 +127,7 @@ endfunction
 " Function to stop the server
 function! visutest_core#StopServer()
   if exists('g:visutest_server_job') && job_status(g:visutest_server_job) ==# 'run'
-    call jobstop(g:visutest_server_job)
+    call job_stop(g:visutest_server_job)
     unlet g:visutest_server_job
     echom "VisuTest server stopped."
   endif
