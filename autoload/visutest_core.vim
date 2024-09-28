@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 21:22:12 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 21:37:06 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -34,10 +34,9 @@ function! visutest_core#StartServer()
   " Start the server using job_start()
   let l:cmd = ['python3', l:server_script]
   let l:opts = {
-        \ 'out_cb': function('visutest_core#ServerOutput'),
-        \ 'err_cb': function('visutest_core#ServerError'),
-        \ 'exit_cb': function('visutest_core#ServerExit'),
-        \ 'mode': 'line',
+        \ 'on_stdout': function('visutest_core#ServerOutput'),
+        \ 'on_stderr': function('visutest_core#ServerError'),
+        \ 'on_exit': function('visutest_core#ServerExit'),
         \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
@@ -97,10 +96,9 @@ function! visutest_core#StartTests()
   " Use job_start() to run the client script
   let l:cmd = ['python3', l:client_script]
   let l:opts = {
-        \ 'out_cb': function('visutest_core#OnData'),
-        \ 'err_cb': function('visutest_core#OnError'),
-        \ 'exit_cb': function('visutest_core#OnExit'),
-        \ 'mode': 'line',
+        \ 'on_stdout': function('visutest_core#OnData'),
+        \ 'on_stderr': function('visutest_core#OnError'),
+        \ 'on_exit': function('visutest_core#OnExit'),
         \ }
 
   let g:visutest_client_job = job_start(l:cmd, l:opts)
@@ -167,3 +165,4 @@ function! visutest_core#StopServer()
     echom "VisuTest server stopped."
   endif
 endfunction
+
