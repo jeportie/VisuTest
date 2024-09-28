@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 20:33:59 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 20:44:36 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -25,13 +25,11 @@ function! visutest_core#StartServer()
 
   " Start the server using job_start()
   let l:cmd = ['python3', l:server_script]
-  let l:opts = {
-        \ 'rpc': v:false,
-        \ 'detach': v:true,
-        \ 'out_cb': function('visutest_core#ServerOutput'),
-        \ 'err_cb': function('visutest_core#ServerError'),
-        \ 'exit_cb': function('visutest_core#ServerExit'),
-        \ }
+let l:opts = {
+      \ 'out_cb': function('visutest_core#ServerOutput'),
+      \ 'err_cb': function('visutest_core#ServerError'),
+      \ 'exit_cb': function('visutest_core#ServerExit'),
+      \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
 
@@ -42,17 +40,16 @@ function! visutest_core#StartServer()
   endif
 endfunction
 
-" Placeholder functions for server callbacks
-function! visutest_core#ServerOutput(job_id, data, event)
-  " Handle server output if needed
-endfunction
-
 function! visutest_core#ServerError(job_id, data, event)
-  " Handle server error output if needed
+  for l:line in a:data
+    if l:line != ''
+      echoerr "VisuTest server error: " . l:line
+    endif
+  endfor
 endfunction
 
 function! visutest_core#ServerExit(job_id, exit_status, event)
-  " Handle server exit if needed
+  echom "VisuTest server exited with code " . a:exit_status
 endfunction
 
 function! visutest_core#StartTests()
@@ -86,7 +83,7 @@ function! visutest_core#StartTests()
   endif
 endfunction
 
-function! visutest_core#OnData(job_id, data, event)
+function! visutest_core#OnData(job_id, data, event) dict
   for l:line in a:data
     if l:line == ''
       continue
@@ -112,7 +109,7 @@ function! visutest_core#OnData(job_id, data, event)
   endfor
 endfunction
 
-function! visutest_core#OnError(job_id, data, event)
+function! visutest_core#OnError(job_id, data, event) dict
   for l:line in a:data
     if l:line != ''
       echoerr "VisuTest client error: " . l:line
