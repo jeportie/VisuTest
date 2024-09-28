@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 20:56:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 21:14:13 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -38,11 +38,6 @@ function! visutest_core#StartServer()
   else
     echoerr "Failed to start the VisuTest server."
   endif
-endfunction
-
-" Placeholder functions for server callbacks
-function! visutest_core#ServerOutput(job, data, event)
-  " Handle server output if needed
 endfunction
 
 function! visutest_core#ServerError(job, data, event)
@@ -114,7 +109,8 @@ function! visutest_core#OnData(job, data, event)
   endfor
 endfunction
 
-function! visutest_core#OnError(job, data, event)
+" Corrected OnError to accept only job and data
+function! visutest_core#OnError(job, data)
   for l:line in a:data
     if l:line != ''
       echoerr "VisuTest client error: " . l:line
@@ -122,7 +118,8 @@ function! visutest_core#OnError(job, data, event)
   endfor
 endfunction
 
-function! visutest_core#OnExit(job, exit_status, event)
+" Corrected OnExit to accept only job and exit_status
+function! visutest_core#OnExit(job, exit_status)
   echom "VisuTest client exited with code " . a:exit_status
 endfunction
 
