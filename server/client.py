@@ -1,5 +1,8 @@
 import socket
 import sys
+import logging
+
+logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/client.log', level=logging.DEBUG)
 
 def main():
     # Define server address and port

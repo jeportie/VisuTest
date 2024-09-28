@@ -2,6 +2,9 @@ import subprocess
 import socket
 import os
 import time
+import logging
+
+logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/server.log', level=logging.DEBUG)
 
 def run_tests():
     # Run ctest command in the test_src directory
