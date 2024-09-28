@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/21 15:05:24 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 00:35:36 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 14:55:52 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -28,6 +28,11 @@ let g:loaded_visutest = 1
 " Load the core and UI modules
 runtime! autoload/visutest_core.vim
 runtime! autoload/visutest_ui.vim
+
+" Start the VisuTest server when the plugin is loaded
+call visutest_core#StartServer()
+" Stop the VisuTest server when Vim exits
+autocmd VimLeavePre * call visutest_core#StopServer()
 
 " Function to setup autocommands
 function! visutest#SetupAutocmds()

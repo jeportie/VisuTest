@@ -6,14 +6,14 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 14:29:05 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 17:48:10 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 " Setup UI for the VisuTest window
 function! visutest_ui#SetupWindowUI()
   " Set a fixed width for the vertical window (1/5 of the total width)
-  let l:split_width = float2nr(&columns * 0.15)
+ let l:split_width = max([float2nr(&columns * 0.15), 30])
 
   " Open a new vertical window on the right with fixed width
   botright vertical new
@@ -102,12 +102,15 @@ function! visutest_ui#ShowTestSuitePopup()
   " Get the selected test suite name
   let l:line = getline(".")
   let l:test_name = matchstr(l:line, '\zs\w\+$')
-
+  " Remove 'test_' prefix if present
+  let l:test_name = substitute(l:test_name, '^test_', '', '')
+  " Remove any extra characters (e.g., whitespace)
+  let l:test_name = substitute(l:test_name, '^\s*', '', '')
   " Retrieve the log for the selected test
   if has_key(g:visutest_test_logs, l:test_name)
-    let l:popup_content = g:visutest_test_logs[l:test_name]
+      let l:popup_content = g:visutest_test_logs[l:test_name]
   else
-    let l:popup_content = ['No log available for this test suite.']
+      let l:popup_content = ['No log available for this test suite.']
   endif
 
   " Calculate center of the screen for popup positioning
@@ -154,6 +157,8 @@ endfunction
 
 " Function to update the test status in the UI
 function! visutest_ui#UpdateTestStatus(test_name, status)
+  " Ensure test_name has no 'test_' prefix
+  let l:test_name = substitute(a:test_name, '^test_', '', '')
   " Find the line number where the test is displayed
   let l:bufnr = bufnr('%')
   let l:lines = getline(1, '$')
@@ -162,7 +167,7 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
 
   for idx in range(len(l:lines))
     let l:line = l:lines[idx]
-    if l:line =~ '➔ 󰏦 ' . a:test_name
+    if l:line =~ '➔ 󰏦 ' . l:test_name
       let l:line_num = idx + 1  " Line numbers start from 1
       " Update the icon based on status
       if a:status ==# 'running'

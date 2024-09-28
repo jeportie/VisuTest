@@ -338,6 +338,7 @@ info_version	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^
 info_version	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v
 info_version_internal	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
 info_version_internal	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
+main	server/client.py	/^def main():$/;"	f
 main	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	server/test_src/init_shell/test_ms_get_user_input.c	/^int	main(void)$/;"	f
@@ -352,9 +353,12 @@ qnxnto	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char c
 run_tests	server/server.py	/^def run_tests():$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
-visutest_core#OnClose	autoload/visutest_core.vim	/^function! visutest_core#OnClose(channel)$/;"	f
-visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(channel, msg)$/;"	f
+visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(job_id, data, event)$/;"	f
+visutest_core#OnError	autoload/visutest_core.vim	/^function! visutest_core#OnError(job_id, data, event)$/;"	f
+visutest_core#OnExit	autoload/visutest_core.vim	/^function! visutest_core#OnExit(job_id, exit_code, event)$/;"	f
+visutest_core#StartServer	autoload/visutest_core.vim	/^function! visutest_core#StartServer()$/;"	f
 visutest_core#StartTests	autoload/visutest_core.vim	/^function! visutest_core#StartTests()$/;"	f
+visutest_core#StopServer	autoload/visutest_core.vim	/^function! visutest_core#StopServer()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
 visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f

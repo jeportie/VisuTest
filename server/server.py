@@ -6,6 +6,8 @@ import time
 def run_tests():
     # Run ctest command in the test_src directory
     try:
+        subprocess.run(["cmake" "."], cwd="test_src", check=True)
+        subprocess.run(["make"], cwd="test_src", check=True)
         subprocess.run(["ctest"], cwd="test_src", check=True)
     except subprocess.CalledProcessError as e:
         return f"ERROR: {e}"
@@ -85,7 +87,7 @@ def start_server():
         request = client_socket.recv(1024).decode()
 
         if request == "START_TEST":
-            test_status = "SUCCESS"  # For testing, we assume tests ran successfully
+            test_status = run_tests()
 
             # If tests ran successfully, start monitoring the log
             if test_status == "SUCCESS":
