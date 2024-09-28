@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 20:44:36 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/28 20:56:26 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -16,7 +16,7 @@ function! visutest_core#StartServer()
   let l:script_path = expand('<sfile>:p:h')
   let l:plugin_root = fnamemodify(l:script_path, ':h')
   let l:server_script = l:plugin_root . '/server/server.py'
-  
+
   " Check if the server is already running
   if exists('g:visutest_server_job') && job_status(g:visutest_server_job) ==# 'run'
     " Server is already running
@@ -25,22 +25,27 @@ function! visutest_core#StartServer()
 
   " Start the server using job_start()
   let l:cmd = ['python3', l:server_script]
-let l:opts = {
-      \ 'out_cb': function('visutest_core#ServerOutput'),
-      \ 'err_cb': function('visutest_core#ServerError'),
-      \ 'exit_cb': function('visutest_core#ServerExit'),
-      \ }
+  let l:opts = {
+        \ 'out_cb': function('visutest_core#ServerOutput'),
+        \ 'err_cb': function('visutest_core#ServerError'),
+        \ 'exit_cb': function('visutest_core#ServerExit'),
+        \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
 
-  if g:visutest_server_job == 0
-    echoerr "Failed to start the VisuTest server."
-  else
+  if type(g:visutest_server_job) == v:t_job
     echom "VisuTest server started."
+  else
+    echoerr "Failed to start the VisuTest server."
   endif
 endfunction
 
-function! visutest_core#ServerError(job_id, data, event)
+" Placeholder functions for server callbacks
+function! visutest_core#ServerOutput(job, data, event)
+  " Handle server output if needed
+endfunction
+
+function! visutest_core#ServerError(job, data, event)
   for l:line in a:data
     if l:line != ''
       echoerr "VisuTest server error: " . l:line
@@ -48,7 +53,7 @@ function! visutest_core#ServerError(job_id, data, event)
   endfor
 endfunction
 
-function! visutest_core#ServerExit(job_id, exit_status, event)
+function! visutest_core#ServerExit(job, exit_status, event)
   echom "VisuTest server exited with code " . a:exit_status
 endfunction
 
@@ -76,14 +81,14 @@ function! visutest_core#StartTests()
 
   let g:visutest_client_job = job_start(l:cmd, l:opts)
 
-  if g:visutest_client_job == 0
-    echoerr "Failed to start the VisuTest client."
-  else
+  if type(g:visutest_client_job) == v:t_job
     echom "VisuTest client started."
+  else
+    echoerr "Failed to start the VisuTest client."
   endif
 endfunction
 
-function! visutest_core#OnData(job_id, data, event) dict
+function! visutest_core#OnData(job, data, event)
   for l:line in a:data
     if l:line == ''
       continue
@@ -109,7 +114,7 @@ function! visutest_core#OnData(job_id, data, event) dict
   endfor
 endfunction
 
-function! visutest_core#OnError(job_id, data, event) dict
+function! visutest_core#OnError(job, data, event)
   for l:line in a:data
     if l:line != ''
       echoerr "VisuTest client error: " . l:line
@@ -117,8 +122,8 @@ function! visutest_core#OnError(job_id, data, event) dict
   endfor
 endfunction
 
-function! visutest_core#OnExit(job_id, exit_code, event)
-  echom "VisuTest client exited with code " . a:exit_code
+function! visutest_core#OnExit(job, exit_status, event)
+  echom "VisuTest client exited with code " . a:exit_status
 endfunction
 
 " Function to stop the server
