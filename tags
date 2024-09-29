@@ -12,8 +12,6 @@ VisuTestRun	plugin/visutest_commands.vim	/^command! VisuTestRun :call visutest_c
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
-current_test_suite	server/server.py	/^                    current_test_suite = []$/;"	v
-full_log	server/server.py	/^                    full_log = ''.join(current_test_suite)$/;"	v
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
@@ -25,10 +23,6 @@ receive_data	server/client.py	/^def receive_data(sock):$/;"	f
 run_tests	server/server.py	/^def run_tests():$/;"	f
 send_data	server/client.py	/^def send_data(sock, message):$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
-test_in_progress	server/server.py	/^                    test_in_progress = False$/;"	v
-test_in_progress	server/server.py	/^                    test_in_progress = True$/;"	v
-test_name	server/server.py	/^                    test_name = new_line.split("Testing:")[-1].strip()$/;"	v
-test_result	server/server.py	/^                    test_result = "PASSED" if "Test Passed." in new_line else "FAILED"$/;"	v
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
 visutest_client#OnData	autoload/visutest_client.vim	/^function! visutest_client#OnData(job, data)$/;"	f
 visutest_client#OnError	autoload/visutest_client.vim	/^function! visutest_client#OnError(job, data)$/;"	f
