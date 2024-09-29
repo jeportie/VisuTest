@@ -83,65 +83,50 @@ function! visutest_client#OnData(job, data)
     let g:visutest_test_logs = {}
   endif
 
-  let l:buffer = ''  " Initialize buffer for the log content
-  let l:output_buffer = ''  " Buffer to accumulate client data for final echom
+  let l:raw_data = ''  " Accumulate all incoming data
 
   " DEBUGGING: Log raw data
   for l:line in a:data
     echom "RAW line: " . l:line
+    let l:raw_data .= l:line  " Accumulate raw data into a single string
   endfor
 
-  " Process each line in the data block received from the client
-  for l:line in a:data
-    " CLEANING STEP:
-    " 1. Strip null bytes (represented by \x00 in Vim).
-    " 2. Strip non-printable characters explicitly, not just a general range.
-    let l:clean_line = substitute(l:line, '\x00', '', 'g')  " Remove null characters
-    let l:clean_line = substitute(l:clean_line, '[^\x20-\x7E]', '', 'g')  " Remove control characters
+  " Now clean and process the accumulated data
+  let l:clean_data = substitute(l:raw_data, '\x00', '', 'g')  " Remove null characters
+  let l:clean_data = substitute(l:clean_data, '[^\x20-\x7E]', '', 'g')  " Remove control characters
 
-    " Skip empty or invalid lines after cleaning
-    if l:clean_line == ''
-      continue
-    endif
+  " Skip processing if the cleaned data is empty
+  if l:clean_data == ''
+    return
+  endif
 
-    " Accumulate clean data into output buffer for final echom
-    let l:output_buffer .= l:clean_line . "\n"
+  " Check for specific test statuses or log signals
+  if l:clean_data =~ 'RUNNING:'
+    let l:test_name = matchstr(l:clean_data, 'RUNNING:\s*\zs.*')
+    let l:test_name = substitute(l:test_name, '^test_', '', '')
 
-    " Check for RUNNING, PASSED, or FAILED signals
-    if l:clean_line =~ '^RUNNING:'
-      let l:test_name = matchstr(l:clean_line, 'RUNNING:\s*\zs.*')
-      let l:test_name = substitute(l:test_name, '^test_', '', '')
+    " Set the current test name
+    let g:visutest_current_test = l:test_name
 
-      " Set the current test name
-      let g:visutest_current_test = l:test_name
+    " Update UI for the running test
+    call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
-      " Update UI for the running test
-      call visutest_ui#UpdateTestStatus(l:test_name, 'running')
+  elseif l:clean_data =~ 'PASSED'
+    " Update UI for the passed test
+    call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
 
-    elseif l:clean_line ==# 'PASSED'
-      " Update UI for the passed test
-      call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
+  elseif l:clean_data =~ 'FAILED'
+    " Update UI for the failed test
+    call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
 
-    elseif l:clean_line ==# 'FAILED'
-      " Update UI for the failed test
-      call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
+  elseif l:clean_data =~ '^---'
+    " Start processing log data
+    let g:visutest_test_logs[g:visutest_current_test] = split(l:clean_data, "\n")
 
-    elseif l:clean_line =~ '^---'  " Detect the start of a test log block
-      let l:buffer = l:clean_line  " Start a new buffer for the log
+  endif
 
-    elseif l:clean_line =~ '^Test Passed.$' || l:clean_line =~ '^Test Failed.$'
-      " Finalize and store the test log when a log block is completed
-      let l:buffer .= "\n" . l:clean_line
-      let g:visutest_test_logs[g:visutest_current_test] = split(l:buffer, "\n")
-
-    else
-      " Append to the log buffer if in a log block
-      let l:buffer .= "\n" . l:clean_line
-    endif
-  endfor
-
-  " Display the accumulated client data in one echom
-  echom "Client received cleaned data:\n" . l:output_buffer
+  " Display the accumulated cleaned data
+  echom "Client received cleaned data:\n" . l:clean_data
 endfunction
 
 
