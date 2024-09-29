@@ -84,8 +84,9 @@ function! visutest_client#OnData(job, data)
   endif
 
   let l:raw_data = ''  " Accumulate all incoming data
+  let l:buffer = []    " Buffer to collect relevant log lines
 
-  " Accumulate all data into a single string
+  " Accumulate all data into a single string and split by lines
   for l:line in a:data
     let l:raw_data .= l:line . "\n"  " Concatenate raw data into a single string with newlines
   endfor
@@ -109,7 +110,6 @@ function! visutest_client#OnData(job, data)
     " Update UI for the running test
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
-  " Handle test passing or failing
   elseif l:clean_data =~ 'PASSED'
     " Update UI for the passed test
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
@@ -121,19 +121,13 @@ function! visutest_client#OnData(job, data)
 
   " Detect log sections based on '---' lines and store the logs in the dictionary
   if l:clean_data =~ '^---'
-    " Split log data by lines
     let l:log_lines = split(l:clean_data, "\n")
-
-    " Find the lines starting from the first `---` to the next `---`
-    let l:start_idx = index(l:log_lines, '---')
-    let l:end_idx = index(l:log_lines, 'Test Passed.', l:start_idx + 1)
-    
-    " If both start and end are found, extract the relevant portion
-    if l:start_idx >= 0 && l:end_idx >= 0
-      let l:test_log = l:log_lines[l:start_idx:l:end_idx]
-      " Store the extracted log in the dictionary under the current test name
-      let g:visutest_test_logs[g:visutest_current_test] = l:test_log
-    endif
+    " Buffer to accumulate lines for the current test suite
+    for l:line in l:log_lines
+      if l:line != ''
+        call add(g:visutest_test_logs[g:visutest_current_test], l:line)
+      endif
+    endfor
   endif
 endfunction
 
