@@ -91,8 +91,6 @@ function! visutest_client#OnData(job, data)
   endfor
 
   " Clean the accumulated data:
-  " 1. Remove null characters
-  " 2. Remove control characters and non-printable ASCII characters
   let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
 
   " Skip processing if the cleaned data is empty
@@ -122,11 +120,10 @@ function! visutest_client#OnData(job, data)
   elseif l:clean_data =~ '^---'
     " Start processing log data
     let g:visutest_test_logs[g:visutest_current_test] = split(l:clean_data, "\n")
-
   endif
 
-  " Display the cleaned data without any RAW output
-  echom "Client received cleaned data:\n" . l:clean_data
+  " Display the final cleaned buffer, without intermediate logs
+  echom "Final buffer output:\n" . l:clean_data
 endfunction
 
 """""""""" Callback for client errors """""""""""""""""""""

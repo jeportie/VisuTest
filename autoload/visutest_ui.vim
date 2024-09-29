@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 18:34:07 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 20:58:37 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -150,8 +150,7 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
       let l:line_num = idx + 1
 
       " Determine the appropriate icon based on the status
-      let l:icon = a:status ==# 'running' ? '🟡' :
-            \ a:status ==# 'passed' ? '🟢' :
+      let l:icon = a:status ==# 'passed' ? '🟢' :
             \ a:status ==# 'failed' ? '🔴' : '⚪'
 
       " Construct the updated line with the new icon and test suite name
