@@ -90,7 +90,6 @@ function! visutest_client#OnData(job, data)
     let l:raw_data .= l:line  " Concatenate raw data into a single string
   endfor
 
-  " Clean the accumulated data:
   let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
 
   " Skip processing if the cleaned data is empty
@@ -122,8 +121,8 @@ function! visutest_client#OnData(job, data)
     let g:visutest_test_logs[g:visutest_current_test] = split(l:clean_data, "\n")
   endif
 
-  " Display the final cleaned buffer, without intermediate logs
-  echom "Final buffer output:\n" . l:clean_data
+  " Display only the cleaned buffer contents
+  echom l:clean_data
 endfunction
 
 """""""""" Callback for client errors """""""""""""""""""""
