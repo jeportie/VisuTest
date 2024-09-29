@@ -19,7 +19,9 @@ g:visutest_tests_show_units	autoload/visutest_tests.vim	/^let g:visutest_tests_s
 main	server/client.py	/^def main():$/;"	f
 monitor_log_and_send_updates	server/server.py	/^def monitor_log_and_send_updates(client_socket):$/;"	f
 p	autoload/visutest_tests.vim	/^nnoremap <silent> p :call visutest_tests#ToggleUnits()<CR>$/;"	m
+receive_data	server/client.py	/^def receive_data(sock):$/;"	f
 run_tests	server/server.py	/^def run_tests():$/;"	f
+send_data	server/client.py	/^def send_data(sock, message):$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
 visutest_client#OnData	autoload/visutest_client.vim	/^function! visutest_client#OnData(job, data)$/;"	f
