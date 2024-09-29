@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 18:25:39 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 18:32:59 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -154,11 +154,10 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
             \ a:status ==# 'passed' ? '🟢' :
             \ a:status ==# 'failed' ? '🔴' : '⚪'
 
-      " Replace the first character (icon) in the line with the new icon
-      " This regex looks for any icon (default or existing) at the start of the line and replaces it
-      let l:updated_line = substitute(l:line, '^. ', l:icon . ' ', '')
+      " Construct the updated line with the new icon and test suite name
+      let l:updated_line = "➔ " . l:icon . " " . l:test_name
 
-      " Set the updated line in the buffer
+      " Replace the entire line in the buffer
       call setline(l:line_num, l:updated_line)
       echom "UI: Updated line " . l:line_num . " to " . l:updated_line
       break
