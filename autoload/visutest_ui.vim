@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 20:58:37 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 21:11:11 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -102,8 +102,8 @@ function! visutest_ui#ShowTestSuitePopup()
   let l:popup_options = {
         \ 'line': l:winheight,
         \ 'col': l:winwidth,
-        \ 'minwidth': 50,
-        \ 'minheight': 10,
+        \ 'minwidth': 70,
+        \ 'minheight': 20,
         \ 'border': [],
         \ 'title': 'Test Suite: ' . l:test_name,
         \ 'wrap': v:false,

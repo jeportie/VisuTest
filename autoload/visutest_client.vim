@@ -121,8 +121,6 @@ function! visutest_client#OnData(job, data)
     let g:visutest_test_logs[g:visutest_current_test] = split(l:clean_data, "\n")
   endif
 
-  " Display only the cleaned buffer contents
-  echom l:clean_data
 endfunction
 
 """""""""" Callback for client errors """""""""""""""""""""
