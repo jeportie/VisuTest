@@ -6,32 +6,32 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:11:04 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/23 01:40:01 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 17:56:27 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
-" State variable to track visibility
+" Global state variable to track whether to show or hide test units
 let g:visutest_tests_show_units = 1
 
-" Function to toggle display of test units under test suites
+"""""""""" Function to toggle display of test units under test suites """"""""""
+
 function! visutest_tests#ToggleUnits()
   if g:visutest_tests_show_units
-    " If currently showing, hide the test units
     let g:visutest_tests_show_units = 0
     call visutest_tests#HideUnits()
   else
-    " If currently hidden, show the test units
     let g:visutest_tests_show_units = 1
     call visutest_tests#DisplayTestSuites()
   endif
 endfunction
 
-" Function to hide the test units
+"""""""""""" Function to hide the test units and reset UI layout """""""""""""""
+
 function! visutest_tests#HideUnits()
   setlocal modifiable
   execute '%delete _'
 
-  " Add header
+  " Add header for VisuTest
   call append(line('$'), '╔══════════════════════════╗')
   call append(line('$'), '║        VisuTest          ║')
   call append(line('$'), '╚══════════════════════════╝')
@@ -40,6 +40,7 @@ function! visutest_tests#HideUnits()
   " Setup highlighting for icons, colors, etc.
   call visutest_ui#SetupHighlighting()
 
+  " Add a section for test suites
   call append(line('$'), '-------- Test Suites --------')
   call append(line('$'), '')
 
@@ -58,7 +59,8 @@ function! visutest_tests#HideUnits()
   setlocal nomodifiable
 endfunction
 
-" Function to get test units inside each .c file in test_src/
+"""""""""""" Function to get test units from a test suite file """""""""""""""""
+
 function! visutest_tests#GetTestUnits(suite_file)
   let l:test_units = []
   let l:file_content = readfile(a:suite_file)
@@ -83,7 +85,8 @@ function! visutest_tests#GetTestUnits(suite_file)
   return l:test_units
 endfunction
 
-" Function to get test suites from test_src/ folder
+"""""""""" Function to get all test suite files in the test_src folder """""""""
+
 function! visutest_tests#GetTestSuites()
   let l:test_suites = []
   let l:test_src_dir = getcwd() . '/test_src/'
@@ -94,12 +97,13 @@ function! visutest_tests#GetTestSuites()
   return l:test_suites
 endfunction
 
-" Function to display the test suites and their test units
+""""""""""" Function to display test suites and units in the UI """"""""""""""""
+
 function! visutest_tests#DisplayTestSuites()
   setlocal modifiable
   execute '%delete _'
 
-  " Add header
+  " Add header for VisuTest
   call append(line('$'), '╔══════════════════════════╗')
   call append(line('$'), '║        VisuTest          ║')
   call append(line('$'), '╚══════════════════════════╝')
@@ -108,6 +112,7 @@ function! visutest_tests#DisplayTestSuites()
   " Setup highlighting for icons, colors, etc.
   call visutest_ui#SetupHighlighting()
 
+  " Display test suites
   call append(line('$'), '-------- Test Suites --------')
   call append(line('$'), '')
 
@@ -137,31 +142,27 @@ function! visutest_tests#DisplayTestSuites()
   setlocal nomodifiable
 endfunction
 
-" Function to get the selected test suite name from the current line
+""""""""""" Function to get the name of the selected test suite """""""""""""""
+
 function! visutest_tests#GetSelectedSuite()
   let l:line = getline(".")  " Get the current line
   let l:suite_name = substitute(l:line, '^➔ 󰏦', '', '')  " Remove icons
   return l:suite_name
 endfunction
 
-" Function to display test units for the selected test suite
-function! visutest_tests#ShowUnits()
-  " Get the selected suite name
-  let l:suite_name = visutest_tests#GetSelectedSuite()
+""""""""""" Function to display the test units for a selected suite """"""""""""
 
-  " Get the list of test suites
+function! visutest_tests#ShowUnits()
+  let l:suite_name = visutest_tests#GetSelectedSuite()
   let l:test_suites = visutest_tests#GetTestSuites()
 
-  " Find the suite file corresponding to the selected suite name
   for l:suite_file in l:test_suites
     let l:extracted_suite = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
     let l:extracted_suite = substitute(l:extracted_suite, '\.c$', '', '')
 
     if l:extracted_suite == l:suite_name
-      " Get test units for the suite
       let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
 
-      " Display test units under the selected suite
       call append(line('$'), '  Test Units for ' . l:extracted_suite . ':')
       if !empty(l:test_units)
         for l:test_unit in l:test_units
@@ -170,11 +171,11 @@ function! visutest_tests#ShowUnits()
       else
         call append(line('$'), '  No test units found.')
       endif
-
       break
     endif
   endfor
 endfunction
 
-" Map 'p' in normal mode to toggle test units
+" Mapping to toggle units display with 'p' key
+
 nnoremap <silent> p :call visutest_tests#ToggleUnits()<CR>
