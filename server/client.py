@@ -35,6 +35,7 @@ def receive_data(sock):
                 lines = buffer.split("\n")
                 for line in lines[:-1]:  # Process all complete lines
                     logging.debug(f"Received data: {line}")
+                    print(f"{line.strip()}")
                 buffer = lines[-1]  # Keep the incomplete part for the next recv()
 
     except socket.error as e:
