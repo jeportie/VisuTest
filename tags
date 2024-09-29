@@ -25,6 +25,7 @@ visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$
 visutest_client#OnData	autoload/visutest_client.vim	/^function! visutest_client#OnData(job, data)$/;"	f
 visutest_client#OnError	autoload/visutest_client.vim	/^function! visutest_client#OnError(job, data)$/;"	f
 visutest_client#OnExit	autoload/visutest_client.vim	/^function! visutest_client#OnExit(job, exit_status)$/;"	f
+visutest_client#PrintTestLog	autoload/visutest_client.vim	/^function! visutest_client#PrintTestLog(test_name)$/;"	f
 visutest_client#StartTests	autoload/visutest_client.vim	/^function! visutest_client#StartTests()$/;"	f
 visutest_server#ServerError	autoload/visutest_server.vim	/^function! visutest_server#ServerError(job, data)$/;"	f
 visutest_server#ServerExit	autoload/visutest_server.vim	/^function! visutest_server#ServerExit(job, exit_status)$/;"	f

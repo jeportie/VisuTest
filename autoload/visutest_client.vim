@@ -45,6 +45,33 @@ function! visutest_client#StartTests()
   endif
 endfunction
 
+""""""""""""" Function to print the log for a specific test suite """"""""""""""
+function! visutest_client#PrintTestLog(test_name)
+  " Ensure the global log dictionary exists
+  if !exists('g:visutest_test_logs')
+    echoerr "Test logs are not available."
+    return
+  endif
+
+  " Clean up the test suite name by removing any 'test_' prefix
+  let l:test_name = substitute(a:test_name, '^test_', '', '')
+
+  " Check if the test suite exists in the dictionary
+  if has_key(g:visutest_test_logs, l:test_name)
+    " Get the test log for the suite
+    let l:test_log = g:visutest_test_logs[l:test_name]
+
+    " Print the test log line by line
+    echom "Log for test suite: " . l:test_name
+    for l:line in l:test_log
+      echom l:line
+    endfor
+  else
+    " If the test suite is not found in the dictionary
+    echoerr "No log found for test suite: " . l:test_name
+  endif
+endfunction
+
 """""""""" Callback for client data """""""""""""""""""""
 
 function! visutest_client#OnData(job, data)
