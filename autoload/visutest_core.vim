@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 14:24:01 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 14:27:05 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -103,39 +103,42 @@ function! visutest_core#StartTests()
   endif
 endfunction
 
-" Function to log messages to a file
-function! visutest_core#LogToFile(message)
-  let l:log_file = expand('~/.vim/plugged/VisuTest/visutest.log')
-  call writefile([strftime("%Y-%m-%d %H:%M:%S") . " " . a:message], l:log_file, 'a')
-endfunction
-
 " Callback for client data
 function! visutest_core#OnData(job, data)
+  echom "Client data callback triggered."
+  let l:log_file = '/tmp/visutest.log'  " Change to a path we know is writable
+  
   for l:line in a:data
     if l:line == ''
       continue
     endif
-    call visutest_core#LogToFile("Client received: " . l:line)
+    " Log received data
+    call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Client received: " . l:line], l:log_file, 'a')
+    echom "Client received: " . l:line
 
     " Check for RUNNING, PASSED, or FAILED signals
     if l:line =~ '^RUNNING:'
       let l:test_name = matchstr(l:line, 'RUNNING:\s*\zs.*')
       let l:test_name = substitute(l:test_name, '^test_', '', '')
       let g:visutest_current_test = l:test_name
-      call visutest_core#LogToFile("Test is running: " . l:test_name)
+      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test is running: " . l:test_name], l:log_file, 'a')
+      echom "Test is running: " . l:test_name
       call visutest_ui#UpdateTestStatus(l:test_name, 'running')
     elseif l:line ==# 'PASSED'
-      call visutest_core#LogToFile("Test passed: " . g:visutest_current_test)
+      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test passed: " . g:visutest_current_test], l:log_file, 'a')
+      echom "Test passed: " . g:visutest_current_test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
     elseif l:line ==# 'FAILED'
-      call visutest_core#LogToFile("Test failed: " . g:visutest_current_test)
+      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test failed: " . g:visutest_current_test], l:log_file, 'a')
+      echom "Test failed: " . g:visutest_current_test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
     else
+      " Accumulate test logs
       if !has_key(g:visutest_test_logs, g:visutest_current_test)
         let g:visutest_test_logs[g:visutest_current_test] = []
       endif
       call add(g:visutest_test_logs[g:visutest_current_test], l:line)
-      call visutest_core#LogToFile("Log line added for test: " . g:visutest_current_test . " -> " . l:line)
+      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Log line added for test: " . g:visutest_current_test . " -> " . l:line], l:log_file, 'a')
     endif
   endfor
 endfunction
