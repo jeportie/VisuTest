@@ -317,7 +317,6 @@ VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"
 VisuTestRun	plugin/visutest_commands.vim	/^command! VisuTestRun :call visutest_core#StartTests()$/;"	c
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
-VisuTestTogglePopup	plugin/visutest_commands.vim	/^command! VisuTestTogglePopup call visutest_core#TogglePopup()$/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
 __has_include	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	17;"	d	file:
 connect_to_server	server/test_server.py	/^def connect_to_server():$/;"	f
@@ -353,15 +352,15 @@ qnxnto	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char c
 run_tests	server/server.py	/^def run_tests():$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
-visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(job, data)$/;"	f
-visutest_core#OnError	autoload/visutest_core.vim	/^function! visutest_core#OnError(job, data)$/;"	f
-visutest_core#OnExit	autoload/visutest_core.vim	/^function! visutest_core#OnExit(job, exit_status)$/;"	f
-visutest_core#ServerError	autoload/visutest_core.vim	/^function! visutest_core#ServerError(job, data)$/;"	f
-visutest_core#ServerExit	autoload/visutest_core.vim	/^function! visutest_core#ServerExit(job, exit_status)$/;"	f
-visutest_core#ServerOutput	autoload/visutest_core.vim	/^function! visutest_core#ServerOutput(job, data)$/;"	f
-visutest_core#StartServer	autoload/visutest_core.vim	/^function! visutest_core#StartServer()$/;"	f
-visutest_core#StartTests	autoload/visutest_core.vim	/^function! visutest_core#StartTests()$/;"	f
-visutest_core#StopServer	autoload/visutest_core.vim	/^function! visutest_core#StopServer()$/;"	f
+visutest_client#OnData	autoload/visutest_client.vim	/^function! visutest_client#OnData(job, data)$/;"	f
+visutest_client#OnError	autoload/visutest_client.vim	/^function! visutest_client#OnError(job, data)$/;"	f
+visutest_client#OnExit	autoload/visutest_client.vim	/^function! visutest_client#OnExit(job, exit_status)$/;"	f
+visutest_client#StartTests	autoload/visutest_client.vim	/^function! visutest_client#StartTests()$/;"	f
+visutest_server#ServerError	autoload/visutest_server.vim	/^function! visutest_server#ServerError(job, data)$/;"	f
+visutest_server#ServerExit	autoload/visutest_server.vim	/^function! visutest_server#ServerExit(job, exit_status)$/;"	f
+visutest_server#ServerOutput	autoload/visutest_server.vim	/^function! visutest_server#ServerOutput(job, data)$/;"	f
+visutest_server#StartServer	autoload/visutest_server.vim	/^function! visutest_server#StartServer()$/;"	f
+visutest_server#StopServer	autoload/visutest_server.vim	/^function! visutest_server#StopServer()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
 visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f
