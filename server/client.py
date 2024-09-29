@@ -19,14 +19,24 @@ def main():
         sock.sendall(b'START_TEST\n')
         logging.info("Sent START_TEST command to the server.")
 
+        # Buffer to accumulate data
+        buffer = ""
+
         # Receive data from the server
         while True:
             data = sock.recv(1024)
             if not data:
                 break
-            logging.debug(f"Received data: {data.decode().strip()}")
-            print(data.decode(), end='')
-        
+
+            # Decode received data and accumulate it in the buffer
+            buffer += data.decode()
+
+            # Look for completed blocks in the buffer (assuming each block ends with '\n')
+            while '\n' in buffer:
+                line, buffer = buffer.split('\n', 1)
+                logging.debug(f"Received data block: {line.strip()}")
+                print(line.strip())  # Send entire line to Vim
+
     except socket.error as e:
         logging.error(f"Socket error: {e}")
     except Exception as e:

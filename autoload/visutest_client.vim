@@ -72,23 +72,30 @@ function! visutest_client#PrintTestLog(test_name)
   endif
 endfunction
 
-"""""""""""""""" Function to handle data from the client """""""""""""""""
+"""""""""""""""" Function to handle structured data from the client """""""""""""""""
 
 function! visutest_client#OnData(job, data)
   echom "Client data callback triggered."
-  let l:log_file = '/tmp/visutest.log'  " Change to a path we know is writable
+  let l:log_file = '/tmp/visutest.log'  " Path for logging
 
-  " Ensure g:visutest_current_test exists
+  " Ensure global variables are initialized
   if !exists('g:visutest_current_test')
     let g:visutest_current_test = ''
   endif
 
+  if !exists('g:visutest_test_logs')
+    let g:visutest_test_logs = {}
+  endif
+
+  let l:buffer = ''
+
+  " Process each line in the data block received from the client
   for l:line in a:data
     if l:line == ''
       continue
     endif
 
-    " Log received data
+    " Log the data for debugging
     call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Client received: " . l:line], l:log_file, 'a')
     echom "Client received: " . l:line
 
@@ -100,34 +107,31 @@ function! visutest_client#OnData(job, data)
       " Set the current test name
       let g:visutest_current_test = l:test_name
 
-      " Log the start of the test
+      " Log and update UI for the running test
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test is running: " . l:test_name], l:log_file, 'a')
       echom "Test is running: " . l:test_name
-
-      " Update UI with the 'running' status
       call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
     elseif l:line ==# 'PASSED'
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test passed: " . g:visutest_current_test], l:log_file, 'a')
       echom "Test passed: " . g:visutest_current_test
-
-      " Update UI with the 'passed' status
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
 
     elseif l:line ==# 'FAILED'
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test failed: " . g:visutest_current_test], l:log_file, 'a')
       echom "Test failed: " . g:visutest_current_test
-
-      " Update UI with the 'failed' status
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
 
+    elseif l:line =~ '^---'  " Detect the start of a test log block
+      let l:buffer = l:line  " Start a new buffer for the log
+    elseif l:line =~ '^Test Passed.$' || l:line =~ '^Test Failed.$'
+      " Finalize and store the test log when a log block is completed
+      let l:buffer .= "\n" . l:line
+      let g:visutest_test_logs[g:visutest_current_test] = split(l:buffer, "\n")
+      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test log for " . g:visutest_current_test . ": " . l:buffer], l:log_file, 'a')
     else
-      " Handle additional log lines for the current test
-      if !has_key(g:visutest_test_logs, g:visutest_current_test)
-        let g:visutest_test_logs[g:visutest_current_test] = []
-      endif
-      call add(g:visutest_test_logs[g:visutest_current_test], l:line)
-      call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Log line added for test: " . g:visutest_current_test . " -> " . l:line], l:log_file, 'a')
+      " Append to the log buffer if in a log block
+      let l:buffer .= "\n" . l:line
     endif
   endfor
 endfunction
