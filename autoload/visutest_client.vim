@@ -85,14 +85,15 @@ function! visutest_client#OnData(job, data)
 
   let l:raw_data = ''  " Accumulate all incoming data
 
-  " Accumulate all data into a single string without debugging raw lines
+  " Accumulate all data into a single string
   for l:line in a:data
     let l:raw_data .= l:line  " Concatenate raw data into a single string
   endfor
 
-  " Clean the accumulated data
-  let l:clean_data = substitute(l:raw_data, '\x00', '', 'g')  " Remove null characters
-  let l:clean_data = substitute(l:clean_data, '[^\x20-\x7E]', '', 'g')  " Remove control characters
+  " Clean the accumulated data:
+  " 1. Remove null characters
+  " 2. Remove control characters and non-printable ASCII characters
+  let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
 
   " Skip processing if the cleaned data is empty
   if l:clean_data == ''
