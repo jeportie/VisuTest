@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 18:00:07 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 18:16:33 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -134,24 +134,40 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
   let l:test_name = substitute(a:test_name, '^test_', '', '')
   echom "UI: Updating status for " . l:test_name . " to " . a:status
 
+  " Get the current buffer number and all the lines in the buffer
   let l:bufnr = bufnr('%')
   let l:lines = getline(1, '$')
   let l:line_num = 0
 
+  " Temporarily make the buffer modifiable
+  setlocal modifiable
+
   for idx in range(len(l:lines))
     let l:line = l:lines[idx]
+
+    " Find the line that matches the test name
     if l:line =~ '➔ 󰏦 ' . l:test_name
       let l:line_num = idx + 1
+
+      " Determine the appropriate icon based on the status
       let l:icon = a:status ==# 'running' ? '🟡' :
             \ a:status ==# 'passed' ? '🟢' :
             \ a:status ==# 'failed' ? '🔴' : '⚪'
+
+      " Update the icon in the line (replace the first character with the new icon)
       let l:updated_line = substitute(l:line, '^.\zs.', l:icon, '')
+
+      " Set the updated line in the buffer
       call setline(l:line_num, l:updated_line)
       echom "UI: Updated line " . l:line_num . " to " . l:updated_line
       break
     endif
   endfor
 
+  " Set the buffer back to non-modifiable
+  setlocal nomodifiable
+
+  " Refresh the display to apply changes
   redraw
 endfunction
 
