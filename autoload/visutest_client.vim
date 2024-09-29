@@ -88,16 +88,19 @@ function! visutest_client#OnData(job, data)
 
   " Process each line in the data block received from the client
   for l:line in a:data
-    if l:line == ''
+    " Remove null characters and non-printable characters from the line
+    let l:clean_line = substitute(l:line, '[^\x20-\x7E]', '', 'g')
+
+    if l:clean_line == ''
       continue
     endif
 
-    " Accumulate data into output buffer for final echom
-    let l:output_buffer .= l:line . "\n"
+    " Accumulate clean data into output buffer for final echom
+    let l:output_buffer .= l:clean_line . "\n"
 
     " Check for RUNNING, PASSED, or FAILED signals
-    if l:line =~ '^RUNNING:'
-      let l:test_name = matchstr(l:line, 'RUNNING:\s*\zs.*')
+    if l:clean_line =~ '^RUNNING:'
+      let l:test_name = matchstr(l:clean_line, 'RUNNING:\s*\zs.*')
       let l:test_name = substitute(l:test_name, '^test_', '', '')
 
       " Set the current test name
@@ -106,25 +109,25 @@ function! visutest_client#OnData(job, data)
       " Update UI for the running test
       call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
-    elseif l:line ==# 'PASSED'
+    elseif l:clean_line ==# 'PASSED'
       " Update UI for the passed test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
 
-    elseif l:line ==# 'FAILED'
+    elseif l:clean_line ==# 'FAILED'
       " Update UI for the failed test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
 
-    elseif l:line =~ '^---'  " Detect the start of a test log block
-      let l:buffer = l:line  " Start a new buffer for the log
+    elseif l:clean_line =~ '^---'  " Detect the start of a test log block
+      let l:buffer = l:clean_line  " Start a new buffer for the log
 
-    elseif l:line =~ '^Test Passed.$' || l:line =~ '^Test Failed.$'
+    elseif l:clean_line =~ '^Test Passed.$' || l:clean_line =~ '^Test Failed.$'
       " Finalize and store the test log when a log block is completed
-      let l:buffer .= "\n" . l:line
+      let l:buffer .= "\n" . l:clean_line
       let g:visutest_test_logs[g:visutest_current_test] = split(l:buffer, "\n")
 
     else
       " Append to the log buffer if in a log block
-      let l:buffer .= "\n" . l:line
+      let l:buffer .= "\n" . l:clean_line
     endif
   endfor
 
