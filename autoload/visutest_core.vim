@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 14:17:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 14:23:31 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -103,68 +103,6 @@ function! visutest_core#StartTests()
   endif
 endfunction
 
-" Callback for client data
-function! visutest_core#OnData(job, data)
-  for l:line in a:data
-    if l:line == ''
-      continue
-    endif
-    " Check for RUNNING, PASSED, or FAILED signals
-    if l:line =~ '^RUNNING:'
-      let l:test_name = matchstr(l:line, 'RUNNING:\s*\zs.*')
-      " Remove 'test_' prefix if present
-      let l:test_name = substitute(l:test_name, '^test_', '', '')
-      let g:visutest_current_test = l:test_name
-      echom "Updating status to RUNNING for: " . l:test_name
-      call visutest_ui#UpdateTestStatus(l:test_name, 'running')
-    elseif l:line ==# 'PASSED'
-      echom "Updating status to PASSED for: " . g:visutest_current_test
-      call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
-    elseif l:line ==# 'FAILED'
-      echom "Updating status to FAILED for: " . g:visutest_current_test
-      call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
-    else
-      " Accumulate test logs
-      if !has_key(g:visutest_test_logs, g:visutest_current_test)
-        let g:visutest_test_logs[g:visutest_current_test] = []
-      endif
-      call add(g:visutest_test_logs[g:visutest_current_test], l:line)
-      echom "Added log for test: " . g:visutest_current_test . " -> " . l:line
-    endif
-  endfor
-endfunction
-
-" Callback for client errors
-function! visutest_core#OnError(job, data)
-  if empty(a:data)
-    echoerr "VisuTest client error: No data received."
-    return
-  endif
-  for l:line in a:data
-    if type(l:line) == type('') && l:line != ''
-      echoerr "VisuTest client error: " . l:line
-    else
-      echoerr "VisuTest client error: Unexpected data format."
-    endif
-  endfor
-endfunction
-
-" Callback for client exit
-function! visutest_core#OnExit(job, exit_status)
-  echom "VisuTest client exited with code " . a:exit_status
-endfunction
-
-" Function to stop the server
-function! visutest_core#StopServer()
-  if exists('g:visutest_server_job') && job_status(g:visutest_server_job) ==# 'run'
-    call job_stop(g:visutest_server_job)
-    unlet g:visutest_server_job
-    echom "VisuTest server stopped."
-  else
-    echo "No running server found."
-  endif
-endfunction
-
 " Function to log messages to a file
 function! visutest_core#LogToFile(message)
   let l:log_file = expand('~/.vim/plugged/VisuTest/visutest.log')
@@ -201,4 +139,37 @@ function! visutest_core#OnData(job, data)
     endif
   endfor
 endfunction
+
+
+" Callback for client errors
+function! visutest_core#OnError(job, data)
+  if empty(a:data)
+    echoerr "VisuTest client error: No data received."
+    return
+  endif
+  for l:line in a:data
+    if type(l:line) == type('') && l:line != ''
+      echoerr "VisuTest client error: " . l:line
+    else
+      echoerr "VisuTest client error: Unexpected data format."
+    endif
+  endfor
+endfunction
+
+" Callback for client exit
+function! visutest_core#OnExit(job, exit_status)
+  echom "VisuTest client exited with code " . a:exit_status
+endfunction
+
+" Function to stop the server
+function! visutest_core#StopServer()
+  if exists('g:visutest_server_job') && job_status(g:visutest_server_job) ==# 'run'
+    call job_stop(g:visutest_server_job)
+    unlet g:visutest_server_job
+    echom "VisuTest server stopped."
+  else
+    echo "No running server found."
+  endif
+endfunction
+
 
