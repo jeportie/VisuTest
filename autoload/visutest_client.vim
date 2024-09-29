@@ -136,6 +136,7 @@ function! visutest_client#OnData(job, data)
   echom "Client received data:\n" . l:output_buffer
 endfunction
 
+
 """""""""" Callback for client errors """""""""""""""""""""
 
 function! visutest_client#OnError(job, data)
