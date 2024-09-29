@@ -84,12 +84,20 @@ function! visutest_client#OnData(job, data)
   endif
 
   let l:buffer = ''  " Initialize buffer for the log content
-  let l:output_buffer = ''  " Buffer to accumulate cleaned client data for final echom
+  let l:output_buffer = ''  " Buffer to accumulate client data for final echom
+
+  " DEBUGGING: Log raw data
+  for l:line in a:data
+    echom "RAW line: " . l:line
+  endfor
 
   " Process each line in the data block received from the client
   for l:line in a:data
-    " Remove null characters (^) and at-symbols (@) before processing
-    let l:clean_line = substitute(l:line, '[\^@]', '', 'g')
+    " CLEANING STEP:
+    " 1. Strip null bytes (represented by \x00 in Vim).
+    " 2. Strip non-printable characters explicitly, not just a general range.
+    let l:clean_line = substitute(l:line, '\x00', '', 'g')  " Remove null characters
+    let l:clean_line = substitute(l:clean_line, '[^\x20-\x7E]', '', 'g')  " Remove control characters
 
     " Skip empty or invalid lines after cleaning
     if l:clean_line == ''
@@ -132,8 +140,8 @@ function! visutest_client#OnData(job, data)
     endif
   endfor
 
-  " Display the accumulated cleaned data in one echom
-  echom "Client received data:\n" . l:output_buffer
+  " Display the accumulated client data in one echom
+  echom "Client received cleaned data:\n" . l:output_buffer
 endfunction
 
 
