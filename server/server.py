@@ -19,7 +19,7 @@ def run_tests():
         
         # Run ctest command
         ctest_result = subprocess.run(["ctest"], cwd="test_src", check=True, capture_output=True)
-        logging.debug(f"CMake output: {ctest_result.stdout.decode()}")
+        logging.debug(f"CTest output: {ctest_result.stdout.decode()}")
         
     except subprocess.CalledProcessError as e:
         logging.error(f"Test execution failed: {e}")
@@ -30,7 +30,7 @@ def monitor_log_and_send_updates(client_socket):
     log_file = os.path.join(os.getcwd(), "test_src", "Testing", "Temporary", "LastTest.log")
 
     if not os.path.exists(log_file):
-        client_socket.send("ERROR: LastTest.log not found.".encode())
+        client_socket.sendall("ERROR: LastTest.log not found.\n".encode())
         logging.error(f"Log file not found: {log_file}")
         return
 
@@ -44,10 +44,13 @@ def monitor_log_and_send_updates(client_socket):
             if new_line:
                 logging.debug(f"Read log line: {new_line.strip()}")
 
+                # Send the line to the client in blocks, not character by character
+                client_socket.sendall(new_line.encode('utf-8'))
+
                 if "Testing:" in new_line:
                     test_name = new_line.split("Testing:")[-1].strip()
                     logging.info(f"Test started: {test_name}")
-                    client_socket.send(f"RUNNING: {test_name}\n".encode())
+                    client_socket.sendall(f"RUNNING: {test_name}\n".encode())
                     current_test_suite.append("----------------------------------------------------------\n")
                     current_test_suite.append(new_line)
                     test_in_progress = True
@@ -57,9 +60,9 @@ def monitor_log_and_send_updates(client_socket):
 
                 if test_in_progress and ("Test Passed." in new_line or "Test Failed." in new_line):
                     test_result = "PASSED" if "Test Passed." in new_line else "FAILED"
-                    client_socket.send(f"{test_result}\n".encode())
+                    client_socket.sendall(f"{test_result}\n".encode())
                     full_log = ''.join(current_test_suite)
-                    client_socket.send(full_log.encode())
+                    client_socket.sendall(full_log.encode())
                     current_test_suite = []
                     test_in_progress = False
                     logging.info(f"Test {test_name} completed with result: {test_result}")
@@ -92,10 +95,10 @@ def start_server():
             if test_status == "SUCCESS":
                 monitor_log_and_send_updates(client_socket)
             else:
-                client_socket.send(f"{test_status}\n".encode())
+                client_socket.sendall(f"{test_status}\n".encode())
                 logging.error(f"Error running tests: {test_status}")
         else:
-            client_socket.send("ERROR: Invalid request.".encode())
+            client_socket.sendall("ERROR: Invalid request.\n".encode())
             logging.error("Invalid request received.")
 
         client_socket.close()
@@ -103,4 +106,3 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
-
