@@ -353,6 +353,7 @@ qnxnto	server/test_src/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char c
 run_tests	server/server.py	/^def run_tests():$/;"	f
 start_server	server/server.py	/^def start_server():$/;"	f
 visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$/;"	f
+visutest_core#LogToFile	autoload/visutest_core.vim	/^function! visutest_core#LogToFile(message)$/;"	f
 visutest_core#OnData	autoload/visutest_core.vim	/^function! visutest_core#OnData(job, data)$/;"	f
 visutest_core#OnError	autoload/visutest_core.vim	/^function! visutest_core#OnError(job, data)$/;"	f
 visutest_core#OnExit	autoload/visutest_core.vim	/^function! visutest_core#OnExit(job, exit_status)$/;"	f
