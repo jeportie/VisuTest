@@ -84,12 +84,12 @@ function! visutest_client#OnData(job, data)
   endif
 
   let l:buffer = ''  " Initialize buffer for the log content
-  let l:output_buffer = ''  " Buffer to accumulate client data for final echom
+  let l:output_buffer = ''  " Buffer to accumulate cleaned client data for final echom
 
   " Process each line in the data block received from the client
   for l:line in a:data
-    " Clean the line: remove null characters and non-printable characters before processing
-    let l:clean_line = substitute(l:line, '[^\x20-\x7E]', '', 'g')
+    " Remove null characters (^) and at-symbols (@) before processing
+    let l:clean_line = substitute(l:line, '[\^@]', '', 'g')
 
     " Skip empty or invalid lines after cleaning
     if l:clean_line == ''
@@ -132,7 +132,7 @@ function! visutest_client#OnData(job, data)
     endif
   endfor
 
-  " Display the accumulated client data in one echom
+  " Display the accumulated cleaned data in one echom
   echom "Client received data:\n" . l:output_buffer
 endfunction
 
