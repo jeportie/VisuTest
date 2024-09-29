@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 17:48:10 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 13:25:53 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -99,25 +99,21 @@ endif
 
 " Function to show the test suite popup with the actual test log
 function! visutest_ui#ShowTestSuitePopup()
-  " Get the selected test suite name
   let l:line = getline(".")
   let l:test_name = matchstr(l:line, '\zs\w\+$')
-  " Remove 'test_' prefix if present
   let l:test_name = substitute(l:test_name, '^test_', '', '')
-  " Remove any extra characters (e.g., whitespace)
   let l:test_name = substitute(l:test_name, '^\s*', '', '')
-  " Retrieve the log for the selected test
+
+  " Retrieve the log for the selected test, ensure it's treated as a string
   if has_key(g:visutest_test_logs, l:test_name)
-      let l:popup_content = g:visutest_test_logs[l:test_name]
+      let l:popup_content = join(g:visutest_test_logs[l:test_name], "\n")
   else
-      let l:popup_content = ['No log available for this test suite.']
+      let l:popup_content = 'No log available for this test suite.'
   endif
 
-  " Calculate center of the screen for popup positioning
-  let l:winheight = float2nr(&lines / 2 - len(l:popup_content) / 2)
+  let l:winheight = float2nr(&lines / 2 - len(split(l:popup_content, "\n")) / 2)
   let l:winwidth = float2nr(&columns / 2) - 25
 
-  " Define popup options
   let l:popup_options = {
         \ 'line': l:winheight,
         \ 'col': l:winwidth,
@@ -128,25 +124,16 @@ function! visutest_ui#ShowTestSuitePopup()
         \ 'wrap': v:false,
         \ }
 
-  " Create the popup
-  let l:popup_id = popup_create(l:popup_content, l:popup_options)
+  let l:popup_id = popup_create(split(l:popup_content, "\n"), l:popup_options)
 
-  " Check for success
   if l:popup_id == -1
     echoerr "Failed to create popup."
     return
   endif
 
-  " Track the popup
   call add(g:visutest_popups, l:popup_id)
   let b:visutest_popup = l:popup_id
 
-  " Set filetype for syntax highlighting if needed
-  " call popup_setoptions(l:popup_id, {'filetype': 'visutest_popup'})
-
-  " Bind <Esc> to close the popup
-  call popup_setoptions(l:popup_id, {'mapping': v:true})
-  call popup_filter_menu(l:popup_id, ['<Esc>'])
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 endfunction
 

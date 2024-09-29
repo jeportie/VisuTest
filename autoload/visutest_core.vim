@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/28 21:48:29 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 13:26:22 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -156,6 +156,7 @@ function! visutest_core#StopServer()
     call job_stop(g:visutest_server_job)
     unlet g:visutest_server_job
     echom "VisuTest server stopped."
+  else
+    echo "No running server found."
   endif
 endfunction
-
