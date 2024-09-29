@@ -8,29 +8,29 @@ logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/client.log', le
 def send_data(sock, message):
     """Send a message to the server with proper encoding."""
     try:
+        # Strip any control characters or NULL bytes before sending
         cleaned_message = message.replace('\x00', '')  # Remove NULL bytes
         sock.sendall((cleaned_message + "\n").encode('utf-8'))
     except socket.error as e:
         logging.error(f"Failed to send message: {e}")
 
 def receive_data(sock):
-    """Receive data from the server in chunks and process line by line."""
+    """Receive data from the server in chunks, handling it as complete messages."""
     buffer = ""
     try:
         while True:
-            # Receive a block of data from the server
-            data = sock.recv(1024).decode('utf-8', 'ignore')  # Ignore invalid chars
-
+            # Receive and decode data
+            data = sock.recv(1024).decode('utf-8')
+            
             if not data:
                 break  # No more data, connection closed
 
             # Clean out any NULL or control characters
             cleaned_data = data.replace('\x00', '')  # Remove NULL bytes
-            cleaned_data = ''.join(filter(lambda x: ord(x) >= 32, cleaned_data))  # Remove control characters
 
             buffer += cleaned_data  # Accumulate received data into a buffer
 
-            # Process complete lines (when a newline is encountered)
+            # Process complete messages (when a newline is encountered)
             if "\n" in buffer:
                 lines = buffer.split("\n")
                 for line in lines[:-1]:  # Process all complete lines
@@ -68,4 +68,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
