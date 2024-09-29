@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 22:17:32 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 23:23:04 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -32,12 +32,12 @@ function! visutest_server#StartServer()
         \ }
 
   let g:visutest_server_job = job_start(l:cmd, l:opts)
-
-  if type(g:visutest_server_job) != v:t_job
+  if type(g:visutest_server_job) == v:t_job
+    echom "VisuTest server started."
+  else
     echoerr "Failed to start the VisuTest server."
   endif
-endfunction
-
+ endfunction
 """""""""" Callback for server output """""""""""""""""""""
 
 function! visutest_server#ServerOutput(job, data)
