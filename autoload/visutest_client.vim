@@ -87,7 +87,7 @@ function! visutest_client#OnData(job, data)
 
   " Accumulate all data into a single string
   for l:line in a:data
-    let l:raw_data .= l:line  " Concatenate raw data into a single string
+    let l:raw_data .= l:line . "\n"  " Concatenate raw data into a single string with newlines
   endfor
 
   let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
@@ -102,12 +102,14 @@ function! visutest_client#OnData(job, data)
     let l:test_name = matchstr(l:clean_data, 'RUNNING:\s*\zs.*')
     let l:test_name = substitute(l:test_name, '^test_', '', '')
 
-    " Set the current test name
+    " Set the current test name and initialize its log in the dictionary
     let g:visutest_current_test = l:test_name
+    let g:visutest_test_logs[g:visutest_current_test] = []
 
     " Update UI for the running test
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
+  " Handle test passing or failing
   elseif l:clean_data =~ 'PASSED'
     " Update UI for the passed test
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
@@ -115,12 +117,24 @@ function! visutest_client#OnData(job, data)
   elseif l:clean_data =~ 'FAILED'
     " Update UI for the failed test
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
-
-  elseif l:clean_data =~ '^---'
-    " Start processing log data
-    let g:visutest_test_logs[g:visutest_current_test] = split(l:clean_data, "\n")
   endif
 
+  " Detect log sections based on '---' lines and store the logs in the dictionary
+  if l:clean_data =~ '^---'
+    " Split log data by lines
+    let l:log_lines = split(l:clean_data, "\n")
+
+    " Find the lines starting from the first `---` to the next `---`
+    let l:start_idx = index(l:log_lines, '---')
+    let l:end_idx = index(l:log_lines, 'Test Passed.', l:start_idx + 1)
+    
+    " If both start and end are found, extract the relevant portion
+    if l:start_idx >= 0 && l:end_idx >= 0
+      let l:test_log = l:log_lines[l:start_idx:l:end_idx]
+      " Store the extracted log in the dictionary under the current test name
+      let g:visutest_test_logs[g:visutest_current_test] = l:test_log
+    endif
+  endif
 endfunction
 
 """""""""" Callback for client errors """""""""""""""""""""
