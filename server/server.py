@@ -3,23 +3,23 @@ import socket
 import os
 import logging
 
-# Set up logging to capture both debug and error messages
+# Set up logging to capture debug messages
 logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/server.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def run_tests():
     logging.info("Running tests: cmake, make, ctest.")
     try:
         # Run cmake command
-        subprocess.run(["cmake", "."], cwd="test_src", check=True, capture_output=True)
-        logging.info("CMake command executed successfully.")
+        cmake_result = subprocess.run(["cmake", "."], cwd="test_src", check=True, capture_output=True)
+        logging.debug(f"CMake output: {cmake_result.stdout.decode()}")
         
         # Run make command
-        subprocess.run(["make"], cwd="test_src", check=True, capture_output=True)
-        logging.info("Make command executed successfully.")
+        make_result = subprocess.run(["make"], cwd="test_src", check=True, capture_output=True)
+        logging.debug(f"Make output: {make_result.stdout.decode()}")
         
         # Run ctest command
-        subprocess.run(["ctest"], cwd="test_src", check=True, capture_output=True)
-        logging.info("CTest command executed successfully.")
+        ctest_result = subprocess.run(["ctest"], cwd="test_src", check=True, capture_output=True)
+        logging.debug(f"CMake output: {ctest_result.stdout.decode()}")
         
     except subprocess.CalledProcessError as e:
         logging.error(f"Test execution failed: {e}")
@@ -82,7 +82,11 @@ def start_server():
         logging.info(f"Accepted connection from {addr}")
         request = client_socket.recv(1024).decode()
 
-        if request == "START_TEST":
+        # Enhanced logging for request handling
+        logging.debug(f"Received request: {request}")
+
+        if request.strip() == "START_TEST":
+            logging.info("Processing START_TEST command.")
             test_status = run_tests()
 
             if test_status == "SUCCESS":
@@ -90,9 +94,13 @@ def start_server():
             else:
                 client_socket.send(f"{test_status}\n".encode())
                 logging.error(f"Error running tests: {test_status}")
+        else:
+            client_socket.send("ERROR: Invalid request.".encode())
+            logging.error("Invalid request received.")
 
         client_socket.close()
         logging.info(f"Connection with {addr} closed.")
 
 if __name__ == "__main__":
     start_server()
+
