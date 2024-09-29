@@ -88,9 +88,10 @@ function! visutest_client#OnData(job, data)
 
   " Process each line in the data block received from the client
   for l:line in a:data
-    " Remove null characters and non-printable characters from the line
+    " Clean the line: remove null characters and non-printable characters before processing
     let l:clean_line = substitute(l:line, '[^\x20-\x7E]', '', 'g')
 
+    " Skip empty or invalid lines after cleaning
     if l:clean_line == ''
       continue
     endif
