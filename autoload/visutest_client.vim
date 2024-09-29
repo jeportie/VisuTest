@@ -72,16 +72,22 @@ function! visutest_client#PrintTestLog(test_name)
   endif
 endfunction
 
-"""""""""" Callback for client data """""""""""""""""""""
+"""""""""""""""" Function to handle data from the client """""""""""""""""
 
 function! visutest_client#OnData(job, data)
   echom "Client data callback triggered."
   let l:log_file = '/tmp/visutest.log'  " Change to a path we know is writable
-  
+
+  " Ensure g:visutest_current_test exists
+  if !exists('g:visutest_current_test')
+    let g:visutest_current_test = ''
+  endif
+
   for l:line in a:data
     if l:line == ''
       continue
     endif
+
     " Log received data
     call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Client received: " . l:line], l:log_file, 'a')
     echom "Client received: " . l:line
@@ -90,20 +96,33 @@ function! visutest_client#OnData(job, data)
     if l:line =~ '^RUNNING:'
       let l:test_name = matchstr(l:line, 'RUNNING:\s*\zs.*')
       let l:test_name = substitute(l:test_name, '^test_', '', '')
+
+      " Set the current test name
       let g:visutest_current_test = l:test_name
+
+      " Log the start of the test
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test is running: " . l:test_name], l:log_file, 'a')
       echom "Test is running: " . l:test_name
+
+      " Update UI with the 'running' status
       call visutest_ui#UpdateTestStatus(l:test_name, 'running')
+
     elseif l:line ==# 'PASSED'
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test passed: " . g:visutest_current_test], l:log_file, 'a')
       echom "Test passed: " . g:visutest_current_test
+
+      " Update UI with the 'passed' status
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
+
     elseif l:line ==# 'FAILED'
       call writefile([strftime("%Y-%m-%d %H:%M:%S") . " Test failed: " . g:visutest_current_test], l:log_file, 'a')
       echom "Test failed: " . g:visutest_current_test
+
+      " Update UI with the 'failed' status
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
+
     else
-      " Accumulate test logs
+      " Handle additional log lines for the current test
       if !has_key(g:visutest_test_logs, g:visutest_current_test)
         let g:visutest_test_logs[g:visutest_current_test] = []
       endif
