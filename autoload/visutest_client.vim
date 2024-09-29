@@ -84,9 +84,9 @@ function! visutest_client#OnData(job, data)
   endif
 
   let l:raw_data = ''  " Accumulate all incoming data
-  let l:buffer = []    " Buffer to collect relevant log lines
+  let l:buffer = []    " Buffer to collect log lines for the current test
 
-  " Accumulate all data into a single string and split by lines
+  " Accumulate all data into a single string
   for l:line in a:data
     let l:raw_data .= l:line . "\n"  " Concatenate raw data into a single string with newlines
   endfor
@@ -105,7 +105,7 @@ function! visutest_client#OnData(job, data)
 
     " Set the current test name and initialize its log in the dictionary
     let g:visutest_current_test = l:test_name
-    let g:visutest_test_logs[g:visutest_current_test] = []
+    let g:visutest_test_logs[g:visutest_current_test] = []  " Initialize an empty log buffer
 
     " Update UI for the running test
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
@@ -119,10 +119,19 @@ function! visutest_client#OnData(job, data)
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
   endif
 
-  " Detect log sections based on '---' lines and store the logs in the dictionary
+  " Check if we are in a log section by detecting '---'
   if l:clean_data =~ '^---'
     let l:log_lines = split(l:clean_data, "\n")
-    " Buffer to accumulate lines for the current test suite
+
+    " Iterate over each line and add it to the log buffer for the current test
+    for l:line in l:log_lines
+      if l:line != ''
+        call add(g:visutest_test_logs[g:visutest_current_test], l:line)
+      endif
+    endfor
+  else
+    " If not a separator, continue adding all relevant log lines to the buffer
+    let l:log_lines = split(l:clean_data, "\n")
     for l:line in l:log_lines
       if l:line != ''
         call add(g:visutest_test_logs[g:visutest_current_test], l:line)
