@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:11:04 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 17:56:27 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 18:27:21 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -51,7 +51,7 @@ function! visutest_tests#HideUnits()
     for l:suite_file in l:test_suites
       let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
       let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
-      let l:display_line = "➔ 󰏦 " . l:suite_name
+      let l:display_line = "➔ ⚪ " . l:suite_name
       call append(line('$'), l:display_line)
     endfor
   endif
@@ -123,17 +123,17 @@ function! visutest_tests#DisplayTestSuites()
     for l:suite_file in l:test_suites
       let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
       let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
-      let l:display_line = "➔ 󰏦 " . l:suite_name
+      let l:display_line = "➔ ⚪ " . l:suite_name
       call append(line('$'), l:display_line)
 
       let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
       if !empty(l:test_units) && g:visutest_tests_show_units
         for l:test_unit in l:test_units
-          let l:test_unit_display = "➔ 󰏦 " . l:test_unit
+          let l:test_unit_display = "➔ ⚪ " . l:test_unit
           call append(line('$'), '    ' . l:test_unit_display)
         endfor
       else
-        let l:no_test_display = "➔ 󰗖 No test units found"
+        let l:no_test_display = "➔ 🔴 No test units found"
         call append(line('$'), '    ' . l:no_test_display)
       endif
     endfor
@@ -146,7 +146,7 @@ endfunction
 
 function! visutest_tests#GetSelectedSuite()
   let l:line = getline(".")  " Get the current line
-  let l:suite_name = substitute(l:line, '^➔ 󰏦', '', '')  " Remove icons
+  let l:suite_name = substitute(l:line, '^➔ ⚪', '', '')  " Remove icons
   return l:suite_name
 endfunction
 

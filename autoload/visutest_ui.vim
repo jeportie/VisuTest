@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 18:17:05 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 18:25:39 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -56,8 +56,8 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('ArrowIcon', '➔')
 
   highlight NerdFontIcon ctermfg=15 guifg=white
-  execute 'syntax match NerdFontIcon "󰏦"'
-  call matchadd('NerdFontIcon', '󰏦')
+  execute 'syntax match NerdFontIcon "⚪"'
+  call matchadd('NerdFontIcon', '⚪')
 
   highlight TestSuiteName ctermfg=81 guifg=#add8e6
   syntax match TestSuiteName "\v\w+"
@@ -68,8 +68,8 @@ function! visutest_ui#SetupHighlighting()
   call matchadd('NoTestArrow', '➔')
 
   highlight NoTestIcon ctermfg=1 guifg=red
-  execute 'syntax match NoTestIcon "󰗖"'
-  call matchadd('NoTestIcon', '󰗖')
+  execute 'syntax match NoTestIcon "🔴"'
+  call matchadd('NoTestIcon', '🔴')
 
   highlight NoTestText ctermfg=1 guifg=red
   syntax match NoTestText "No test units found"
@@ -146,7 +146,7 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
     let l:line = l:lines[idx]
 
     " Find the line that matches the test name
-    if l:line =~ '➔ 󰏦 ' . l:test_name
+    if l:line =~ '➔ ⚪ ' . l:test_name
       let l:line_num = idx + 1
 
       " Determine the appropriate icon based on the status
@@ -154,8 +154,9 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
             \ a:status ==# 'passed' ? '🟢' :
             \ a:status ==# 'failed' ? '🔴' : '⚪'
 
-      " Update the icon in the line (replace the first character with the new icon)
-      let l:updated_line = substitute(l:line, '^.\zs.', l:icon, '')
+      " Replace the first character (icon) in the line with the new icon
+      " This regex looks for any icon (default or existing) at the start of the line and replaces it
+      let l:updated_line = substitute(l:line, '^. ', l:icon . ' ', '')
 
       " Set the updated line in the buffer
       call setline(l:line_num, l:updated_line)
@@ -170,3 +171,4 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
   " Refresh the display to apply changes
   redraw
 endfunction
+
