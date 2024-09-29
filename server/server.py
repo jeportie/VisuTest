@@ -18,7 +18,7 @@ def run_tests():
         logging.debug(f"Make output: {make_result.stdout.decode()}")
         
         # Run ctest command
-        ctest_result = subprocess.run(["ctest"], cwd="test_src", check=True, capture_output=True)
+        ctest_result = subprocess.run(["ctest"], cwd="test_src", capture_output=True)
         logging.debug(f"CMake output: {ctest_result.stdout.decode()}")
         
     except subprocess.CalledProcessError as e:
