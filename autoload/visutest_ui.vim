@@ -6,14 +6,14 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 14:06:14 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 16:51:19 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 " Setup UI for the VisuTest window
 function! visutest_ui#SetupWindowUI()
   " Set a fixed width for the vertical window (1/5 of the total width)
- let l:split_width = max([float2nr(&columns * 0.15), 30])
+ let l:split_width = max([float2nr(&columns * 0.20), 30])
 
   " Open a new vertical window on the right with fixed width
   botright vertical new
