@@ -1,0 +1,3 @@
+2024-09-29 13:32:06,731 - INFO - Server is listening on port 9999.
+2024-09-29 13:32:12,969 - INFO - Accepted connection from ('127.0.0.1', 38176)
+2024-09-29 13:32:12,969 - INFO - Connection with ('127.0.0.1', 38176) closed.
