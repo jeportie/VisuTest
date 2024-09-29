@@ -44,7 +44,7 @@ def monitor_log_and_send_updates(client_socket):
             if new_line:
                 logging.debug(f"Read log line: {new_line.strip()}")
 
-                # Send the line to the client in blocks, not character by character
+                # Send the line to the client
                 client_socket.sendall(new_line.encode('utf-8'))
 
                 if "Testing:" in new_line:
@@ -75,6 +75,7 @@ def monitor_log_and_send_updates(client_socket):
 def start_server():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    server_socket.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)  # Disable Nagle's algorithm
     server_socket.bind(('localhost', 9999))
     server_socket.listen(1)
 
@@ -106,3 +107,4 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
+
