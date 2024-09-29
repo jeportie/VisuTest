@@ -31,6 +31,7 @@ def monitor_log_and_send_updates(client_socket):
 
     if not os.path.exists(log_file):
         client_socket.sendall("ERROR: LastTest.log not found.\n".encode())
+        client_socket.flush()
         logging.error(f"Log file not found: {log_file}")
         return
 
@@ -46,11 +47,12 @@ def monitor_log_and_send_updates(client_socket):
 
                 # Send the line to the client in blocks, not character by character
                 client_socket.sendall(new_line.encode('utf-8'))
-
+i               client_socket.flush()
                 if "Testing:" in new_line:
                     test_name = new_line.split("Testing:")[-1].strip()
                     logging.info(f"Test started: {test_name}")
                     client_socket.sendall(f"RUNNING: {test_name}\n".encode())
+                    client_socket.flush()
                     current_test_suite.append("----------------------------------------------------------\n")
                     current_test_suite.append(new_line)
                     test_in_progress = True
@@ -61,8 +63,10 @@ def monitor_log_and_send_updates(client_socket):
                 if test_in_progress and ("Test Passed." in new_line or "Test Failed." in new_line):
                     test_result = "PASSED" if "Test Passed." in new_line else "FAILED"
                     client_socket.sendall(f"{test_result}\n".encode())
+                    client_socket.flush()
                     full_log = ''.join(current_test_suite)
                     client_socket.sendall(full_log.encode())
+                    client_socket.flush()
                     current_test_suite = []
                     test_in_progress = False
                     logging.info(f"Test {test_name} completed with result: {test_result}")
@@ -96,9 +100,11 @@ def start_server():
                 monitor_log_and_send_updates(client_socket)
             else:
                 client_socket.sendall(f"{test_status}\n".encode())
+                client_socket.flush()
                 logging.error(f"Error running tests: {test_status}")
         else:
             client_socket.sendall("ERROR: Invalid request.\n".encode())
+            client_socket.flush()
             logging.error("Invalid request received.")
 
         client_socket.close()
