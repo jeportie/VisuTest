@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/28 14:12:40 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 13:26:22 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 14:05:46 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -115,10 +115,13 @@ function! visutest_core#OnData(job, data)
       " Remove 'test_' prefix if present
       let l:test_name = substitute(l:test_name, '^test_', '', '')
       let g:visutest_current_test = l:test_name
+      echom "Updating status to RUNNING for: " . l:test_name
       call visutest_ui#UpdateTestStatus(l:test_name, 'running')
     elseif l:line ==# 'PASSED'
+      echom "Updating status to PASSED for: " . g:visutest_current_test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
     elseif l:line ==# 'FAILED'
+      echom "Updating status to FAILED for: " . g:visutest_current_test
       call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
     else
       " Accumulate test logs
@@ -126,6 +129,7 @@ function! visutest_core#OnData(job, data)
         let g:visutest_test_logs[g:visutest_current_test] = []
       endif
       call add(g:visutest_test_logs[g:visutest_current_test], l:line)
+      echom "Added log for test: " . g:visutest_current_test . " -> " . l:line
     endif
   endfor
 endfunction

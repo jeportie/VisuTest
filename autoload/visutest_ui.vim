@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:02:33 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 13:25:53 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/29 14:06:14 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -146,6 +146,8 @@ endfunction
 function! visutest_ui#UpdateTestStatus(test_name, status)
   " Ensure test_name has no 'test_' prefix
   let l:test_name = substitute(a:test_name, '^test_', '', '')
+  echom "UI: Updating status for " . l:test_name . " to " . a:status
+
   " Find the line number where the test is displayed
   let l:bufnr = bufnr('%')
   let l:lines = getline(1, '$')
@@ -169,8 +171,8 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
 
       " Construct the updated line
       let l:updated_line = substitute(l:line, '^.\zs.', l:icon, '')
-      " Update the line in the buffer
       call setline(l:line_num, l:updated_line)
+      echom "UI: Updated line " . l:line_num . " to " . l:updated_line
       break
     endif
   endfor
