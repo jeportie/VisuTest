@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/09/22 12:11:04 by jeportie          #+#    #+#              "
-"    Updated: 2024/09/29 18:27:21 by jeportie         ###   ########.fr        "
+"    Updated: 2024/09/30 16:26:36 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -178,4 +178,4 @@ endfunction
 
 " Mapping to toggle units display with 'p' key
 
-nnoremap <silent> p :call visutest_tests#ToggleUnits()<CR>
+nnoremap <silent> P :call visutest_tests#ToggleUnits()<CR>
