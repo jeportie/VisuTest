@@ -1,80 +1,11 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
-!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
-!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
-!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/jeportie/Documents/VisuTest/	//
-!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
-!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
-!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	5.9.0	//
-**1. Load Test Suite Names**	README.md	/^#### **1. Load Test Suite Names**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Detailed Steps**
-**1. Popup Window with Test Output on Enter**	README.md	/^#### **1. Popup Window with Test Output on Enter**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""3. Server-Based Asynchronous Test Execution
-**1. Popup Window with Test Output on Enter**	README.md	/^#### **1. Popup Window with Test Output on Enter**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**
-**2. Parse Test Suite Files for Test Units**	README.md	/^#### **2. Parse Test Suite Files for Test Units**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Detailed Steps**
-**2. Parsing and Updating Test Unit States**	README.md	/^#### **2. Parsing and Updating Test Unit States**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""3. Server-Based Asynchronous Test Execution
-**2. Parsing and Updating Test Unit States**	README.md	/^#### **2. Parsing and Updating Test Unit States**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**
-**3. Display in Vertical Window**	README.md	/^#### **3. Display in Vertical Window**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Detailed Steps**
-**Detailed Steps for Test Unit Parsing**:	README.md	/^#### **Detailed Steps for Test Unit Parsing**:$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**
-**Detailed Steps**	README.md	/^### **Detailed Steps**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Enhanced Real-Time Update Strategy with `vim-dispatch` and `tmux`**	README.md	/^### **Enhanced Real-Time Update Strategy with `vim-dispatch` and `tmux`**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Exec Strategy Recap and Structure with `vim-dispatch`, `tmux`, and `vim-rooter` Integration**	README.md	/^### **Exec Strategy Recap and Structure with `vim-dispatch`, `tmux`, and `vim-rooter` Integratio/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Explanation of File Structure**:	README.md	/^### **Explanation of File Structure**:$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**File Organization for the Plugin**	README.md	/^### **File Organization for the Plugin**$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**High-Level Process Flow with Asynchronous Execution**	README.md	/^### **High-Level Process Flow with Asynchronous Execution**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Implementation Thoughts**	README.md	/^### **Implementation Thoughts**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**	README.md	/^### **Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Key Components of the Server-Listening System**	README.md	/^### **Key Components of the Server-Listening System**$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**Key Features:**	README.md	/^#### **Key Features:**$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Exec Strategy Recap and Structure with `vim-dispatch`, `tmux`, and `vim-rooter` Integration**
-**Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**	README.md	/^### **Modifications and Enhancements with `vim-dispatch`, `tmux`, and `vim-rooter`**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Next Steps**	README.md	/^## **Next Steps**$/;"	s	chapter:VisuTest Plugin - Alpha Version
-**Overview**	README.md	/^### **Overview**$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**Overview**	README.md	/^### **Overview**$/;"	S	section:VisuTest Plugin - Alpha Version""Plan for Server-Listening System for Asynchronous Test Execution
-**Phase 1: Server Setup and Communication**	README.md	/^#### **Phase 1: Server Setup and Communication**$/;"	t	subsection:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**""**Step-by-Step Implementation Plan**
-**Phase 2: Asynchronous Test Execution**	README.md	/^#### **Phase 2: Asynchronous Test Execution**$/;"	t	subsection:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**""**Step-by-Step Implementation Plan**
-**Phase 3: Implement Real-Time Updates in Vim**	README.md	/^#### **Phase 3: Implement Real-Time Updates in Vim**$/;"	t	subsection:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**""**Step-by-Step Implementation Plan**
-**Phase 4: Error Handling and Cleanup**	README.md	/^#### **Phase 4: Error Handling and Cleanup**$/;"	t	subsection:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**""**Step-by-Step Implementation Plan**
-**Phase 5: Final Enhancements**	README.md	/^### **Phase 5: Final Enhancements**$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**Plan for Server-Listening System for Asynchronous Test Execution**	README.md	/^## **Plan for Server-Listening System for Asynchronous Test Execution**$/;"	s	chapter:VisuTest Plugin - Alpha Version
-**Potential Enhancements**	README.md	/^### **Potential Enhancements**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Step-by-Step Implementation Plan**	README.md	/^### **Step-by-Step Implementation Plan**$/;"	S	section:VisuTest Plugin - Alpha Version""**Plan for Server-Listening System for Asynchronous Test Execution**
-**Tools to Use**	README.md	/^### **Tools to Use**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Using `vim-dispatch` and `tmux` for Asynchronous Execution**:	README.md	/^#### **Using `vim-dispatch` and `tmux` for Asynchronous Execution**:$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**
-**Using `vim-rooter` for Simplifying Project Navigation**:	README.md	/^#### **Using `vim-rooter` for Simplifying Project Navigation**:$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**
-**Window init Strategy Overview**	README.md	/^### **Window init Strategy Overview**$/;"	S	section:VisuTest Plugin - Alpha Version""Notes
-**Workflow with `vim-dispatch` and `tmux`**:	README.md	/^#### **Workflow with `vim-dispatch` and `tmux`**:$/;"	t	subsection:VisuTest Plugin - Alpha Version""Notes""**Integration of `vim-dispatch`, `tmux`, and `vim-rooter` into the Process**
-1. Standardized Project Structure	README.md	/^### 1. Standardized Project Structure$/;"	S	section:VisuTest Plugin - Alpha Version""Key Features
-2. User Interface	README.md	/^### 2. User Interface$/;"	S	section:VisuTest Plugin - Alpha Version""Key Features
-3. Extreme Programming and the Importance of Testing	README.md	/^### 3. Extreme Programming and the Importance of Testing$/;"	S	section:VisuTest Plugin - Alpha Version""Key Features
-3. Server-Based Asynchronous Test Execution	README.md	/^### 3. Server-Based Asynchronous Test Execution$/;"	S	section:VisuTest Plugin - Alpha Version""Key Features
-3. Vertical Window for Test Suites	README.md	/^#### 3. Vertical Window for Test Suites$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""2. User Interface
-4. Detailed Logs for Each Test	README.md	/^#### 4. Detailed Logs for Each Test$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""2. User Interface
-5. Test Suite Approval Workflow	README.md	/^#### 5. Test Suite Approval Workflow$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""2. User Interface
-6. Asynchronous Test Execution	README.md	/^#### 6. Asynchronous Test Execution$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""Real-Time Test Execution and Status Updates
-7. Test Unit and Test Suite Parsing	README.md	/^#### 7. Test Unit and Test Suite Parsing$/;"	t	subsection:VisuTest Plugin - Alpha Version""Key Features""Real-Time Test Execution and Status Updates
-:bnext	autoload/visutest_ui.vim	/^  nnoremap <buffer> <silent> :bnext <NOP>$/;"	m
-:bprev	autoload/visutest_ui.vim	/^  nnoremap <buffer> <silent> :bprev <NOP>$/;"	m
-<CR>	autoload/visutest_ui.vim	/^  nnoremap <buffer> <silent> <CR> :call visutest_ui#ShowTestSuitePopup()<CR>$/;"	m
-<Esc>	autoload/visutest_ui.vim	/^  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>$/;"	m
-Commands Overview	README.md	/^### Commands Overview$/;"	S	section:VisuTest Plugin - Alpha Version""Plugin Features and Commands
-Features Overview	README.md	/^### Features Overview$/;"	S	section:VisuTest Plugin - Alpha Version""Plugin Features and Commands
-Installation and Setup	README.md	/^## Installation and Setup$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Installation:	README.md	/^### Installation:$/;"	S	section:VisuTest Plugin - Alpha Version""Installation and Setup
-Introduction	README.md	/^## Introduction$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Key Features	README.md	/^## Key Features$/;"	s	chapter:VisuTest Plugin - Alpha Version
-License	README.md	/^## License$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Notes	README.md	/^## Notes$/;"	s	chapter:VisuTest Plugin - Alpha Version
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 P	autoload/visutest_tests.vim	/^nnoremap <silent> P :call visutest_tests#ToggleUnits()<CR>$/;"	m
-Plan for Server-Listening System for Asynchronous Test Execution	README.md	/^## Plan for Server-Listening System for Asynchronous Test Execution$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Plugin Features and Commands	README.md	/^## Plugin Features and Commands$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Real-Time Test Execution and Status Updates	README.md	/^### Real-Time Test Execution and Status Updates$/;"	S	section:VisuTest Plugin - Alpha Version""Key Features
-Requirements:	README.md	/^### Requirements:$/;"	S	section:VisuTest Plugin - Alpha Version""Installation and Setup
-Roadmap	README.md	/^## Roadmap$/;"	s	chapter:VisuTest Plugin - Alpha Version
-Updated VisuTest Plugin Project Structure	README.md	/^## Updated VisuTest Plugin Project Structure$/;"	s	chapter:VisuTest Plugin - Alpha Version
 VisuTest	plugin/visutest_commands.vim	/^command! VisuTest :call visutest_ui#SetupWindowUI() $/;"	c
-VisuTest Plugin - Alpha Version	README.md	/^# VisuTest Plugin - Alpha Version$/;"	c
-VisuTest streamlines this process by automating test file creation, handling CMakeLists updates, and providing real-time test execution and status updates.	README.md	/^VisuTest streamlines this process by automating test file creation, handling CMakeLists updates,/;"	s	chapter:VisuTest Plugin - Alpha Version
 VisuTestClose	plugin/visutest_commands.vim	/^command! VisuTestClose :call VisuTestCloseWindow()$/;"	c
 VisuTestCloseWindow	plugin/visutest_core.vim	/^function! VisuTestCloseWindow()$/;"	f
 VisuTestOpenWindow	plugin/visutest_core.vim	/^function! VisuTestOpenWindow()$/;"	f
@@ -82,22 +13,15 @@ VisuTestRun	plugin/visutest_commands.vim	/^command! VisuTestRun :call visutest_c
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
+filename	server/server.py	/^    filename='\/root\/.vim\/plugged\/VisuTest\/server\/server.log',$/;"	v
+format	server/server.py	/^    format='%(asctime)s - %(levelname)s - %(message)s'$/;"	v
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
-g:visutest_client_job	autoload/visutest_client.vim	/^  let g:visutest_client_job = job_start(l:cmd, l:opts)$/;"	v
-g:visutest_current_test	autoload/visutest_client.vim	/^    let g:visutest_current_test = ''$/;"	v
-g:visutest_current_test	autoload/visutest_client.vim	/^    let g:visutest_current_test = l:test_name$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
-g:visutest_server_job	autoload/visutest_server.vim	/^  let g:visutest_server_job = job_start(l:cmd, l:opts)$/;"	v
-g:visutest_test_logs	autoload/visutest_client.vim	/^    let g:visutest_test_logs = {}$/;"	v
-g:visutest_test_logs	autoload/visutest_client.vim	/^    let g:visutest_test_logs[g:visutest_current_test] = []  " Initialize an empty log buffer$/;"	v
-g:visutest_tests_show_units	autoload/visutest_tests.vim	/^    let g:visutest_tests_show_units = 0$/;"	v
-g:visutest_tests_show_units	autoload/visutest_tests.vim	/^    let g:visutest_tests_show_units = 1$/;"	v
 g:visutest_tests_show_units	autoload/visutest_tests.vim	/^let g:visutest_tests_show_units = 1$/;"	v
+level	server/server.py	/^    level=logging.DEBUG,$/;"	v
 main	server/client.py	/^def main():$/;"	f
 monitor_log_and_send_updates	server/server.py	/^def monitor_log_and_send_updates(client_socket):$/;"	f
-q	autoload/visutest_ui.vim	/^  nnoremap <buffer> q :call VisuTestCloseWindow()<CR>$/;"	m
-r	autoload/visutest_ui.vim	/^  nnoremap <buffer> r :VisuTestRun<CR>$/;"	m
 receive_data	server/client.py	/^def receive_data(sock):$/;"	f
 run_tests	server/server.py	/^def run_tests():$/;"	f
 send_data	server/client.py	/^def send_data(sock, message):$/;"	f
@@ -108,7 +32,6 @@ visutest_client#OnError	autoload/visutest_client.vim	/^function! visutest_client
 visutest_client#OnExit	autoload/visutest_client.vim	/^function! visutest_client#OnExit(job, exit_status)$/;"	f
 visutest_client#PrintTestLog	autoload/visutest_client.vim	/^function! visutest_client#PrintTestLog(test_name)$/;"	f
 visutest_client#StartTests	autoload/visutest_client.vim	/^function! visutest_client#StartTests()$/;"	f
-visutest_popup_management	plugin/visutest.vim	/^  augroup visutest_popup_management$/;"	a
 visutest_server#ServerError	autoload/visutest_server.vim	/^function! visutest_server#ServerError(job, data)$/;"	f
 visutest_server#ServerExit	autoload/visutest_server.vim	/^function! visutest_server#ServerExit(job, exit_status)$/;"	f
 visutest_server#ServerOutput	autoload/visutest_server.vim	/^function! visutest_server#ServerOutput(job, data)$/;"	f

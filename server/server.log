@@ -1,0 +1,506 @@
+2024-10-01 10:20:53,948 - INFO - Server is listening on port 9999.
+2024-10-01 10:21:52,437 - INFO - Server is listening on port 9999.
+2024-10-01 10:22:37,517 - INFO - Server is listening on port 9999.
+2024-10-01 10:24:19,918 - INFO - Server is listening on port 9999.
+2024-10-01 10:26:04,328 - INFO - Server is listening on port 9999.
+2024-10-01 10:26:09,326 - INFO - Server is listening on port 9999.
+2024-10-01 10:26:35,187 - INFO - Server is listening on port 9999.
+2024-10-01 10:35:32,321 - INFO - Server is listening on port 9999.
+2024-10-01 10:36:17,721 - INFO - Server is listening on port 9999.
+2024-10-01 10:37:16,475 - INFO - Server is listening on port 9999.
+2024-10-02 09:59:57,743 - INFO - Server is listening on port 9999.
+2024-10-02 10:07:20,100 - INFO - Server is listening on port 9999.
+2024-10-16 08:34:03,779 - INFO - Server is listening on port 9999.
+2024-10-16 08:36:43,319 - INFO - Server is listening on port 9999.
+2024-10-16 08:37:17,776 - INFO - Server is listening on port 9999.
+2024-10-16 08:39:32,595 - INFO - Server is listening on port 9999.
+2024-10-16 08:40:22,891 - INFO - Server is listening on port 9999.
+2024-10-16 12:00:13,625 - INFO - Server is listening on port 9999.
+2024-10-16 14:07:16,648 - INFO - Server is listening on port 9999.
+2024-10-16 14:13:32,603 - INFO - Server is listening on port 9999.
+2024-10-16 14:13:36,579 - INFO - Accepted connection from ('127.0.0.1', 41450)
+2024-10-16 14:13:36,579 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:13:36,579 - INFO - Processing START_TEST command.
+2024-10-16 14:13:36,579 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:13:36,580 - ERROR - Test execution failed: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:36,580 - ERROR - Error running tests: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:36,580 - INFO - Connection with ('127.0.0.1', 41450) closed.
+2024-10-16 14:13:39,172 - INFO - Accepted connection from ('127.0.0.1', 41456)
+2024-10-16 14:13:39,172 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:13:39,172 - INFO - Processing START_TEST command.
+2024-10-16 14:13:39,172 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:13:39,173 - ERROR - Test execution failed: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:39,173 - ERROR - Error running tests: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:39,173 - INFO - Connection with ('127.0.0.1', 41456) closed.
+2024-10-16 14:13:47,524 - INFO - Accepted connection from ('127.0.0.1', 43910)
+2024-10-16 14:13:47,524 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:13:47,524 - INFO - Processing START_TEST command.
+2024-10-16 14:13:47,524 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:13:47,525 - ERROR - Test execution failed: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:47,525 - ERROR - Error running tests: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:47,525 - INFO - Connection with ('127.0.0.1', 43910) closed.
+2024-10-16 14:16:07,244 - INFO - Server is listening on port 9999.
+2024-10-16 14:17:06,130 - INFO - Accepted connection from ('127.0.0.1', 41762)
+2024-10-16 14:17:06,130 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:17:06,130 - INFO - Processing START_TEST command.
+2024-10-16 14:17:06,130 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:17:20,061 - INFO - Server is listening on port 9999.
+2024-10-16 14:17:22,846 - INFO - Accepted connection from ('127.0.0.1', 35602)
+2024-10-16 14:17:22,846 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:17:22,846 - INFO - Processing START_TEST command.
+2024-10-16 14:17:22,846 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:22:42,122 - INFO - Server is listening on port 9999.
+2024-10-16 14:23:04,866 - INFO - Server is listening on port 9999.
+2024-10-16 14:23:08,027 - INFO - Accepted connection from ('127.0.0.1', 55992)
+2024-10-16 14:23:08,027 - DEBUG - Received request: START_TEST
+
+2024-10-16 14:23:08,027 - INFO - Processing START_TEST command.
+2024-10-16 14:23:08,027 - INFO - Running tests: cmake, make, ctest.
+2024-10-16 14:23:08,027 - DEBUG - Created build directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:08,163 - DEBUG - CMake output:
+-- The C compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'check'
+--   Found check, version 0.15.2
+-- Checking for module 'readline'
+--   Found readline, version 8.2
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-16 14:23:08,163 - DEBUG - CMake errors:
+
+2024-10-16 14:23:09,715 - DEBUG - Make output:
+[  1%] Building C object CMakeFiles/test_ms_env_add_back.dir/env_lst_utils/test_ms_env_add_back.c.o
+[  3%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[  4%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[  6%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[  7%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[  9%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 11%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 12%] Building C object CMakeFiles/test_ms_env_add_back.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 14%] Linking C executable test_ms_env_add_back
+[ 14%] Built target test_ms_env_add_back
+[ 15%] Building C object CMakeFiles/test_ms_env_create_node.dir/env_lst_utils/test_ms_env_create_node.c.o
+[ 17%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 19%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 20%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 22%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 23%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 25%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 26%] Building C object CMakeFiles/test_ms_env_create_node.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 28%] Linking C executable test_ms_env_create_node
+[ 28%] Built target test_ms_env_create_node
+[ 30%] Building C object CMakeFiles/test_ms_get_user_input.dir/init_shell/test_ms_get_user_input.c.o
+[ 31%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 33%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 34%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 36%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 38%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 39%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 41%] Building C object CMakeFiles/test_ms_get_user_input.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 42%] Linking C executable test_ms_get_user_input
+[ 42%] Built target test_ms_get_user_input
+[ 44%] Building C object CMakeFiles/test_ms_init_env.dir/init_shell/test_ms_init_env.c.o
+[ 46%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 47%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 49%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 50%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 52%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 53%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 55%] Building C object CMakeFiles/test_ms_init_env.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 57%] Linking C executable test_ms_init_env
+[ 57%] Built target test_ms_init_env
+[ 58%] Building C object CMakeFiles/test_ms_init_shell.dir/init_shell/test_ms_init_shell.c.o
+[ 60%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 61%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 63%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 65%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 66%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 68%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 69%] Building C object CMakeFiles/test_ms_init_shell.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 71%] Linking C executable test_ms_init_shell
+[ 71%] Built target test_ms_init_shell
+[ 73%] Building C object CMakeFiles/test_ms_init_std_signal.dir/signal/test_ms_init_std_signal.c.o
+[ 74%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 76%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 77%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 79%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 80%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 82%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 84%] Building C object CMakeFiles/test_ms_init_std_signal.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[ 85%] Linking C executable test_ms_init_std_signal
+[ 85%] Built target test_ms_init_std_signal
+[ 87%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/signal/test_ms_stop_std_signal.c.o
+[ 88%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/env_lst_utils/ms_env_add_back.c.o
+[ 90%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/env_lst_utils/ms_env_create_node.c.o
+[ 92%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/init_shell/ms_get_user_input.c.o
+[ 93%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/init_shell/ms_init_env.c.o
+[ 95%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/init_shell/ms_init_shell.c.o
+[ 96%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/signal/ms_init_std_signal.c.o
+[ 98%] Building C object CMakeFiles/test_ms_stop_std_signal.dir/root/projects/Minishell/src/signal/ms_stop_std_signal.c.o
+[100%] Linking C executable test_ms_stop_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-16 14:23:09,715 - DEBUG - Make errors:
+
+2024-10-16 14:23:12,915 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.46 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.43 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.42 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................***Failed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................***Failed    0.57 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.45 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+71% tests passed, 2 tests failed out of 7
+
+Total Test time (real) =   3.20 sec
+
+The following tests FAILED:
+	  4 - ms_init_env (Failed)
+	  5 - ms_init_shell (Failed)
+
+2024-10-16 14:23:12,915 - DEBUG - CTest errors:
+Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Start testing: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-16 14:23:12,915 - INFO - Test started: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test Passed.
+2024-10-16 14:23:12,915 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-16 14:23:12,915 - INFO - Test started: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Running suite(s): Env
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test Passed.
+2024-10-16 14:23:12,915 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-16 14:23:12,915 - INFO - Test started: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Test Passed.
+2024-10-16 14:23:12,915 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-16 14:23:12,915 - INFO - Test started: ms_init_env
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Read log line: "ms_init_env" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-16 14:23:12,915 - DEBUG - Read log line: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Read log line: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-16 14:23:12,915 - DEBUG - Read log line: Valgrind detected errors:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ==1321== LEAK SUMMARY:
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ==1321==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ==1321==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ==1321==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,915 - DEBUG - Read log line: ==1321==    still reachable: 1,100 bytes in 32 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1321== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==     in use at exit: 1,655 bytes in 53 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==   total heap usage: 115 allocs, 62 frees, 30,297 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== 24 bytes in 1 blocks are definitely lost in loss record 33 of 45
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    by 0x10CAA8: st_create_envp (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    by 0x10CBE3: ms_init_env (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    by 0x10BBD1: test_ms_init_env_without_envp_fn (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    by 0x10FBE0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    by 0x10C691: main (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    definitely lost: 24 bytes in 1 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==    still reachable: 1,631 bytes in 52 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1322== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320==     in use at exit: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320==   total heap usage: 102 allocs, 102 frees, 34,890 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320== All heap blocks were freed -- no leaks are possible
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1320== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Test Failed.
+2024-10-16 14:23:12,916 - INFO - Test ms_init_env completed with result: FAILED
+2024-10-16 14:23:12,916 - DEBUG - Read log line: "ms_init_env" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,916 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Read log line: 
+2024-10-16 14:23:12,916 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-16 14:23:12,916 - INFO - Test started: ms_init_shell
+2024-10-16 14:23:12,916 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,916 - DEBUG - Read log line: "ms_init_shell" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-16 14:23:12,916 - DEBUG - Read log line: : No such process
+2024-10-16 14:23:12,916 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-16 14:23:12,916 - DEBUG - Read log line: Valgrind detected errors:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==    definitely lost: 24 bytes in 1 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==    still reachable: 1,568 bytes in 51 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1328== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==     in use at exit: 1,164 bytes in 34 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==   total heap usage: 46 allocs, 12 frees, 9,790 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==    still reachable: 1,164 bytes in 34 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1327== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==     in use at exit: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==   total heap usage: 54 allocs, 17 frees, 22,882 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==    still reachable: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1330== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==     in use at exit: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==   total heap usage: 57 allocs, 20 frees, 23,033 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==    still reachable: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==     in use at exit: 1,892 bytes in 59 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==   total heap usage: 85 allocs, 26 frees, 36,603 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Read log line: ==1332==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332==    still reachable: 1,892 bytes in 59 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1332== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== HEAP SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==     in use at exit: 1,430 bytes in 40 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==   total heap usage: 69 allocs, 29 frees, 36,292 bytes allocated
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== LEAK SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==    still reachable: 1,430 bytes in 40 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1331== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== HEAP SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==     in use at exit: 1,655 bytes in 46 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==   total heap usage: 81 allocs, 35 frees, 49,496 bytes allocated
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== LEAK SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==    still reachable: 1,655 bytes in 46 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== HEAP SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==     in use at exit: 1,575 bytes in 43 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==   total heap usage: 81 allocs, 38 frees, 49,567 bytes allocated
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== LEAK SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==    still reachable: 1,575 bytes in 43 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1333== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326== HEAP SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326==     in use at exit: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326==   total heap usage: 85 allocs, 85 frees, 58,504 bytes allocated
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326== All heap blocks were freed -- no leaks are possible
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326==
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ==1326== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test time =   0.57 sec
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test Failed.
+2024-10-16 14:23:12,917 - INFO - Test ms_init_shell completed with result: FAILED
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_init_shell" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-16 14:23:12,917 - INFO - Test started: ms_init_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-16 14:23:12,917 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test Passed.
+2024-10-16 14:23:12,917 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-16 14:23:12,917 - INFO - Test started: ms_stop_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Output:
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-16 14:23:12,917 - DEBUG - Read log line: <end of output>
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: Test Passed.
+2024-10-16 14:23:12,917 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-16 14:23:12,917 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Read log line: 
+2024-10-16 14:23:12,917 - DEBUG - Read log line: End testing: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - INFO - Finished sending updates to client.
+2024-10-16 14:23:12,917 - INFO - Connection with ('127.0.0.1', 55992) closed.

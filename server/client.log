@@ -1,0 +1,324 @@
+2024-10-16 14:13:36,579 - INFO - Connected to the server.
+2024-10-16 14:13:36,579 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:13:36,580 - DEBUG - Received data: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:36,580 - INFO - Closing client socket.
+2024-10-16 14:13:39,172 - INFO - Connected to the server.
+2024-10-16 14:13:39,172 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:13:39,173 - DEBUG - Received data: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:39,173 - INFO - Closing client socket.
+2024-10-16 14:13:47,524 - INFO - Connected to the server.
+2024-10-16 14:13:47,524 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:13:47,525 - DEBUG - Received data: ERROR: Command '['mkdir', 'build', '&&', 'cd', 'build']' returned non-zero exit status 1.
+2024-10-16 14:13:47,525 - INFO - Closing client socket.
+2024-10-16 14:17:06,130 - INFO - Connected to the server.
+2024-10-16 14:17:06,130 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:17:06,132 - INFO - Closing client socket.
+2024-10-16 14:17:22,846 - INFO - Connected to the server.
+2024-10-16 14:17:22,846 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:17:22,848 - INFO - Closing client socket.
+2024-10-16 14:18:08,457 - ERROR - Socket error: [Errno 111] Connection refused
+2024-10-16 14:18:08,457 - INFO - Closing client socket.
+2024-10-16 14:23:08,026 - INFO - Connected to the server.
+2024-10-16 14:23:08,027 - INFO - Sent START_TEST command to the server.
+2024-10-16 14:23:12,915 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Received data: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-16 14:23:12,915 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Received data: "ms_env_add_back" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-16 14:23:12,915 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: Test Passed.
+2024-10-16 14:23:12,915 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Received data: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-16 14:23:12,915 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Received data: "ms_env_create_node" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: Running suite(s): Env
+2024-10-16 14:23:12,915 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: Test Passed.
+2024-10-16 14:23:12,915 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Received data: PASSED
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-16 14:23:12,915 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,915 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,915 - DEBUG - Received data: "ms_get_user_input" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,915 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,915 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-16 14:23:12,915 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-16 14:23:12,915 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,915 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-16 14:23:12,915 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Received data: Test Passed.
+2024-10-16 14:23:12,916 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-16 14:23:12,916 - DEBUG - Received data: FAILED
+2024-10-16 14:23:12,916 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-16 14:23:12,916 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-16 14:23:12,916 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-16 14:23:12,916 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,916 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,916 - DEBUG - Received data: "ms_init_env" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,916 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-16 14:23:12,916 - DEBUG - Received data: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-16 14:23:12,916 - DEBUG - Received data: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-16 14:23:12,916 - DEBUG - Received data: Valgrind detected errors:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321==    still reachable: 1,100 bytes in 32 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1321== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==     in use at exit: 1,655 bytes in 53 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==   total heap usage: 115 allocs, 62 frees, 30,297 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== 24 bytes in 1 blocks are definitely lost in loss record 33 of 45
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    by 0x10CAA8: st_create_envp (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    by 0x10CBE3: ms_init_env (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    by 0x10BBD1: test_ms_init_env_without_envp_fn (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    by 0x10FBE0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    by 0x10C691: main (in /root/projects/Minishell/test_src/build/test_ms_init_env)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== LEAK SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    definitely lost: 24 bytes in 1 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==    still reachable: 1,631 bytes in 52 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1322== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== HEAP SUMMARY:
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320==     in use at exit: 0 bytes in 0 blocks
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320==   total heap usage: 102 allocs, 102 frees, 34,890 bytes allocated
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== All heap blocks were freed -- no leaks are possible
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== 
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,916 - DEBUG - Received data: ==1320== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,916 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,916 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-16 14:23:12,916 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,916 - DEBUG - Received data: Test Failed.
+2024-10-16 14:23:12,916 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-16 14:23:12,917 - DEBUG - Received data: FAILED
+2024-10-16 14:23:12,917 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-16 14:23:12,917 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-16 14:23:12,917 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-16 14:23:12,917 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,917 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,917 - DEBUG - Received data: "ms_init_shell" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,917 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,917 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,917 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-16 14:23:12,917 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-16 14:23:12,917 - DEBUG - Received data: : No such process
+2024-10-16 14:23:12,917 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-16 14:23:12,917 - DEBUG - Received data: Valgrind detected errors:
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== LEAK SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328==    definitely lost: 24 bytes in 1 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328==    still reachable: 1,568 bytes in 51 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== 
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1328== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== 
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== HEAP SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==     in use at exit: 1,164 bytes in 34 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==   total heap usage: 46 allocs, 12 frees, 9,790 bytes allocated
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== 
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== LEAK SUMMARY:
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==    still reachable: 1,164 bytes in 34 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== 
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1327== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,917 - DEBUG - Received data: ==1330== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==     in use at exit: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==   total heap usage: 54 allocs, 17 frees, 22,882 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==    still reachable: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1330== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==     in use at exit: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==   total heap usage: 57 allocs, 20 frees, 23,033 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==    still reachable: 1,293 bytes in 37 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1329== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==     in use at exit: 1,892 bytes in 59 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==   total heap usage: 85 allocs, 26 frees, 36,603 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==    still reachable: 1,892 bytes in 59 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1332== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==     in use at exit: 1,430 bytes in 40 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==   total heap usage: 69 allocs, 29 frees, 36,292 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==    still reachable: 1,430 bytes in 40 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1331== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==     in use at exit: 1,655 bytes in 46 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==   total heap usage: 81 allocs, 35 frees, 49,496 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==    still reachable: 1,655 bytes in 46 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1334== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==     in use at exit: 1,575 bytes in 43 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==   total heap usage: 81 allocs, 38 frees, 49,567 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== LEAK SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==    definitely lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==    indirectly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==      possibly lost: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==    still reachable: 1,575 bytes in 43 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333==         suppressed: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1333== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== HEAP SUMMARY:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326==     in use at exit: 0 bytes in 0 blocks
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326==   total heap usage: 85 allocs, 85 frees, 58,504 bytes allocated
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== All heap blocks were freed -- no leaks are possible
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== 
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== For lists of detected and suppressed errors, rerun with: -s
+2024-10-16 14:23:12,918 - DEBUG - Received data: ==1326== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-16 14:23:12,918 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,918 - DEBUG - Received data: Test time =   0.57 sec
+2024-10-16 14:23:12,918 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,918 - DEBUG - Received data: Test Failed.
+2024-10-16 14:23:12,918 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-16 14:23:12,918 - DEBUG - Received data: PASSED
+2024-10-16 14:23:12,918 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,918 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-16 14:23:12,918 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-16 14:23:12,918 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-16 14:23:12,918 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,918 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,918 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,918 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,918 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,918 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-16 14:23:12,918 - DEBUG - Received data: 
+2024-10-16 14:23:12,918 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-16 14:23:12,918 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,919 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-16 14:23:12,919 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,919 - DEBUG - Received data: Test Passed.
+2024-10-16 14:23:12,919 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-16 14:23:12,919 - DEBUG - Received data: PASSED
+2024-10-16 14:23:12,919 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,919 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-16 14:23:12,919 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-16 14:23:12,919 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-16 14:23:12,919 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-16 14:23:12,919 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-16 14:23:12,919 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 16 14:23 UTC
+2024-10-16 14:23:12,919 - DEBUG - Received data: Output:
+2024-10-16 14:23:12,919 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,919 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-16 14:23:12,919 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-16 14:23:12,919 - DEBUG - Received data: <end of output>
+2024-10-16 14:23:12,919 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-16 14:23:12,919 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-16 14:23:12,919 - DEBUG - Received data: Test Passed.
+2024-10-16 14:23:12,919 - INFO - Closing client socket.

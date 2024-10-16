@@ -4,30 +4,65 @@ import os
 import logging
 
 # Set up logging to capture debug messages
-logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/server.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    filename='/root/.vim/plugged/VisuTest/server/server.log',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def run_tests():
     logging.info("Running tests: cmake, make, ctest.")
     try:
-        # Run cmake command
-        cmake_result = subprocess.run(["cmake", "."], cwd="test_src", check=True, capture_output=True)
-        logging.debug(f"CMake output: {cmake_result.stdout.decode()}")
-        
-        # Run make command
-        make_result = subprocess.run(["make"], cwd="test_src", check=True, capture_output=True)
-        logging.debug(f"Make output: {make_result.stdout.decode()}")
-        
-        # Run ctest command
-        ctest_result = subprocess.run(["ctest"], cwd="test_src", capture_output=True)
-        logging.debug(f"CMake output: {ctest_result.stdout.decode()}")
-        
+        # Define the build directory
+        build_dir = os.path.join(os.getcwd(), "test_src", "build")
+
+        # Create build directory if it doesn't exist
+        if not os.path.exists(build_dir):
+            os.makedirs(build_dir)
+            logging.debug(f"Created build directory: {build_dir}")
+        else:
+            logging.debug(f"Build directory already exists: {build_dir}")
+
+        # Run cmake command in build directory
+        cmake_result = subprocess.run(
+            ["cmake", ".."],
+            cwd=build_dir,
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        logging.debug(f"CMake output:\n{cmake_result.stdout}")
+        logging.debug(f"CMake errors:\n{cmake_result.stderr}")
+
+        # Run make command in build directory
+        make_result = subprocess.run(
+            ["make"],
+            cwd=build_dir,
+            check=True,
+            capture_output=True,
+            text=True
+        )
+        logging.debug(f"Make output:\n{make_result.stdout}")
+        logging.debug(f"Make errors:\n{make_result.stderr}")
+
+        # Run ctest command in build directory
+        ctest_result = subprocess.run(
+            ["ctest"],
+            cwd=build_dir,
+            capture_output=True,
+            text=True
+        )
+        logging.debug(f"CTest output:\n{ctest_result.stdout}")
+        logging.debug(f"CTest errors:\n{ctest_result.stderr}")
+
     except subprocess.CalledProcessError as e:
-        logging.error(f"Test execution failed: {e}")
-        return f"ERROR: {e}"
+        logging.error(f"Test execution failed: {e.stderr}")
+        return f"ERROR: {e.stderr}"
     return "SUCCESS"
 
 def monitor_log_and_send_updates(client_socket):
-    log_file = os.path.join(os.getcwd(), "test_src", "Testing", "Temporary", "LastTest.log")
+    build_dir = os.path.join(os.getcwd(), "test_src", "build")
+    log_file = os.path.join(build_dir, "Testing", "Temporary", "LastTest.log")
 
     if not os.path.exists(log_file):
         client_socket.send("ERROR: LastTest.log not found.".encode())
@@ -37,6 +72,7 @@ def monitor_log_and_send_updates(client_socket):
     with open(log_file, "r") as log:
         current_test_suite = []
         test_in_progress = False
+        test_name = ""
 
         while True:
             new_line = log.readline()
