@@ -17,7 +17,16 @@ filename	server/server.py	/^    filename='\/root\/.vim\/plugged\/VisuTest\/serve
 format	server/server.py	/^    format='%(asctime)s - %(levelname)s - %(message)s'$/;"	v
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
+g:visutest_all_subtests	autoload/visutest_client.vim	/^  let g:visutest_all_subtests = {}$/;"	v
+g:visutest_all_subtests	autoload/visutest_tests.vim	/^  let g:visutest_all_subtests = {}$/;"	v
+g:visutest_all_subtests	autoload/visutest_ui.vim	/^  let g:visutest_all_subtests = {}$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
+g:visutest_subtest_statuses	autoload/visutest_client.vim	/^  let g:visutest_subtest_statuses = {}$/;"	v
+g:visutest_subtest_statuses	autoload/visutest_ui.vim	/^  let g:visutest_subtest_statuses = {}$/;"	v
+g:visutest_test_logs	autoload/visutest_client.vim	/^  let g:visutest_test_logs = {}$/;"	v
+g:visutest_test_statuses	autoload/visutest_client.vim	/^  let g:visutest_test_statuses = {}$/;"	v
+g:visutest_test_statuses	autoload/visutest_tests.vim	/^  let g:visutest_test_statuses = {}$/;"	v
+g:visutest_test_statuses	autoload/visutest_ui.vim	/^  let g:visutest_test_statuses = {}$/;"	v
 g:visutest_tests_show_units	autoload/visutest_tests.vim	/^let g:visutest_tests_show_units = 1$/;"	v
 level	server/server.py	/^    level=logging.DEBUG,$/;"	v
 main	server/client.py	/^def main():$/;"	f
@@ -30,8 +39,10 @@ visutest#SetupAutocmds	plugin/visutest.vim	/^function! visutest#SetupAutocmds()$
 visutest_client#OnData	autoload/visutest_client.vim	/^function! visutest_client#OnData(job, data)$/;"	f
 visutest_client#OnError	autoload/visutest_client.vim	/^function! visutest_client#OnError(job, data)$/;"	f
 visutest_client#OnExit	autoload/visutest_client.vim	/^function! visutest_client#OnExit(job, exit_status)$/;"	f
+visutest_client#ParseSubTestResults	autoload/visutest_client.vim	/^function! visutest_client#ParseSubTestResults(test_name)$/;"	f
 visutest_client#PrintTestLog	autoload/visutest_client.vim	/^function! visutest_client#PrintTestLog(test_name)$/;"	f
 visutest_client#StartTests	autoload/visutest_client.vim	/^function! visutest_client#StartTests()$/;"	f
+visutest_helper#GetSubtestStatus	autoload/visutest_helper.vim	/^function! visutest_helper#GetSubtestStatus(suite, subtest)$/;"	f
 visutest_server#ServerError	autoload/visutest_server.vim	/^function! visutest_server#ServerError(job, data)$/;"	f
 visutest_server#ServerExit	autoload/visutest_server.vim	/^function! visutest_server#ServerExit(job, exit_status)$/;"	f
 visutest_server#ServerOutput	autoload/visutest_server.vim	/^function! visutest_server#ServerOutput(job, data)$/;"	f
@@ -48,4 +59,5 @@ visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePop
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
+visutest_ui#UpdateSubTestStatuses	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)$/;"	f
 visutest_ui#UpdateTestStatus	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateTestStatus(test_name, status)$/;"	f
