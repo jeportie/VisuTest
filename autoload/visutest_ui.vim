@@ -6,26 +6,22 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/16 15:51:24 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/17 09:01:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
 """""""""" Initialize Global Variables """""""""""""""""""""""""""""
 if !exists('g:visutest_popups')
   let g:visutest_popups = []
-  echom "Initialized g:visutest_popups"
 endif
 if !exists('g:visutest_test_statuses')
   let g:visutest_test_statuses = {}
-  echom "Initialized g:visutest_test_statuses"
 endif
 if !exists('g:visutest_subtest_statuses')
   let g:visutest_subtest_statuses = {}
-  echom "Initialized g:visutest_subtest_statuses"
 endif
 if !exists('g:visutest_all_subtests')
   let g:visutest_all_subtests = {}
-  echom "Initialized g:visutest_all_subtests"
 endif
 
 """""""""" Function to set up the VisuTest window UI layout """"""""""""""""""
@@ -159,13 +155,11 @@ function! visutest_ui#ClosePopup()
     call popup_clear(l:popup_id)
   endfor
   let g:visutest_popups = []
-  echom "Closed all popups."
 endfunction
 
 """""""""" Function to update test statuses in the UI display """"""""""""""
 function! visutest_ui#UpdateTestStatus(test_name, status)
   let l:test_name = substitute(a:test_name, '^test_', '', '')
-  echom "UI: Updating status for " . l:test_name . " to " . a:status
 
   " Update the global test status
   let g:visutest_test_statuses[l:test_name] = a:status
@@ -194,7 +188,6 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
 
       " Replace the entire line in the buffer
       call setline(l:line_num, l:updated_line)
-      echom "UI: Updated line " . l:line_num . " to " . l:updated_line
       break
     endif
   endfor
@@ -245,7 +238,6 @@ function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)
 
         " Replace the line in the buffer
         call setline(idx + 1, l:updated_line)
-        echom "UI: Updated subtest " . l:subtest_name . " to " . l:status
       else
         " If we reach a line that is not a sub-test, stop looking
         break

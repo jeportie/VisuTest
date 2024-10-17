@@ -1341,3 +1341,1713 @@ Total Test time (real) =   3.20 sec
 2024-10-16 15:53:35,156 - DEBUG - Read log line: End testing: Oct 16 15:53 UTC
 2024-10-16 15:53:35,156 - INFO - Finished sending updates to client.
 2024-10-16 15:53:35,156 - INFO - Connection with ('127.0.0.1', 36664) closed.
+2024-10-17 08:16:15,464 - INFO - Server is listening on port 9999.
+2024-10-17 08:32:35,267 - INFO - Server is listening on port 9999.
+2024-10-17 08:34:48,481 - INFO - Accepted connection from ('127.0.0.1', 56710)
+2024-10-17 08:34:48,481 - DEBUG - Received request: START_TEST
+
+2024-10-17 08:34:48,481 - INFO - Processing START_TEST command.
+2024-10-17 08:34:48,481 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 08:34:48,481 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:48,503 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 08:34:48,503 - DEBUG - CMake errors:
+
+2024-10-17 08:34:48,690 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 08:34:48,690 - DEBUG - Make errors:
+
+2024-10-17 08:34:51,981 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.49 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.45 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.42 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.58 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.46 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.28 sec
+
+2024-10-17 08:34:51,981 - DEBUG - CTest errors:
+
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Start testing: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 08:34:51,981 - INFO - Test started: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:34:51,981 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Test time =   0.49 sec
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,981 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 08:34:51,981 - INFO - Test started: ms_env_create_node
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:34:51,981 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,981 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 08:34:51,981 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 08:34:51,981 - INFO - Test started: ms_get_user_input
+2024-10-17 08:34:51,981 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,981 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,981 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 08:34:51,982 - INFO - Test started: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 08:34:51,982 - INFO - Test started: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 08:34:51,982 - DEBUG - Read log line: : No such process
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test time =   0.58 sec
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:34:51,982 - INFO - Test started: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:34:51,982 - INFO - Test started: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Output:
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Read log line: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 08:34:51,982 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Read log line: 
+2024-10-17 08:34:51,982 - DEBUG - Read log line: End testing: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - INFO - Finished sending updates to client.
+2024-10-17 08:34:51,982 - INFO - Connection with ('127.0.0.1', 56710) closed.
+2024-10-17 08:35:14,459 - INFO - Accepted connection from ('127.0.0.1', 58446)
+2024-10-17 08:35:14,459 - DEBUG - Received request: START_TEST
+
+2024-10-17 08:35:14,459 - INFO - Processing START_TEST command.
+2024-10-17 08:35:14,459 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 08:35:14,459 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:14,482 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 08:35:14,483 - DEBUG - CMake errors:
+
+2024-10-17 08:35:14,724 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 08:35:14,724 - DEBUG - Make errors:
+
+2024-10-17 08:35:18,018 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.49 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.42 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.58 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.46 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.28 sec
+
+2024-10-17 08:35:18,018 - DEBUG - CTest errors:
+
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Start testing: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 08:35:18,018 - INFO - Test started: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test time =   0.49 sec
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,018 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 08:35:18,018 - INFO - Test started: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,018 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 08:35:18,018 - INFO - Test started: ms_get_user_input
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,018 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 08:35:18,018 - INFO - Test started: ms_init_env
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 08:35:18,018 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-17 08:35:18,018 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,019 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 08:35:18,019 - INFO - Test started: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 08:35:18,019 - DEBUG - Read log line: : No such process
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test time =   0.58 sec
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,019 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:35:18,019 - INFO - Test started: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,019 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:35:18,019 - INFO - Test started: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Output:
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Read log line: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:35:18,019 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 08:35:18,019 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Read log line: 
+2024-10-17 08:35:18,019 - DEBUG - Read log line: End testing: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - INFO - Finished sending updates to client.
+2024-10-17 08:35:18,019 - INFO - Connection with ('127.0.0.1', 58446) closed.
+2024-10-17 08:45:02,252 - INFO - Server is listening on port 9999.
+2024-10-17 08:46:09,029 - INFO - Server is listening on port 9999.
+2024-10-17 08:46:16,879 - INFO - Accepted connection from ('127.0.0.1', 42742)
+2024-10-17 08:46:16,879 - DEBUG - Received request: START_TEST
+
+2024-10-17 08:46:16,879 - INFO - Processing START_TEST command.
+2024-10-17 08:46:16,879 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 08:46:16,879 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:16,905 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 08:46:16,905 - DEBUG - CMake errors:
+
+2024-10-17 08:46:17,152 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 08:46:17,152 - DEBUG - Make errors:
+
+2024-10-17 08:46:20,424 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.48 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.42 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.57 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.46 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.46 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.26 sec
+
+2024-10-17 08:46:20,424 - DEBUG - CTest errors:
+
+2024-10-17 08:46:20,424 - DEBUG - Read log line: Start testing: Oct 17 08:46 UTC
+2024-10-17 08:46:20,424 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,424 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 08:46:20,424 - INFO - Test started: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.48 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 08:46:20,425 - INFO - Test started: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 08:46:20,425 - INFO - Test started: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 08:46:20,425 - INFO - Test started: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 08:46:20,425 - INFO - Test started: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 08:46:20,425 - DEBUG - Read log line: : No such process
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.57 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:46:20,425 - INFO - Test started: ms_init_std_signal
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 
+2024-10-17 08:46:20,425 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:46:20,425 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,425 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 08:46:20,426 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 08:46:20,426 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Read log line: 
+2024-10-17 08:46:20,426 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:46:20,426 - INFO - Test started: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,426 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Output:
+2024-10-17 08:46:20,426 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,426 - DEBUG - Read log line: <end of output>
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:46:20,426 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:46:20,426 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 08:46:20,426 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 08:46:20,426 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Read log line: 
+2024-10-17 08:46:20,426 - DEBUG - Read log line: End testing: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - INFO - Finished sending updates to client.
+2024-10-17 08:46:20,426 - INFO - Connection with ('127.0.0.1', 42742) closed.
+2024-10-17 08:48:29,556 - INFO - Server is listening on port 9999.
+2024-10-17 08:49:10,626 - INFO - Server is listening on port 9999.
+2024-10-17 08:49:15,770 - INFO - Accepted connection from ('127.0.0.1', 55080)
+2024-10-17 08:49:15,770 - DEBUG - Received request: START_TEST
+
+2024-10-17 08:49:15,770 - INFO - Processing START_TEST command.
+2024-10-17 08:49:15,770 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 08:49:15,770 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:15,807 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 08:49:15,807 - DEBUG - CMake errors:
+
+2024-10-17 08:49:16,022 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 08:49:16,023 - DEBUG - Make errors:
+
+2024-10-17 08:49:19,286 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.49 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.57 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.45 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.46 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.25 sec
+
+2024-10-17 08:49:19,286 - DEBUG - CTest errors:
+
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Start testing: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 08:49:19,286 - INFO - Test started: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:49:19,286 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test time =   0.49 sec
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,286 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 08:49:19,286 - INFO - Test started: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:49:19,286 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,286 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 08:49:19,286 - INFO - Test started: ms_get_user_input
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:49:19,286 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,286 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 08:49:19,286 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 08:49:19,286 - INFO - Test started: ms_init_env
+2024-10-17 08:49:19,286 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 08:49:19,286 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,287 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 08:49:19,287 - INFO - Test started: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 08:49:19,287 - DEBUG - Read log line: : No such process
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test time =   0.57 sec
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,287 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:49:19,287 - INFO - Test started: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,287 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:49:19,287 - INFO - Test started: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Output:
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Read log line: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:49:19,287 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 08:49:19,287 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Read log line: 
+2024-10-17 08:49:19,287 - DEBUG - Read log line: End testing: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - INFO - Finished sending updates to client.
+2024-10-17 08:49:19,287 - INFO - Connection with ('127.0.0.1', 55080) closed.
+2024-10-17 08:58:22,013 - INFO - Server is listening on port 9999.
+2024-10-17 08:58:57,197 - INFO - Server is listening on port 9999.
+2024-10-17 08:59:03,307 - INFO - Accepted connection from ('127.0.0.1', 41642)
+2024-10-17 08:59:03,307 - DEBUG - Received request: START_TEST
+
+2024-10-17 08:59:03,307 - INFO - Processing START_TEST command.
+2024-10-17 08:59:03,307 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 08:59:03,307 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:03,330 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 08:59:03,330 - DEBUG - CMake errors:
+
+2024-10-17 08:59:03,467 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 08:59:03,468 - DEBUG - Make errors:
+
+2024-10-17 08:59:06,723 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.46 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.42 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.58 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.46 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.24 sec
+
+2024-10-17 08:59:06,723 - DEBUG - CTest errors:
+
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Start testing: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 08:59:06,723 - INFO - Test started: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:59:06,723 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,723 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 08:59:06,723 - INFO - Test started: ms_env_create_node
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:59:06,723 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,723 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 08:59:06,723 - INFO - Test started: ms_get_user_input
+2024-10-17 08:59:06,723 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,723 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,723 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 08:59:06,724 - INFO - Test started: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 08:59:06,724 - INFO - Test started: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 08:59:06,724 - DEBUG - Read log line: : No such process
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test time =   0.58 sec
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:59:06,724 - INFO - Test started: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:59:06,724 - INFO - Test started: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Output:
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Read log line: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 08:59:06,724 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Read log line: 
+2024-10-17 08:59:06,724 - DEBUG - Read log line: End testing: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - INFO - Finished sending updates to client.
+2024-10-17 08:59:06,724 - INFO - Connection with ('127.0.0.1', 41642) closed.
+2024-10-17 08:59:43,520 - INFO - Server is listening on port 9999.
+2024-10-17 09:01:30,066 - INFO - Server is listening on port 9999.
+2024-10-17 09:01:38,749 - INFO - Accepted connection from ('127.0.0.1', 44234)
+2024-10-17 09:01:38,749 - DEBUG - Received request: START_TEST
+
+2024-10-17 09:01:38,749 - INFO - Processing START_TEST command.
+2024-10-17 09:01:38,749 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 09:01:38,749 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:38,771 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 09:01:38,771 - DEBUG - CMake errors:
+
+2024-10-17 09:01:39,010 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 09:01:39,011 - DEBUG - Make errors:
+
+2024-10-17 09:01:42,257 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.47 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.59 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.46 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.44 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.24 sec
+
+2024-10-17 09:01:42,257 - DEBUG - CTest errors:
+
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Start testing: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 09:01:42,257 - INFO - Test started: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test time =   0.47 sec
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,257 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 09:01:42,257 - INFO - Test started: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,257 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 09:01:42,257 - INFO - Test started: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,257 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 09:01:42,257 - INFO - Test started: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,257 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 09:01:42,257 - INFO - Test started: ms_init_shell
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 09:01:42,257 - DEBUG - Read log line: : No such process
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test time =   0.59 sec
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,257 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 09:01:42,257 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Read log line: 
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:01:42,258 - INFO - Test started: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,258 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,258 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:01:42,258 - INFO - Test started: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Output:
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,258 - DEBUG - Read log line: <end of output>
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:01:42,258 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 09:01:42,258 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Read log line: 
+2024-10-17 09:01:42,258 - DEBUG - Read log line: End testing: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - INFO - Finished sending updates to client.
+2024-10-17 09:01:42,258 - INFO - Connection with ('127.0.0.1', 44234) closed.
+2024-10-17 09:02:18,526 - INFO - Accepted connection from ('127.0.0.1', 46902)
+2024-10-17 09:02:18,526 - DEBUG - Received request: START_TEST
+
+2024-10-17 09:02:18,526 - INFO - Processing START_TEST command.
+2024-10-17 09:02:18,526 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 09:02:18,526 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:18,547 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 09:02:18,547 - DEBUG - CMake errors:
+
+2024-10-17 09:02:18,851 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 44%] Building C object CMakeFiles/test_ms_init_env.dir/init_shell/test_ms_init_env.c.o
+[ 46%] Linking C executable test_ms_init_env
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 09:02:18,851 - DEBUG - Make errors:
+
+2024-10-17 09:02:22,112 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.48 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.59 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.45 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.46 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.25 sec
+
+2024-10-17 09:02:22,112 - DEBUG - CTest errors:
+
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Start testing: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 09:02:22,112 - INFO - Test started: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test time =   0.48 sec
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,112 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 09:02:22,112 - INFO - Test started: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,112 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 09:02:22,112 - INFO - Test started: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,112 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 09:02:22,112 - INFO - Test started: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Read log line: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,112 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 09:02:22,112 - INFO - Test started: ms_init_shell
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 09:02:22,112 - DEBUG - Read log line: : No such process
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test time =   0.59 sec
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,112 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 09:02:22,112 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Read log line: 
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:02:22,113 - INFO - Test started: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:02:22,113 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,113 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:02:22,113 - INFO - Test started: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Output:
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:02:22,113 - DEBUG - Read log line: <end of output>
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:02:22,113 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 09:02:22,113 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Read log line: 
+2024-10-17 09:02:22,113 - DEBUG - Read log line: End testing: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - INFO - Finished sending updates to client.
+2024-10-17 09:02:22,113 - INFO - Connection with ('127.0.0.1', 46902) closed.
+2024-10-17 09:05:58,481 - INFO - Server is listening on port 9999.
+2024-10-17 09:06:30,560 - INFO - Server is listening on port 9999.
+2024-10-17 09:06:35,278 - INFO - Accepted connection from ('127.0.0.1', 44508)
+2024-10-17 09:06:35,278 - DEBUG - Received request: START_TEST
+
+2024-10-17 09:06:35,278 - INFO - Processing START_TEST command.
+2024-10-17 09:06:35,278 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 09:06:35,278 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:35,301 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 09:06:35,301 - DEBUG - CMake errors:
+
+2024-10-17 09:06:35,505 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 09:06:35,505 - DEBUG - Make errors:
+
+2024-10-17 09:06:38,741 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.47 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.43 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.42 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.58 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.45 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.23 sec
+
+2024-10-17 09:06:38,741 - DEBUG - CTest errors:
+
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Start testing: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 09:06:38,741 - INFO - Test started: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test time =   0.47 sec
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,741 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 09:06:38,741 - INFO - Test started: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,741 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 09:06:38,741 - INFO - Test started: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,741 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 09:06:38,741 - INFO - Test started: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Read log line: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,741 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 09:06:38,741 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 09:06:38,741 - INFO - Test started: ms_init_shell
+2024-10-17 09:06:38,741 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 09:06:38,742 - DEBUG - Read log line: : No such process
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test time =   0.58 sec
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,742 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:06:38,742 - INFO - Test started: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,742 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:06:38,742 - INFO - Test started: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Output:
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Read log line: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:06:38,742 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 09:06:38,742 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Read log line: 
+2024-10-17 09:06:38,742 - DEBUG - Read log line: End testing: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - INFO - Finished sending updates to client.
+2024-10-17 09:06:38,742 - INFO - Connection with ('127.0.0.1', 44508) closed.
+2024-10-17 09:12:48,009 - INFO - Accepted connection from ('127.0.0.1', 37494)
+2024-10-17 09:12:48,009 - DEBUG - Received request: START_TEST
+
+2024-10-17 09:12:48,010 - INFO - Processing START_TEST command.
+2024-10-17 09:12:48,010 - INFO - Running tests: cmake, make, ctest.
+2024-10-17 09:12:48,010 - DEBUG - Build directory already exists: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:48,030 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-17 09:12:48,030 - DEBUG - CMake errors:
+
+2024-10-17 09:12:48,323 - DEBUG - Make output:
+[ 14%] Built target test_ms_env_add_back
+[ 28%] Built target test_ms_env_create_node
+[ 42%] Built target test_ms_get_user_input
+[ 44%] Building C object CMakeFiles/test_ms_init_env.dir/init_shell/test_ms_init_env.c.o
+[ 46%] Linking C executable test_ms_init_env
+[ 57%] Built target test_ms_init_env
+[ 71%] Built target test_ms_init_shell
+[ 85%] Built target test_ms_init_std_signal
+[100%] Built target test_ms_stop_std_signal
+
+2024-10-17 09:12:48,323 - DEBUG - Make errors:
+
+2024-10-17 09:12:51,572 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+    Start 1: ms_env_add_back
+1/7 Test #1: ms_env_add_back ..................   Passed    0.47 sec
+    Start 2: ms_env_create_node
+2/7 Test #2: ms_env_create_node ...............   Passed    0.44 sec
+    Start 3: ms_get_user_input
+3/7 Test #3: ms_get_user_input ................   Passed    0.43 sec
+    Start 4: ms_init_env
+4/7 Test #4: ms_init_env ......................   Passed    0.41 sec
+    Start 5: ms_init_shell
+5/7 Test #5: ms_init_shell ....................   Passed    0.58 sec
+    Start 6: ms_init_std_signal
+6/7 Test #6: ms_init_std_signal ...............   Passed    0.45 sec
+    Start 7: ms_stop_std_signal
+7/7 Test #7: ms_stop_std_signal ...............   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =   3.24 sec
+
+2024-10-17 09:12:51,572 - DEBUG - CTest errors:
+
+2024-10-17 09:12:51,572 - DEBUG - Read log line: Start testing: Oct 17 09:12 UTC
+2024-10-17 09:12:51,572 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,572 - DEBUG - Read log line: 1/7 Testing: ms_env_add_back
+2024-10-17 09:12:51,572 - INFO - Test started: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 1/7 Test: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.47 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 2/7 Testing: ms_env_create_node
+2024-10-17 09:12:51,573 - INFO - Test started: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 2/7 Test: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): Env
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 3/7 Testing: ms_get_user_input
+2024-10-17 09:12:51,573 - INFO - Test started: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 3/7 Test: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 4/7 Testing: ms_init_env
+2024-10-17 09:12:51,573 - INFO - Test started: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 4/7 Test: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_env" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.41 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_env" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 5/7 Testing: ms_init_shell
+2024-10-17 09:12:51,573 - INFO - Test started: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 5/7 Test: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_shell" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-17 09:12:51,573 - DEBUG - Read log line: : No such process
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.58 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_shell" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:12:51,573 - INFO - Test started: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 6/7 Test: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,573 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-17 09:12:51,573 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:12:51,573 - INFO - Test started: ms_stop_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Read log line: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,574 - DEBUG - Read log line: Output:
+2024-10-17 09:12:51,574 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,574 - DEBUG - Read log line: <end of output>
+2024-10-17 09:12:51,574 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-17 09:12:51,574 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Read log line: Test Passed.
+2024-10-17 09:12:51,574 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-17 09:12:51,574 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,574 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-17 09:12:51,574 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Read log line: 
+2024-10-17 09:12:51,574 - DEBUG - Read log line: End testing: Oct 17 09:12 UTC
+2024-10-17 09:12:51,574 - INFO - Finished sending updates to client.
+2024-10-17 09:12:51,574 - INFO - Connection with ('127.0.0.1', 37494) closed.

@@ -822,3 +822,1130 @@
 2024-10-16 15:53:35,156 - DEBUG - Received data: ----------------------------------------------------------
 2024-10-16 15:53:35,156 - DEBUG - Received data: Test Passed.
 2024-10-16 15:53:35,156 - INFO - Closing client socket.
+2024-10-17 08:34:48,481 - INFO - Connected to the server.
+2024-10-17 08:34:48,481 - INFO - Sent START_TEST command to the server.
+2024-10-17 08:34:51,981 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,981 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 08:34:51,981 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,981 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,981 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,981 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,981 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:34:51,981 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:34:51,981 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,981 - DEBUG - Received data: Test time =   0.49 sec
+2024-10-17 08:34:51,981 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,981 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 08:34:51,981 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,981 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,981 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:34:51,982 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:34:51,982 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 08:34:51,982 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:34:51,982 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:34:51,982 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_init_env" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 08:34:51,982 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 08:34:51,982 - DEBUG - Received data: : No such process
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.58 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: PASSED
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:34:51,982 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:34:51,982 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 08:34 UTC
+2024-10-17 08:34:51,982 - DEBUG - Received data: Output:
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 08:34:51,982 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:34:51,982 - DEBUG - Received data: <end of output>
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 08:34:51,982 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:34:51,982 - DEBUG - Received data: Test Passed.
+2024-10-17 08:34:51,982 - INFO - Closing client socket.
+2024-10-17 08:35:14,459 - INFO - Connected to the server.
+2024-10-17 08:35:14,459 - INFO - Sent START_TEST command to the server.
+2024-10-17 08:35:18,018 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 08:35:18,018 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:35:18,018 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Received data: Test time =   0.49 sec
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,018 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 08:35:18,018 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,018 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,018 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,018 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 08:35:18,018 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:35:18,018 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,018 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 08:35:18,018 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,018 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,018 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 08:35:18,019 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:35:18,019 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:35:18,019 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 08:35:18,019 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:35:18,019 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,019 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 08:35:18,019 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:35:18,019 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:35:18,019 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 08:35:18,019 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Received data: "ms_init_env" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 08:35:18,019 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,019 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 08:35:18,019 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 08:35:18,019 - DEBUG - Received data: : No such process
+2024-10-17 08:35:18,019 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test time =   0.58 sec
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,019 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 
+2024-10-17 08:35:18,019 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,019 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: PASSED
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:35:18,019 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:35:18,019 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 08:35 UTC
+2024-10-17 08:35:18,019 - DEBUG - Received data: Output:
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 08:35:18,019 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:35:18,019 - DEBUG - Received data: <end of output>
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 08:35:18,019 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:35:18,019 - DEBUG - Received data: Test Passed.
+2024-10-17 08:35:18,019 - INFO - Closing client socket.
+2024-10-17 08:46:16,879 - INFO - Connected to the server.
+2024-10-17 08:46:16,879 - INFO - Sent START_TEST command to the server.
+2024-10-17 08:46:20,425 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 08:46:20,425 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:46:20,425 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test time =   0.48 sec
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,425 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 08:46:20,425 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 08:46:20,425 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,425 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 08:46:20,425 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:46:20,425 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,425 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Received data: "ms_init_env" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 08:46:20,425 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,425 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,425 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,425 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 08:46:20,425 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,425 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,425 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,425 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,425 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 08:46:20,426 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 08:46:20,426 - DEBUG - Received data: : No such process
+2024-10-17 08:46:20,426 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:46:20,426 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test time =   0.57 sec
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,426 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,426 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,426 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 
+2024-10-17 08:46:20,426 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,426 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,426 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: PASSED
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:46:20,426 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:46:20,426 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 08:46 UTC
+2024-10-17 08:46:20,426 - DEBUG - Received data: Output:
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 08:46:20,426 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:46:20,426 - DEBUG - Received data: <end of output>
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:46:20,426 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:46:20,426 - DEBUG - Received data: Test Passed.
+2024-10-17 08:46:20,426 - INFO - Closing client socket.
+2024-10-17 08:49:15,769 - INFO - Connected to the server.
+2024-10-17 08:49:15,770 - INFO - Sent START_TEST command to the server.
+2024-10-17 08:49:19,286 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 08:49:19,286 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,286 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,286 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:49:19,286 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:49:19,286 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,286 - DEBUG - Received data: Test time =   0.49 sec
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,286 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 08:49:19,286 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,286 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,286 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,286 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 08:49:19,286 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:49:19,286 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,286 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,286 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 08:49:19,286 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,286 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,286 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:49:19,286 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:49:19,287 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 08:49:19,287 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:49:19,287 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,287 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Received data: "ms_init_env" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 08:49:19,287 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,287 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 08:49:19,287 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 08:49:19,287 - DEBUG - Received data: : No such process
+2024-10-17 08:49:19,287 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test time =   0.57 sec
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,287 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 
+2024-10-17 08:49:19,287 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,287 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: PASSED
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:49:19,287 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:49:19,287 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 08:49 UTC
+2024-10-17 08:49:19,287 - DEBUG - Received data: Output:
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 08:49:19,287 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:49:19,287 - DEBUG - Received data: <end of output>
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:49:19,287 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:49:19,287 - DEBUG - Received data: Test Passed.
+2024-10-17 08:49:19,287 - INFO - Closing client socket.
+2024-10-17 08:59:03,307 - INFO - Connected to the server.
+2024-10-17 08:59:03,307 - INFO - Sent START_TEST command to the server.
+2024-10-17 08:59:06,723 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,723 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 08:59:06,723 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,723 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,723 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,723 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,723 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:59:06,723 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:59:06,723 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,723 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:59:06,723 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,723 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 08:59:06,723 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,723 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,723 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:59:06,723 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 08:59:06,723 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 08:59:06,724 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:59:06,724 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 08:59:06,724 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_init_env" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 08:59:06,724 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 08:59:06,724 - DEBUG - Received data: : No such process
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.58 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: PASSED
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 08:59:06,724 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 08:59:06,724 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 08:59 UTC
+2024-10-17 08:59:06,724 - DEBUG - Received data: Output:
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 08:59:06,724 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 08:59:06,724 - DEBUG - Received data: <end of output>
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 08:59:06,724 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 08:59:06,724 - DEBUG - Received data: Test Passed.
+2024-10-17 08:59:06,724 - INFO - Closing client socket.
+2024-10-17 09:01:38,749 - INFO - Connected to the server.
+2024-10-17 09:01:38,749 - INFO - Sent START_TEST command to the server.
+2024-10-17 09:01:42,257 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 09:01:42,257 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:01:42,257 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test time =   0.47 sec
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,257 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 09:01:42,257 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 09:01:42,257 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,257 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 09:01:42,257 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:01:42,257 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,257 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,257 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,257 - DEBUG - Received data: "ms_init_env" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,257 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 09:01:42,257 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,257 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,257 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 09:01:42,257 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,257 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,257 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:01:42,258 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:01:42,258 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 09:01:42,258 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,258 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,258 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 09:01:42,258 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 09:01:42,258 - DEBUG - Received data: : No such process
+2024-10-17 09:01:42,258 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:01:42,258 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test time =   0.59 sec
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,258 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,258 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,258 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 
+2024-10-17 09:01:42,258 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,258 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,258 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: PASSED
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:01:42,258 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:01:42,258 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 09:01 UTC
+2024-10-17 09:01:42,258 - DEBUG - Received data: Output:
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 09:01:42,258 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:01:42,258 - DEBUG - Received data: <end of output>
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 09:01:42,258 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:01:42,258 - DEBUG - Received data: Test Passed.
+2024-10-17 09:01:42,258 - INFO - Closing client socket.
+2024-10-17 09:02:18,526 - INFO - Connected to the server.
+2024-10-17 09:02:18,526 - INFO - Sent START_TEST command to the server.
+2024-10-17 09:02:22,112 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 09:02:22,112 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:02:22,112 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test time =   0.48 sec
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,112 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 09:02:22,112 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 09:02:22,112 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,112 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 09:02:22,112 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:02:22,112 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,112 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,112 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,112 - DEBUG - Received data: "ms_init_env" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,112 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 09:02:22,112 - DEBUG - Received data: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-17 09:02:22,112 - DEBUG - Received data: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-17 09:02:22,112 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,112 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,112 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 09:02:22,112 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,112 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:02:22,113 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:02:22,113 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 09:02:22,113 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,113 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,113 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 09:02:22,113 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 09:02:22,113 - DEBUG - Received data: : No such process
+2024-10-17 09:02:22,113 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:02:22,113 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test time =   0.59 sec
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,113 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,113 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,113 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 
+2024-10-17 09:02:22,113 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:02:22,113 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,113 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: PASSED
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:02:22,113 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:02:22,113 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 09:02 UTC
+2024-10-17 09:02:22,113 - DEBUG - Received data: Output:
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 09:02:22,113 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:02:22,113 - DEBUG - Received data: <end of output>
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test time =   0.46 sec
+2024-10-17 09:02:22,113 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:02:22,113 - DEBUG - Received data: Test Passed.
+2024-10-17 09:02:22,113 - INFO - Closing client socket.
+2024-10-17 09:06:35,278 - INFO - Connected to the server.
+2024-10-17 09:06:35,278 - INFO - Sent START_TEST command to the server.
+2024-10-17 09:06:38,741 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 09:06:38,741 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:06:38,741 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test time =   0.47 sec
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,741 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 09:06:38,741 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 09:06:38,741 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,741 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 09:06:38,741 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:06:38,741 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:06:38,741 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test time =   0.42 sec
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,741 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,741 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,741 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 09:06:38,741 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,741 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,741 - DEBUG - Received data: "ms_init_env" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,741 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 09:06:38,742 - DEBUG - Received data: 50%: Checks: 2, Failures: 1, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Received data: /root/projects/Minishell/test_src/init_shell/test_ms_init_env.c:72:F:Core:test_ms_init_env_without_envp:0: Assertion 'current->var == "PwD"' failed: current->var == "PWD", "PwD" == "PwD"
+2024-10-17 09:06:38,742 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,742 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,742 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,742 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 09:06:38,742 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 09:06:38,742 - DEBUG - Received data: : No such process
+2024-10-17 09:06:38,742 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test time =   0.58 sec
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,742 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,742 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,742 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 
+2024-10-17 09:06:38,742 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,742 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: PASSED
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:06:38,742 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:06:38,742 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 09:06 UTC
+2024-10-17 09:06:38,742 - DEBUG - Received data: Output:
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 09:06:38,742 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:06:38,742 - DEBUG - Received data: <end of output>
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 09:06:38,742 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:06:38,742 - DEBUG - Received data: Test Passed.
+2024-10-17 09:06:38,742 - INFO - Closing client socket.
+2024-10-17 09:12:48,009 - INFO - Connected to the server.
+2024-10-17 09:12:48,009 - INFO - Sent START_TEST command to the server.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Received data: 1/7 Testing: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Received data: 1/7 Test: ms_env_add_back
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_env_add_back" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:12:51,573 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test time =   0.47 sec
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Received data: 2/7 Testing: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Received data: 2/7 Test: ms_env_create_node
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_env_create_node" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Running suite(s): Env
+2024-10-17 09:12:51,573 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test time =   0.44 sec
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Received data: 3/7 Testing: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Received data: 3/7 Test: ms_get_user_input
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_get_user_input" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Running suite(s): Minishell
+2024-10-17 09:12:51,573 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test time =   0.43 sec
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Received data: 4/7 Testing: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Received data: 4/7 Test: ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_init_env" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-10-17 09:12:51,573 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test time =   0.41 sec
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Received data: 5/7 Testing: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Received data: 5/7 Test: ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_init_shell" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,573 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-10-17 09:12:51,573 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-10-17 09:12:51,573 - DEBUG - Received data: : No such process
+2024-10-17 09:12:51,573 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-17 09:12:51,573 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test time =   0.58 sec
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,573 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,573 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,573 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Received data: 6/7 Testing: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Received data: 6/7 Test: ms_init_std_signal
+2024-10-17 09:12:51,573 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,573 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,573 - DEBUG - Received data: "ms_init_std_signal" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,574 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,574 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: 
+2024-10-17 09:12:51,574 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,574 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,574 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 09:12:51,574 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,574 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: PASSED
+2024-10-17 09:12:51,574 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: 7/7 Testing: ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: 7/7 Test: ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-17 09:12:51,574 - DEBUG - Received data: Directory: /root/projects/Minishell/test_src/build
+2024-10-17 09:12:51,574 - DEBUG - Received data: "ms_stop_std_signal" start time: Oct 17 09:12 UTC
+2024-10-17 09:12:51,574 - DEBUG - Received data: Output:
+2024-10-17 09:12:51,574 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-10-17 09:12:51,574 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-17 09:12:51,574 - DEBUG - Received data: <end of output>
+2024-10-17 09:12:51,574 - DEBUG - Received data: Test time =   0.45 sec
+2024-10-17 09:12:51,574 - DEBUG - Received data: ----------------------------------------------------------
+2024-10-17 09:12:51,574 - DEBUG - Received data: Test Passed.
+2024-10-17 09:12:51,574 - INFO - Closing client socket.

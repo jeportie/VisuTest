@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:37:27 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/16 15:52:04 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/17 09:01:03 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -14,11 +14,9 @@
 """""""""" Initialize Global Variables """""""""""""""""""""""""""""
 if !exists('g:visutest_test_statuses')
   let g:visutest_test_statuses = {}
-  echom "Initialized g:visutest_test_statuses"
 endif
 if !exists('g:visutest_all_subtests')
   let g:visutest_all_subtests = {}
-  echom "Initialized g:visutest_all_subtests"
 endif
 
 " Global state variable to track whether to show or hide test units
@@ -29,11 +27,9 @@ function! visutest_tests#ToggleUnits()
   if g:visutest_tests_show_units
     let g:visutest_tests_show_units = 0
     call visutest_tests#HideUnits()
-    echom "Toggled off sub-test display."
   else
     let g:visutest_tests_show_units = 1
     call visutest_tests#DisplayTestSuites()
-    echom "Toggled on sub-test display."
   endif
 endfunction
 
@@ -71,7 +67,6 @@ function! visutest_tests#HideUnits()
   endif
 
   setlocal nomodifiable
-  echom "Displayed test suites without sub-tests."
 endfunction
 
 """""""""" Function to get test units from a test suite file """""""""""""""""
@@ -96,7 +91,6 @@ function! visutest_tests#GetTestUnits(suite_file)
       let l:in_suite_function = 0
     endif
   endfor
-  echom "Extracted " . len(l:test_units) . " sub-tests from " . a:suite_file
   return l:test_units
 endfunction
 
@@ -107,7 +101,6 @@ function! visutest_tests#GetTestSuites()
   let l:files = globpath(l:test_src_dir, '**/test_*.c', 0, 1)
   for l:file in l:files
     call add(l:test_suites, l:file)
-    echom "Found test suite file: " . l:file
   endfor
   return l:test_suites
 endfunction
@@ -147,7 +140,6 @@ function! visutest_tests#DisplayTestSuites()
       let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
       let g:visutest_all_subtests[l:suite_name] = l:test_units
 
-      echom "Populated g:visutest_all_subtests for suite: " . l:suite_name
 
       " Initialize subtest statuses if not already done
       if !has_key(g:visutest_subtest_statuses, l:suite_name)
@@ -179,7 +171,6 @@ function! visutest_tests#DisplayTestSuites()
   endif
 
   setlocal nomodifiable
-  echom "Displayed test suites with sub-tests."
 endfunction
 
 """""""""" Function to get the name of the selected test suite """""""""""""""
