@@ -1,6 +1,6 @@
 
 ![Screenshot from 2024-10-28 10-44-40](https://github.com/user-attachments/assets/42737af8-ea59-4798-af2b-9fb6c631225c)
-![Screenshot from 2024-10-28 10-48-35](https://github.com/user-attachments/assets/f2986fc2-ccd8-42d9-b382-7927af2d64f9)
+
 
 ## Introduction
 
@@ -8,6 +8,7 @@ VisuTest is a Vim plugin designed to optimize the C development workflow by inte
 
 This plugin ensures that each function is tested individually, following best practices from extreme programming to improve code quality, maintainability, and collaboration.
 
+![Screenshot from 2024-10-28 10-48-35](https://github.com/user-attachments/assets/f2986fc2-ccd8-42d9-b382-7927af2d64f9)
 ---
 
 ## Key Features
