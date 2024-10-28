@@ -13650,3 +13650,32 @@ make: *** [Makefile:101: all] Error 2
 
 2024-10-28 13:52:45,393 - ERROR - Error running tests: MAKE_ERROR:<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’<br>   20 | include test<br>      | ^~~~~~~<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’<br>   20 | include test<br>      |             ^<br>      |             ;<br>   21 | /* Global garbage collector */<br>   22 | t_gc *gcl = NULL;<br>      | ~~~~         <br>make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1<br>make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2<br>make: *** [Makefile:101: all] Error 2<br>
 2024-10-28 13:52:45,393 - INFO - Connection with ('127.0.0.1', 60008) closed.
+2024-10-28 13:55:23,282 - INFO - Server is listening on port 9999.
+2024-10-28 13:55:25,908 - INFO - Accepted connection from ('127.0.0.1', 33112)
+2024-10-28 13:55:25,908 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:55:25,908 - INFO - Processing START_TEST command.
+2024-10-28 13:55:25,908 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:55:25,945 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:55:26,009 - ERROR - Captured Make error:
+MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:55:26,009 - ERROR - Error running tests: MAKE_ERROR:<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’<br>   20 | include test<br>      | ^~~~~~~<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’<br>   20 | include test<br>      |             ^<br>      |             ;<br>   21 | /* Global garbage collector */<br>   22 | t_gc *gcl = NULL;<br>      | ~~~~         <br>make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1<br>make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2<br>make: *** [Makefile:101: all] Error 2<br>
+2024-10-28 13:55:26,009 - INFO - Connection with ('127.0.0.1', 33112) closed.
