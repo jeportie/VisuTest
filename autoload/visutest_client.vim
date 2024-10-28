@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:50:44 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/28 13:52:38 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/28 14:18:17 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -54,7 +54,6 @@ endfunction
 
 " Function to handle structured data from the client
 function! visutest_client#OnData(job, data)
-  " Log raw received data
   echomsg "Received data: " . a:data
 
   if type(a:data) == type('')
@@ -67,34 +66,41 @@ function! visutest_client#OnData(job, data)
 
   let l:raw_data = join(l:data, "\n")
   let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
-
-  " Log clean data for verification
   echomsg "Cleaned data: " . l:clean_data
 
   if l:clean_data == ''
     return
   endif
 
-  " Check for cmake or make errors and display them in the build error popup
   if l:clean_data =~ 'CMAKE_ERROR:' || l:clean_data =~ 'MAKE_ERROR:'
-    " Replace <br> with newline for display
     let g:visutest_build_error = substitute(l:clean_data, '<br>', "\n", 'g')
     echomsg "Build error set for popup: " . g:visutest_build_error
     call visutest_ui#ShowBuildErrorPopup()
     return
   endif
 
+  " Update test suite status and set as current test
   if l:clean_data =~ 'RUNNING:'
     let l:test_name = matchstr(l:clean_data, 'RUNNING:\s*\zs.*')
     let l:test_name = substitute(l:test_name, '^test_', '', '')
-
     let g:visutest_current_test = l:test_name
     let g:visutest_test_logs[g:visutest_current_test] = []
     let g:visutest_subtest_statuses[g:visutest_current_test] = {}
-
+    echomsg "Test started: " . l:test_name
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
+
+  elseif l:clean_data =~ 'PASSED'
+    echomsg "Test passed: " . g:visutest_current_test
+    call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
+    call visutest_client#ParseSubTestResults(g:visutest_current_test)
+
+  elseif l:clean_data =~ 'FAILED'
+    echomsg "Test failed: " . g:visutest_current_test
+    call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
+    call visutest_client#ParseSubTestResults(g:visutest_current_test)
   endif
 
+  " Accumulate log lines for subtest processing
   if exists("g:visutest_current_test") && !empty(g:visutest_current_test)
     let l:log_lines = split(l:clean_data, "\n")
     for l:line in l:log_lines
@@ -110,61 +116,27 @@ function! visutest_client#ParseSubTestResults(test_name)
   let l:log = g:visutest_test_logs[a:test_name]
   let l:subtest_statuses = {}
 
-  " Extract failed sub-tests from lines containing 'Core:'
+  " Parse each log line for sub-test status updates
   for l:line in l:log
-    if l:line =~ 'Core:'
-      " Extract the sub-test name after 'Core:'
-      let l:core_pos = match(l:line, 'Core:')
-      if l:core_pos != -1
-        let l:substr = strpart(l:line, l:core_pos + len('Core:'))
-        " Extract up to the next colon
-        let l:subtest_name = matchstr(l:substr, '^\w\+')
-        if !empty(l:subtest_name)
-          let l:subtest_statuses[l:subtest_name] = 'failed'
-        endif
-      endif
+    if l:line =~ 'Core:' || l:line =~ 'SubTest'
+      " Extract the sub-test name after 'Core:' or 'SubTest'
+      let l:subtest_name = matchstr(l:line, '\v(Core|SubTest):\s*(\w+)', 1)
+      let l:subtest_status = l:line =~ 'failed' ? 'failed' : 'passed'
+      let l:subtest_statuses[l:subtest_name] = l:subtest_status
     endif
   endfor
 
-  " Assume all sub-tests passed initially
+  " Default all unlisted sub-tests to 'passed'
   if has_key(g:visutest_all_subtests, a:test_name)
     for l:subtest in g:visutest_all_subtests[a:test_name]
-      if has_key(l:subtest_statuses, l:subtest)
-        " Sub-test already marked as failed
-        continue
-      else
-        " Mark as passed
+      if !has_key(l:subtest_statuses, l:subtest)
         let l:subtest_statuses[l:subtest] = 'passed'
       endif
     endfor
   endif
 
-  " Initialize the subtest_statuses dictionary for the test suite if not already done
-  if !has_key(g:visutest_subtest_statuses, a:test_name)
-    let g:visutest_subtest_statuses[a:test_name] = {}
-  endif
-
-  " Update the global sub-test statuses
-  for [l:subtest, l:status] in items(l:subtest_statuses)
-    let g:visutest_subtest_statuses[a:test_name][l:subtest] = l:status
-  endfor
-
-  " Determine overall test suite status based on sub-test statuses
-  let l:test_suite_status = 'passed'
-  for l:status in values(l:subtest_statuses)
-    if l:status ==# 'failed'
-      let l:test_suite_status = 'failed'
-      break
-    endif
-  endfor
-
-  " Update global test suite status
-  let g:visutest_test_statuses[a:test_name] = l:test_suite_status
-
-  " Update the UI for the test suite
-  call visutest_ui#UpdateTestStatus(a:test_name, l:test_suite_status)
-
-  " Update the UI for sub-tests
+  " Update global sub-test statuses and UI
+  let g:visutest_subtest_statuses[a:test_name] = l:subtest_statuses
   call visutest_ui#UpdateSubTestStatuses(a:test_name, g:visutest_subtest_statuses[a:test_name])
 endfunction
 
