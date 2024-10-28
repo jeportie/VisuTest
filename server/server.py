@@ -65,7 +65,7 @@ def monitor_log_and_send_updates(client_socket):
     log_file = os.path.join(build_dir, "Testing", "Temporary", "LastTest.log")
 
     if not os.path.exists(log_file):
-        client_socket.send("ERROR: LastTest.log not found.".encode())
+        client_socket.send("ERROR: LastTest.log not found.\n".encode())
         logging.error(f"Log file not found: {log_file}")
         return
 
@@ -87,6 +87,23 @@ def monitor_log_and_send_updates(client_socket):
                     current_test_suite.append("----------------------------------------------------------\n")
                     current_test_suite.append(new_line)
                     test_in_progress = True
+
+                if "Command:" in new_line:
+                    # Extract the test executable path
+                    parts = new_line.split('"')
+                    # Expected format:
+                    # Command: "/usr/bin/bash" "/path/to/script.sh" "/usr/bin/valgrind" "/path/to/test_executable" "log_file.log" "/path/to/supp_file.supp"
+                    # We want the 4th argument (index 7)
+                    if len(parts) >= 8:
+                        test_executable = parts[7]
+                        new_command_line = f'Command: "{test_executable}"\n'
+                        client_socket.send(new_command_line.encode())
+                        current_test_suite.append(new_command_line)
+                        logging.debug(f"Modified Command line: {new_command_line.strip()}")
+                    else:
+                        # If the expected format is not met, send the original line
+                        client_socket.send(new_line.encode())
+                        current_test_suite.append(new_line)
 
                 if test_in_progress:
                     current_test_suite.append(new_line)
@@ -131,7 +148,7 @@ def start_server():
                 client_socket.send(f"{test_status}\n".encode())
                 logging.error(f"Error running tests: {test_status}")
         else:
-            client_socket.send("ERROR: Invalid request.".encode())
+            client_socket.send("ERROR: Invalid request.\n".encode())
             logging.error("Invalid request received.")
 
         client_socket.close()
@@ -139,3 +156,4 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
+

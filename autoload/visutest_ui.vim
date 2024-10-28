@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/17 09:01:24 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/28 12:47:12 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -172,16 +172,31 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
   " Temporarily make the buffer modifiable
   setlocal modifiable
 
+  " Determine the appropriate icon based on the sub-test statuses
+  let l:icon = a:status ==# 'passed' ? '🟢' :
+        \ a:status ==# 'failed' ? '🔴' : '⚪'
+
+  " Search for specific error indicators in the log that override status to 'failed'
+  if has_key(g:visutest_test_logs, l:test_name)
+    let l:log_lines = g:visutest_test_logs[l:test_name]
+
+    " Check for Valgrind errors or 'Test Failed' messages in the test log
+    for l:log_line in l:log_lines
+      if l:log_line =~ 'Valgrind detected errors:' || l:log_line =~ 'Test Failed.'
+        let l:icon = '🔴'
+        let g:visutest_test_statuses[l:test_name] = 'failed'
+        break
+      endif
+    endfor
+  endif
+
+  " Update the icon display for the test suite in the buffer
   for idx in range(len(l:lines))
     let l:line = l:lines[idx]
 
     " Find the line that matches the test name
     if l:line =~ '^\s*➔ [🟢🔴⚪] ' . l:test_name . '$'
       let l:line_num = idx + 1
-
-      " Determine the appropriate icon based on the status
-      let l:icon = a:status ==# 'passed' ? '🟢' :
-            \ a:status ==# 'failed' ? '🔴' : '⚪'
 
       " Construct the updated line with the new icon and test suite name
       let l:updated_line = "➔ " . l:icon . " " . l:test_name

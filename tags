@@ -13,7 +13,9 @@ VisuTestRun	plugin/visutest_commands.vim	/^command! VisuTestRun :call visutest_c
 VisuTestShowUnits	plugin/visutest_commands.vim	/^command! VisuTestShowUnits :call visutest_tests#ShowUnits()$/;"	c
 VisuTestToggle	plugin/visutest_commands.vim	/^command! VisuTestToggle :call VisuTestToggleWindow() $/;"	c
 VisuTestToggleWindow	plugin/visutest_core.vim	/^function! VisuTestToggleWindow()$/;"	f
+filename	server/client.py	/^    filename='\/root\/.vim\/plugged\/VisuTest\/server\/client.log',$/;"	v
 filename	server/server.py	/^    filename='\/root\/.vim\/plugged\/VisuTest\/server\/server.log',$/;"	v
+format	server/client.py	/^    format='%(asctime)s - %(levelname)s - %(message)s'$/;"	v
 format	server/server.py	/^    format='%(asctime)s - %(levelname)s - %(message)s'$/;"	v
 g:loaded_visutest	plugin/visutest.vim	/^let g:loaded_visutest = 1$/;"	v
 g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1$/;"	v
@@ -28,6 +30,7 @@ g:visutest_test_statuses	autoload/visutest_client.vim	/^  let g:visutest_test_st
 g:visutest_test_statuses	autoload/visutest_tests.vim	/^  let g:visutest_test_statuses = {}$/;"	v
 g:visutest_test_statuses	autoload/visutest_ui.vim	/^  let g:visutest_test_statuses = {}$/;"	v
 g:visutest_tests_show_units	autoload/visutest_tests.vim	/^let g:visutest_tests_show_units = 1$/;"	v
+level	server/client.py	/^    level=logging.DEBUG,$/;"	v
 level	server/server.py	/^    level=logging.DEBUG,$/;"	v
 main	server/client.py	/^def main():$/;"	f
 monitor_log_and_send_updates	server/server.py	/^def monitor_log_and_send_updates(client_socket):$/;"	f

@@ -3,7 +3,11 @@ import sys
 import logging
 
 # Set up logging for the client
-logging.basicConfig(filename='/root/.vim/plugged/VisuTest/server/client.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    filename='/root/.vim/plugged/VisuTest/server/client.log',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def send_data(sock, message):
     """Send a message to the server with proper encoding."""
@@ -17,6 +21,8 @@ def send_data(sock, message):
 def receive_data(sock):
     """Receive data from the server in chunks, handling it as complete messages."""
     buffer = ""
+    previous_line = ""  # To track the previous line for duplicate detection
+
     try:
         while True:
             # Receive and decode data
@@ -34,8 +40,20 @@ def receive_data(sock):
             if "\n" in buffer:
                 lines = buffer.split("\n")
                 for line in lines[:-1]:  # Process all complete lines
+                    # Check for duplicate "Testing:" or "Command:" lines
+                    if (
+                        ("Testing:" in line and "Testing:" in previous_line) or
+                        (line.startswith("Command:") and previous_line.startswith("Command:"))
+                    ):
+                        # Skip duplicate "Testing:" or "Command:" line
+                        logging.debug(f"Skipped duplicate line: {line.strip()}")
+                        continue
+
+                    # Print and log the line if it's not a duplicate
                     logging.debug(f"Received data: {line}")
                     print(f"{line.strip()}")
+                    previous_line = line  # Update previous line to the current line
+
                 buffer = lines[-1]  # Keep the incomplete part for the next recv()
 
     except socket.error as e:
@@ -68,3 +86,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
