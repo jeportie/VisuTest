@@ -122,6 +122,8 @@ No specific configuration is required to get started, but you can customize the 
     - `🔴`: Failed.
     - `⚪`: Not executed.
 
+![Screenshot from 2024-10-28 16-48-04](https://github.com/user-attachments/assets/2b38de5b-9e1f-4979-9da5-4d70b816a484)
+
 ### Viewing Build Errors
 
 1. If a build error is detected during `cmake ..` or `make`, the error will appear in a popup.
