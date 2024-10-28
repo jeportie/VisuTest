@@ -1,4 +1,5 @@
 # VisuTest Plugin - Alpha Version
+![Screenshot from 2024-10-28 10-44-40](https://github.com/user-attachments/assets/42737af8-ea59-4798-af2b-9fb6c631225c)
 
 ## Introduction
 
