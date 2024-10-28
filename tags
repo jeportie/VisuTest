@@ -60,6 +60,7 @@ visutest_tests#ToggleUnits	autoload/visutest_tests.vim	/^function! visutest_test
 visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePopup()$/;"	f
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
+visutest_ui#ShowBuildErrorPopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowBuildErrorPopup()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
 visutest_ui#UpdateSubTestStatuses	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)$/;"	f
 visutest_ui#UpdateTestStatus	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateTestStatus(test_name, status)$/;"	f

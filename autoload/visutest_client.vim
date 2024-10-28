@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:50:44 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/17 09:06:16 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/28 13:52:38 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -54,7 +54,9 @@ endfunction
 
 " Function to handle structured data from the client
 function! visutest_client#OnData(job, data)
-  " Handle cases where a:data is a string
+  " Log raw received data
+  echomsg "Received data: " . a:data
+
   if type(a:data) == type('')
     let l:data = [a:data]
   elseif type(a:data) == type([])
@@ -63,51 +65,37 @@ function! visutest_client#OnData(job, data)
     return
   endif
 
-  " Accumulate all incoming data into a single string
   let l:raw_data = join(l:data, "\n")
-
-  " Clean the data by removing control characters and NULL bytes
   let l:clean_data = substitute(l:raw_data, '[\x00-\x1F\x7F]', '', 'g')
 
-  " Skip processing if the cleaned data is empty
+  " Log clean data for verification
+  echomsg "Cleaned data: " . l:clean_data
+
   if l:clean_data == ''
     return
   endif
 
-  " Check for specific test statuses or log signals
+  " Check for cmake or make errors and display them in the build error popup
+  if l:clean_data =~ 'CMAKE_ERROR:' || l:clean_data =~ 'MAKE_ERROR:'
+    " Replace <br> with newline for display
+    let g:visutest_build_error = substitute(l:clean_data, '<br>', "\n", 'g')
+    echomsg "Build error set for popup: " . g:visutest_build_error
+    call visutest_ui#ShowBuildErrorPopup()
+    return
+  endif
+
   if l:clean_data =~ 'RUNNING:'
     let l:test_name = matchstr(l:clean_data, 'RUNNING:\s*\zs.*')
     let l:test_name = substitute(l:test_name, '^test_', '', '')
 
-    " Set the current test name and initialize its log in the dictionary
     let g:visutest_current_test = l:test_name
-    let g:visutest_test_logs[g:visutest_current_test] = []  " Initialize an empty log buffer
-    let g:visutest_subtest_statuses[g:visutest_current_test] = {}  " Initialize sub-test statuses
+    let g:visutest_test_logs[g:visutest_current_test] = []
+    let g:visutest_subtest_statuses[g:visutest_current_test] = {}
 
-    " Update UI for the running test
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
-
-  " Remove setting test suite status here
-  " The test suite status will be determined based on sub-test results
-
   endif
 
-  " Check if we are in a log section by detecting '---'
-  if l:clean_data =~ '^---'
-    let l:log_lines = split(l:clean_data, "\n")
-
-    " Iterate over each line and add it to the log buffer for the current test
-    for l:line in l:log_lines
-      if l:line != ''
-        call add(g:visutest_test_logs[g:visutest_current_test], l:line)
-      endif
-    endfor
-
-    " Parse sub-test results from the log
-    call visutest_client#ParseSubTestResults(g:visutest_current_test)
-
-  else
-    " If not a separator, continue adding all relevant log lines to the buffer
+  if exists("g:visutest_current_test") && !empty(g:visutest_current_test)
     let l:log_lines = split(l:clean_data, "\n")
     for l:line in l:log_lines
       if l:line != ''

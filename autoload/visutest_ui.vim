@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/28 12:47:12 by jeportie         ###   ########.fr        "
+"    Updated: 2024/10/28 13:49:04 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -266,3 +266,43 @@ function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)
   " Refresh the display to apply changes
   redraw
 endfunction
+
+""""""""""""" Function to show Build Error in Popup """""""""""""""
+function! visutest_ui#ShowBuildErrorPopup()
+  call visutest_ui#ClosePopup()
+
+  " Log the current build error content
+  if exists('g:visutest_build_error') && !empty(g:visutest_build_error)
+    let l:popup_content = g:visutest_build_error
+    echomsg "Displaying build error content in popup:\n" . l:popup_content
+  else
+    let l:popup_content = 'No build error log available.'
+    echomsg "No build error content to display."
+  endif
+
+  let l:winheight = float2nr(&lines / 2 - len(split(l:popup_content, "\n")) / 2)
+  let l:winwidth = float2nr(&columns / 2) - 25
+
+  let l:popup_options = {
+        \ 'line': l:winheight,
+        \ 'col': l:winwidth,
+        \ 'minwidth': 50,
+        \ 'minheight': 10,
+        \ 'border': [],
+        \ 'title': '🔴 Build Error Log',
+        \ 'wrap': v:false,
+        \ }
+
+  let l:popup_lines = split(l:popup_content, "\n")
+  let l:popup_id = popup_create(l:popup_lines, l:popup_options)
+
+  if l:popup_id == -1
+    echoerr "Failed to create build error popup."
+  else
+    call add(g:visutest_popups, l:popup_id)
+    let b:visutest_popup = l:popup_id
+    echomsg "Build error popup displayed successfully."
+  endif
+  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
+endfunction
+

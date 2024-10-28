@@ -12340,3 +12340,1313 @@ Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
 2024-10-28 12:47:27,376 - DEBUG - Read log line: End testing: Oct 28 12:47 UTC
 2024-10-28 12:47:27,376 - INFO - Finished sending updates to client.
 2024-10-28 12:47:27,376 - INFO - Connection with ('127.0.0.1', 47562) closed.
+2024-10-28 13:00:37,262 - INFO - Server is listening on port 9999.
+2024-10-28 13:06:01,252 - INFO - Server is listening on port 9999.
+2024-10-28 13:06:07,941 - INFO - Accepted connection from ('127.0.0.1', 51106)
+2024-10-28 13:06:07,941 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:06:07,941 - INFO - Processing START_TEST command.
+2024-10-28 13:06:07,941 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:06:07,980 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:06:08,405 - DEBUG - Make output:
+[  8%] Built target test_ms_parse_tokens
+[ 16%] Built target test_ms_env_add_back
+[ 24%] Built target test_ms_env_create_node
+[ 31%] Built target test_ms_get_user_input
+[ 39%] Built target test_ms_init_env
+[ 47%] Built target test_ms_init_shell
+[ 54%] Built target test_ms_init_std_signal
+[ 62%] Built target test_ms_stop_std_signal
+[ 69%] Built target test_lst_tokens
+[ 76%] Built target test_ms_tokenize
+[ 84%] Built target test_tokenize_frame
+[ 92%] Built target test_tokenize_operator
+[100%] Built target test_tokenize_word
+
+2024-10-28 13:06:15,124 - ERROR - CTest failed: Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-28 13:06:15,124 - ERROR - Error running tests: CTEST_ERROR:
+Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-28 13:06:15,124 - INFO - Connection with ('127.0.0.1', 51106) closed.
+2024-10-28 13:07:33,237 - INFO - Server is listening on port 9999.
+2024-10-28 13:08:06,008 - INFO - Server is listening on port 9999.
+2024-10-28 13:08:09,137 - INFO - Accepted connection from ('127.0.0.1', 46912)
+2024-10-28 13:08:09,137 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:08:09,137 - INFO - Processing START_TEST command.
+2024-10-28 13:08:09,137 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:08:09,175 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:08:09,501 - DEBUG - Make output:
+[  8%] Built target test_ms_parse_tokens
+[ 16%] Built target test_ms_env_add_back
+[ 24%] Built target test_ms_env_create_node
+[ 31%] Built target test_ms_get_user_input
+[ 39%] Built target test_ms_init_env
+[ 47%] Built target test_ms_init_shell
+[ 54%] Built target test_ms_init_std_signal
+[ 62%] Built target test_ms_stop_std_signal
+[ 69%] Built target test_lst_tokens
+[ 76%] Built target test_ms_tokenize
+[ 84%] Built target test_tokenize_frame
+[ 92%] Built target test_tokenize_operator
+[100%] Built target test_tokenize_word
+
+2024-10-28 13:08:16,188 - ERROR - CTest failed: Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-28 13:08:16,188 - ERROR - Error running tests: CTEST_ERROR:
+Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-28 13:08:16,188 - INFO - Connection with ('127.0.0.1', 46912) closed.
+2024-10-28 13:09:48,447 - INFO - Server is listening on port 9999.
+2024-10-28 13:15:17,267 - INFO - Server is listening on port 9999.
+2024-10-28 13:15:22,428 - INFO - Accepted connection from ('127.0.0.1', 37226)
+2024-10-28 13:15:22,428 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:15:22,428 - INFO - Processing START_TEST command.
+2024-10-28 13:15:22,428 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:15:22,468 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:15:22,923 - DEBUG - Make output:
+[  8%] Built target test_ms_parse_tokens
+[ 16%] Built target test_ms_env_add_back
+[ 24%] Built target test_ms_env_create_node
+[ 31%] Built target test_ms_get_user_input
+[ 39%] Built target test_ms_init_env
+[ 47%] Built target test_ms_init_shell
+[ 54%] Built target test_ms_init_std_signal
+[ 62%] Built target test_ms_stop_std_signal
+[ 69%] Built target test_lst_tokens
+[ 76%] Built target test_ms_tokenize
+[ 84%] Built target test_tokenize_frame
+[ 92%] Built target test_tokenize_operator
+[100%] Built target test_tokenize_word
+
+2024-10-28 13:15:29,595 - ERROR - Unexpected error: Command '['ctest']' returned non-zero exit status 8.
+2024-10-28 13:15:29,595 - ERROR - Error running tests: ERROR: Command '['ctest']' returned non-zero exit status 8.
+2024-10-28 13:15:29,595 - INFO - Connection with ('127.0.0.1', 37226) closed.
+2024-10-28 13:15:44,946 - INFO - Accepted connection from ('127.0.0.1', 55050)
+2024-10-28 13:15:44,946 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:15:44,946 - INFO - Processing START_TEST command.
+2024-10-28 13:15:44,946 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:15:44,983 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:15:45,373 - DEBUG - Make output:
+[  8%] Built target test_ms_parse_tokens
+[ 16%] Built target test_ms_env_add_back
+[ 24%] Built target test_ms_env_create_node
+[ 31%] Built target test_ms_get_user_input
+[ 39%] Built target test_ms_init_env
+[ 47%] Built target test_ms_init_shell
+[ 54%] Built target test_ms_init_std_signal
+[ 62%] Built target test_ms_stop_std_signal
+[ 69%] Built target test_lst_tokens
+[ 76%] Built target test_ms_tokenize
+[ 84%] Built target test_tokenize_frame
+[ 92%] Built target test_tokenize_operator
+[100%] Built target test_tokenize_word
+
+2024-10-28 13:15:52,015 - ERROR - Unexpected error: Command '['ctest']' returned non-zero exit status 8.
+2024-10-28 13:15:52,015 - ERROR - Error running tests: ERROR: Command '['ctest']' returned non-zero exit status 8.
+2024-10-28 13:15:52,015 - INFO - Connection with ('127.0.0.1', 55050) closed.
+2024-10-28 13:16:26,082 - INFO - Server is listening on port 9999.
+2024-10-28 13:18:36,685 - INFO - Server is listening on port 9999.
+2024-10-28 13:22:14,050 - INFO - Server is listening on port 9999.
+2024-10-28 13:22:16,872 - INFO - Accepted connection from ('127.0.0.1', 33328)
+2024-10-28 13:22:16,872 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:22:16,872 - INFO - Processing START_TEST command.
+2024-10-28 13:22:16,872 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:22:16,908 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:22:17,348 - DEBUG - Make output:
+[  8%] Built target test_ms_parse_tokens
+[ 16%] Built target test_ms_env_add_back
+[ 24%] Built target test_ms_env_create_node
+[ 31%] Built target test_ms_get_user_input
+[ 39%] Built target test_ms_init_env
+[ 47%] Built target test_ms_init_shell
+[ 54%] Built target test_ms_init_std_signal
+[ 62%] Built target test_ms_stop_std_signal
+[ 69%] Built target test_lst_tokens
+[ 76%] Built target test_ms_tokenize
+[ 84%] Built target test_tokenize_frame
+[ 92%] Built target test_tokenize_operator
+[100%] Built target test_tokenize_word
+
+2024-10-28 13:22:24,007 - DEBUG - CTest output:
+Test project /root/projects/Minishell/test_src/build
+      Start  1: ms_parse_tokens
+ 1/13 Test  #1: ms_parse_tokens ..................***Failed    0.73 sec
+      Start  2: ms_env_add_back
+ 2/13 Test  #2: ms_env_add_back ..................   Passed    0.46 sec
+      Start  3: ms_env_create_node
+ 3/13 Test  #3: ms_env_create_node ...............   Passed    0.44 sec
+      Start  4: ms_get_user_input
+ 4/13 Test  #4: ms_get_user_input ................   Passed    0.42 sec
+      Start  5: ms_init_env
+ 5/13 Test  #5: ms_init_env ......................   Passed    0.42 sec
+      Start  6: ms_init_shell
+ 6/13 Test  #6: ms_init_shell ....................   Passed    0.57 sec
+      Start  7: ms_init_std_signal
+ 7/13 Test  #7: ms_init_std_signal ...............   Passed    0.46 sec
+      Start  8: ms_stop_std_signal
+ 8/13 Test  #8: ms_stop_std_signal ...............   Passed    0.45 sec
+      Start  9: lst_tokens
+ 9/13 Test  #9: lst_tokens .......................   Passed    0.52 sec
+      Start 10: ms_tokenize
+10/13 Test #10: ms_tokenize ......................***Failed    0.77 sec
+      Start 11: tokenize_frame
+11/13 Test #11: tokenize_frame ...................   Passed    0.43 sec
+      Start 12: tokenize_operator
+12/13 Test #12: tokenize_operator ................   Passed    0.47 sec
+      Start 13: tokenize_word
+13/13 Test #13: tokenize_word ....................   Passed    0.50 sec
+
+85% tests passed, 2 tests failed out of 13
+
+Total Test time (real) =   6.64 sec
+
+The following tests FAILED:
+	  1 - ms_parse_tokens (Failed)
+	 10 - ms_tokenize (Failed)
+
+2024-10-28 13:22:24,007 - ERROR - CTest encountered test failures: Errors while running CTest
+Output from these tests are in: /root/projects/Minishell/test_src/build/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Start testing: Oct 28 13:22 UTC
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,007 - DEBUG - Read log line: 1/13 Testing: ms_parse_tokens
+2024-10-28 13:22:24,007 - INFO - Test started: ms_parse_tokens
+2024-10-28 13:22:24,007 - DEBUG - Read log line: 1/13 Test: ms_parse_tokens
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_parse_tokens" "valgrind_ms_parse_tokens.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,007 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_parse_tokens"
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,007 - DEBUG - Read log line: "ms_parse_tokens" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Running suite(s): AST
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Minishell: Syntax Error: Expected a command.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Minishell: Syntax Error: Expected Command after pipe '|'.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Minishell: Syntax Error: Expected a command.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Minishell: Error: No Input provided.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: 100%: Checks: 11, Failures: 0, Errors: 0
+2024-10-28 13:22:24,007 - DEBUG - Read log line: Valgrind detected errors:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366== LEAK SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==    still reachable: 1,708 bytes in 50 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15366== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== HEAP SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==     in use at exit: 1,768 bytes in 51 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==   total heap usage: 89 allocs, 38 frees, 24,578 bytes allocated
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== LEAK SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==    still reachable: 1,768 bytes in 51 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15367== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== HEAP SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==     in use at exit: 2,308 bytes in 66 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==   total heap usage: 125 allocs, 59 frees, 38,990 bytes allocated
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== LEAK SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==    still reachable: 2,308 bytes in 66 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15368== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== HEAP SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==     in use at exit: 2,304 bytes in 65 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==   total heap usage: 143 allocs, 78 frees, 52,700 bytes allocated
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== LEAK SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==    still reachable: 2,304 bytes in 65 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15369== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15370==
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15370== HEAP SUMMARY:
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15370==     in use at exit: 2,636 bytes in 74 blocks
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15370==   total heap usage: 174 allocs, 100 frees, 67,007 bytes allocated
+2024-10-28 13:22:24,007 - DEBUG - Read log line: ==15370==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==    still reachable: 2,636 bytes in 74 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15370== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==     in use at exit: 2,584 bytes in 71 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==   total heap usage: 188 allocs, 117 frees, 80,541 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==    still reachable: 2,584 bytes in 71 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15371== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==     in use at exit: 2,644 bytes in 72 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==   total heap usage: 205 allocs, 133 frees, 94,188 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==    still reachable: 2,644 bytes in 72 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15372== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Conditional jump or move depends on uninitialised value(s)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    at 0x10ED71: parse_command (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10EF53: parse_pipeline (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10EEBE: parse_logical (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10D26E: test_parse_complex_command_fn (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x113890: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10E54E: main (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Conditional jump or move depends on uninitialised value(s)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    at 0x10EFF1: parse_pipeline (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10EEBE: parse_logical (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10D26E: test_parse_complex_command_fn (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x113890: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10E54E: main (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Conditional jump or move depends on uninitialised value(s)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    at 0x10F6E0: is_logical_op (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10EF1E: parse_logical (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10D26E: test_parse_complex_command_fn (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x113890: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10E54E: main (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Conditional jump or move depends on uninitialised value(s)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    at 0x10F6EB: is_logical_op (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10EF1E: parse_logical (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10D26E: test_parse_complex_command_fn (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x113890: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    by 0x10E54E: main (in /root/projects/Minishell/test_src/build/test_ms_parse_tokens)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==     in use at exit: 4,040 bytes in 113 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==   total heap usage: 276 allocs, 163 frees, 110,102 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==    still reachable: 4,040 bytes in 113 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== Use --track-origins=yes to see where uninitialised values come from
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15373== ERROR SUMMARY: 4 errors from 4 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==     in use at exit: 2,820 bytes in 76 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==   total heap usage: 247 allocs, 171 frees, 121,860 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==    still reachable: 2,820 bytes in 76 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15374== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==     in use at exit: 2,864 bytes in 75 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==   total heap usage: 255 allocs, 180 frees, 135,067 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==    still reachable: 2,864 bytes in 75 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15375== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377== HEAP SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==     in use at exit: 2,796 bytes in 72 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==   total heap usage: 259 allocs, 187 frees, 148,090 bytes allocated
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377== LEAK SUMMARY:
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,008 - DEBUG - Read log line: ==15377==    still reachable: 2,796 bytes in 72 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15377== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== HEAP SUMMARY:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==     in use at exit: 2,796 bytes in 72 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==   total heap usage: 262 allocs, 190 frees, 148,231 bytes allocated
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== LEAK SUMMARY:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==    still reachable: 2,796 bytes in 72 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15376== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== HEAP SUMMARY:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==     in use at exit: 8 bytes in 1 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==   total heap usage: 268 allocs, 267 frees, 157,279 bytes allocated
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== LEAK SUMMARY:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==    definitely lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==    still reachable: 8 bytes in 1 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365==
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ==15365== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,009 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test time =   0.73 sec
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test Failed.
+2024-10-28 13:22:24,009 - INFO - Test ms_parse_tokens completed with result: FAILED
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_parse_tokens" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_parse_tokens" time elapsed: 00:00:00
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 2/13 Testing: ms_env_add_back
+2024-10-28 13:22:24,009 - INFO - Test started: ms_env_add_back
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 2/13 Test: ms_env_add_back
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_add_back" "valgrind_ms_env_add_back.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,009 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_env_add_back"
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_add_back" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-28 13:22:24,009 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,009 - INFO - Test ms_env_add_back completed with result: PASSED
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_add_back" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_add_back" time elapsed: 00:00:00
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 3/13 Testing: ms_env_create_node
+2024-10-28 13:22:24,009 - INFO - Test started: ms_env_create_node
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 3/13 Test: ms_env_create_node
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_env_create_node" "valgrind_ms_env_create_node.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,009 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_env_create_node"
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_create_node" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Running suite(s): Env
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-28 13:22:24,009 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test time =   0.44 sec
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,009 - INFO - Test ms_env_create_node completed with result: PASSED
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_create_node" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_env_create_node" time elapsed: 00:00:00
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 4/13 Testing: ms_get_user_input
+2024-10-28 13:22:24,009 - INFO - Test started: ms_get_user_input
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 4/13 Test: ms_get_user_input
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_get_user_input" "valgrind_ms_get_user_input.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,009 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_get_user_input"
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_get_user_input" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Running suite(s): Minishell
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-28 13:22:24,009 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,009 - INFO - Test ms_get_user_input completed with result: PASSED
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_get_user_input" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_get_user_input" time elapsed: 00:00:00
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 5/13 Testing: ms_init_env
+2024-10-28 13:22:24,009 - INFO - Test started: ms_init_env
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 5/13 Test: ms_init_env
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_env" "valgrind_ms_init_env.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,009 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_init_env"
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,009 - DEBUG - Read log line: "ms_init_env" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Running suite(s): ms_init_env
+2024-10-28 13:22:24,009 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-28 13:22:24,009 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test time =   0.42 sec
+2024-10-28 13:22:24,009 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,009 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,010 - INFO - Test ms_init_env completed with result: PASSED
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_env" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_env" time elapsed: 00:00:00
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 6/13 Testing: ms_init_shell
+2024-10-28 13:22:24,010 - INFO - Test started: ms_init_shell
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 6/13 Test: ms_init_shell
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_shell" "valgrind_ms_init_shell.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,010 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_init_shell"
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_shell" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Running suite(s): ms_init_shell
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Minishell: format: no arguments needed!
+2024-10-28 13:22:24,010 - DEBUG - Read log line: : No such process
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-28 13:22:24,010 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test time =   0.57 sec
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,010 - INFO - Test ms_init_shell completed with result: PASSED
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_shell" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_shell" time elapsed: 00:00:00
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 7/13 Testing: ms_init_std_signal
+2024-10-28 13:22:24,010 - INFO - Test started: ms_init_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 7/13 Test: ms_init_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_init_std_signal" "valgrind_ms_init_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,010 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_init_std_signal"
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_std_signal" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Running suite(s): ms_init_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-28 13:22:24,010 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test time =   0.46 sec
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,010 - INFO - Test ms_init_std_signal completed with result: PASSED
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_std_signal" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_init_std_signal" time elapsed: 00:00:00
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 8/13 Testing: ms_stop_std_signal
+2024-10-28 13:22:24,010 - INFO - Test started: ms_stop_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 8/13 Test: ms_stop_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal" "valgrind_ms_stop_std_signal.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,010 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_stop_std_signal"
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_stop_std_signal" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Running suite(s): ms_stop_std_signal
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-28 13:22:24,010 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test time =   0.45 sec
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,010 - INFO - Test ms_stop_std_signal completed with result: PASSED
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_stop_std_signal" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_stop_std_signal" time elapsed: 00:00:00
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 9/13 Testing: lst_tokens
+2024-10-28 13:22:24,010 - INFO - Test started: lst_tokens
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 9/13 Test: lst_tokens
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_lst_tokens" "valgrind_lst_tokens.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,010 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_lst_tokens"
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "lst_tokens" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Running suite(s): lst_tokens
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Minishell: Error: HEAD is NULL
+2024-10-28 13:22:24,010 - DEBUG - Read log line: : No such process
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-10-28 13:22:24,010 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test time =   0.52 sec
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,010 - INFO - Test lst_tokens completed with result: PASSED
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "lst_tokens" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "lst_tokens" time elapsed: 00:00:00
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 10/13 Testing: ms_tokenize
+2024-10-28 13:22:24,010 - INFO - Test started: ms_tokenize
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 10/13 Test: ms_tokenize
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_ms_tokenize" "valgrind_ms_tokenize.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,010 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_ms_tokenize"
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,010 - DEBUG - Read log line: "ms_tokenize" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Running suite(s): Tokenize
+2024-10-28 13:22:24,010 - DEBUG - Read log line: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-10-28 13:22:24,010 - DEBUG - Read log line: Valgrind detected errors:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440== LEAK SUMMARY:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==    still reachable: 1,452 bytes in 42 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440==
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15440== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441== HEAP SUMMARY:
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==     in use at exit: 1,582 bytes in 46 blocks
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==   total heap usage: 106 allocs, 60 frees, 25,430 bytes allocated
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441== 8 bytes in 1 blocks are definitely lost in loss record 13 of 46
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==    by 0x10B1FF: test_command_with_quotes_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,010 - DEBUG - Read log line: ==15441==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==    still reachable: 1,574 bytes in 45 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15441== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== HEAP SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==     in use at exit: 1,712 bytes in 49 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==   total heap usage: 130 allocs, 81 frees, 39,369 bytes allocated
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    by 0x10B705: test_command_with_single_quotes_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==    still reachable: 1,704 bytes in 48 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15442== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== HEAP SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==     in use at exit: 1,850 bytes in 52 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==   total heap usage: 194 allocs, 142 frees, 55,309 bytes allocated
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    by 0x10BC0B: test_command_with_redirection_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==    still reachable: 1,842 bytes in 51 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15443== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== HEAP SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==     in use at exit: 1,972 bytes in 55 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==   total heap usage: 231 allocs, 176 frees, 70,146 bytes allocated
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    by 0x10CB29: test_command_with_pipe_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==    still reachable: 1,964 bytes in 54 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15444== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== HEAP SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==     in use at exit: 2,126 bytes in 58 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==   total heap usage: 253 allocs, 195 frees, 84,201 bytes allocated
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    by 0x10D7C8: test_command_with_wildcards_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==    still reachable: 2,118 bytes in 57 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15445== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== HEAP SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==     in use at exit: 2,248 bytes in 61 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==   total heap usage: 322 allocs, 261 frees, 100,469 bytes allocated
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    by 0x10DF69: test_command_with_logical_operators_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== LEAK SUMMARY:
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==    still reachable: 2,240 bytes in 60 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446==
+2024-10-28 13:22:24,011 - DEBUG - Read log line: ==15446== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15446== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==     in use at exit: 2,370 bytes in 64 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==   total heap usage: 345 allocs, 281 frees, 114,668 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    by 0x10F106: test_command_with_subshell_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== LEAK SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==    still reachable: 2,362 bytes in 63 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15447== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==     in use at exit: 2,492 bytes in 67 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==   total heap usage: 390 allocs, 323 frees, 129,803 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    by 0x10FB26: test_command_with_multiple_redirections_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== LEAK SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==    still reachable: 2,484 bytes in 66 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15448== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==     in use at exit: 2,678 bytes in 70 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==   total heap usage: 382 allocs, 312 frees, 142,427 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    by 0x1107BF: test_empty_input_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== LEAK SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==    still reachable: 2,670 bytes in 69 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15449== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==     in use at exit: 2,800 bytes in 73 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==   total heap usage: 393 allocs, 320 frees, 155,642 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    by 0x110871: test_input_with_only_whitespace_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== LEAK SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==    still reachable: 2,792 bytes in 72 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15450== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==     in use at exit: 2,922 bytes in 76 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==   total heap usage: 544 allocs, 468 frees, 175,788 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== 8 bytes in 1 blocks are definitely lost in loss record 11 of 46
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    by 0x11A68F: gc_init (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    by 0x110929: test_complex_command_fn (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    by 0x1181D0: srunner_run_tagged (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    by 0x112E92: main (in /root/projects/Minishell/test_src/build/test_ms_tokenize)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== LEAK SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    definitely lost: 8 bytes in 1 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    indirectly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==      possibly lost: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==    still reachable: 2,914 bytes in 75 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==         suppressed: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== Reachable blocks (those to which a pointer was found) are not shown.
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15451== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439== HEAP SUMMARY:
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439==     in use at exit: 0 bytes in 0 blocks
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439==   total heap usage: 491 allocs, 491 frees, 182,742 bytes allocated
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439== All heap blocks were freed -- no leaks are possible
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439==
+2024-10-28 13:22:24,012 - DEBUG - Read log line: ==15439== For lists of detected and suppressed errors, rerun with: -s
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ==15439== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+2024-10-28 13:22:24,013 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test time =   0.77 sec
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test Failed.
+2024-10-28 13:22:24,013 - INFO - Test ms_tokenize completed with result: FAILED
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "ms_tokenize" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "ms_tokenize" time elapsed: 00:00:00
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 11/13 Testing: tokenize_frame
+2024-10-28 13:22:24,013 - INFO - Test started: tokenize_frame
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 11/13 Test: tokenize_frame
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_tokenize_frame" "valgrind_tokenize_frame.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,013 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_tokenize_frame"
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_frame" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Running suite(s): tokenize_frame
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Minishell: Error: Null Input: No such process
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-10-28 13:22:24,013 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test time =   0.43 sec
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,013 - INFO - Test tokenize_frame completed with result: PASSED
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_frame" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_frame" time elapsed: 00:00:00
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 12/13 Testing: tokenize_operator
+2024-10-28 13:22:24,013 - INFO - Test started: tokenize_operator
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 12/13 Test: tokenize_operator
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_tokenize_operator" "valgrind_tokenize_operator.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,013 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_tokenize_operator"
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_operator" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Running suite(s): tokenize_operator
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Minishell: Error: null input
+2024-10-28 13:22:24,013 - DEBUG - Read log line: : No such process
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-10-28 13:22:24,013 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test time =   0.47 sec
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,013 - INFO - Test tokenize_operator completed with result: PASSED
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_operator" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_operator" time elapsed: 00:00:00
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 13/13 Testing: tokenize_word
+2024-10-28 13:22:24,013 - INFO - Test started: tokenize_word
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 13/13 Test: tokenize_word
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Command: "/usr/bin/bash" "/root/projects/Minishell/test_src/run_test_with_valgrind.sh" "/usr/bin/valgrind" "/root/projects/Minishell/test_src/build/test_tokenize_word" "valgrind_tokenize_word.log" "/root/projects/Minishell/test_src/../assets/supp.supp"
+2024-10-28 13:22:24,013 - DEBUG - Modified Command line: Command: "/root/projects/Minishell/test_src/build/test_tokenize_word"
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Directory: /root/projects/Minishell/test_src/build
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_word" start time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Output:
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Running suite(s): tokenize_word
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Minishell: Error: Null Input: No such process
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-10-28 13:22:24,013 - DEBUG - Read log line: <end of output>
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test time =   0.50 sec
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: Test Passed.
+2024-10-28 13:22:24,013 - INFO - Test tokenize_word completed with result: PASSED
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_word" end time: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - DEBUG - Read log line: "tokenize_word" time elapsed: 00:00:00
+2024-10-28 13:22:24,013 - DEBUG - Read log line: ----------------------------------------------------------
+2024-10-28 13:22:24,013 - DEBUG - Read log line: 
+2024-10-28 13:22:24,013 - DEBUG - Read log line: End testing: Oct 28 13:22 UTC
+2024-10-28 13:22:24,013 - INFO - Finished sending updates to client.
+2024-10-28 13:22:24,013 - INFO - Connection with ('127.0.0.1', 33328) closed.
+2024-10-28 13:23:45,400 - INFO - Server is listening on port 9999.
+2024-10-28 13:23:48,440 - INFO - Accepted connection from ('127.0.0.1', 42742)
+2024-10-28 13:23:48,440 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:23:48,440 - INFO - Processing START_TEST command.
+2024-10-28 13:23:48,440 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:23:48,477 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:23:48,546 - ERROR - Make failed: /root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:23:48,547 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:23:48,547 - INFO - Connection with ('127.0.0.1', 42742) closed.
+2024-10-28 13:33:11,949 - INFO - Server is listening on port 9999.
+2024-10-28 13:34:02,226 - INFO - Server is listening on port 9999.
+2024-10-28 13:34:07,199 - INFO - Accepted connection from ('127.0.0.1', 36996)
+2024-10-28 13:34:07,199 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:34:07,199 - INFO - Processing START_TEST command.
+2024-10-28 13:34:07,199 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:34:07,237 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:34:07,304 - ERROR - Make failed: /root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:34:07,304 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:34:07,304 - INFO - Connection with ('127.0.0.1', 36996) closed.
+2024-10-28 13:36:44,322 - INFO - Server is listening on port 9999.
+2024-10-28 13:38:19,096 - INFO - Server is listening on port 9999.
+2024-10-28 13:38:21,321 - INFO - Accepted connection from ('127.0.0.1', 50916)
+2024-10-28 13:38:21,322 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:38:21,322 - INFO - Processing START_TEST command.
+2024-10-28 13:38:21,322 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:38:21,358 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:38:21,420 - ERROR - Make failed: /root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:38:21,420 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:38:21,420 - INFO - Connection with ('127.0.0.1', 50916) closed.
+2024-10-28 13:38:26,977 - INFO - Accepted connection from ('127.0.0.1', 50932)
+2024-10-28 13:38:26,977 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:38:26,977 - INFO - Processing START_TEST command.
+2024-10-28 13:38:26,977 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:38:27,014 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:38:27,085 - ERROR - Make failed: /root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:38:27,085 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:38:27,085 - INFO - Connection with ('127.0.0.1', 50932) closed.
+2024-10-28 13:40:57,310 - INFO - Server is listening on port 9999.
+2024-10-28 13:41:04,923 - INFO - Accepted connection from ('127.0.0.1', 41356)
+2024-10-28 13:41:04,923 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:41:04,923 - INFO - Processing START_TEST command.
+2024-10-28 13:41:04,923 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:41:04,964 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:41:05,017 - ERROR - Make failed: /root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:41:05,017 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:41:05,017 - INFO - Connection with ('127.0.0.1', 41356) closed.
+2024-10-28 13:41:44,852 - INFO - Server is listening on port 9999.
+2024-10-28 13:46:04,459 - INFO - Server is listening on port 9999.
+2024-10-28 13:46:07,758 - INFO - Accepted connection from ('127.0.0.1', 40266)
+2024-10-28 13:46:07,758 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:46:07,758 - INFO - Processing START_TEST command.
+2024-10-28 13:46:07,758 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:46:07,797 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:46:07,870 - ERROR - MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:46:07,870 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:46:07,870 - INFO - Connection with ('127.0.0.1', 40266) closed.
+2024-10-28 13:47:31,994 - INFO - Server is listening on port 9999.
+2024-10-28 13:49:12,294 - INFO - Server is listening on port 9999.
+2024-10-28 13:49:15,328 - INFO - Accepted connection from ('127.0.0.1', 37962)
+2024-10-28 13:49:15,328 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:49:15,328 - INFO - Processing START_TEST command.
+2024-10-28 13:49:15,328 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:49:15,366 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:49:15,425 - ERROR - Captured Make error:
+MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:49:15,425 - ERROR - Error running tests: MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:49:15,425 - INFO - Connection with ('127.0.0.1', 37962) closed.
+2024-10-28 13:51:11,113 - INFO - Server is listening on port 9999.
+2024-10-28 13:52:42,562 - INFO - Server is listening on port 9999.
+2024-10-28 13:52:45,302 - INFO - Accepted connection from ('127.0.0.1', 60008)
+2024-10-28 13:52:45,302 - DEBUG - Received request: START_TEST
+
+2024-10-28 13:52:45,302 - INFO - Processing START_TEST command.
+2024-10-28 13:52:45,302 - INFO - Running tests: cmake, make, ctest.
+2024-10-28 13:52:45,340 - DEBUG - CMake output:
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/projects/Minishell/test_src/build
+
+2024-10-28 13:52:45,393 - ERROR - Captured Make error:
+MAKE_ERROR:
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’
+   20 | include test
+      | ^~~~~~~
+/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’
+   20 | include test
+      |             ^
+      |             ;
+   21 | /* Global garbage collector */
+   22 | t_gc *gcl = NULL;
+      | ~~~~         
+make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2
+make: *** [Makefile:101: all] Error 2
+
+2024-10-28 13:52:45,393 - ERROR - Error running tests: MAKE_ERROR:<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:1: error: unknown type name ‘include’<br>   20 | include test<br>      | ^~~~~~~<br>/root/projects/Minishell/test_src/ast/test_ms_parse_tokens.c:20:13: error: expected ‘;’ before ‘t_gc’<br>   20 | include test<br>      |             ^<br>      |             ;<br>   21 | /* Global garbage collector */<br>   22 | t_gc *gcl = NULL;<br>      | ~~~~         <br>make[2]: *** [CMakeFiles/test_ms_parse_tokens.dir/build.make:76: CMakeFiles/test_ms_parse_tokens.dir/ast/test_ms_parse_tokens.c.o] Error 1<br>make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/test_ms_parse_tokens.dir/all] Error 2<br>make: *** [Makefile:101: all] Error 2<br>
+2024-10-28 13:52:45,393 - INFO - Connection with ('127.0.0.1', 60008) closed.

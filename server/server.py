@@ -13,39 +13,41 @@ logging.basicConfig(
 def run_tests():
     logging.info("Running tests: cmake, make, ctest.")
     try:
-        # Define the build directory
         build_dir = os.path.join(os.getcwd(), "test_src", "build")
 
-        # Create build directory if it doesn't exist
         if not os.path.exists(build_dir):
             os.makedirs(build_dir)
             logging.debug(f"Created build directory: {build_dir}")
-        else:
-            logging.debug(f"Build directory already exists: {build_dir}")
 
-        # Run cmake command in build directory
-        cmake_result = subprocess.run(
-            ["cmake", ".."],
-            cwd=build_dir,
-            check=True,
-            capture_output=True,
-            text=True
-        )
-        logging.debug(f"CMake output:\n{cmake_result.stdout}")
-        logging.debug(f"CMake errors:\n{cmake_result.stderr}")
+        try:
+            cmake_result = subprocess.run(
+                ["cmake", ".."],
+                cwd=build_dir,
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            logging.debug(f"CMake output:\n{cmake_result.stdout}")
+        except subprocess.CalledProcessError as e:
+            error_message = f"CMAKE_ERROR:\n{e.stderr}"
+            logging.error(f"Captured CMake error:\n{error_message}")
+            return error_message.replace("\n", "<br>")  # To preserve line structure for Vim
 
-        # Run make command in build directory
-        make_result = subprocess.run(
-            ["make"],
-            cwd=build_dir,
-            check=True,
-            capture_output=True,
-            text=True
-        )
-        logging.debug(f"Make output:\n{make_result.stdout}")
-        logging.debug(f"Make errors:\n{make_result.stderr}")
+        try:
+            make_result = subprocess.run(
+                ["make"],
+                cwd=build_dir,
+                check=True,
+                capture_output=True,
+                text=True
+            )
+            logging.debug(f"Make output:\n{make_result.stdout}")
+        except subprocess.CalledProcessError as e:
+            error_message = f"MAKE_ERROR:\n{e.stderr}"
+            logging.error(f"Captured Make error:\n{error_message}")
+            return error_message.replace("\n", "<br>")  # To preserve line structure for Vim
 
-        # Run ctest command in build directory
+        # If cmake and make succeed, proceed with ctest
         ctest_result = subprocess.run(
             ["ctest"],
             cwd=build_dir,
@@ -53,12 +55,15 @@ def run_tests():
             text=True
         )
         logging.debug(f"CTest output:\n{ctest_result.stdout}")
-        logging.debug(f"CTest errors:\n{ctest_result.stderr}")
 
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Test execution failed: {e.stderr}")
-        return f"ERROR: {e.stderr}"
+    except Exception as e:
+        error_message = f"ERROR: {str(e)}"
+        logging.error(f"Unexpected error:\n{error_message}")
+        return error_message.replace("\n", "<br>")
+
+    logging.info("Build and tests succeeded.")
     return "SUCCESS"
+
 
 def monitor_log_and_send_updates(client_socket):
     build_dir = os.path.join(os.getcwd(), "test_src", "build")
