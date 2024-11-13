@@ -162,3 +162,162 @@ def start_server():
 if __name__ == "__main__":
     start_server()
 
+## server/server.py
+#
+#import subprocess
+#import socket
+#import os
+#import logging
+#
+## Set up logging to capture debug messages
+#logging.basicConfig(
+#    filename='/root/.vim/plugged/VisuTest/server/server.log',
+#    level=logging.DEBUG,
+#    format='%(asctime)s - %(levelname)s - %(message)s'
+#)
+#
+#def send_line(client_socket, line):
+#    """Send a single line to the client and flush the socket."""
+#    try:
+#        client_socket.sendall((line + "\n").encode('utf-8'))
+#    except socket.error as e:
+#        logging.error(f"Failed to send line: {e}")
+#
+#def run_tests(client_socket):
+#    logging.info("Running tests: cmake, make, ctest.")
+#    try:
+#        build_dir = os.path.join(os.getcwd(), "test_src", "build")
+#
+#        if not os.path.exists(build_dir):
+#            os.makedirs(build_dir)
+#            logging.debug(f"Created build directory: {build_dir}")
+#
+#        # Helper function to run a command and send its output
+#        def run_command(command, description):
+#            logging.info(f"Running command: {' '.join(command)}")
+#            process = subprocess.Popen(
+#                command,
+#                cwd=build_dir,
+#                stdout=subprocess.PIPE,
+#                stderr=subprocess.STDOUT,
+#                text=True,
+#                bufsize=1  # Line-buffered
+#            )
+#            for line in process.stdout:
+#                line = line.rstrip('\n')
+#                logging.debug(f"{description} output: {line}")
+#                send_line(client_socket, line)
+#            process.stdout.close()
+#            return_code = process.wait()
+#            if return_code != 0:
+#                error_message = f"{description.upper()}_ERROR: Command {' '.join(command)} failed with return code {return_code}."
+#                logging.error(error_message)
+#                send_line(client_socket, error_message)
+#                return False
+#            return True
+#
+#        # Run cmake
+#        cmake_command = ["cmake", ".."]
+#        if not run_command(cmake_command, "cmake"):
+#            return
+#
+#        # Run make
+#        make_command = ["make"]
+#        if not run_command(make_command, "make"):
+#            return
+#
+#        # Run ctest with verbose output
+#        ctest_command = ["ctest", "-V"]  # Verbose
+#        process = subprocess.Popen(
+#            ctest_command,
+#            cwd=build_dir,
+#            stdout=subprocess.PIPE,
+#            stderr=subprocess.STDOUT,
+#            text=True,
+#            bufsize=1  # Line-buffered
+#        )
+#
+#        current_test = None
+#        test_logs = {}
+#        subtest_statuses = {}
+#
+#        for line in process.stdout:
+#            line = line.rstrip('\n')
+#            logging.debug(f"CTest output: {line}")
+#            send_line(client_socket, line)
+#
+#            # Detect test start
+#            if "Start  " in line and "Test" in line:
+#                parts = line.split(":")
+#                if len(parts) >= 2:
+#                    test_info = parts[1].strip()
+#                    current_test = test_info
+#                    test_logs[current_test] = []
+#                    subtest_statuses[current_test] = {}
+#                    # Notify client that test started
+#                    send_line(client_socket, f"RUNNING: {current_test}")
+#                    logging.info(f"Test started: {current_test}")
+#
+#            # Accumulate logs for subtests
+#            if current_test:
+#                test_logs[current_test].append(line)
+#
+#            # Detect test completion
+#            if "Test " in line and ("PASSED" in line or "FAILED" in line):
+#                if current_test:
+#                    status = "PASSED" if "PASSED" in line else "FAILED"
+#                    logging.info(f"Test {current_test} completed with result: {status}")
+#                    # Notify client of test completion
+#                    send_line(client_socket, f"Test {current_test} completed with result: {status}")
+#                    current_test = None
+#
+#        process.stdout.close()
+#        return_code = process.wait()
+#        if return_code != 0:
+#            error_message = f"CTEST_ERROR: CTest failed with return code {return_code}."
+#            logging.error(error_message)
+#            send_line(client_socket, error_message)
+#            return
+#
+#    except Exception as e:
+#        error_message = f"ERROR: {str(e)}"
+#        logging.error(f"Unexpected error:\n{error_message}")
+#        send_line(client_socket, error_message)
+#        return
+#
+#    logging.info("Build and tests succeeded.")
+#    send_line(client_socket, "SUCCESS")
+#
+#def start_server():
+#    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+#    server_socket.bind(('localhost', 9999))
+#    server_socket.listen(1)
+#
+#    logging.info("Server is listening on port 9999.")
+#
+#    while True:
+#        client_socket, addr = server_socket.accept()
+#        logging.info(f"Accepted connection from {addr}")
+#        try:
+#            request = client_socket.recv(1024).decode().strip()
+#            logging.debug(f"Received request: {request}")
+#
+#            if request == "START_TEST":
+#                logging.info("Processing START_TEST command.")
+#                run_tests(client_socket)
+#            else:
+#                error_message = "ERROR: Invalid request."
+#                send_line(client_socket, error_message)
+#                logging.error("Invalid request received.")
+#
+#        except Exception as e:
+#            logging.error(f"Error handling client: {e}")
+#        finally:
+#            client_socket.close()
+#            logging.info(f"Connection with {addr} closed.")
+#
+#if __name__ == "__main__":
+#    start_server()
+#
+##
