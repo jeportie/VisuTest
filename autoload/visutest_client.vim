@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:50:44 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/28 14:18:17 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/13 11:49:24 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -53,6 +53,7 @@ function! visutest_client#StartTests()
 endfunction
 
 " Function to handle structured data from the client
+" Function to handle structured data from the client
 function! visutest_client#OnData(job, data)
   echomsg "Received data: " . a:data
 
@@ -89,12 +90,12 @@ function! visutest_client#OnData(job, data)
     echomsg "Test started: " . l:test_name
     call visutest_ui#UpdateTestStatus(l:test_name, 'running')
 
-  elseif l:clean_data =~ 'PASSED'
+  elseif l:clean_data =~? 'passed'
     echomsg "Test passed: " . g:visutest_current_test
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'passed')
     call visutest_client#ParseSubTestResults(g:visutest_current_test)
 
-  elseif l:clean_data =~ 'FAILED'
+  elseif l:clean_data =~? 'failed'
     echomsg "Test failed: " . g:visutest_current_test
     call visutest_ui#UpdateTestStatus(g:visutest_current_test, 'failed')
     call visutest_client#ParseSubTestResults(g:visutest_current_test)
@@ -111,18 +112,27 @@ function! visutest_client#OnData(job, data)
   endif
 endfunction
 
-" Function to parse sub-test results from test logs
 function! visutest_client#ParseSubTestResults(test_name)
   let l:log = g:visutest_test_logs[a:test_name]
   let l:subtest_statuses = {}
 
-  " Parse each log line for sub-test status updates
+  " Iterate through each line in the log to find subtest results
   for l:line in l:log
-    if l:line =~ 'Core:' || l:line =~ 'SubTest'
-      " Extract the sub-test name after 'Core:' or 'SubTest'
-      let l:subtest_name = matchstr(l:line, '\v(Core|SubTest):\s*(\w+)', 1)
-      let l:subtest_status = l:line =~ 'failed' ? 'failed' : 'passed'
-      let l:subtest_statuses[l:subtest_name] = l:subtest_status
+    " Look for lines indicating subtest failures
+    if l:line =~? '\v(Core|SubTest):[^:]+:.*failed'
+      " Extract the subtest name using matchlist
+      let l:matches = matchlist(l:line, '\v(Core|SubTest):([^:]+)')
+      if len(l:matches) >= 3
+        let l:subtest_name = l:matches[2]
+        let l:subtest_status = 'failed'
+        let l:subtest_statuses[l:subtest_name] = l:subtest_status
+      endif
+    endif
+
+    " Capture general test failures with flexible pattern
+    if l:line =~? '\v(Test\s+\w+\s+completed with result:\s+FAILED|Assertion.*failed)'
+      let l:test_status = 'failed'
+      let g:visutest_test_statuses[a:test_name] = l:test_status
     endif
   endfor
 
