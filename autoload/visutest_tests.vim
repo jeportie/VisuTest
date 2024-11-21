@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:37:27 by jeportie          #+#    #+#              "
-"    Updated: 2024/10/17 09:01:03 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/21 16:32:26 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -136,36 +136,34 @@ function! visutest_tests#DisplayTestSuites()
       let l:display_line = "➔ " . l:icon . " " . l:suite_name
       call append(line('$'), [l:display_line])
 
+      " **Initialize subtest statuses for all suites**
       " Populate the list of all sub-tests
       let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
       let g:visutest_all_subtests[l:suite_name] = l:test_units
-
 
       " Initialize subtest statuses if not already done
       if !has_key(g:visutest_subtest_statuses, l:suite_name)
         let g:visutest_subtest_statuses[l:suite_name] = {}
       endif
 
-      " Initialize all subtests as 'waiting'
+      " Initialize all subtests as 'waiting' if not already set
       for l:subtest in l:test_units
         if !has_key(g:visutest_subtest_statuses[l:suite_name], l:subtest)
           let g:visutest_subtest_statuses[l:suite_name][l:subtest] = 'waiting'
         endif
       endfor
 
-      " Display sub-tests if units are shown
-      if !empty(g:visutest_all_subtests[l:suite_name]) && g:visutest_tests_show_units
+      " **Display sub-tests only if the suite is expanded**
+      if get(g:visutest_expanded_suites, l:suite_name, 0)
+        " Display sub-tests
         for l:test_unit in g:visutest_all_subtests[l:suite_name]
-          " Get sub-test status using the helper function
+          " Get sub-test status
           let l:subtest_status = visutest_helper#GetSubtestStatus(l:suite_name, l:test_unit)
           let l:subtest_icon = l:subtest_status ==# 'passed' ? '🟢' :
                 \ l:subtest_status ==# 'failed' ? '🔴' : '⚪'
           let l:test_unit_display = "    ➔ " . l:subtest_icon . " " . l:test_unit
           call append(line('$'), [l:test_unit_display])
         endfor
-      else
-        let l:no_test_display = "    ➔ 🔴 No test units found"
-        call append(line('$'), [l:no_test_display])
       endif
     endfor
   endif
@@ -218,3 +216,89 @@ endfunction
 
 """"""""""""" Mapping to toggle units display with 'P' key """""""""""""""""
 nnoremap <silent> P :call visutest_tests#ToggleUnits()<CR>
+
+function! visutest_tests#ToggleSuiteUnits()
+  setlocal modifiable
+  let l:current_line_num = line('.')
+  let l:line_text = getline('.')
+
+  " Get the suite name from the current line
+  let l:suite_name = matchstr(l:line_text, '^➔ [🟢🔴⚪] \zs.*$')
+
+  if l:suite_name == ''
+    " Not a test suite line
+    setlocal nomodifiable
+    return
+  endif
+
+  " Check if the suite is expanded
+  let l:is_expanded = get(g:visutest_expanded_suites, l:suite_name, 0)
+
+  if l:is_expanded
+    " Collapse the suite: remove subtests from the buffer
+    let g:visutest_expanded_suites[l:suite_name] = 0
+
+    " Remove subtest lines from the buffer
+    let l:line_num = l:current_line_num + 1
+    while l:line_num <= line('$')
+      let l:next_line = getline(l:line_num)
+      if l:next_line =~ '^    ➔ [🟢🔴⚪] '
+        " Delete this line
+        call deletebufline('', l:line_num)
+      else
+        break
+      endif
+      " Do not increment l:line_num, because lines shift up after deletion
+    endwhile
+  else
+    " Expand the suite: insert subtests into the buffer
+    let g:visutest_expanded_suites[l:suite_name] = 1
+
+    " Get subtests for this suite
+    let l:suite_file = ''
+    let l:test_suites = visutest_tests#GetTestSuites()
+    for l:file in l:test_suites
+      let l:name = substitute(fnamemodify(l:file, ':t'), '^test_', '', '')
+      let l:name = substitute(l:name, '\.c$', '', '')
+      if l:name ==# l:suite_name
+        let l:suite_file = l:file
+        break
+      endif
+    endfor
+
+    if l:suite_file != ''
+      let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
+      let g:visutest_all_subtests[l:suite_name] = l:test_units
+
+      " Initialize subtest statuses if not already done
+      if !has_key(g:visutest_subtest_statuses, l:suite_name)
+        let g:visutest_subtest_statuses[l:suite_name] = {}
+      endif
+
+      " Initialize all subtests as 'waiting'
+      for l:subtest in l:test_units
+        if !has_key(g:visutest_subtest_statuses[l:suite_name], l:subtest)
+          let g:visutest_subtest_statuses[l:suite_name][l:subtest] = 'waiting'
+        endif
+      endfor
+
+      " Insert subtests into buffer after the suite line
+      let l:insert_line_num = l:current_line_num
+      let l:subtest_lines = []
+      for l:test_unit in g:visutest_all_subtests[l:suite_name]
+        " Get sub-test status
+        let l:subtest_status = visutest_helper#GetSubtestStatus(l:suite_name, l:test_unit)
+        let l:subtest_icon = l:subtest_status ==# 'passed' ? '🟢' :
+              \ l:subtest_status ==# 'failed' ? '🔴' : '⚪'
+        let l:test_unit_display = "    ➔ " . l:subtest_icon . " " . l:test_unit
+        call add(l:subtest_lines, l:test_unit_display)
+      endfor
+      " Insert the subtest lines into the buffer
+      call append(l:insert_line_num, l:subtest_lines)
+    else
+      echomsg "Test suite file not found for " . l:suite_name
+    endif
+  endif
+  setlocal nomodifiable
+endfunction
+
