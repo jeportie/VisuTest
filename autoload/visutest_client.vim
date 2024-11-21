@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:50:44 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/21 15:52:50 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/21 16:48:45 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -55,7 +55,6 @@ endfunction
 " Function to handle structured data from the client
 function! visutest_client#OnData(job, data)
   " Log the raw data received
-  echomsg "Received data: " . string(a:data)
 
   if empty(a:data)
     return
@@ -79,13 +78,10 @@ function! visutest_client#OnData(job, data)
       continue
     endif
 
-    " Log the cleaned line
-    echomsg "Processing line: " . l:line
 
     " Check for build errors
     if l:line =~ 'CMAKE_ERROR:' || l:line =~ 'MAKE_ERROR:'
       let g:visutest_build_error = substitute(l:line, '<br>', "\n", 'g')
-      echomsg "Build error detected: " . g:visutest_build_error
       call visutest_ui#ShowBuildErrorPopup()
       return
     endif
@@ -93,7 +89,6 @@ function! visutest_client#OnData(job, data)
     " Check for test start
     if l:line =~ 'RUNNING:'
       let l:test_name = matchstr(l:line, 'RUNNING:\s*\zs.*')
-      echomsg "Test started: " . l:test_name
       let g:visutest_current_test = l:test_name
       let g:visutest_test_logs[l:test_name] = []
       let g:visutest_subtest_statuses[l:test_name] = {}
@@ -104,13 +99,11 @@ function! visutest_client#OnData(job, data)
     " Check for test result
     if l:line =~? 'Test Passed\.'
       let l:test_name = g:visutest_current_test
-      echomsg "Test passed: " . l:test_name
       call visutest_ui#UpdateTestStatus(l:test_name, 'passed')
       call visutest_client#ParseSubTestResults(l:test_name, g:visutest_test_logs[l:test_name])
       continue
     elseif l:line =~? 'Test Failed\.'
       let l:test_name = g:visutest_current_test
-      echomsg "Test failed: " . l:test_name
       call visutest_ui#UpdateTestStatus(l:test_name, 'failed')
       call visutest_client#ParseSubTestResults(l:test_name, g:visutest_test_logs[l:test_name])
       continue
@@ -119,7 +112,6 @@ function! visutest_client#OnData(job, data)
     " Accumulate log lines for subtest processing
     if exists("g:visutest_current_test") && !empty(g:visutest_current_test)
       call add(g:visutest_test_logs[g:visutest_current_test], l:line)
-      echomsg "Appended to log of " . g:visutest_current_test . ": " . l:line
     endif
   endfor
 endfunction
@@ -130,7 +122,6 @@ function! visutest_client#ParseSubTestResults(test_name, log)
   let l:subtest_statuses = {}
   
   " Log the parsing action
-  echomsg "Parsing subtest results for " . a:test_name
   
   " Flags to track if we're in the output section
   let l:in_output = 0
@@ -153,7 +144,6 @@ function! visutest_client#ParseSubTestResults(test_name, log)
     
     if l:in_output
       " Log lines within Output section
-      echomsg "Output line: " . l:line
       
       " Check for summary line
       if l:line =~ '\vChecks:\s*\d+,\s*Failures:\s*\d+,\s*Errors:\s*\d+'
@@ -161,7 +151,6 @@ function! visutest_client#ParseSubTestResults(test_name, log)
         let l:errors = matchstr(l:line, 'Errors:\s*\zs\d\+')
         if str2nr(l:failures) > 0 || str2nr(l:errors) > 0
           let l:failures_detected = 1
-          echomsg "Failures detected: Failures=" . l:failures . ", Errors=" . l:errors
         endif
         continue
       endif
@@ -174,7 +163,6 @@ function! visutest_client#ParseSubTestResults(test_name, log)
           let l:subtest_name = l:fields[4]
           " Ensure the subtest name starts with 'test_'
           if l:subtest_name =~ '^test_'
-            echomsg "Subtest failed: " . l:subtest_name
             let l:subtest_statuses[l:subtest_name] = 'failed'
           endif
         endif
@@ -187,7 +175,6 @@ function! visutest_client#ParseSubTestResults(test_name, log)
     for l:subtest in g:visutest_all_subtests[a:test_name]
       if !has_key(l:subtest_statuses, l:subtest)
         let l:subtest_statuses[l:subtest] = 'passed'
-        echomsg "Subtest passed: " . l:subtest
       endif
     endfor
   endif
@@ -212,6 +199,5 @@ endfunction
 
 " Callback for client exit
 function! visutest_client#OnExit(job, exit_status)
-  echomsg "VisuTest client exited with status: " . a:exit_status
 endfunction
 

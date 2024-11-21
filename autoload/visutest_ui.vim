@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/21 16:41:16 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/21 16:49:25 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -283,10 +283,8 @@ function! visutest_ui#ShowBuildErrorPopup()
   " Log the current build error content
   if exists('g:visutest_build_error') && !empty(g:visutest_build_error)
     let l:popup_content = g:visutest_build_error
-    echomsg "Displaying build error content in popup:\n" . l:popup_content
   else
     let l:popup_content = 'No build error log available.'
-    echomsg "No build error content to display."
   endif
 
   let l:winheight = float2nr(&lines / 2 - len(split(l:popup_content, "\n")) / 2)
@@ -310,7 +308,6 @@ function! visutest_ui#ShowBuildErrorPopup()
   else
     call add(g:visutest_popups, l:popup_id)
     let b:visutest_popup = l:popup_id
-    echomsg "Build error popup displayed successfully."
   endif
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 endfunction
@@ -333,14 +330,12 @@ function! visutest_ui#ShowTestLogPopup()
   endwhile
 
   if !exists('l:suite_name')
-    echomsg "Could not determine test suite name."
     return
   endif
 
   " Get the test log for the test suite
   let l:test_log = get(g:visutest_test_logs, l:suite_name, [])
   if empty(l:test_log)
-    echomsg "No log available for test suite: " . l:suite_name
     return
   endif
 
@@ -372,7 +367,6 @@ function! visutest_ui#ShowPopup(content, title)
   else
     call add(g:visutest_popups, l:popup_id)
     let b:visutest_popup = l:popup_id
-    echomsg "Popup displayed successfully."
   endif
 
   " Map <Esc> to close the popup
