@@ -56,11 +56,15 @@ visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_te
 visutest_tests#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestUnits(suite_file)$/;"	f
 visutest_tests#HideUnits	autoload/visutest_tests.vim	/^function! visutest_tests#HideUnits()$/;"	f
 visutest_tests#ShowUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ShowUnits()$/;"	f
+visutest_tests#ToggleSuiteUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ToggleSuiteUnits()$/;"	f
 visutest_tests#ToggleUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ToggleUnits()$/;"	f
 visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePopup()$/;"	f
+visutest_ui#HandleLineAction	autoload/visutest_ui.vim	/^function! visutest_ui#HandleLineAction()$/;"	f
 visutest_ui#SetupHighlighting	autoload/visutest_ui.vim	/^function! visutest_ui#SetupHighlighting()$/;"	f
 visutest_ui#SetupWindowUI	autoload/visutest_ui.vim	/^function! visutest_ui#SetupWindowUI()$/;"	f
 visutest_ui#ShowBuildErrorPopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowBuildErrorPopup()$/;"	f
+visutest_ui#ShowPopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowPopup(content, title)$/;"	f
+visutest_ui#ShowTestLogPopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestLogPopup()$/;"	f
 visutest_ui#ShowTestSuitePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ShowTestSuitePopup()$/;"	f
 visutest_ui#UpdateSubTestStatuses	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)$/;"	f
 visutest_ui#UpdateTestStatus	autoload/visutest_ui.vim	/^function! visutest_ui#UpdateTestStatus(test_name, status)$/;"	f

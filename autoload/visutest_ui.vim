@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/21 13:41:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/21 16:41:16 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -24,6 +24,17 @@ if !exists('g:visutest_all_subtests')
   let g:visutest_all_subtests = {}
 endif
 
+function! visutest_ui#HandleLineAction()
+  let l:current_line = getline('.')
+  if l:current_line =~ '^➔ [🟢🔴⚪] '  " Test suite line
+    call visutest_tests#ToggleSuiteUnits()
+  elseif l:current_line =~ '^    ➔ [🟢🔴⚪] '  " Subtest line
+    call visutest_ui#ShowTestLogPopup()
+  else
+    " Not a recognizable line, do nothing
+  endif
+endfunction
+
 """""""""" Function to set up the VisuTest window UI layout """"""""""""""""""
 function! visutest_ui#SetupWindowUI()
   let l:split_width = max([float2nr(&columns * 0.20), 30])
@@ -37,16 +48,28 @@ function! visutest_ui#SetupWindowUI()
   setlocal norelativenumber signcolumn=no winfixwidth modifiable
   setlocal filetype=visutest nobuflisted
 
+  " Initialize expanded suites dictionary
+  let g:visutest_expanded_suites = {}
+
+  " Set the global variable to hide units by default
+  let g:visutest_tests_show_units = 0
+
   " Display test suites
   call visutest_tests#DisplayTestSuites()
 
   " Key mappings
   nnoremap <buffer> <silent> :bnext <NOP>
   nnoremap <buffer> <silent> :bprev <NOP>
-  nnoremap <buffer> <silent> <CR> :call visutest_ui#ShowTestSuitePopup()<CR>
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
   nnoremap <buffer> r :VisuTestRun<CR>
+
+  " Enable mouse support
+  setlocal mouse=a
+
+  " Map double-click and Enter key to handle action based on line type
+  nnoremap <buffer> <2-LeftMouse> :call visutest_ui#HandleLineAction()<CR>
+  nnoremap <buffer> <CR> :call visutest_ui#HandleLineAction()<CR>
 
   " Set buffer back to read-only
   setlocal nomodifiable
@@ -289,6 +312,70 @@ function! visutest_ui#ShowBuildErrorPopup()
     let b:visutest_popup = l:popup_id
     echomsg "Build error popup displayed successfully."
   endif
+  nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
+endfunction
+
+function! visutest_ui#ShowTestLogPopup()
+  let l:current_line_num = line('.')
+  let l:current_line = getline('.')
+
+  " Determine the test suite name
+  " We need to look upwards in the buffer to find the test suite line
+  let l:suite_line_num = l:current_line_num
+  while l:suite_line_num > 0
+    let l:line_text = getline(l:suite_line_num)
+    if l:line_text =~ '^➔ [🟢🔴⚪] '
+      " Found the test suite line
+      let l:suite_name = matchstr(l:line_text, '^➔ [🟢🔴⚪] \zs.*$')
+      break
+    endif
+    let l:suite_line_num -= 1
+  endwhile
+
+  if !exists('l:suite_name')
+    echomsg "Could not determine test suite name."
+    return
+  endif
+
+  " Get the test log for the test suite
+  let l:test_log = get(g:visutest_test_logs, l:suite_name, [])
+  if empty(l:test_log)
+    echomsg "No log available for test suite: " . l:suite_name
+    return
+  endif
+
+  " Display the test log in a popup window
+  call visutest_ui#ShowPopup(join(l:test_log, "\n"), 'Test Log: ' . l:suite_name)
+endfunction
+
+function! visutest_ui#ShowPopup(content, title)
+  " Close any existing popup
+  call visutest_ui#ClosePopup()
+
+  let l:popup_options = {
+        \ 'line': 'cursor+1',
+        \ 'col': 'cursor+1',
+        \ 'pos': 'botleft',
+        \ 'minwidth': 50,
+        \ 'minheight': 10,
+        \ 'border': [],
+        \ 'title': a:title,
+        \ 'wrap': v:false,
+        \ 'padding': [0,1,0,1],
+        \ }
+
+  let l:popup_lines = split(a:content, "\n")
+  let l:popup_id = popup_create(l:popup_lines, l:popup_options)
+
+  if l:popup_id == -1
+    echoerr "Failed to create popup."
+  else
+    call add(g:visutest_popups, l:popup_id)
+    let b:visutest_popup = l:popup_id
+    echomsg "Popup displayed successfully."
+  endif
+
+  " Map <Esc> to close the popup
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 endfunction
 
