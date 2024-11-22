@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/22 13:21:14 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/22 14:15:44 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -23,12 +23,20 @@ endif
 if !exists('g:visutest_all_subtests')
   let g:visutest_all_subtests = {}
 endif
+if !exists('g:visutest_expanded_folders')
+  let g:visutest_expanded_folders = {}
+endif
 
 function! visutest_ui#HandleLineAction()
   let l:current_line = getline('.')
-  if l:current_line =~ '^➔ [🟢🔴⚪] '  " Test suite line
+  if l:current_line =~ '^[▶▼] '
+    " Folder line
+    call visutest_tests#ToggleFolder()
+  elseif l:current_line =~ '^➔ [🟢🔴⚪] '
+    " Test suite line
     call visutest_tests#ToggleSuiteUnits()
-  elseif l:current_line =~ '^    ➔ [🟢🔴⚪] '  " Subtest line
+  elseif l:current_line =~ '^    ➔ [🟢🔴⚪] '
+    " Subtest line
     call visutest_ui#ShowTestLogPopup()
   else
     " Not a recognizable line, do nothing
@@ -48,8 +56,17 @@ function! visutest_ui#SetupWindowUI()
   setlocal norelativenumber signcolumn=no winfixwidth modifiable
   setlocal filetype=visutest nobuflisted
 
-  " Initialize expanded suites dictionary
+  " Initialize expanded suites and folders dictionaries
   let g:visutest_expanded_suites = {}
+  let g:visutest_expanded_folders = {}
+
+  " **Initialize expanded folders to be expanded by default**
+  let l:test_folders = visutest_tests#GetTestFolders()
+  for l:folder in l:test_folders
+    let l:folder_name = fnamemodify(l:folder, ':t')
+    " Set the expansion state to expanded (1)
+    let g:visutest_expanded_folders[l:folder_name] = 1
+  endfor
 
   " Set the global variable to hide units by default
   let g:visutest_tests_show_units = 0
@@ -205,7 +222,7 @@ function! visutest_ui#UpdateTestStatus(test_name, status)
     let l:line = l:lines[idx]
 
     " Find the line that matches the test name
-    if l:line =~ '^\s*➔ [🟢🔴⚪] ' . l:test_name . '$'
+    if l:line =~ '^➔ [🟢🔴⚪] ' . l:test_name . '$'
       let l:line_num = idx + 1
 
       " Construct the updated line with the new icon and test suite name
@@ -240,7 +257,7 @@ function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)
     let l:line = l:lines[idx]
 
     " Find the test suite line
-    if l:line =~ '^\s*➔ [🟢🔴⚪] ' . l:suite_name . '$'
+    if l:line =~ '^➔ [🟢🔴⚪] ' . l:suite_name . '$'
       let l:found_suite = 1
       continue
     endif
@@ -248,10 +265,10 @@ function! visutest_ui#UpdateSubTestStatuses(suite_name, subtest_statuses)
     " If we've found the suite, look for its sub-tests
     if l:found_suite
       " Check if the line is a sub-test line
-      if l:line =~ '^\s\+➔ [🟢🔴⚪] .*$'
+      if l:line =~ '^    ➔ [🟢🔴⚪] .*$'
         " Extract the sub-test name
         let l:subtest_line = l:line
-        let l:subtest_name = substitute(l:subtest_line, '^\s\+➔ [🟢🔴⚪] ', '', '')
+        let l:subtest_name = substitute(l:subtest_line, '^    ➔ [🟢🔴⚪] ', '', '')
 
         " Get the status of the sub-test using the helper function
         let l:status = visutest_helper#GetSubtestStatus(l:suite_name, l:subtest_name)
@@ -320,6 +337,7 @@ function! visutest_ui#ShowTestLogPopup()
   " Determine the test suite name
   " We need to look upwards in the buffer to find the test suite line
   let l:suite_line_num = l:current_line_num
+  let l:suite_name = ''
   while l:suite_line_num > 0
     let l:line_text = getline(l:suite_line_num)
     if l:line_text =~ '^➔ [🟢🔴⚪] '
@@ -330,13 +348,15 @@ function! visutest_ui#ShowTestLogPopup()
     let l:suite_line_num -= 1
   endwhile
 
-  if !exists('l:suite_name')
+  if l:suite_name == ''
+    echomsg "Could not determine test suite name."
     return
   endif
 
   " Get the test log for the test suite
   let l:test_log = get(g:visutest_test_logs, l:suite_name, [])
   if empty(l:test_log)
+    echomsg "No log available for test suite: " . l:suite_name
     return
   endif
 
@@ -375,7 +395,6 @@ function! visutest_ui#ShowPopup(content, title)
 endfunction
 
 function! visutest_ui#ResetUI()
-
   " Clear all test statuses and logs
   let g:visutest_test_logs = {}
   let g:visutest_test_statuses = {}
@@ -384,7 +403,15 @@ function! visutest_ui#ResetUI()
   let g:visutest_expanded_suites = {}
   let g:visutest_expanded_folders = {}
 
+  " **Initialize expanded folders to be expanded by default**
+  let l:test_folders = visutest_tests#GetTestFolders()
+  for l:folder in l:test_folders
+    let l:folder_name = fnamemodify(l:folder, ':t')
+    " Set the expansion state to expanded (1)
+    let g:visutest_expanded_folders[l:folder_name] = 1
+  endfor
+
   " Re-display the test suites (this will reparse the test folders)
   call visutest_tests#DisplayTestSuites()
-
 endfunction
+

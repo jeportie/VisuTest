@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:37:27 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/21 16:32:26 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/22 14:13:41 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -17,6 +17,9 @@ if !exists('g:visutest_test_statuses')
 endif
 if !exists('g:visutest_all_subtests')
   let g:visutest_all_subtests = {}
+endif
+if !exists('g:visutest_expanded_folders')
+  let g:visutest_expanded_folders = {}
 endif
 
 " Global state variable to track whether to show or hide test units
@@ -106,6 +109,8 @@ function! visutest_tests#GetTestSuites()
 endfunction
 
 """""""""" Function to display test suites and units in the UI """"""""""""""""
+" Function to display test suites and units in the UI
+" Function to display test suites and units in the UI
 function! visutest_tests#DisplayTestSuites()
   setlocal modifiable
   execute '%delete _'
@@ -119,50 +124,66 @@ function! visutest_tests#DisplayTestSuites()
   " Setup highlighting for icons, colors, etc.
   call visutest_ui#SetupHighlighting()
 
-  " Display test suites
+  " Display test hierarchy
   call append(line('$'), '-------- Test Suites --------')
   call append(line('$'), '')
 
-  let l:test_suites = visutest_tests#GetTestSuites()
-  if empty(l:test_suites)
+  " Get the test hierarchy
+  let l:test_hierarchy = visutest_tests#GetTestHierarchy()
+
+  if empty(l:test_hierarchy)
     call append(line('$'), ['No test suites found.'])
   else
-    for l:suite_file in l:test_suites
-      let l:suite_name = substitute(fnamemodify(l:suite_file, ':t'), '^test_', '', '')
-      let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
-      let l:status = get(g:visutest_test_statuses, l:suite_name, 'waiting')
-      let l:icon = l:status ==# 'passed' ? '🟢' :
-            \ l:status ==# 'failed' ? '🔴' : '⚪'
-      let l:display_line = "➔ " . l:icon . " " . l:suite_name
-      call append(line('$'), [l:display_line])
+    for l:folder_name in sort(keys(l:test_hierarchy))
+      " Display the folder name
+      let l:is_folder_expanded = get(g:visutest_expanded_folders, l:folder_name, 0)
+      let l:folder_icon = l:is_folder_expanded ? '▼' : '▶'
+      let l:folder_line = l:folder_icon . ' ' . l:folder_name
+      call append(line('$'), [l:folder_line])
 
-      " **Initialize subtest statuses for all suites**
-      " Populate the list of all sub-tests
-      let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
-      let g:visutest_all_subtests[l:suite_name] = l:test_units
+      " If folder is expanded, display test suites
+      if l:is_folder_expanded
+        for l:suite in l:test_hierarchy[l:folder_name]
+          let l:suite_name = l:suite.name
+          let l:suite_file = l:suite.file
+          let l:status = get(g:visutest_test_statuses, l:suite_name, 'waiting')
+          let l:icon = l:status ==# 'passed' ? '🟢' :
+                \ l:status ==# 'failed' ? '🔴' : '⚪'
+          " **Remove indentation before test suite names**
+          let l:suite_line = "➔ " . l:icon . " " . l:suite_name
+          call append(line('$'), [l:suite_line])
 
-      " Initialize subtest statuses if not already done
-      if !has_key(g:visutest_subtest_statuses, l:suite_name)
-        let g:visutest_subtest_statuses[l:suite_name] = {}
-      endif
+          " Initialize subtest statuses for all suites
+          " Populate the list of all sub-tests
+          let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
+          let g:visutest_all_subtests[l:suite_name] = l:test_units
 
-      " Initialize all subtests as 'waiting' if not already set
-      for l:subtest in l:test_units
-        if !has_key(g:visutest_subtest_statuses[l:suite_name], l:subtest)
-          let g:visutest_subtest_statuses[l:suite_name][l:subtest] = 'waiting'
-        endif
-      endfor
+          " Initialize subtest statuses if not already done
+          if !has_key(g:visutest_subtest_statuses, l:suite_name)
+            let g:visutest_subtest_statuses[l:suite_name] = {}
+          endif
 
-      " **Display sub-tests only if the suite is expanded**
-      if get(g:visutest_expanded_suites, l:suite_name, 0)
-        " Display sub-tests
-        for l:test_unit in g:visutest_all_subtests[l:suite_name]
-          " Get sub-test status
-          let l:subtest_status = visutest_helper#GetSubtestStatus(l:suite_name, l:test_unit)
-          let l:subtest_icon = l:subtest_status ==# 'passed' ? '🟢' :
-                \ l:subtest_status ==# 'failed' ? '🔴' : '⚪'
-          let l:test_unit_display = "    ➔ " . l:subtest_icon . " " . l:test_unit
-          call append(line('$'), [l:test_unit_display])
+          " Initialize all subtests as 'waiting' if not already set
+          for l:subtest in l:test_units
+            if !has_key(g:visutest_subtest_statuses[l:suite_name], l:subtest)
+              let g:visutest_subtest_statuses[l:suite_name][l:subtest] = 'waiting'
+            endif
+          endfor
+
+          " Check if test suite is expanded
+          let l:is_suite_expanded = get(g:visutest_expanded_suites, l:suite_name, 0)
+          if l:is_suite_expanded
+            " Display sub-tests
+            for l:test_unit in g:visutest_all_subtests[l:suite_name]
+              " Get sub-test status
+              let l:subtest_status = visutest_helper#GetSubtestStatus(l:suite_name, l:test_unit)
+              let l:subtest_icon = l:subtest_status ==# 'passed' ? '🟢' :
+                    \ l:subtest_status ==# 'failed' ? '🔴' : '⚪'
+              " **Indent subtests under test suites**
+              let l:subtest_line = "    ➔ " . l:subtest_icon . " " . l:test_unit
+              call append(line('$'), [l:subtest_line])
+            endfor
+          endif
         endfor
       endif
     endfor
@@ -217,6 +238,7 @@ endfunction
 """"""""""""" Mapping to toggle units display with 'P' key """""""""""""""""
 nnoremap <silent> P :call visutest_tests#ToggleUnits()<CR>
 
+" Function to toggle the expansion of a test suite
 function! visutest_tests#ToggleSuiteUnits()
   setlocal modifiable
   let l:current_line_num = line('.')
@@ -231,74 +253,78 @@ function! visutest_tests#ToggleSuiteUnits()
     return
   endif
 
-  " Check if the suite is expanded
+  " Toggle the expansion state
   let l:is_expanded = get(g:visutest_expanded_suites, l:suite_name, 0)
+  let g:visutest_expanded_suites[l:suite_name] = !l:is_expanded
 
-  if l:is_expanded
-    " Collapse the suite: remove subtests from the buffer
-    let g:visutest_expanded_suites[l:suite_name] = 0
+  " Re-display the test suites
+  call visutest_tests#DisplayTestSuites()
 
-    " Remove subtest lines from the buffer
-    let l:line_num = l:current_line_num + 1
-    while l:line_num <= line('$')
-      let l:next_line = getline(l:line_num)
-      if l:next_line =~ '^    ➔ [🟢🔴⚪] '
-        " Delete this line
-        call deletebufline('', l:line_num)
-      else
-        break
-      endif
-      " Do not increment l:line_num, because lines shift up after deletion
-    endwhile
-  else
-    " Expand the suite: insert subtests into the buffer
-    let g:visutest_expanded_suites[l:suite_name] = 1
+  " Move cursor back to the suite line
+  call cursor(l:current_line_num, 1)
 
-    " Get subtests for this suite
-    let l:suite_file = ''
-    let l:test_suites = visutest_tests#GetTestSuites()
-    for l:file in l:test_suites
-      let l:name = substitute(fnamemodify(l:file, ':t'), '^test_', '', '')
-      let l:name = substitute(l:name, '\.c$', '', '')
-      if l:name ==# l:suite_name
-        let l:suite_file = l:file
-        break
-      endif
-    endfor
+  setlocal nomodifiable
+endfunction
 
-    if l:suite_file != ''
-      let l:test_units = visutest_tests#GetTestUnits(l:suite_file)
-      let g:visutest_all_subtests[l:suite_name] = l:test_units
-
-      " Initialize subtest statuses if not already done
-      if !has_key(g:visutest_subtest_statuses, l:suite_name)
-        let g:visutest_subtest_statuses[l:suite_name] = {}
-      endif
-
-      " Initialize all subtests as 'waiting'
-      for l:subtest in l:test_units
-        if !has_key(g:visutest_subtest_statuses[l:suite_name], l:subtest)
-          let g:visutest_subtest_statuses[l:suite_name][l:subtest] = 'waiting'
-        endif
-      endfor
-
-      " Insert subtests into buffer after the suite line
-      let l:insert_line_num = l:current_line_num
-      let l:subtest_lines = []
-      for l:test_unit in g:visutest_all_subtests[l:suite_name]
-        " Get sub-test status
-        let l:subtest_status = visutest_helper#GetSubtestStatus(l:suite_name, l:test_unit)
-        let l:subtest_icon = l:subtest_status ==# 'passed' ? '🟢' :
-              \ l:subtest_status ==# 'failed' ? '🔴' : '⚪'
-        let l:test_unit_display = "    ➔ " . l:subtest_icon . " " . l:test_unit
-        call add(l:subtest_lines, l:test_unit_display)
-      endfor
-      " Insert the subtest lines into the buffer
-      call append(l:insert_line_num, l:subtest_lines)
-    else
-      echomsg "Test suite file not found for " . l:suite_name
+" Function to get all test folders in the test_src directory, excluding 'build'
+function! visutest_tests#GetTestFolders()
+  let l:test_src_dir = getcwd() . '/test_src/'
+  let l:folders = []
+  let l:all_entries = globpath(l:test_src_dir, '*', 1, 1)
+  for l:entry in l:all_entries
+    if isdirectory(l:entry) && fnamemodify(l:entry, ':t') !=# 'build'
+      call add(l:folders, l:entry)
     endif
+  endfor
+  return l:folders
+endfunction
+
+" Function to build a hierarchy of folders to test suites
+function! visutest_tests#GetTestHierarchy()
+  let l:test_hierarchy = {}
+  let l:test_folders = visutest_tests#GetTestFolders()
+  for l:folder in l:test_folders
+    let l:folder_name = fnamemodify(l:folder, ':t')
+    " Get all test_*.c files in the folder
+    let l:test_files = globpath(l:folder, 'test_*.c', 0, 1)
+    if !empty(l:test_files)
+      let l:test_hierarchy[l:folder_name] = []
+      for l:test_file in l:test_files
+        " Get the test suite name
+        let l:suite_name = substitute(fnamemodify(l:test_file, ':t'), '^test_', '', '')
+        let l:suite_name = substitute(l:suite_name, '\.c$', '', '')
+        call add(l:test_hierarchy[l:folder_name], {'file': l:test_file, 'name': l:suite_name})
+      endfor
+    endif
+  endfor
+  return l:test_hierarchy
+endfunction
+
+" Function to toggle the expansion of a folder
+function! visutest_tests#ToggleFolder()
+  setlocal modifiable
+  let l:current_line_num = line('.')
+  let l:line_text = getline('.')
+
+  " Get the folder name from the current line
+  let l:folder_name = matchstr(l:line_text, '^[▶▼] \zs.*$')
+
+  if l:folder_name == ''
+    " Not a folder line
+    setlocal nomodifiable
+    return
   endif
+
+  " Toggle the expansion state
+  let l:is_expanded = get(g:visutest_expanded_folders, l:folder_name, 0)
+  let g:visutest_expanded_folders[l:folder_name] = !l:is_expanded
+
+  " Re-display the test suites
+  call visutest_tests#DisplayTestSuites()
+
+  " Move cursor back to the folder line
+  call cursor(l:current_line_num, 1)
+
   setlocal nomodifiable
 endfunction
 
