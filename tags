@@ -22,6 +22,8 @@ g:loaded_visutest_core	plugin/visutest_core.vim	/^let g:loaded_visutest_core = 1
 g:visutest_all_subtests	autoload/visutest_client.vim	/^  let g:visutest_all_subtests = {}$/;"	v
 g:visutest_all_subtests	autoload/visutest_tests.vim	/^  let g:visutest_all_subtests = {}$/;"	v
 g:visutest_all_subtests	autoload/visutest_ui.vim	/^  let g:visutest_all_subtests = {}$/;"	v
+g:visutest_expanded_folders	autoload/visutest_tests.vim	/^  let g:visutest_expanded_folders = {}$/;"	v
+g:visutest_expanded_folders	autoload/visutest_ui.vim	/^  let g:visutest_expanded_folders = {}$/;"	v
 g:visutest_popups	autoload/visutest_ui.vim	/^  let g:visutest_popups = []$/;"	v
 g:visutest_subtest_statuses	autoload/visutest_client.vim	/^  let g:visutest_subtest_statuses = {}$/;"	v
 g:visutest_subtest_statuses	autoload/visutest_ui.vim	/^  let g:visutest_subtest_statuses = {}$/;"	v
@@ -52,10 +54,13 @@ visutest_server#StartServer	autoload/visutest_server.vim	/^function! visutest_se
 visutest_server#StopServer	autoload/visutest_server.vim	/^function! visutest_server#StopServer()$/;"	f
 visutest_tests#DisplayTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#DisplayTestSuites()$/;"	f
 visutest_tests#GetSelectedSuite	autoload/visutest_tests.vim	/^function! visutest_tests#GetSelectedSuite()$/;"	f
+visutest_tests#GetTestFolders	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestFolders()$/;"	f
+visutest_tests#GetTestHierarchy	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestHierarchy()$/;"	f
 visutest_tests#GetTestSuites	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestSuites()$/;"	f
 visutest_tests#GetTestUnits	autoload/visutest_tests.vim	/^function! visutest_tests#GetTestUnits(suite_file)$/;"	f
 visutest_tests#HideUnits	autoload/visutest_tests.vim	/^function! visutest_tests#HideUnits()$/;"	f
 visutest_tests#ShowUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ShowUnits()$/;"	f
+visutest_tests#ToggleFolder	autoload/visutest_tests.vim	/^function! visutest_tests#ToggleFolder()$/;"	f
 visutest_tests#ToggleSuiteUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ToggleSuiteUnits()$/;"	f
 visutest_tests#ToggleUnits	autoload/visutest_tests.vim	/^function! visutest_tests#ToggleUnits()$/;"	f
 visutest_ui#ClosePopup	autoload/visutest_ui.vim	/^function! visutest_ui#ClosePopup()$/;"	f
