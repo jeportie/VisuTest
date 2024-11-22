@@ -6,7 +6,7 @@
 "    By: jeportie <jeportie@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2024/10/16 15:36:45 by jeportie          #+#    #+#              "
-"    Updated: 2024/11/21 16:49:25 by jeportie         ###   ########.fr        "
+"    Updated: 2024/11/22 13:21:14 by jeportie         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -63,6 +63,7 @@ function! visutest_ui#SetupWindowUI()
   nnoremap <buffer> q :call VisuTestCloseWindow()<CR>
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
   nnoremap <buffer> r :VisuTestRun<CR>
+  nnoremap <buffer> P :call visutest_ui#ResetUI()<CR>
 
   " Enable mouse support
   setlocal mouse=a
@@ -373,3 +374,17 @@ function! visutest_ui#ShowPopup(content, title)
   nnoremap <buffer> <Esc> :call visutest_ui#ClosePopup()<CR>
 endfunction
 
+function! visutest_ui#ResetUI()
+
+  " Clear all test statuses and logs
+  let g:visutest_test_logs = {}
+  let g:visutest_test_statuses = {}
+  let g:visutest_subtest_statuses = {}
+  let g:visutest_all_subtests = {}
+  let g:visutest_expanded_suites = {}
+  let g:visutest_expanded_folders = {}
+
+  " Re-display the test suites (this will reparse the test folders)
+  call visutest_tests#DisplayTestSuites()
+
+endfunction
