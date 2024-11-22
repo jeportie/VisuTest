@@ -36428,3 +36428,1872 @@
 2024-11-21 16:47:01,664 - DEBUG - Received data: ----------------------------------------------------------
 2024-11-21 16:47:01,664 - DEBUG - Received data: Test Passed.
 2024-11-21 16:47:01,664 - INFO - Closing client socket.
+2024-11-22 13:02:46,389 - INFO - Connected to the server.
+2024-11-22 13:02:46,389 - INFO - Sent START_TEST command to the server.
+2024-11-22 13:02:47,774 - DEBUG - Received data: RUNNING: ms_parse_tokens
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:02:47,775 - DEBUG - Received data: 1/31 Test: ms_parse_tokens
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:02:47,775 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,775 - DEBUG - Received data: "ms_parse_tokens" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,775 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Running suite(s): AST
+2024-11-22 13:02:47,775 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:02:47,775 - DEBUG - Received data: Minishell: Syntax Error:					Expected Command after pipe '|'.
+2024-11-22 13:02:47,775 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:02:47,775 - DEBUG - Received data: Minishell: Error: No Input provided.
+2024-11-22 13:02:47,775 - DEBUG - Received data: 100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:02:47,775 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,775 - DEBUG - Received data: RUNNING: ms_echo
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: 2/31 Testing: ms_echo
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: 2/31 Testing: ms_echo
+2024-11-22 13:02:47,775 - DEBUG - Received data: 2/31 Test: ms_echo
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:02:47,775 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,775 - DEBUG - Received data: "ms_echo" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,775 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Running suite(s): ms_echo
+2024-11-22 13:02:47,775 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:02:47,775 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,775 - DEBUG - Received data: RUNNING: ms_env
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: 3/31 Testing: ms_env
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: 3/31 Testing: ms_env
+2024-11-22 13:02:47,775 - DEBUG - Received data: 3/31 Test: ms_env
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:02:47,775 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,775 - DEBUG - Received data: "ms_env" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,775 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Running suite(s): ms_env
+2024-11-22 13:02:47,775 - DEBUG - Received data: export PATH="/usr/bin"
+2024-11-22 13:02:47,775 - DEBUG - Received data: export HOME="/home/user"
+2024-11-22 13:02:47,775 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:02:47,775 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,775 - DEBUG - Received data: RUNNING: ms_exit
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: 4/31 Testing: ms_exit
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: 4/31 Testing: ms_exit
+2024-11-22 13:02:47,775 - DEBUG - Received data: 4/31 Test: ms_exit
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:02:47,775 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,775 - DEBUG - Received data: "ms_exit" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,775 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Running suite(s): ms_exit
+2024-11-22 13:02:47,775 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:02:47,775 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,775 - DEBUG - Received data: RUNNING: ms_export
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: 5/31 Testing: ms_export
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: 5/31 Testing: ms_export
+2024-11-22 13:02:47,775 - DEBUG - Received data: 5/31 Test: ms_export
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:02:47,775 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:02:47,775 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,775 - DEBUG - Received data: "ms_export" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,775 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Running suite(s): ms_export
+2024-11-22 13:02:47,775 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,775 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,775 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,775 - DEBUG - Received data: RUNNING: ms_pwd
+2024-11-22 13:02:47,775 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:02:47,775 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,775 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 6/31 Testing: ms_pwd
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 6/31 Testing: ms_pwd
+2024-11-22 13:02:47,776 - DEBUG - Received data: 6/31 Test: ms_pwd
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "ms_pwd" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): ms_pwd
+2024-11-22 13:02:47,776 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,776 - DEBUG - Received data: RUNNING: ms_unset
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:02:47,776 - DEBUG - Received data: FAILED
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 7/31 Testing: ms_unset
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 7/31 Testing: ms_unset
+2024-11-22 13:02:47,776 - DEBUG - Received data: 7/31 Test: ms_unset
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "ms_unset" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): ms_unset
+2024-11-22 13:02:47,776 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:02:47,776 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:02:47,776 - DEBUG - Received data: 0%: Checks: 2, Failures: 0, Errors: 2
+2024-11-22 13:02:47,776 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:62:E:Core:test_ms_unset_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:02:47,776 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:93:E:Core:test_ms_unset_non_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.09 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Failed.
+2024-11-22 13:02:47,776 - DEBUG - Received data: RUNNING: check_testunit_template
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:02:47,776 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 8/31 Testing: check_testunit_template
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 8/31 Testing: check_testunit_template
+2024-11-22 13:02:47,776 - DEBUG - Received data: 8/31 Test: check_testunit_template
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "check_testunit_template" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:02:47,776 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,776 - DEBUG - Received data: RUNNING: ms_concat_path
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:02:47,776 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 9/31 Testing: ms_concat_path
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 9/31 Testing: ms_concat_path
+2024-11-22 13:02:47,776 - DEBUG - Received data: 9/31 Test: ms_concat_path
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "ms_concat_path" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): ms_concat_path
+2024-11-22 13:02:47,776 - DEBUG - Received data: error: minishell: memory allocation errorerror: minishell: memory allocation error100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,776 - DEBUG - Received data: RUNNING: ms_execute_ast
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:02:47,776 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 10/31 Testing: ms_execute_ast
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 10/31 Testing: ms_execute_ast
+2024-11-22 13:02:47,776 - DEBUG - Received data: 10/31 Test: ms_execute_ast
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "ms_execute_ast" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): ms_execute_ast
+2024-11-22 13:02:47,776 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,776 - DEBUG - Received data: RUNNING: ms_execute_external
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:02:47,776 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: 11/31 Testing: ms_execute_external
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: 11/31 Testing: ms_execute_external
+2024-11-22 13:02:47,776 - DEBUG - Received data: 11/31 Test: ms_execute_external
+2024-11-22 13:02:47,776 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:02:47,776 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:02:47,776 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,776 - DEBUG - Received data: "ms_execute_external" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,776 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Running suite(s): ms_execute_external
+2024-11-22 13:02:47,776 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,776 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,776 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,776 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: ms_execute_pipeline
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:02:47,777 - DEBUG - Received data: 12/31 Test: ms_execute_pipeline
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:02:47,777 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,777 - DEBUG - Received data: "ms_execute_pipeline" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,777 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Running suite(s): ms_execute_pipeline
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:02:47,777 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,777 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: ms_heredoc_mode
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:02:47,777 - DEBUG - Received data: 13/31 Test: ms_heredoc_mode
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:02:47,777 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,777 - DEBUG - Received data: "ms_heredoc_mode" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,777 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Running suite(s): ms_heredoc_mode
+2024-11-22 13:02:47,777 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,777 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: ms_expand_args
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 14/31 Testing: ms_expand_args
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: 14/31 Testing: ms_expand_args
+2024-11-22 13:02:47,777 - DEBUG - Received data: 14/31 Test: ms_expand_args
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:02:47,777 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,777 - DEBUG - Received data: "ms_expand_args" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,777 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:02:47,777 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:02:47,777 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: add_process
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 15/31 Testing: add_process
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: 15/31 Testing: add_process
+2024-11-22 13:02:47,777 - DEBUG - Received data: 15/31 Test: add_process
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:02:47,777 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,777 - DEBUG - Received data: "add_process" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,777 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Running suite(s): add_process
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: Close failed
+2024-11-22 13:02:47,777 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,777 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 16/31 Testing: ms_env_add_back
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: 16/31 Testing: ms_env_add_back
+2024-11-22 13:02:47,777 - DEBUG - Received data: 16/31 Test: ms_env_add_back
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:02:47,777 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:02:47,777 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,777 - DEBUG - Received data: "ms_env_add_back" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,777 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:02:47,777 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,777 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,777 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-11-22 13:02:47,777 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:02:47,777 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,777 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,777 - DEBUG - Received data: 17/31 Testing: ms_env_create_node
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 17/31 Testing: ms_env_create_node
+2024-11-22 13:02:47,778 - DEBUG - Received data: 17/31 Test: ms_env_create_node
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_env_create_node" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Running suite(s): Env
+2024-11-22 13:02:47,778 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:02:47,778 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,778 - DEBUG - Received data: RUNNING: ms_get_env_value
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:02:47,778 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: 18/31 Testing: ms_get_env_value
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 18/31 Testing: ms_get_env_value
+2024-11-22 13:02:47,778 - DEBUG - Received data: 18/31 Test: ms_get_env_value
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_get_env_value" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Running suite(s): ms_get_env_value
+2024-11-22 13:02:47,778 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,778 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,778 - DEBUG - Received data: RUNNING: ms_get_envp
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:02:47,778 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: 19/31 Testing: ms_get_envp
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 19/31 Testing: ms_get_envp
+2024-11-22 13:02:47,778 - DEBUG - Received data: 19/31 Test: ms_get_envp
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_get_envp" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Running suite(s): ms_get_envp
+2024-11-22 13:02:47,778 - DEBUG - Received data: 100%: Checks: 10, Failures: 0, Errors: 0
+2024-11-22 13:02:47,778 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,778 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:02:47,778 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: 20/31 Testing: ms_get_user_input
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 20/31 Testing: ms_get_user_input
+2024-11-22 13:02:47,778 - DEBUG - Received data: 20/31 Test: ms_get_user_input
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_get_user_input" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:02:47,778 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:02:47,778 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,778 - DEBUG - Received data: RUNNING: ms_getenv
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:02:47,778 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: 21/31 Testing: ms_getenv
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 21/31 Testing: ms_getenv
+2024-11-22 13:02:47,778 - DEBUG - Received data: 21/31 Test: ms_getenv
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_getenv" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Running suite(s): ms_getenv
+2024-11-22 13:02:47,778 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:02:47,778 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,778 - DEBUG - Received data: RUNNING: ms_init_env
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:02:47,778 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,778 - DEBUG - Received data: 22/31 Testing: ms_init_env
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: 22/31 Testing: ms_init_env
+2024-11-22 13:02:47,778 - DEBUG - Received data: 22/31 Test: ms_init_env
+2024-11-22 13:02:47,778 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:02:47,778 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:02:47,778 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,778 - DEBUG - Received data: "ms_init_env" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,778 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,778 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: 23/31 Testing: ms_init_shell
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: 23/31 Testing: ms_init_shell
+2024-11-22 13:02:47,779 - DEBUG - Received data: 23/31 Test: ms_init_shell
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:02:47,779 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,779 - DEBUG - Received data: "ms_init_shell" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,779 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-11-22 13:02:47,779 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-11-22 13:02:47,779 - DEBUG - Received data: : No such process
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: 24/31 Test: ms_init_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,779 - DEBUG - Received data: "ms_init_std_signal" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,779 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: 
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: 25/31 Test: ms_stop_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:02:47,779 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,779 - DEBUG - Received data: "ms_stop_std_signal" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,779 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: ms_syntax_error
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: 26/31 Testing: ms_syntax_error
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: 26/31 Testing: ms_syntax_error
+2024-11-22 13:02:47,779 - DEBUG - Received data: 26/31 Test: ms_syntax_error
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:02:47,779 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,779 - DEBUG - Received data: "ms_syntax_error" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,779 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): ms_syntax_error
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 28, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: lst_tokens
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: 27/31 Testing: lst_tokens
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: 27/31 Testing: lst_tokens
+2024-11-22 13:02:47,779 - DEBUG - Received data: 27/31 Test: lst_tokens
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:02:47,779 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:02:47,779 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,779 - DEBUG - Received data: "lst_tokens" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,779 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Running suite(s): lst_tokens
+2024-11-22 13:02:47,779 - DEBUG - Received data: Minishell: Error: HEAD is NULL
+2024-11-22 13:02:47,779 - DEBUG - Received data: : No such process
+2024-11-22 13:02:47,779 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:02:47,779 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,779 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,779 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,779 - DEBUG - Received data: RUNNING: ms_tokenize
+2024-11-22 13:02:47,779 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:02:47,779 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: 28/31 Testing: ms_tokenize
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: 28/31 Testing: ms_tokenize
+2024-11-22 13:02:47,780 - DEBUG - Received data: 28/31 Test: ms_tokenize
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:02:47,780 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,780 - DEBUG - Received data: "ms_tokenize" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,780 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Running suite(s): Tokenize
+2024-11-22 13:02:47,780 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:02:47,780 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,780 - DEBUG - Received data: RUNNING: tokenize_frame
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:02:47,780 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: 29/31 Testing: tokenize_frame
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: 29/31 Testing: tokenize_frame
+2024-11-22 13:02:47,780 - DEBUG - Received data: 29/31 Test: tokenize_frame
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:02:47,780 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,780 - DEBUG - Received data: "tokenize_frame" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,780 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Running suite(s): tokenize_frame
+2024-11-22 13:02:47,780 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:02:47,780 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:02:47,780 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,780 - DEBUG - Received data: RUNNING: tokenize_operator
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:02:47,780 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: 30/31 Testing: tokenize_operator
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: 30/31 Testing: tokenize_operator
+2024-11-22 13:02:47,780 - DEBUG - Received data: 30/31 Test: tokenize_operator
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:02:47,780 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,780 - DEBUG - Received data: "tokenize_operator" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,780 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Running suite(s): tokenize_operator
+2024-11-22 13:02:47,780 - DEBUG - Received data: Minishell: Error: null input
+2024-11-22 13:02:47,780 - DEBUG - Received data: : No such process
+2024-11-22 13:02:47,780 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:02:47,780 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,780 - DEBUG - Received data: RUNNING: tokenize_word
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:02:47,780 - DEBUG - Received data: PASSED
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: 31/31 Testing: tokenize_word
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: 31/31 Testing: tokenize_word
+2024-11-22 13:02:47,780 - DEBUG - Received data: 31/31 Test: tokenize_word
+2024-11-22 13:02:47,780 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:02:47,780 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:02:47,780 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:02:47,780 - DEBUG - Received data: "tokenize_word" start time: Nov 22 13:02 UTC
+2024-11-22 13:02:47,780 - DEBUG - Received data: Output:
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Running suite(s): tokenize_word
+2024-11-22 13:02:47,780 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:02:47,780 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:02:47,780 - DEBUG - Received data: <end of output>
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:02:47,780 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:02:47,780 - DEBUG - Received data: Test Passed.
+2024-11-22 13:02:47,780 - INFO - Closing client socket.
+2024-11-22 13:17:33,398 - INFO - Connected to the server.
+2024-11-22 13:17:33,398 - INFO - Sent START_TEST command to the server.
+2024-11-22 13:17:34,816 - DEBUG - Received data: RUNNING: ms_parse_tokens
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:34,816 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:17:34,816 - DEBUG - Received data: 1/31 Test: ms_parse_tokens
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:34,816 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,816 - DEBUG - Received data: "ms_parse_tokens" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,816 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Running suite(s): AST
+2024-11-22 13:17:34,816 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:17:34,816 - DEBUG - Received data: Minishell: Syntax Error:					Expected Command after pipe '|'.
+2024-11-22 13:17:34,816 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:17:34,816 - DEBUG - Received data: Minishell: Error: No Input provided.
+2024-11-22 13:17:34,816 - DEBUG - Received data: 100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:17:34,816 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,816 - DEBUG - Received data: RUNNING: ms_echo
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:34,816 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: 2/31 Testing: ms_echo
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: 2/31 Testing: ms_echo
+2024-11-22 13:17:34,816 - DEBUG - Received data: 2/31 Test: ms_echo
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:34,816 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,816 - DEBUG - Received data: "ms_echo" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,816 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Running suite(s): ms_echo
+2024-11-22 13:17:34,816 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:17:34,816 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,816 - DEBUG - Received data: RUNNING: ms_env
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:34,816 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: 3/31 Testing: ms_env
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: 3/31 Testing: ms_env
+2024-11-22 13:17:34,816 - DEBUG - Received data: 3/31 Test: ms_env
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:34,816 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,816 - DEBUG - Received data: "ms_env" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,816 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Running suite(s): ms_env
+2024-11-22 13:17:34,816 - DEBUG - Received data: export PATH="/usr/bin"
+2024-11-22 13:17:34,816 - DEBUG - Received data: export HOME="/home/user"
+2024-11-22 13:17:34,816 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:34,816 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,816 - DEBUG - Received data: RUNNING: ms_exit
+2024-11-22 13:17:34,816 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:34,816 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,816 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,816 - DEBUG - Received data: 4/31 Testing: ms_exit
+2024-11-22 13:17:34,816 - DEBUG - Skipped duplicate line: 4/31 Testing: ms_exit
+2024-11-22 13:17:34,817 - DEBUG - Received data: 4/31 Test: ms_exit
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "ms_exit" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): ms_exit
+2024-11-22 13:17:34,817 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,817 - DEBUG - Received data: RUNNING: ms_export
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:34,817 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: 5/31 Testing: ms_export
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: 5/31 Testing: ms_export
+2024-11-22 13:17:34,817 - DEBUG - Received data: 5/31 Test: ms_export
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "ms_export" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): ms_export
+2024-11-22 13:17:34,817 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,817 - DEBUG - Received data: RUNNING: ms_pwd
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:34,817 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: 6/31 Testing: ms_pwd
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: 6/31 Testing: ms_pwd
+2024-11-22 13:17:34,817 - DEBUG - Received data: 6/31 Test: ms_pwd
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "ms_pwd" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): ms_pwd
+2024-11-22 13:17:34,817 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,817 - DEBUG - Received data: RUNNING: ms_unset
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:34,817 - DEBUG - Received data: FAILED
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: 7/31 Testing: ms_unset
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: 7/31 Testing: ms_unset
+2024-11-22 13:17:34,817 - DEBUG - Received data: 7/31 Test: ms_unset
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "ms_unset" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): ms_unset
+2024-11-22 13:17:34,817 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:17:34,817 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:17:34,817 - DEBUG - Received data: 0%: Checks: 2, Failures: 0, Errors: 2
+2024-11-22 13:17:34,817 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:62:E:Core:test_ms_unset_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:17:34,817 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:93:E:Core:test_ms_unset_non_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.09 sec
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test Failed.
+2024-11-22 13:17:34,817 - DEBUG - Received data: RUNNING: check_testunit_template
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:34,817 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: 8/31 Testing: check_testunit_template
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: 8/31 Testing: check_testunit_template
+2024-11-22 13:17:34,817 - DEBUG - Received data: 8/31 Test: check_testunit_template
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "check_testunit_template" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:17:34,817 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,817 - DEBUG - Received data: RUNNING: ms_concat_path
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:34,817 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: 9/31 Testing: ms_concat_path
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: 9/31 Testing: ms_concat_path
+2024-11-22 13:17:34,817 - DEBUG - Received data: 9/31 Test: ms_concat_path
+2024-11-22 13:17:34,817 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:34,817 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:34,817 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,817 - DEBUG - Received data: "ms_concat_path" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,817 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,817 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,817 - DEBUG - Received data: Running suite(s): ms_concat_path
+2024-11-22 13:17:34,817 - DEBUG - Received data: error: minishell: memory allocation errorerror: minishell: memory allocation error100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:17:34,817 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,817 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: ms_execute_ast
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: 10/31 Testing: ms_execute_ast
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: 10/31 Testing: ms_execute_ast
+2024-11-22 13:17:34,818 - DEBUG - Received data: 10/31 Test: ms_execute_ast
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:34,818 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,818 - DEBUG - Received data: "ms_execute_ast" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,818 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Running suite(s): ms_execute_ast
+2024-11-22 13:17:34,818 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,818 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: ms_execute_external
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: 11/31 Testing: ms_execute_external
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: 11/31 Testing: ms_execute_external
+2024-11-22 13:17:34,818 - DEBUG - Received data: 11/31 Test: ms_execute_external
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:34,818 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,818 - DEBUG - Received data: "ms_execute_external" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,818 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Running suite(s): ms_execute_external
+2024-11-22 13:17:34,818 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,818 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: ms_execute_pipeline
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:17:34,818 - DEBUG - Received data: 12/31 Test: ms_execute_pipeline
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:34,818 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,818 - DEBUG - Received data: "ms_execute_pipeline" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,818 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Running suite(s): ms_execute_pipeline
+2024-11-22 13:17:34,818 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,818 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:34,818 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,818 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:34,818 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,818 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:34,818 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:34,818 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,818 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,818 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: ms_heredoc_mode
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:17:34,818 - DEBUG - Received data: 13/31 Test: ms_heredoc_mode
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:34,818 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,818 - DEBUG - Received data: "ms_heredoc_mode" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,818 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Running suite(s): ms_heredoc_mode
+2024-11-22 13:17:34,818 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,818 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: ms_expand_args
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: 14/31 Testing: ms_expand_args
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: 14/31 Testing: ms_expand_args
+2024-11-22 13:17:34,818 - DEBUG - Received data: 14/31 Test: ms_expand_args
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:34,818 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:34,818 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,818 - DEBUG - Received data: "ms_expand_args" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,818 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:17:34,818 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:34,818 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,818 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,818 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,818 - DEBUG - Received data: RUNNING: add_process
+2024-11-22 13:17:34,818 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:34,818 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 15/31 Testing: add_process
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 15/31 Testing: add_process
+2024-11-22 13:17:34,819 - DEBUG - Received data: 15/31 Test: add_process
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "add_process" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): add_process
+2024-11-22 13:17:34,819 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,819 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,819 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,819 - DEBUG - Received data: Close failed
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,819 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,819 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:34,819 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 16/31 Testing: ms_env_add_back
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 16/31 Testing: ms_env_add_back
+2024-11-22 13:17:34,819 - DEBUG - Received data: 16/31 Test: ms_env_add_back
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "ms_env_add_back" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,819 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,819 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:34,819 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 17/31 Testing: ms_env_create_node
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 17/31 Testing: ms_env_create_node
+2024-11-22 13:17:34,819 - DEBUG - Received data: 17/31 Test: ms_env_create_node
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "ms_env_create_node" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): Env
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:34,819 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,819 - DEBUG - Received data: RUNNING: ms_get_env_value
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:34,819 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 18/31 Testing: ms_get_env_value
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 18/31 Testing: ms_get_env_value
+2024-11-22 13:17:34,819 - DEBUG - Received data: 18/31 Test: ms_get_env_value
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "ms_get_env_value" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): ms_get_env_value
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,819 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,819 - DEBUG - Received data: RUNNING: ms_get_envp
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:34,819 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 19/31 Testing: ms_get_envp
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 19/31 Testing: ms_get_envp
+2024-11-22 13:17:34,819 - DEBUG - Received data: 19/31 Test: ms_get_envp
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "ms_get_envp" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): ms_get_envp
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 10, Failures: 0, Errors: 0
+2024-11-22 13:17:34,819 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,819 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:34,819 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: 20/31 Testing: ms_get_user_input
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: 20/31 Testing: ms_get_user_input
+2024-11-22 13:17:34,819 - DEBUG - Received data: 20/31 Test: ms_get_user_input
+2024-11-22 13:17:34,819 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:34,819 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:34,819 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,819 - DEBUG - Received data: "ms_get_user_input" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,819 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,819 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,819 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:17:34,819 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_getenv
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 21/31 Testing: ms_getenv
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 21/31 Testing: ms_getenv
+2024-11-22 13:17:34,820 - DEBUG - Received data: 21/31 Test: ms_getenv
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:34,820 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,820 - DEBUG - Received data: "ms_getenv" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,820 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Running suite(s): ms_getenv
+2024-11-22 13:17:34,820 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_init_env
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 22/31 Testing: ms_init_env
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 22/31 Testing: ms_init_env
+2024-11-22 13:17:34,820 - DEBUG - Received data: 22/31 Test: ms_init_env
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:34,820 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,820 - DEBUG - Received data: "ms_init_env" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,820 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-11-22 13:17:34,820 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 23/31 Testing: ms_init_shell
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 23/31 Testing: ms_init_shell
+2024-11-22 13:17:34,820 - DEBUG - Received data: 23/31 Test: ms_init_shell
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:34,820 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,820 - DEBUG - Received data: "ms_init_shell" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,820 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-11-22 13:17:34,820 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-11-22 13:17:34,820 - DEBUG - Received data: : No such process
+2024-11-22 13:17:34,820 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: 24/31 Test: ms_init_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,820 - DEBUG - Received data: "ms_init_std_signal" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,820 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: 
+2024-11-22 13:17:34,820 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: 25/31 Test: ms_stop_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:34,820 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,820 - DEBUG - Received data: "ms_stop_std_signal" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,820 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-11-22 13:17:34,820 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,820 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,820 - DEBUG - Received data: RUNNING: ms_syntax_error
+2024-11-22 13:17:34,820 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:34,820 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,820 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,820 - DEBUG - Received data: 26/31 Testing: ms_syntax_error
+2024-11-22 13:17:34,820 - DEBUG - Skipped duplicate line: 26/31 Testing: ms_syntax_error
+2024-11-22 13:17:34,821 - DEBUG - Received data: 26/31 Test: ms_syntax_error
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "ms_syntax_error" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): ms_syntax_error
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 28, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,821 - DEBUG - Received data: RUNNING: lst_tokens
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:34,821 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: 27/31 Testing: lst_tokens
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: 27/31 Testing: lst_tokens
+2024-11-22 13:17:34,821 - DEBUG - Received data: 27/31 Test: lst_tokens
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "lst_tokens" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): lst_tokens
+2024-11-22 13:17:34,821 - DEBUG - Received data: Minishell: Error: HEAD is NULL
+2024-11-22 13:17:34,821 - DEBUG - Received data: : No such process
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,821 - DEBUG - Received data: RUNNING: ms_tokenize
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:34,821 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: 28/31 Testing: ms_tokenize
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: 28/31 Testing: ms_tokenize
+2024-11-22 13:17:34,821 - DEBUG - Received data: 28/31 Test: ms_tokenize
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "ms_tokenize" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): Tokenize
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,821 - DEBUG - Received data: RUNNING: tokenize_frame
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:34,821 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: 29/31 Testing: tokenize_frame
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: 29/31 Testing: tokenize_frame
+2024-11-22 13:17:34,821 - DEBUG - Received data: 29/31 Test: tokenize_frame
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "tokenize_frame" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): tokenize_frame
+2024-11-22 13:17:34,821 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,821 - DEBUG - Received data: RUNNING: tokenize_operator
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:34,821 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: 30/31 Testing: tokenize_operator
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: 30/31 Testing: tokenize_operator
+2024-11-22 13:17:34,821 - DEBUG - Received data: 30/31 Test: tokenize_operator
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "tokenize_operator" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): tokenize_operator
+2024-11-22 13:17:34,821 - DEBUG - Received data: Minishell: Error: null input
+2024-11-22 13:17:34,821 - DEBUG - Received data: : No such process
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,821 - DEBUG - Received data: RUNNING: tokenize_word
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:34,821 - DEBUG - Received data: PASSED
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: 31/31 Testing: tokenize_word
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: 31/31 Testing: tokenize_word
+2024-11-22 13:17:34,821 - DEBUG - Received data: 31/31 Test: tokenize_word
+2024-11-22 13:17:34,821 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:34,821 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:34,821 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:34,821 - DEBUG - Received data: "tokenize_word" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:34,821 - DEBUG - Received data: Output:
+2024-11-22 13:17:34,821 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,821 - DEBUG - Received data: Running suite(s): tokenize_word
+2024-11-22 13:17:34,821 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:17:34,821 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:34,821 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:34,822 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:34,822 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:34,822 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:34,822 - INFO - Closing client socket.
+2024-11-22 13:17:55,198 - INFO - Connected to the server.
+2024-11-22 13:17:55,198 - INFO - Sent START_TEST command to the server.
+2024-11-22 13:17:56,559 - DEBUG - Received data: RUNNING: ms_parse_tokens
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:56,559 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: 1/31 Testing: ms_parse_tokens
+2024-11-22 13:17:56,559 - DEBUG - Received data: 1/31 Test: ms_parse_tokens
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_parse_tokens"
+2024-11-22 13:17:56,559 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,559 - DEBUG - Received data: "ms_parse_tokens" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,559 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: Running suite(s): AST
+2024-11-22 13:17:56,559 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:17:56,559 - DEBUG - Received data: Minishell: Syntax Error:					Expected Command after pipe '|'.
+2024-11-22 13:17:56,559 - DEBUG - Received data: Minishell: Syntax Error: Expected a command.
+2024-11-22 13:17:56,559 - DEBUG - Received data: Minishell: Error: No Input provided.
+2024-11-22 13:17:56,559 - DEBUG - Received data: 100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:17:56,559 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,559 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,559 - DEBUG - Received data: RUNNING: ms_echo
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:56,559 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: 2/31 Testing: ms_echo
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: 2/31 Testing: ms_echo
+2024-11-22 13:17:56,559 - DEBUG - Received data: 2/31 Test: ms_echo
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_echo"
+2024-11-22 13:17:56,559 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,559 - DEBUG - Received data: "ms_echo" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,559 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: Running suite(s): ms_echo
+2024-11-22 13:17:56,559 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:17:56,559 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,559 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,559 - DEBUG - Received data: RUNNING: ms_env
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:56,559 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,559 - DEBUG - Received data: 3/31 Testing: ms_env
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: 3/31 Testing: ms_env
+2024-11-22 13:17:56,559 - DEBUG - Received data: 3/31 Test: ms_env
+2024-11-22 13:17:56,559 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:56,559 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env"
+2024-11-22 13:17:56,559 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,559 - DEBUG - Received data: "ms_env" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,559 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,559 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): ms_env
+2024-11-22 13:17:56,560 - DEBUG - Received data: export PATH="/usr/bin"
+2024-11-22 13:17:56,560 - DEBUG - Received data: export HOME="/home/user"
+2024-11-22 13:17:56,560 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: ms_exit
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:56,560 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: 4/31 Testing: ms_exit
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: 4/31 Testing: ms_exit
+2024-11-22 13:17:56,560 - DEBUG - Received data: 4/31 Test: ms_exit
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_exit"
+2024-11-22 13:17:56,560 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,560 - DEBUG - Received data: "ms_exit" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,560 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): ms_exit
+2024-11-22 13:17:56,560 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: ms_export
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:56,560 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: 5/31 Testing: ms_export
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: 5/31 Testing: ms_export
+2024-11-22 13:17:56,560 - DEBUG - Received data: 5/31 Test: ms_export
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_export"
+2024-11-22 13:17:56,560 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,560 - DEBUG - Received data: "ms_export" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,560 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): ms_export
+2024-11-22 13:17:56,560 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: ms_pwd
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:56,560 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: 6/31 Testing: ms_pwd
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: 6/31 Testing: ms_pwd
+2024-11-22 13:17:56,560 - DEBUG - Received data: 6/31 Test: ms_pwd
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_pwd"
+2024-11-22 13:17:56,560 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,560 - DEBUG - Received data: "ms_pwd" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,560 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): ms_pwd
+2024-11-22 13:17:56,560 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: ms_unset
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:56,560 - DEBUG - Received data: FAILED
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: 7/31 Testing: ms_unset
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: 7/31 Testing: ms_unset
+2024-11-22 13:17:56,560 - DEBUG - Received data: 7/31 Test: ms_unset
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_unset"
+2024-11-22 13:17:56,560 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,560 - DEBUG - Received data: "ms_unset" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,560 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): ms_unset
+2024-11-22 13:17:56,560 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:17:56,560 - DEBUG - Received data: free(): double free detected in tcache 2
+2024-11-22 13:17:56,560 - DEBUG - Received data: 0%: Checks: 2, Failures: 0, Errors: 2
+2024-11-22 13:17:56,560 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:62:E:Core:test_ms_unset_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:17:56,560 - DEBUG - Received data: /root/projects/minishell/test_src/builtins/test_ms_unset.c:93:E:Core:test_ms_unset_non_existing_var:0: (after this point) Received signal 6 (Aborted)
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.10 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Failed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: check_testunit_template
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:56,560 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: 8/31 Testing: check_testunit_template
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: 8/31 Testing: check_testunit_template
+2024-11-22 13:17:56,560 - DEBUG - Received data: 8/31 Test: check_testunit_template
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:56,560 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/check_testunit_template"
+2024-11-22 13:17:56,560 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,560 - DEBUG - Received data: "check_testunit_template" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,560 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:17:56,560 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:56,560 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,560 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,560 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,560 - DEBUG - Received data: RUNNING: ms_concat_path
+2024-11-22 13:17:56,560 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:56,560 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 9/31 Testing: ms_concat_path
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 9/31 Testing: ms_concat_path
+2024-11-22 13:17:56,561 - DEBUG - Received data: 9/31 Test: ms_concat_path
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_concat_path"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_concat_path" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Running suite(s): ms_concat_path
+2024-11-22 13:17:56,561 - DEBUG - Received data: error: minishell: memory allocation errorerror: minishell: memory allocation error100%: Checks: 11, Failures: 0, Errors: 0
+2024-11-22 13:17:56,561 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,561 - DEBUG - Received data: RUNNING: ms_execute_ast
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:56,561 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 10/31 Testing: ms_execute_ast
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 10/31 Testing: ms_execute_ast
+2024-11-22 13:17:56,561 - DEBUG - Received data: 10/31 Test: ms_execute_ast
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_ast"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_execute_ast" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Running suite(s): ms_execute_ast
+2024-11-22 13:17:56,561 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,561 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,561 - DEBUG - Received data: RUNNING: ms_execute_external
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:56,561 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 11/31 Testing: ms_execute_external
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 11/31 Testing: ms_execute_external
+2024-11-22 13:17:56,561 - DEBUG - Received data: 11/31 Test: ms_execute_external
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_external"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_execute_external" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Running suite(s): ms_execute_external
+2024-11-22 13:17:56,561 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,561 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,561 - DEBUG - Received data: RUNNING: ms_execute_pipeline
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:56,561 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 12/31 Testing: ms_execute_pipeline
+2024-11-22 13:17:56,561 - DEBUG - Received data: 12/31 Test: ms_execute_pipeline
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_execute_pipeline"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_execute_pipeline" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Running suite(s): ms_execute_pipeline
+2024-11-22 13:17:56,561 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,561 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:56,561 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,561 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:56,561 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,561 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:56,561 - DEBUG - Received data: minishell: command not found: fail
+2024-11-22 13:17:56,561 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,561 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,561 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,561 - DEBUG - Received data: RUNNING: ms_heredoc_mode
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:56,561 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 13/31 Testing: ms_heredoc_mode
+2024-11-22 13:17:56,561 - DEBUG - Received data: 13/31 Test: ms_heredoc_mode
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_heredoc_mode"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_heredoc_mode" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Running suite(s): ms_heredoc_mode
+2024-11-22 13:17:56,561 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,561 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,561 - DEBUG - Received data: RUNNING: ms_expand_args
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:56,561 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,561 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,561 - DEBUG - Received data: 14/31 Testing: ms_expand_args
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: 14/31 Testing: ms_expand_args
+2024-11-22 13:17:56,561 - DEBUG - Received data: 14/31 Test: ms_expand_args
+2024-11-22 13:17:56,561 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:56,561 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_expand_args"
+2024-11-22 13:17:56,561 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,561 - DEBUG - Received data: "ms_expand_args" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,561 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): NAME
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 1, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: add_process
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: 15/31 Testing: add_process
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: 15/31 Testing: add_process
+2024-11-22 13:17:56,562 - DEBUG - Received data: 15/31 Test: add_process
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_add_process"
+2024-11-22 13:17:56,562 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,562 - DEBUG - Received data: "add_process" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,562 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): add_process
+2024-11-22 13:17:56,562 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,562 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,562 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,562 - DEBUG - Received data: Close failed
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: ms_env_add_back
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: 16/31 Testing: ms_env_add_back
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: 16/31 Testing: ms_env_add_back
+2024-11-22 13:17:56,562 - DEBUG - Received data: 16/31 Test: ms_env_add_back
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_add_back"
+2024-11-22 13:17:56,562 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,562 - DEBUG - Received data: "ms_env_add_back" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,562 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: ms_env_create_node
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: 17/31 Testing: ms_env_create_node
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: 17/31 Testing: ms_env_create_node
+2024-11-22 13:17:56,562 - DEBUG - Received data: 17/31 Test: ms_env_create_node
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_env_create_node"
+2024-11-22 13:17:56,562 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,562 - DEBUG - Received data: "ms_env_create_node" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,562 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): Env
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: ms_get_env_value
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: 18/31 Testing: ms_get_env_value
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: 18/31 Testing: ms_get_env_value
+2024-11-22 13:17:56,562 - DEBUG - Received data: 18/31 Test: ms_get_env_value
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_env_value"
+2024-11-22 13:17:56,562 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,562 - DEBUG - Received data: "ms_get_env_value" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,562 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): ms_get_env_value
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: ms_get_envp
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: 19/31 Testing: ms_get_envp
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: 19/31 Testing: ms_get_envp
+2024-11-22 13:17:56,562 - DEBUG - Received data: 19/31 Test: ms_get_envp
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:56,562 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_envp"
+2024-11-22 13:17:56,562 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,562 - DEBUG - Received data: "ms_get_envp" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,562 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Running suite(s): ms_get_envp
+2024-11-22 13:17:56,562 - DEBUG - Received data: 100%: Checks: 10, Failures: 0, Errors: 0
+2024-11-22 13:17:56,562 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,562 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,562 - DEBUG - Received data: RUNNING: ms_get_user_input
+2024-11-22 13:17:56,562 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:56,562 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,562 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 20/31 Testing: ms_get_user_input
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 20/31 Testing: ms_get_user_input
+2024-11-22 13:17:56,563 - DEBUG - Received data: 20/31 Test: ms_get_user_input
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_get_user_input"
+2024-11-22 13:17:56,563 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,563 - DEBUG - Received data: "ms_get_user_input" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,563 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Running suite(s): Minishell
+2024-11-22 13:17:56,563 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:56,563 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,563 - DEBUG - Received data: RUNNING: ms_getenv
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:56,563 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 21/31 Testing: ms_getenv
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 21/31 Testing: ms_getenv
+2024-11-22 13:17:56,563 - DEBUG - Received data: 21/31 Test: ms_getenv
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_getenv"
+2024-11-22 13:17:56,563 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,563 - DEBUG - Received data: "ms_getenv" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,563 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Running suite(s): ms_getenv
+2024-11-22 13:17:56,563 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:17:56,563 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,563 - DEBUG - Received data: RUNNING: ms_init_env
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:56,563 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 22/31 Testing: ms_init_env
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 22/31 Testing: ms_init_env
+2024-11-22 13:17:56,563 - DEBUG - Received data: 22/31 Test: ms_init_env
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_env"
+2024-11-22 13:17:56,563 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,563 - DEBUG - Received data: "ms_init_env" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,563 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Running suite(s): ms_init_env
+2024-11-22 13:17:56,563 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,563 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,563 - DEBUG - Received data: RUNNING: ms_init_shell
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:56,563 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 23/31 Testing: ms_init_shell
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 23/31 Testing: ms_init_shell
+2024-11-22 13:17:56,563 - DEBUG - Received data: 23/31 Test: ms_init_shell
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_shell"
+2024-11-22 13:17:56,563 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,563 - DEBUG - Received data: "ms_init_shell" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,563 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Running suite(s): ms_init_shell
+2024-11-22 13:17:56,563 - DEBUG - Received data: Minishell: format: no arguments needed!
+2024-11-22 13:17:56,563 - DEBUG - Received data: : No such process
+2024-11-22 13:17:56,563 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,563 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,563 - DEBUG - Received data: RUNNING: ms_init_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:56,563 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 24/31 Testing: ms_init_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Received data: 24/31 Test: ms_init_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_init_std_signal"
+2024-11-22 13:17:56,563 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,563 - DEBUG - Received data: "ms_init_std_signal" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,563 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Running suite(s): ms_init_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Received data: 
+2024-11-22 13:17:56,563 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,563 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,563 - DEBUG - Received data: RUNNING: ms_stop_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:56,563 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,563 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,563 - DEBUG - Received data: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:17:56,563 - DEBUG - Skipped duplicate line: 25/31 Testing: ms_stop_std_signal
+2024-11-22 13:17:56,564 - DEBUG - Received data: 25/31 Test: ms_stop_std_signal
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_stop_std_signal"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "ms_stop_std_signal" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): ms_stop_std_signal
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,564 - DEBUG - Received data: RUNNING: ms_syntax_error
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:56,564 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: 26/31 Testing: ms_syntax_error
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: 26/31 Testing: ms_syntax_error
+2024-11-22 13:17:56,564 - DEBUG - Received data: 26/31 Test: ms_syntax_error
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_syntax_error"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "ms_syntax_error" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): ms_syntax_error
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 28, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.01 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,564 - DEBUG - Received data: RUNNING: lst_tokens
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:56,564 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: 27/31 Testing: lst_tokens
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: 27/31 Testing: lst_tokens
+2024-11-22 13:17:56,564 - DEBUG - Received data: 27/31 Test: lst_tokens
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_lst_tokens"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "lst_tokens" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): lst_tokens
+2024-11-22 13:17:56,564 - DEBUG - Received data: Minishell: Error: HEAD is NULL
+2024-11-22 13:17:56,564 - DEBUG - Received data: : No such process
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 5, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,564 - DEBUG - Received data: RUNNING: ms_tokenize
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:56,564 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: 28/31 Testing: ms_tokenize
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: 28/31 Testing: ms_tokenize
+2024-11-22 13:17:56,564 - DEBUG - Received data: 28/31 Test: ms_tokenize
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_ms_tokenize"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "ms_tokenize" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): Tokenize
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 12, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,564 - DEBUG - Received data: RUNNING: tokenize_frame
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:56,564 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: 29/31 Testing: tokenize_frame
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: 29/31 Testing: tokenize_frame
+2024-11-22 13:17:56,564 - DEBUG - Received data: 29/31 Test: tokenize_frame
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_frame"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "tokenize_frame" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): tokenize_frame
+2024-11-22 13:17:56,564 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 2, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,564 - DEBUG - Received data: RUNNING: tokenize_operator
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:56,564 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: 30/31 Testing: tokenize_operator
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: 30/31 Testing: tokenize_operator
+2024-11-22 13:17:56,564 - DEBUG - Received data: 30/31 Test: tokenize_operator
+2024-11-22 13:17:56,564 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:56,564 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_operator"
+2024-11-22 13:17:56,564 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,564 - DEBUG - Received data: "tokenize_operator" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,564 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,564 - DEBUG - Received data: Running suite(s): tokenize_operator
+2024-11-22 13:17:56,564 - DEBUG - Received data: Minishell: Error: null input
+2024-11-22 13:17:56,564 - DEBUG - Received data: : No such process
+2024-11-22 13:17:56,564 - DEBUG - Received data: 100%: Checks: 3, Failures: 0, Errors: 0
+2024-11-22 13:17:56,564 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,564 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,564 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,565 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,565 - DEBUG - Received data: RUNNING: tokenize_word
+2024-11-22 13:17:56,565 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:56,565 - DEBUG - Received data: PASSED
+2024-11-22 13:17:56,565 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,565 - DEBUG - Received data: 31/31 Testing: tokenize_word
+2024-11-22 13:17:56,565 - DEBUG - Skipped duplicate line: 31/31 Testing: tokenize_word
+2024-11-22 13:17:56,565 - DEBUG - Received data: 31/31 Test: tokenize_word
+2024-11-22 13:17:56,565 - DEBUG - Received data: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:56,565 - DEBUG - Skipped duplicate line: Command: "/root/projects/minishell/test_src/build/test_tokenize_word"
+2024-11-22 13:17:56,565 - DEBUG - Received data: Directory: /root/projects/minishell/test_src/build
+2024-11-22 13:17:56,565 - DEBUG - Received data: "tokenize_word" start time: Nov 22 13:17 UTC
+2024-11-22 13:17:56,565 - DEBUG - Received data: Output:
+2024-11-22 13:17:56,565 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,565 - DEBUG - Received data: Running suite(s): tokenize_word
+2024-11-22 13:17:56,565 - DEBUG - Received data: Minishell: Error: Null Input: No such process
+2024-11-22 13:17:56,565 - DEBUG - Received data: 100%: Checks: 4, Failures: 0, Errors: 0
+2024-11-22 13:17:56,565 - DEBUG - Received data: <end of output>
+2024-11-22 13:17:56,565 - DEBUG - Received data: Test time =   0.00 sec
+2024-11-22 13:17:56,565 - DEBUG - Received data: ----------------------------------------------------------
+2024-11-22 13:17:56,565 - DEBUG - Received data: Test Passed.
+2024-11-22 13:17:56,565 - INFO - Closing client socket.
