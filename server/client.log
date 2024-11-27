@@ -42036,3 +42036,8 @@
 2024-11-22 14:16:24,122 - DEBUG - Received data: ----------------------------------------------------------
 2024-11-22 14:16:24,122 - DEBUG - Received data: Test Passed.
 2024-11-22 14:16:24,122 - INFO - Closing client socket.
+2024-11-27 10:57:49,048 - INFO - Connected to the server.
+2024-11-27 10:57:49,048 - INFO - Sent START_TEST command to the server.
+2024-11-27 10:58:38,393 - INFO - Closing client socket.
+2024-11-27 10:59:54,328 - ERROR - Socket error: [Errno 111] Connection refused
+2024-11-27 10:59:54,328 - INFO - Closing client socket.

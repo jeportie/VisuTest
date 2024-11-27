@@ -74,7 +74,7 @@ def monitor_log_and_send_updates(client_socket):
         logging.error(f"Log file not found: {log_file}")
         return
 
-    with open(log_file, "r") as log:
+    with open(log_file, "r", encoding='utf-8', errors='replace') as log:
         current_test_suite = []
         test_in_progress = False
         test_name = ""
