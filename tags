@@ -290,6 +290,7 @@ PLATFORM_ID	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	565;
 PLATFORM_ID	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	569;"	d	file:
 PLATFORM_ID	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	572;"	d	file:
 PRINTF_H	include/printf.h	14;"	d
+PROCESS_H	include/process.h	14;"	d
 RM	test_src/build/Makefile	/^RM = \/usr\/bin\/cmake -E rm -f$/;"	m
 SHELL	test_src/build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	27;"	d	file:
@@ -332,18 +333,36 @@ START_TEST	test_src/printf/test_ft_snprintf.c	/^START_TEST(test_various_specifie
 STRINGIFY	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	462;"	d	file:
 STRINGIFY_HELPER	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	461;"	d	file:
 __has_include	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	17;"	d	file:
+add_process	src/process/add_process.c	/^t_proc_info	*add_process(t_proc_manager *manager, t_proc_params *params)$/;"	f
+back_to_parent_stdout	src/process/back_to_parent_stdout.c	/^int	back_to_parent_stdout(t_proc_manager *manager, pid_t pid)$/;"	f
 buf_fd	include/printf.h	/^	int		buf_fd;$/;"	m	struct:s_buffer
 buf_last	include/printf.h	/^	char	buf_last;$/;"	m	struct:s_buffer
 buffer	include/printf.h	/^	char	*buffer;$/;"	m	struct:s_buffer
+child_lvl	include/process.h	/^	int					child_lvl;$/;"	m	struct:s_proc_info
+child_lvl	include/process.h	/^	int			child_lvl;$/;"	m	struct:s_fork_params
+child_lvl	include/process.h	/^	int			child_lvl;$/;"	m	struct:s_proc_params
+clean_manager	src/process/clean_manager.c	/^void	clean_manager(t_proc_manager *manager)$/;"	f
+cleanup_proc	src/process/clean_process.c	/^void	cleanup_proc(t_proc_manager *manager, pid_t pid)$/;"	f
 const	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 e_error	include/printf.h	/^typedef enum e_error$/;"	g
 error	include/printf.h	/^	int			error;$/;"	m	struct:s_format_spec
 error	include/printf.h	/^	int		error;$/;"	m	struct:s_buffer
+fd_error	include/process.h	/^	int					fd_error;$/;"	m	struct:s_proc_info
+fd_error	include/process.h	/^	int			fd_error;$/;"	m	struct:s_fork_params
+fd_error	include/process.h	/^	int			fd_error;$/;"	m	struct:s_proc_params
+fd_in	include/process.h	/^	int					fd_in;$/;"	m	struct:s_proc_info
+fd_in	include/process.h	/^	int			fd_in;$/;"	m	struct:s_fork_params
+fd_in	include/process.h	/^	int			fd_in;$/;"	m	struct:s_proc_params
+fd_original_stdout	include/process.h	/^	int					fd_original_stdout;$/;"	m	struct:s_proc_info
+fd_out	include/process.h	/^	int					fd_out;$/;"	m	struct:s_proc_info
+fd_out	include/process.h	/^	int			fd_out;$/;"	m	struct:s_fork_params
+fd_out	include/process.h	/^	int			fd_out;$/;"	m	struct:s_proc_params
 flag_hash	include/printf.h	/^	int			flag_hash;$/;"	m	struct:s_format_spec
 flag_minus	include/printf.h	/^	int			flag_minus;$/;"	m	struct:s_format_spec
 flag_plus	include/printf.h	/^	int			flag_plus;$/;"	m	struct:s_format_spec
 flag_space	include/printf.h	/^	int			flag_space;$/;"	m	struct:s_format_spec
 flag_zero	include/printf.h	/^	int			flag_zero;$/;"	m	struct:s_format_spec
+fork_init	src/process/redirect_fd.c	/^void	fork_init(t_fork_params *fork_params, t_exec_context *context,$/;"	f
 ft_apply_precision	src/printf/ft_apply_precision.c	/^void	ft_apply_precision(t_format_spec spec, char **formatted_content)$/;"	f
 ft_apply_width	src/printf/ft_apply_width.c	/^void	ft_apply_width(t_format_spec spec, t_buffer *buf_info, int content_len)$/;"	f
 ft_atoi	src/conversion/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f
@@ -442,9 +461,11 @@ ft_update_buffer	src/get_next_line/get_next_line.c	/^static char	*ft_update_buff
 ft_utoa_base	src/conversion/ft_utoa_base.c	/^char	*ft_utoa_base(unsigned int nbr, char *base)$/;"	f
 ft_zero_minus_flags	src/printf/ft_parse_flags.c	/^static void	ft_zero_minus_flags(const char *format, t_format_spec *spec,$/;"	f	file:
 gcl	check_testunit_template.c	/^static t_gc *gcl;$/;"	v	file:
+gcl	include/process.h	/^	t_gc		*gcl;$/;"	m	struct:s_proc_manager
 gcl	test_src/printf/test_ft_snprintf.c	/^static t_gc *gcl;$/;"	v	file:
 generate_src_list	update_makefile.sh	/^generate_src_list() {$/;"	f
 get_next_line	src/get_next_line/get_next_line.c	/^char	*get_next_line(int fd)$/;"	f
+head	include/process.h	/^	t_proc_info	*head;$/;"	m	struct:s_proc_manager
 index	include/printf.h	/^	int		index;$/;"	m	struct:s_buffer
 info_arch	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_compiler	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
@@ -458,6 +479,11 @@ info_version	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^c
 info_version	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version = "INFO" ":" "compiler_version[" COMPILER_VERSION "]";$/;"	v
 info_version_internal	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
 info_version_internal	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_version_internal = "INFO" ":" "compiler_version_internal[" COMPILER_VERSION_INTERNAL_STR "]";$/;"	v
+init_io	src/process/redirect_fd.c	/^int	init_io(int new_in, int new_out, int new_err)$/;"	f
+init_manager	src/process/init_proc_manager.c	/^t_proc_manager	*init_manager(t_gc *gcl)$/;"	f
+is_heredoc	include/process.h	/^	bool				is_heredoc;$/;"	m	struct:s_proc_info
+is_heredoc	include/process.h	/^	bool		is_heredoc;$/;"	m	struct:s_fork_params
+is_heredoc	include/process.h	/^	bool		is_heredoc;$/;"	m	struct:s_proc_params
 main	check_testunit_template.c	/^int main(void)$/;"	f
 main	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
@@ -466,17 +492,42 @@ max_size	include/printf.h	/^	size_t	max_size;$/;"	m	struct:s_buffer
 name_suite	check_testunit_template.c	/^Suite *name_suite(void)$/;"	f
 name_suite	test_src/printf/test_ft_snprintf.c	/^Suite *name_suite(void)$/;"	f
 nb_printed	include/printf.h	/^	int		nb_printed;$/;"	m	struct:s_buffer
+next	include/process.h	/^	struct s_proc_info	*next;$/;"	m	struct:s_proc_info	typeref:struct:s_proc_info::s_proc_info
+parent_pid	include/process.h	/^	pid_t				parent_pid;$/;"	m	struct:s_proc_info
+parent_pid	include/process.h	/^	pid_t		parent_pid;$/;"	m	struct:s_proc_manager
+parent_pid	include/process.h	/^	pid_t		parent_pid;$/;"	m	struct:s_proc_params
+pid	include/process.h	/^	pid_t				pid;$/;"	m	struct:s_proc_info
+pid	include/process.h	/^	pid_t		pid;$/;"	m	struct:s_proc_params
 precision	include/printf.h	/^	int			precision;$/;"	m	struct:s_format_spec
+print_proc_info	src/process/print_proc_info.c	/^void	print_proc_info(const t_proc_manager *manager)$/;"	f
+process_count	include/process.h	/^	int			process_count;$/;"	m	struct:s_proc_manager
 qnxnto	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
+redirect_fd	src/process/redirect_fd.c	/^int	redirect_fd(int old_fd, int new_fd)$/;"	f
+restore_fd	src/process/redirect_fd.c	/^int	restore_fd(int fd, int saved_fd)$/;"	f
 s_buffer	include/printf.h	/^typedef struct s_buffer$/;"	s
+s_fork_params	include/process.h	/^typedef struct s_fork_params$/;"	s
 s_format_spec	include/printf.h	/^typedef struct s_format_spec$/;"	s
+s_proc_info	include/process.h	/^typedef struct s_proc_info$/;"	s
+s_proc_manager	include/process.h	/^typedef struct s_proc_manager$/;"	s
+s_proc_params	include/process.h	/^typedef struct s_proc_params$/;"	s
+safe_close	src/process/safe_close.c	/^int	safe_close(int fd)$/;"	f
+safe_fork	src/process/safe_fork.c	/^pid_t	safe_fork(t_proc_manager *manager, t_fork_params *params)$/;"	f
+safe_open	src/process/safe_open.c	/^int	safe_open(const char *filepath, int flags, int mode)$/;"	f
+safe_pipe	src/process/safe_pipe.c	/^int	safe_pipe(int pipefd[2])$/;"	f
 setup	check_testunit_template.c	/^void setup(void)$/;"	f
 setup	test_src/printf/test_ft_snprintf.c	/^void setup(void)$/;"	f
 t_buffer	include/printf.h	/^}			t_buffer;$/;"	t	typeref:struct:s_buffer
 t_error	include/printf.h	/^}	t_error;$/;"	t	typeref:enum:e_error
+t_fork_params	include/process.h	/^}			t_fork_params;$/;"	t	typeref:struct:s_fork_params
 t_format_spec	include/printf.h	/^}				t_format_spec;$/;"	t	typeref:struct:s_format_spec
+t_proc_info	include/process.h	/^}				t_proc_info;$/;"	t	typeref:struct:s_proc_info
+t_proc_manager	include/process.h	/^}				t_proc_manager;$/;"	t	typeref:struct:s_proc_manager
+t_proc_params	include/process.h	/^}			t_proc_params;$/;"	t	typeref:struct:s_proc_params
 teardown	check_testunit_template.c	/^void teardown(void)$/;"	f
 teardown	test_src/printf/test_ft_snprintf.c	/^void teardown(void)$/;"	f
+title	include/process.h	/^	const char			*title;$/;"	m	struct:s_proc_info
+title	include/process.h	/^	const char	*title;$/;"	m	struct:s_fork_params
+title	include/process.h	/^	const char	*title;$/;"	m	struct:s_proc_params
 type	include/printf.h	/^	char		type;$/;"	m	struct:s_format_spec
 volatile	test_src/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 width	include/printf.h	/^	int			width;$/;"	m	struct:s_format_spec
